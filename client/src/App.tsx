@@ -11,6 +11,7 @@ import MainContentPage from "./pages/main";
 import ToolTipsPage from "./pages/tool-tips-page";
 import ErrorPage from "./pages/errors/error";
 
+
 const MainNav = styled(Nav)`
   min-width: 50%;
   margin: 0 auto;
@@ -66,8 +67,24 @@ function App() {
                 푸터야
             </Footer>
         </>
-
     )
 }
 
-export default App
+
+// import Keyboard from './components/Keyboard/Keyboard';
+
+// import { KeyboardProvider } from './contexts/KeyboardContext';
+
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <KeyboardProvider>
+//         <Keyboard />
+//       </KeyboardProvider>
+//     </div>
+//   )
+// }
+
+
+export default App;
