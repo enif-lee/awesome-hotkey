@@ -12,7 +12,7 @@ const Row = (props) => (
             'position': 'relative',
             'overflow': 'hidden'
         }}
-        { ...props }
+        {...props}
     />
 )
 
@@ -20,9 +20,9 @@ const Row = (props) => (
 function KeyboardRow({ keycaps }) {
     return (
         <Row>
-            { keycaps.map((keycap, index) => (
-                <KeyboardKeycap keycap={ keycap } />
-            )) }
+            {keycaps.map((keycap, index) => (
+                <KeyboardKeycap keycap={keycap} key={index} />
+            ))}
         </Row>
     )
 }

@@ -1,26 +1,42 @@
-import React, { useReducer } from 'react'
+import React from 'react'
+
+/** @jsx jsx */
+import { jsx } from '@emotion/react'
 
 import KeyboardRow from './KeyboardRow'
 
 import { useKeyboardState, useKeyboardDispatch } from '../../contexts/KeyboardContext'
 
 
+const KeyboardElement = (props) => (
+    <div
+        css={{
+            display: 'inline-block',
+            margin: '24px',
+            padding: '8px 16px',
+            backgroundColor: '#F9F9FA'
+        }}
+        {...props}
+    />
+)
+
+
 function Keyboard() {
     const state = useKeyboardState()
     const dispatch = useKeyboardDispatch()
 
-    const separatedColumnsCountPerRows = [13, 14, 12, 10, 12, 5]
-    var column = 0
+    const separatedColumnsCountPerRows = [13, 14, 14, 13, 12, 5]
+    let renderedColumn = 0
 
     return (
-        <div>
-            { separatedColumnsCountPerRows.map((columnsCount, index) => (
+        <KeyboardElement>
+            {separatedColumnsCountPerRows.map((columnsCount, index) => (
                 <KeyboardRow
-                    key={ index }
-                    keycaps={ state.keycaps.slice(column, column += columnsCount) }
+                    keycaps={state.keycaps.slice(renderedColumn, renderedColumn += columnsCount)}
+                    key={index}
                 />
-            )) }
-        </div>
+            ))}
+        </KeyboardElement>
     )
 }
 

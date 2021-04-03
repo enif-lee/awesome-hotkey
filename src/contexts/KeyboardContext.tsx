@@ -1,19 +1,15 @@
 import React, { createContext, useContext, useReducer } from 'react'
 
+import KeycapType from '../utils/KeycapType'
+
 
 function keyboardReducer(state, action) {
     console.log(state, action)
 }
 
 const initialKeyboardState = {
-    keycaps: [
-        'ESC', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12',
-        '`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '+', 'Backspace',
-        'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', // TODO: \
-        'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', // TODO: '
-        'L Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'R Shift',
-        'L Ctrl', 'L Alt', 'Space', 'R Alt', 'R Ctrl'
-    ]
+    keycaps: Object.values(KeycapType),
+    activeKeycaps: [KeycapType.LCtrl, KeycapType.Z]
 }
 
 const KeyboardStateContext = createContext()
