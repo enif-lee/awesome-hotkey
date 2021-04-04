@@ -11,6 +11,12 @@ import MainContentPage from "./pages/main";
 import ToolTipsPage from "./pages/tool-tips-page";
 import ErrorPage from "./pages/errors/error";
 
+import HotkeyList from './components/HotKeyList/HotkeyList';
+import Keyboard from './components/Keyboard/Keyboard';
+
+import { HotkeyListProvider } from './contexts/HotkeyListContext';
+import { KeyboardProvider } from './contexts/KeyboardContext';
+
 
 const MainNav = styled(Nav)`
   min-width: 50%;
@@ -82,6 +88,9 @@ function App() {
 //       <KeyboardProvider>
 //         <Keyboard />
 //       </KeyboardProvider>
+//       <HotkeyListProvider>
+//         <HotkeyList />
+//       </HotkeyListProvider>
 //     </div>
 //   )
 // }

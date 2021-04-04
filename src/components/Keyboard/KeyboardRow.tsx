@@ -6,7 +6,7 @@ import { jsx } from '@emotion/react'
 import KeyboardKeycap from './KeyboardKeycap'
 
 
-const Row = (props) => (
+const RowElement = (props) => (
     <div
         css={{
             'position': 'relative',
@@ -19,11 +19,11 @@ const Row = (props) => (
 
 function KeyboardRow({ keycaps }) {
     return (
-        <Row>
+        <RowElement>
             {keycaps.map((keycap, index) => (
                 <KeyboardKeycap keycap={keycap} key={index} />
             ))}
-        </Row>
+        </RowElement>
     )
 }
 

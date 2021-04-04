@@ -5,7 +5,7 @@ import { jsx } from '@emotion/react'
 
 import KeyboardRow from './KeyboardRow'
 
-import { useKeyboardState, useKeyboardDispatch } from '../../contexts/KeyboardContext'
+import { useKeyboardState } from '../../contexts/KeyboardContext'
 
 
 const KeyboardElement = (props) => (
@@ -14,7 +14,8 @@ const KeyboardElement = (props) => (
             display: 'inline-block',
             margin: '24px',
             padding: '8px 16px',
-            backgroundColor: '#F9F9FA'
+            backgroundColor: '#F6F6F9',
+            boxShadow: '0 1px 4px #ECECEF'
         }}
         {...props}
     />
@@ -23,9 +24,8 @@ const KeyboardElement = (props) => (
 
 function Keyboard() {
     const state = useKeyboardState()
-    const dispatch = useKeyboardDispatch()
 
-    const separatedColumnsCountPerRows = [13, 14, 14, 13, 12, 5]
+    const separatedColumnsCountPerRows = [13, 14, 14, 13, 12, 7]
     let renderedColumn = 0
 
     return (

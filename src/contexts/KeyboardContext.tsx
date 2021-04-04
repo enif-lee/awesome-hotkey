@@ -3,18 +3,34 @@ import React, { createContext, useContext, useReducer } from 'react'
 import KeycapType from '../utils/KeycapType'
 
 
-function keyboardReducer(state, action) {
-    console.log(state, action)
-}
-
 const initialKeyboardState = {
     keycaps: Object.values(KeycapType),
-    activeKeycaps: [KeycapType.LCtrl, KeycapType.Z]
+    activedKeycaps: []
 }
 
 const KeyboardStateContext = createContext()
 const KeyboardDispatchContext = createContext()
 
+
+function keyboardReducer(state, action) {
+    console.log(state, action)
+
+    switch (action.type) {
+        case KeyboardDispatchType.ActivateHotkey:
+            return {
+                ...state,
+                activedKeycaps: action.keycaps
+            }
+
+        default:
+            return state
+    }
+}
+
+
+export enum KeyboardDispatchType {
+    ActivateHotkey = 'ACTIVATE_HOTKEY'
+}
 
 export function KeyboardProvider({ children }) {
     const [state, dispatch] = useReducer(keyboardReducer, initialKeyboardState)

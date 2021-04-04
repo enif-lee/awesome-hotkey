@@ -67,7 +67,9 @@ const enum KeycapType {
     RShift = 'RShift',
     LCtrl = 'LCtrl',
     LAlt = 'LAlt',
+    LCommand = 'LCommand',
     Space = 'Space',
+    RCommand = 'RCommand',
     RAlt = 'RAlt',
     RCtrl = 'RCtrl',
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
 /** @jsx jsx */
-import { css, cx, jsx } from '@emotion/react'
+import { css, jsx } from '@emotion/react'
 
-import { useKeyboardState, useKeyboardDispatch } from '../../contexts/KeyboardContext'
+import { KeyboardDispatchType, useKeyboardState, useKeyboardDispatch } from '../../contexts/KeyboardContext'
 import KeycapType from '../../utils/KeycapType'
 
 
@@ -14,10 +14,12 @@ const KeycapElement = (props) => (
             margin: '4px',
             backgroundColor: 'white',
             borderRadius: '8px',
-            boxShadow: props.isActive ? '0 0 4px #396EFF' : 'none',
+            boxShadow: props.isActive ? '0 0 4px #396EFF' : '0 1px 2px #ECECEF',
             color: props.isActive ? '#396EFF' : 'black',
             fontSize: '12px',
-            wordBreak: 'break-all'
+            fontWeight: props.isActive ? 'bold' : 'regular',
+            wordBreak: 'break-all',
+            transition: 'all 0.2s ease-out'
         }}
         {...props}
     />
@@ -55,6 +57,8 @@ const cssFromKeycapType = (keycap) => {
 
         case KeycapType.LCtrl:
         case KeycapType.LAlt:
+        case KeycapType.LCommand:
+        case KeycapType.RCommand:
         case KeycapType.RAlt:
         case KeycapType.RCtrl:
             return rectCSS(60, 48)
@@ -78,11 +82,20 @@ const rectCSS = (width, height) => (
 
 function KeyboardKeycap({ keycap }) {
     const state = useKeyboardState()
+    const dispatch = useKeyboardDispatch()
+
+    const onPress = () => {
+        dispatch({
+            type: KeyboardDispatchType.ActivateHotkey,
+            keycaps: [keycap]
+        })
+    }
 
     return (
         <KeycapElement
-            isActive={state.activeKeycaps.includes(keycap)}
-            style={cssFromKeycapType(keycap)}>
+            isActive={state.activedKeycaps.includes(keycap)}
+            style={cssFromKeycapType(keycap)}
+            onClick={onPress}>
             {keycap}
         </KeycapElement>
     )
