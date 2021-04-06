@@ -19,6 +19,7 @@ const KeycapElement = (props) => (
             fontSize: '12px',
             fontWeight: props.isActive ? 'bold' : 'regular',
             wordBreak: 'break-all',
+            cursor: 'pointer',
             transition: 'all 0.2s ease-out'
         }}
         {...props}

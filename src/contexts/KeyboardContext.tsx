@@ -19,7 +19,7 @@ function keyboardReducer(state, action) {
         case KeyboardDispatchType.ActivateHotkey:
             return {
                 ...state,
-                activedKeycaps: action.keycaps
+                activedKeycaps: [...state.activedKeycaps, ...action.keycaps]
             }
 
         default:
