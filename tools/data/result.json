@@ -1,0 +1,118 @@
+{
+  "programs": [
+    {
+      "code": "adobe.illustrator",
+      "name": null,
+      "description": null,
+      "version": null
+    },
+    {
+      "code": "adobe.photoshop",
+      "name": null,
+      "description": null,
+      "version": null
+    }
+  ],
+  "hotkeys": [
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Edit",
+        "Code",
+        "File"
+      ],
+      "description": {
+        "en": "아악",
+        "ko": "아악"
+      },
+      "key": {
+        "windows": "a+z",
+        "osx": "a+z"
+      }
+    },
+    {
+      "programCode": null,
+      "category": [],
+      "description": {
+        "en": null,
+        "ko": null
+      },
+      "key": {
+        "windows": null,
+        "osx": null
+      }
+    },
+    {
+      "programCode": null,
+      "category": [],
+      "description": {
+        "en": null,
+        "ko": null
+      },
+      "key": {
+        "windows": null,
+        "osx": null
+      }
+    },
+    {
+      "programCode": null,
+      "category": [],
+      "description": {
+        "en": null,
+        "ko": null
+      },
+      "key": {
+        "windows": null,
+        "osx": null
+      }
+    },
+    {
+      "programCode": null,
+      "category": [],
+      "description": {
+        "en": null,
+        "ko": null
+      },
+      "key": {
+        "windows": null,
+        "osx": null
+      }
+    },
+    {
+      "programCode": null,
+      "category": [],
+      "description": {
+        "en": null,
+        "ko": null
+      },
+      "key": {
+        "windows": null,
+        "osx": null
+      }
+    },
+    {
+      "programCode": null,
+      "category": [],
+      "description": {
+        "en": null,
+        "ko": null
+      },
+      "key": {
+        "windows": null,
+        "osx": null
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [],
+      "description": {
+        "en": null,
+        "ko": null
+      },
+      "key": {
+        "windows": null,
+        "osx": null
+      }
+    }
+  ]
+}

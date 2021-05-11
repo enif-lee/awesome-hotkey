@@ -4,10 +4,6 @@ import mkdirp from 'mkdirp';
 import fs from 'fs';
 import client from 'axios';
 
-interface ServerData {
-    skins: {name: string}[];
-}
-
 export function sheetByTitle(sheet: GoogleSpreadsheet, title: string): GoogleSpreadsheetWorksheet {
     for (let key in sheet.sheetsById) {
         if (sheet.sheetsById[key].title === title) {
@@ -46,49 +42,16 @@ export async function loadSheet(sheetId: string): Promise<GoogleSpreadsheet> {
     return await loadSheetWithCredential(sheetId, await import('../.secrets/credential.json'));
 }
 
-export async function getSpineJsonFromS3(spineID: string): Promise<ServerData> {
-    try {
-        const {data} = await client.request<ServerData>({
-            url: `https://vino-test-assets.s3.ap-northeast-2.amazonaws.com/resources/spines/${spineID}/${spineID}.json`,
-            method: 'GET',
-        });
-        return data;
-    } catch (e) {
-        debug(`FAILED TO FETCH ${spineID} spine type.`);
-        throw e;
-    }
-}
-
-export async function makeIdSetFromJson(ids: string[]): Promise<Set<string>> {
-    debug(`LOAD SPINE(${ids.join(', ')}) JSON FILE`);
-    const spines = await Promise.all(ids.map(getSpineJsonFromS3));
-    const skinNames = spines
-        .map((spine) => spine.skins)
-        .flat()
-        .map((skin) => skin.name);
-    debug('SUCCESS : EXTRACT SKIN NAMES FROM JSON FILES');
-    return new Set<string>(skinNames);
-}
-
-export function debug(message: string) {
-    console.log(message);
-}
-
+export const debug = console.log
 export const error = console.error;
 
-export type VinoMetadataObject = {
+export type MetadataObject = {
     [category: string]: any[];
-    units: {
-        unitId: string;
-        spineId: string;
-        category: string;
-        skin: string[];
-    }[];
 };
 
-export async function parseVinoSpreadSheet(doc: GoogleSpreadsheet): Promise<VinoMetadataObject> {
-    debug('VINO_GENERAL_SPREADSHEET_PARSER');
-    const result: VinoMetadataObject = {units: []};
+export async function parseSpreadSheet(doc: GoogleSpreadsheet): Promise<MetadataObject> {
+    debug('GENERAL_SPREADSHEET_PARSER');
+    const result: MetadataObject = {};
 
     const promises = [...sheetsBy(doc, (sheet) => !sheet.title.startsWith('#'))].map(async (worksheet) => {
         debug(`PROCESS SPREADSHEET : ${worksheet.title}`);
@@ -98,7 +61,7 @@ export async function parseVinoSpreadSheet(doc: GoogleSpreadsheet): Promise<Vino
         worksheet.headerValues = tempHeader;
 
         sheetDebug(`LOAD COLUMN VALUES`);
-        const header = await worksheet.getRows({offset: 8, limit: 1});
+        const header = await worksheet.getRows({offset: 0, limit: 1});
         worksheet.headerValues = tempHeader
             .map((tempColumn) => header[0][tempColumn])
             .filter((column) => column !== undefined);
@@ -110,7 +73,7 @@ export async function parseVinoSpreadSheet(doc: GoogleSpreadsheet): Promise<Vino
 
         sheetDebug(`LOAD DATA ROWS `);
         const rows = await worksheet.getRows({
-            offset: 9,
+            offset: 1,
             limit: worksheet.rowCount,
         });
         sheetDebug(`LOADED DATA ROWS(${worksheet.rowCount})`);
