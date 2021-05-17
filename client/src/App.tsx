@@ -1,9 +1,10 @@
-import './App.css'
 import 'rsuite/lib/styles/index.less';
-import {Content, Divider, Dropdown, FlexboxGrid, Footer, Header, Icon, Input, InputGroup, Nav, Navbar} from "rsuite";
+import './App.less'
+import 'rsuite/lib/styles/themes/dark/index.less'
+import {Content, Divider, Dropdown, FlexboxGrid, Footer, Header, Nav, Navbar} from "rsuite";
 import styled from "@emotion/styled";
 import {css} from "@emotion/css";
-import {Link, Route, Switch, useHistory} from "react-router-dom";
+import {Route, Switch, useHistory} from "react-router-dom";
 import ProgramMainPage from "./pages/program/program-main-page";
 import SettingPage from "./pages/settings";
 import MainContentPage from "./pages/main";
@@ -28,7 +29,8 @@ function App() {
                     <Navbar.Body>
                         <MainNav>
                             <Dropdown title="문서">
-                                <Dropdown.Item onSelect={() => history.push("/programs/office-word")}>word</Dropdown.Item>
+                                <Dropdown.Item
+                                    onSelect={() => history.push("/programs/office-word")}>word</Dropdown.Item>
                             </Dropdown>
                             <Dropdown title="개발툴 및 협업툴"><Dropdown.Item>Contact</Dropdown.Item></Dropdown>
                             <Dropdown title="UI 및 UX"><Dropdown.Item>Contact</Dropdown.Item></Dropdown>
@@ -47,7 +49,8 @@ function App() {
                 </Navbar>
             </Header>
             <Content>
-                <FlexboxGrid justify={"center"} align={"middle"} className={css`height: 600px; text-align: center;`}>
+                <FlexboxGrid justify={"center"} align={"middle"} className={css`height: 600px;
+                  text-align: center;`}>
                     <FlexboxGrid.Item colspan={16}>
                         <Switch>
                             <Route path="/" exact><MainContentPage/></Route>
