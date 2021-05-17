@@ -50,7 +50,7 @@ const ProgramMainPage: FC = observer(() => {
                                     <RowTitle>검색어로 찾기</RowTitle>
                                 </Col>
                                 <Col xs={18}>
-                                    <Link to={`${match.url}/search/keyboard`}>
+                                    <Link to={`${match.url}/search/category`}>
                                         <Dimmed />
                                     </Link>
                                 </Col>
@@ -61,7 +61,7 @@ const ProgramMainPage: FC = observer(() => {
                                     <RowTitle>키보드로 찾기</RowTitle>
                                 </Col>
                                 <Col xs={18}>
-                                    <Link to={`${match.url}/search/category`}>
+                                    <Link to={`${match.url}/search/keyboard`}>
                                         <Dimmed />
                                     </Link>
                                 </Col>
@@ -85,7 +85,14 @@ const ProgramMainPage: FC = observer(() => {
             </Route>
 
             <Route path={`${match.url}/search/category`}><KeySearchByCategoryPage/></Route>
-            <Route path={`${match.url}/search/keyboard`}><KeySearchByKeyboardPage/></Route>
+            
+            <Route path={`${match.url}/search/keyboard`}>
+                <KeySearchByKeyboardPage
+                    title={programCode}
+                    subtitle={programCode}
+                />
+            </Route>
+
             <Route path={`${match.url}/search/text`}>
                 <KeySearchByTextPage
                     title={programCode}

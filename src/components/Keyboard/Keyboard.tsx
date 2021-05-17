@@ -1,44 +1,37 @@
-import React from 'react'
+import {FC, useContext} from 'react'
+import styled from '@emotion/styled'
+import {observer} from 'mobx-react-lite'
 
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
-
-import KeyboardRow from './KeyboardRow'
-
-import { useKeyboardState } from '../../contexts/KeyboardContext'
+import KeyboardRow from './keyboard-row'
+import KeyboardStore from '../../stores/keyboard'
 
 
-const KeyboardElement = (props) => (
-    <div
-        css={{
-            display: 'inline-block',
-            margin: '24px',
-            padding: '8px 16px',
-            backgroundColor: '#F6F6F9',
-            boxShadow: '0 1px 4px #ECECEF'
-        }}
-        {...props}
-    />
-)
+const Wrapper = styled.div`
+    display: inline-block;
+    margin: 24px;
+    padding: 8px 16px;
+    background-color: #F6F6F9;
+    box-shadow: 0 1px 4px #ECECEF;
+`
 
 
-function Keyboard() {
-    const state = useKeyboardState()
+const Keyboard: FC = observer(() => {
+    const store = useContext(KeyboardStore)
 
     const separatedColumnsCountPerRows = [13, 14, 14, 13, 12, 7]
     let renderedColumn = 0
 
     return (
-        <KeyboardElement>
+        <Wrapper>
             {separatedColumnsCountPerRows.map((columnsCount, index) => (
                 <KeyboardRow
-                    keycaps={state.keycaps.slice(renderedColumn, renderedColumn += columnsCount)}
+                    keycaps={store.keycaps.slice(renderedColumn, renderedColumn += columnsCount)}
                     key={index}
                 />
             ))}
-        </KeyboardElement>
+        </Wrapper>
     )
-}
+})
 
 
 export default Keyboard
