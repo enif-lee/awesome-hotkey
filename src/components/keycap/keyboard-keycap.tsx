@@ -9,8 +9,6 @@ import KeyboardStore from '../../stores/keyboard'
 
 interface KeyboardKeycapProps {
     keycap: string
-    activeKeycaps: string[]
-    onSelectKeycap: (string) => void
 }
 
 
@@ -22,12 +20,6 @@ const Wrapper = styled.div`
     float: left;
     margin: 4px;
     padding: 1px;
-
-    // background-image: url();
-    // background-size: contain;
-    // background-position: center center;
-    // background-repeat: no-repeat;
-    // box-shadow: 0 1px 2px #ECECEF; // TODO: color
 
     .border {
         position: absolute;
@@ -61,11 +53,6 @@ const Wrapper = styled.div`
         word-break: break-all;
     }
 
-    &:hover {
-        cursor: pointer;
-        text-decoration: none;
-    }
-
     &.--active .border {
         background: linear-gradient(to right bottom, var(--yellow), var(--pink));
         filter: blur(2px);
@@ -78,6 +65,12 @@ const Wrapper = styled.div`
         font-weight: bold;
     }
 
+    // background-image: url();
+    // background-size: contain;
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // box-shadow: 0 1px 2px #ECECEF; // TODO: color
+
     // &.--active {
     //     box-shadow: 0 0 4px #396EFF; // TODO: color
     //     color: #396EFF; // TODO: color
@@ -89,18 +82,15 @@ const Wrapper = styled.div`
 const KeyboardKeycap: FC<KeyboardKeycapProps> = observer(props => {
     const store = useContext(KeyboardStore)
 
-    return (
-        <Wrapper
-            className={classNames({'--active': store.activedKeycaps.includes(props.keycap)})}
-            style={cssFromKeycapType(props.keycap)}
-            onClick={() => store.selectKeycap(props.keycap)}>
-            <div className="border"></div>
-            <div className="background"></div>
-            <div className="text">
-                {props.keycap}
-            </div>
-        </Wrapper>
-    )
+    return <Wrapper
+        className={classNames({'--active': store.activedKeycaps.includes(props.keycap)})}
+        style={cssFromKeycapType(props.keycap)}>
+        <div className="border"></div>
+        <div className="background"></div>
+        <div className="text">
+            {props.keycap}
+        </div>
+    </Wrapper>
 })
 
 

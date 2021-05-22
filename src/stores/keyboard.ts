@@ -30,7 +30,7 @@ class Keyboard {
         },
         {
             description: '실행 취소취소',
-            keycaps: [KeycapType.LCtrl, KeycapType.LShift, KeycapType.Z]
+            keycaps: [KeycapType.LCtrl, KeycapType.LShift, KeycapType.Z, KeycapType.X, KeycapType.C]
         },
         {
             description: '잘라내기',

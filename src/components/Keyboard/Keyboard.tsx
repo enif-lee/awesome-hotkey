@@ -8,8 +8,6 @@ import KeyboardStore from '../../stores/keyboard'
 
 const Wrapper = styled.div`
     display: inline-block;
-    margin: 24px;
-    padding: 8px 16px;
     background-color: #1E1F21; // TODO: color
     // background-color: #F6F6F9;
     // box-shadow: 0 1px 4px #ECECEF;
@@ -22,16 +20,14 @@ const Keyboard: FC = observer(() => {
     const separatedColumnsCountPerRows = [13, 14, 14, 13, 12, 7]
     let renderedColumn = 0
 
-    return (
-        <Wrapper>
-            {separatedColumnsCountPerRows.map((columnsCount, index) => (
-                <KeyboardRow
-                    keycaps={store.keycaps.slice(renderedColumn, renderedColumn += columnsCount)}
-                    key={index}
-                />
-            ))}
-        </Wrapper>
-    )
+    return <Wrapper>
+        {separatedColumnsCountPerRows.map((columnsCount, index) => (
+            <KeyboardRow
+                keycaps={store.keycaps.slice(renderedColumn, renderedColumn += columnsCount)}
+                key={index}
+            />
+        ))}
+    </Wrapper>
 })
 
 

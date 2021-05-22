@@ -1,7 +1,7 @@
 import {FC} from 'react'
 import styled from '@emotion/styled'
 
-import KeyboardKeycap from './keyboard-keycap'
+import KeyboardKeycap from '../keycap/keyboard-keycap'
 
 
 interface KeyboardRowProps {
