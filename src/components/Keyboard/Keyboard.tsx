@@ -10,8 +10,9 @@ const Wrapper = styled.div`
     display: inline-block;
     margin: 24px;
     padding: 8px 16px;
-    background-color: #F6F6F9;
-    box-shadow: 0 1px 4px #ECECEF;
+    background-color: #1E1F21; // TODO: color
+    // background-color: #F6F6F9;
+    // box-shadow: 0 1px 4px #ECECEF;
 `
 
 

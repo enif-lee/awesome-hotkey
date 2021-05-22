@@ -37,9 +37,16 @@ const BookmarkBtn = styled.a`
   background-image: url(${BookmarkedOff});
   background-size: contain;
   border-radius: 50%;
+  transition: transform 0.3s ease-out;
 
   &:hover {
     cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1.3);
+    transition: transform 0.2s ease;
   }
 
   &.--active {

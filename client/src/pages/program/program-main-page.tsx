@@ -10,6 +10,7 @@ import KeySearchByTextPage from './search/search-by-text';
 
 import ProgramMainHeader from '../../components/program/program-main-header'
 import CategoryGrid from '../../components/program/category-grid'
+import Keyboard from '../../components/keyboard/keyboard'
 
 import ProgramSearchStore from '../../stores/program-search'
 
@@ -85,7 +86,7 @@ const ProgramMainPage: FC = observer(() => {
             </Route>
 
             <Route path={`${match.url}/search/category`}><KeySearchByCategoryPage/></Route>
-            
+
             <Route path={`${match.url}/search/keyboard`}>
                 <KeySearchByKeyboardPage
                     title={programCode}

@@ -15,27 +15,74 @@ interface KeyboardKeycapProps {
 
 
 const Wrapper = styled.div`
+    --yellow: #FEFF3E;
+    --pink: #CD00FF;
+
+    position: relative;
     float: left;
     margin: 4px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px #ECECEF; // TODO: color
-    color: black;
-    font-size: 12px;
-    font-weight: regular;
-    word-break: break-all;
-    transition: all 0.2s ease-out;
+    padding: 1px;
+
+    // background-image: url();
+    // background-size: contain;
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // box-shadow: 0 1px 2px #ECECEF; // TODO: color
+
+    .border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #C4C4C4;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+
+    .background {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background-color: black;
+        transition: all 0.3s ease;
+    }
+
+    .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #C4C4C4;
+        font-size: 12px;
+        font-weight: regular;
+        word-break: break-all;
+    }
 
     &:hover {
         cursor: pointer;
         text-decoration: none;
     }
 
-    &.--active {
-        box-shadow: 0 0 4px #396EFF;
-        color: #396EFF; // TODO:
+    &.--active .border {
+        background: linear-gradient(to right bottom, var(--yellow), var(--pink));
+        filter: blur(2px);
+    }
+
+    &.--active .background {
+    }
+
+    &.--active .text {
         font-weight: bold;
     }
+
+    // &.--active {
+    //     box-shadow: 0 0 4px #396EFF; // TODO: color
+    //     color: #396EFF; // TODO: color
+    //     font-weight: bold;
+    // }
 `
 
 
@@ -47,7 +94,11 @@ const KeyboardKeycap: FC<KeyboardKeycapProps> = observer(props => {
             className={classNames({'--active': store.activedKeycaps.includes(props.keycap)})}
             style={cssFromKeycapType(props.keycap)}
             onClick={() => store.selectKeycap(props.keycap)}>
-            {props.keycap}
+            <div className="border"></div>
+            <div className="background"></div>
+            <div className="text">
+                {props.keycap}
+            </div>
         </Wrapper>
     )
 })
