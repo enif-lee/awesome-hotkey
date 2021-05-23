@@ -6,7 +6,7 @@ import SimpleKeycap from '../keycap/simple-keycap'
 
 
 interface KeycapListProps {
-    keycaps: string[]
+    keycaps: KeycapType[]
 }
 
 
@@ -32,16 +32,15 @@ const Wrapper = styled.div`
 `
 
 
-const KeycapList: FC<KeycapListProps> = observer(props => {
-    return <Wrapper>
+const KeycapList: FC<KeycapListProps> = observer(props => (
+    <Wrapper>
         {props.keycaps.map((keycap, index) => (
             <div className="keycap-wrapper">
                 <SimpleKeycap keycap={keycap} key={index} />
             </div>
         ))}
     </Wrapper>
-    
-})
+))
 
 
 export default KeycapList

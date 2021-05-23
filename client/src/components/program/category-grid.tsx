@@ -1,6 +1,7 @@
 import {FC} from 'react'
 import classNames from 'classnames'
 import styled from '@emotion/styled'
+import {observer} from 'mobx-react-lite'
 import {Grid, Row, Col} from 'rsuite'
 
 
@@ -22,10 +23,12 @@ const Btn = styled.a`
     box-shadow: inset 0 0 0 2px #3F4045; // TODO: color
     color: #606060; // TODO: color
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
+    transition: all 0.2s ease;
 
     &:hover {
         cursor: pointer;
+        color: #FFFFFF; // TODO: color
         text-decoration: none;
     }
 
@@ -37,7 +40,7 @@ const Btn = styled.a`
 `
 
 
-const CategoryGrid: FC<CategoryGridProps> = props => {
+const CategoryGrid: FC<CategoryGridProps> = observer(props => {
     return <Grid fluid>
         <Row>
             {props.categories.map((category, index) => (
@@ -51,7 +54,7 @@ const CategoryGrid: FC<CategoryGridProps> = props => {
             ))}
         </Row>
     </Grid>
-}
+})
 
 
 export default CategoryGrid

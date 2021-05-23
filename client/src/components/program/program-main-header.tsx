@@ -14,7 +14,7 @@ interface ProgramMainHeaderProps {
 
 
 const Header = styled.div`
-    margin: 60px 0;
+    padding: 60px 0;
     text-align: center;
 
     > * {
@@ -22,12 +22,13 @@ const Header = styled.div`
     }
 `
 
-const Title = styled.h2`
-    text-align: center;
+const Title = styled.div`
+    font-size: 40px;
+    font-weight: bold;
 `
 
-const Subtitle = styled.h6`
-    text-align: center;
+const Subtitle = styled.div`
+    font-size: 16px;
 `
 
 

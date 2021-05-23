@@ -1,16 +1,19 @@
 import {FC} from 'react'
 import classNames from 'classnames/bind'
 import styled from '@emotion/styled'
+import {Link, useRouteMatch} from 'react-router-dom'
 import {Row, Col} from 'rsuite'
+
+import TabModel from '../../models/tab-model'
 
 
 interface ProgramSearchHeaderProps {
-    tabIndex: number
-    onSelectTab: (number) => void
+    tabs: TabModel[]
+    selectedTabKey: string
 }
 
 
-const Tab = styled.a`
+const Tab = styled.div`
     display: inline-block;
     width: 100%;
     height: 40px;
@@ -19,8 +22,8 @@ const Tab = styled.a`
     background-color: #2B2D2F; // TODO: color
     box-shadow: inset 0 0 0 2px #3F4045; // TODO: color
     color: #606060; // TODO: color
-    font-size: 18px;
     text-align: center;
+    font-size: 16px;
     transition: all 0.2s ease;
 
     &:hover {
@@ -38,18 +41,18 @@ const Tab = styled.a`
 
 
 const ProgramSearchTabbar: FC<ProgramSearchHeaderProps> = props => {
-    const btnTitles: string[] = ['키워드 검색', '키보드 검색', '기능별 검색']
+    const match = useRouteMatch()
 
     return <Row gutter={16}>
-        {btnTitles.map((title, index) => {
-            return <Col xs={24 / btnTitles.length} key={index}>
-                <Tab
-                    className={classNames({'--active': index == props.tabIndex})}
-                    onClick={() => props.onSelectTab(index)}>
-                    {title}
-                </Tab>
+        {props.tabs.map((tab, index) => (
+            <Col xs={24 / props.tabs.length} key={index}>
+                <Link to={[match.url, tab.key].join('/')}>
+                    <Tab className={classNames({'--active': tab.key == props.selectedTabKey})}>
+                        {tab.title}
+                    </Tab>
+                </Link>
             </Col>
-        })}
+        ))}
     </Row>
 }
 

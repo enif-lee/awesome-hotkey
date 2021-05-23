@@ -53,7 +53,7 @@ const enum KeycapType {
     SemiColon = 'SemiColon',
     QuotationMark = 'QuotationMark',
     Enter = 'Enter',
-    LShift = 'LShift',
+    LShift = 'Shift',
     Z = 'Z',
     X = 'X',
     C = 'C',
@@ -64,14 +64,15 @@ const enum KeycapType {
     Comma = 'Comma',
     Period = 'Period',
     Slash = 'Slash',
-    RShift = 'RShift',
-    LCtrl = 'LCtrl',
-    LAlt = 'LAlt',
-    LCommand = 'LCommand',
+    RShift = 'Shift',
+    LCtrl = 'Ctrl',
+    LAlt = 'Alt',
+    LCommand = 'Command',
     Space = 'Space',
-    RCommand = 'RCommand',
-    RAlt = 'RAlt',
-    RCtrl = 'RCtrl',
+    RCommand = 'Command',
+    RAlt = 'Alt',
+    RCtrl = 'Ctrl',
+    Empty = ''
 }
 
 

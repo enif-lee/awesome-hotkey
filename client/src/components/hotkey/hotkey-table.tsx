@@ -4,13 +4,20 @@ import {observer} from 'mobx-react-lite'
 
 import HotkeyRow from './hotkey-row'
 
-import KeyboardStore from '../../stores/keyboard'
+import HotkeyModel from '../../models/hotkey-model'
+
+
+interface HotkeyTableProps {
+    hotkeys: HotkeyModel[]
+    selectedHotkeyIndex: number
+    onSelectHotkey: (number) => void
+}
 
 
 const Wrapper = styled.table`
     width: 100%;
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
 
     th, td {
         padding: 8px 24px;
@@ -19,26 +26,28 @@ const Wrapper = styled.table`
 `
 
 
-const HotkeyTable: FC = observer(() => {
-    const store = useContext(KeyboardStore)
+const HotkeyTable: FC<HotkeyTableProps> = observer(props => (
+    <Wrapper>
+        <thead>
+            <tr>
+                <th width="70%">Command</th>
+                <th width="30%">Shortcut</th>
+            </tr>
+        </thead>
 
-    return <Wrapper>
-        <tr>
-            <th width="70%">Command</th>
-            <th width="30%">Shortcut</th>
-        </tr>
-
-        {store.hotkeys.map((hotkey, index) => (
-            <HotkeyRow
-                description={hotkey.description}
-                keycaps={hotkey.keycaps}
-                isActive={index == store.activedHotkeyIndex}
-                onSelect={() => store.selectHotkey(index)}
-                key={index}
-            />
-        ))}
+        <tbody>
+            {props.hotkeys.map((hotkey, index) => (
+                <HotkeyRow
+                    description={hotkey.description}
+                    keycaps={hotkey.keycaps}
+                    isActived={index == props.selectedHotkeyIndex}
+                    onSelectHotkey={() => props.onSelectHotkey(index)}
+                    key={index}
+                />
+            ))}
+        </tbody>
     </Wrapper>
-})
+))
 
 
 export default HotkeyTable

@@ -7,9 +7,9 @@ import KeycapList from '../keyboard/keycap-list'
 
 interface HotkeyRowProps {
     description: string
-    keycaps: string[]
-    isActive: boolean
-    onSelect: () => void
+    keycaps: KeycapType[]
+    isActived: boolean
+    onSelectHotkey: () => void
 }
 
 
@@ -29,8 +29,8 @@ const Row = styled.tr`
 
 const HotkeyRow: FC<HotkeyRowProps> = props => (
     <Row
-        className={classNames({'--active': props.isActive})}
-        onClick={() => props.onSelect()}>
+        className={classNames({'--active': props.isActived})}
+        onClick={() => props.onSelectHotkey()}>
         <td>
             {props.description}
         </td>

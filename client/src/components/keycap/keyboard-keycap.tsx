@@ -3,12 +3,12 @@ import classNames from 'classnames/bind'
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
 
-import KeycapType from '../../utils/keycap-type'
-import KeyboardStore from '../../stores/keyboard'
+import KeycapType from '../../models/keycap-type'
 
 
 interface KeyboardKeycapProps {
-    keycap: string
+    keycap: KeycapType
+    isActived: boolean
 }
 
 
@@ -53,18 +53,27 @@ const Wrapper = styled.div`
     }
 `
 
+const Empty = styled.div`
+    position: relative;
+    float: left;
+    margin: 4px;
+`
+
 
 const KeyboardKeycap: FC<KeyboardKeycapProps> = observer(props => {
-    const store = useContext(KeyboardStore)
+    if (props.keycap == KeycapType.Empty) {
+        return <Empty style={cssFromKeycapType(props.keycap)} />
 
-    return <Wrapper
-        className={classNames({'--active': store.activedKeycaps.includes(props.keycap)})}
-        style={cssFromKeycapType(props.keycap)}>
-        <div className="border"></div>
-        <div className="background">
-            {props.keycap}
-        </div>
-    </Wrapper>
+    } else {
+        return <Wrapper
+            className={classNames({'--active': props.isActived})}
+            style={cssFromKeycapType(props.keycap)}>
+            <div className="border"></div>
+            <div className="background">
+                {props.keycap}
+            </div>
+        </Wrapper>
+    }
 })
 
 
@@ -107,6 +116,9 @@ const cssFromKeycapType = (keycap: string) => {
 
         case KeycapType.Space:
             return rectCSS(240, 48)
+
+        case KeycapType.Empty:
+            return rectCSS(16, 16)
 
         default:
             return rectCSS(48, 40)

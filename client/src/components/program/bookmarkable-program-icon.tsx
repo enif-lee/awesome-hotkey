@@ -24,7 +24,7 @@ const ProgramImg = styled.img`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: lightgray;
+  background-color: #FFFFFF11; // TODO: color
   border-radius: 24px;
 `
 
@@ -55,15 +55,15 @@ const BookmarkBtn = styled.a`
 `
 
 
-const BookmarkableProgramIcon: FC<BookmarkableProgramIconProps> = props => {
-    return <Wrapper>
+const BookmarkableProgramIcon: FC<BookmarkableProgramIconProps> = props => (
+    <Wrapper>
         <ProgramImg src={props.imgURL} />
         <BookmarkBtn
             className={classNames({'--active': props.isBookmarked})}
             onClick={() => props.onToggleBookmarked()}
         />
     </Wrapper>
-}
+)
 
 
 export default BookmarkableProgramIcon

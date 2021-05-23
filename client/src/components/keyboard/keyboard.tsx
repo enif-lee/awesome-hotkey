@@ -3,7 +3,13 @@ import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
 
 import KeyboardRow from './keyboard-row'
-import KeyboardStore from '../../stores/keyboard'
+
+import KeycapType from '../../models/keycap-type'
+
+
+interface KeyboardProps {
+    activedKeycaps: KeycapType[]
+}
 
 
 const Wrapper = styled.div`
@@ -13,16 +19,16 @@ const Wrapper = styled.div`
 `
 
 
-const Keyboard: FC = observer(() => {
-    const store = useContext(KeyboardStore)
-
-    const separatedColumnsCountPerRows = [13, 14, 14, 13, 12, 7]
-    let renderedColumn = 0
+const Keyboard: FC<KeyboardProps> = observer(props => {
+    const keycaps: KeycapType[] = Object.values(KeycapType)
+    const separatedColumnsCountPerRows: number = [13, 14, 14, 13, 12, 7]
+    let renderedColumn: number = 0
 
     return <Wrapper>
         {separatedColumnsCountPerRows.map((columnsCount, index) => (
             <KeyboardRow
-                keycaps={store.keycaps.slice(renderedColumn, renderedColumn += columnsCount)}
+                keycaps={keycaps.slice(renderedColumn, renderedColumn += columnsCount)}
+                activedKeycaps={props.activedKeycaps}
                 key={index}
             />
         ))}

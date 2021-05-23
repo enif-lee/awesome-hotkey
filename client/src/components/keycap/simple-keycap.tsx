@@ -15,11 +15,11 @@ const Wrapper = styled.div`
 `
 
 
-const SimpleKeycap: FC<SimpleKeycapProps> = props => {
-    return <Wrapper>
+const SimpleKeycap: FC<SimpleKeycapProps> = props => (
+    <Wrapper>
         {props.keycap}
     </Wrapper>
-}
+)
 
 
 export default SimpleKeycap
