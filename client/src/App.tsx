@@ -1,6 +1,6 @@
 import 'rsuite/lib/styles/index.less';
-import './App.less'
 import 'rsuite/lib/styles/themes/dark/index.less'
+import './App.less'
 import {Content, Divider, Dropdown, FlexboxGrid, Footer, Header, Nav, Navbar} from "rsuite";
 import styled from "@emotion/styled";
 import {css} from "@emotion/css";
