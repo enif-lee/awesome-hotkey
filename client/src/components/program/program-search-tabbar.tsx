@@ -21,9 +21,11 @@ const Tab = styled.a`
     color: #606060; // TODO: color
     font-size: 18px;
     text-align: center;
+    transition: all 0.2s ease;
 
     &:hover {
         cursor: pointer;
+        color: #FFFFFF; // TODO: color
         text-decoration: none;
     }
 

@@ -20,6 +20,8 @@ const Wrapper = styled.div`
     float: left;
     margin: 4px;
     padding: 1px;
+    background-color: #2B2D2F; // TODO: color
+    border-radius: 8px;
 
     .border {
         position: absolute;
@@ -27,9 +29,11 @@ const Wrapper = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background: #C4C4C4;
         border-radius: 8px;
-        transition: background 0.3s ease;
+        background: linear-gradient(to right bottom, var(--yellow), var(--pink));
+        filter: blur(2px);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
     }
 
     .background {
@@ -37,45 +41,16 @@ const Wrapper = styled.div`
         width: 100%;
         height: 100%;
         border-radius: 8px;
-        background-color: black;
-        transition: all 0.3s ease;
-    }
-
-    .text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        color: #C4C4C4;
+        background-color: #2B2D2F; // TODO: color
+        color: #FFFFFF; // TODO: color
         font-size: 12px;
-        font-weight: regular;
+        font-weight: bold;
         word-break: break-all;
     }
 
     &.--active .border {
-        background: linear-gradient(to right bottom, var(--yellow), var(--pink));
-        filter: blur(2px);
+        opacity: 1;
     }
-
-    &.--active .background {
-    }
-
-    &.--active .text {
-        font-weight: bold;
-    }
-
-    // background-image: url();
-    // background-size: contain;
-    // background-position: center center;
-    // background-repeat: no-repeat;
-    // box-shadow: 0 1px 2px #ECECEF; // TODO: color
-
-    // &.--active {
-    //     box-shadow: 0 0 4px #396EFF; // TODO: color
-    //     color: #396EFF; // TODO: color
-    //     font-weight: bold;
-    // }
 `
 
 
@@ -86,8 +61,7 @@ const KeyboardKeycap: FC<KeyboardKeycapProps> = observer(props => {
         className={classNames({'--active': store.activedKeycaps.includes(props.keycap)})}
         style={cssFromKeycapType(props.keycap)}>
         <div className="border"></div>
-        <div className="background"></div>
-        <div className="text">
+        <div className="background">
             {props.keycap}
         </div>
     </Wrapper>
@@ -143,7 +117,7 @@ const rectCSS = (width: number, height: number) => (
     {
         width: String(width) + 'px',
         height: String(height) + 'px',
-        lineHeight: String(height) + 'px'
+        lineHeight: String(height - 2) + 'px'
     }
 )
 

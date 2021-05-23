@@ -22,7 +22,7 @@ const Row = styled.tr`
     }
 
     &.--active {
-        background-color: #FFFFFF22; // TODO: color
+        background-color: #FFFFFF11; // TODO: color
     }
 `
 

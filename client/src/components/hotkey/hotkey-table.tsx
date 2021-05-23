@@ -9,8 +9,6 @@ import KeyboardStore from '../../stores/keyboard'
 
 const Wrapper = styled.table`
     width: 100%;
-    background-color: #1E1F21; // TODO: color
-    color: #FFFFFF; // TODO: color
     text-align: left;
     font-size: 18px;
 

@@ -15,8 +15,6 @@ const Wrapper = styled.div`
     overflow: hidden;
     left: -4px;
     line-height: 24px;
-    background-color: #1E1F21; // TODO: color
-    color: #FFFFFF;
 
     .keycap-wrapper {
         float: left;
@@ -28,21 +26,20 @@ const Wrapper = styled.div`
             float: left;
             margin-left: 8px;
             font-size: 14px;
+            font-weight: bold;
         }
     }
 `
 
 
 const KeycapList: FC<KeycapListProps> = observer(props => {
-    return (
-        <Wrapper>
-            {props.keycaps.map((keycap, index) => (
-                <div className="keycap-wrapper">
-                    <SimpleKeycap keycap={keycap} key={index} />
-                </div>
-            ))}
-        </Wrapper>
-    )
+    return <Wrapper>
+        {props.keycaps.map((keycap, index) => (
+            <div className="keycap-wrapper">
+                <SimpleKeycap keycap={keycap} key={index} />
+            </div>
+        ))}
+    </Wrapper>
     
 })
 

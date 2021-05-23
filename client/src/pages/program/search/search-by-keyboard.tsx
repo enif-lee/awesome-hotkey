@@ -40,10 +40,6 @@ const Wrapper = styled.div`
     }
 `
 
-const RowTitle = styled.h5`
-    text-align: left;
-`
-
 
 const KeySearchByKeyboardPage: FC<KeySearchByKeyboardPageProps> = observer(props => {
     const store = useContext(ProgramSearchStore)
@@ -64,7 +60,7 @@ const KeySearchByKeyboardPage: FC<KeySearchByKeyboardPageProps> = observer(props
         <Row className="flex-row">
             <Col xs={8}>
                 <div className="height-filled">
-                    <h5>키보드로 찾기</h5>
+                    <h4>키보드로 찾기</h4>
 
                     <div className="bottom-fixed">
                         <KeycapList keycaps={keyboardStore.activedKeycaps} />
