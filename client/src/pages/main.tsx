@@ -4,6 +4,7 @@ import {Icon, Input, InputGroup} from "rsuite";
 import InputGroupAddon from "rsuite/es/InputGroup/InputGroupAddon";
 import styled from "@emotion/styled";
 
+
 const MainTitle = styled.h1`
   font-size: 3rem;
 `
