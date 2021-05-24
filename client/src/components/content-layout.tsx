@@ -7,7 +7,6 @@ export type ContentLayoutProps = {
 }
 export const ContentLayout: FC<ContentLayoutProps> = ({shiftTop = false, children}) => {
     const className = css`
-      height: 600px;
       text-align: center;
       margin-top: ${shiftTop ? '0px' : '125px'};
     `;
