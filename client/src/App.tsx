@@ -11,10 +11,12 @@ import ToolTipsPage from "./pages/tool-tips-page";
 import ErrorPage from "./pages/errors/error";
 import {ContentLayout} from "./components/content-layout";
 import {NavBar} from "./components/main-nav-menu";
+import mainBg from "../assets/main_bg.svg";
+
 
 
 const MainBackground = styled.div`
-  background-image: url("../assets/main_bg.svg");
+  background-image: url(${mainBg});
 `
 
 function App() {
