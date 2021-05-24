@@ -3,6 +3,7 @@ import {Divider, Dropdown, Nav} from "rsuite";
 import {FC} from "react";
 import {useHistory, Link} from "react-router-dom";
 import {css} from "@emotion/css";
+import logo from '../../assets/logo.svg'
 
 const MainNavBar = styled.div`
   height: 125px;
@@ -43,7 +44,7 @@ export const NavBar: FC = () => {
     return <MainNavBar>
         <MainNav>
             <Link to={"/"}>
-                <img src="../../assets/logo.svg" className={css`width: 60px; height: 45px; margin-right: 120px;`} alt={"logo"}/>
+                <img src={logo} className={css`width: 60px; height: 45px; margin-right: 120px;`} alt={"logo"}/>
             </Link>
             <MenuDropDown title="문서">
                 <MenuDropDownItem

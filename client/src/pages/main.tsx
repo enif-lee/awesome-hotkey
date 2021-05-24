@@ -3,6 +3,7 @@ import {css} from "@emotion/css";
 import {Icon, Input, InputGroup} from "rsuite";
 import InputGroupAddon from "rsuite/es/InputGroup/InputGroupAddon";
 import styled from "@emotion/styled";
+import svg from '../../assets/logo.svg'
 
 const MainTitle = styled.h1`
   font-size: 3rem;
@@ -22,7 +23,7 @@ const logoCss = css`
 const MainContentPage: FC = props => {
 
     return <>
-        <img src="../../assets/logo.svg" alt={"logo"} className={logoCss}/>
+        <img src={svg} alt={"logo"} className={logoCss}/>
         <MainTitle>We'll find you a Hotkey.</MainTitle>
         <MainSubTitle>단축키를 사용하시면 업무효율을 200% 올려줄 수 있습니다!</MainSubTitle>
 
