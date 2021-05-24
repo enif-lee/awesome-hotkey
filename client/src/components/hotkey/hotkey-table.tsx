@@ -10,7 +10,7 @@ import HotkeyModel from '../../models/hotkey-model'
 interface HotkeyTableProps {
     hotkeys: HotkeyModel[]
     selectedHotkeyIndex: number
-    onSelectHotkey: (number) => void
+    onSelectHotkey?: (number) => void
 }
 
 
@@ -20,7 +20,7 @@ const Wrapper = styled.table`
     font-size: 16px;
 
     th, td {
-        padding: 8px 24px;
+        padding: 8px 20px;
         border-bottom: 1px solid #FFFFFF; // TODO: color
     }
 `
@@ -30,8 +30,8 @@ const HotkeyTable: FC<HotkeyTableProps> = observer(props => (
     <Wrapper>
         <thead>
             <tr>
-                <th width="70%">Command</th>
-                <th width="30%">Shortcut</th>
+                <th width="66.66%">Command</th>
+                <th width="33.33%">Shortcut</th>
             </tr>
         </thead>
 

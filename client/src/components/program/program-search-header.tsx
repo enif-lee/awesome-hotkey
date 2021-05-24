@@ -22,18 +22,18 @@ interface ProgramSearchHeaderProps {
 
 const Wrapper = styled.div`
     padding: 20px 0;
+    text-align: left;
 `
 
 const Title = styled.div`
-    text-align: left;
+    margin-top: -8px;
     font-size: 40px;
     font-weight: bold;
 `
 
 const Subtitle = styled.div`
-    margin-top: -8px;
+    margin-top: -4px;
     margin-bottom: 16px;
-    text-align: left;
     font-size: 16px;
 `
 
@@ -50,7 +50,7 @@ const ProgramSearchHeader: FC<ProgramSearchHeaderProps> = props => {
                     />
                 </Col>
 
-                <Col xs={16} lg={14}>
+                <Col xs={16}>
                     <Title>{props.title}</Title>
                     <Subtitle>{props.subtitle}</Subtitle>
                     <ProgramSearchTabbar

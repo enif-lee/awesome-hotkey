@@ -9,13 +9,13 @@ import BookmarkedOff from '../../assets/images/bookmarked-off.png'
 interface BookmarkableProgramIconProps {
     imgURL: string
     isBookmarked: boolean
-    onToggleBookmarked: () => void
+    onToggleBookmarked?: () => void
 }
 
 
 const Wrapper = styled.div`
-  position: relative;
   display: inline-block;
+  position: relative;
   width: 120px;
   height: 120px;
 `
@@ -24,8 +24,9 @@ const ProgramImg = styled.img`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #FFFFFF11; // TODO: color
   border-radius: 24px;
+  background-color: #FFFFFF11; // TODO: color
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) // TODO: color
 `
 
 const BookmarkBtn = styled.a`

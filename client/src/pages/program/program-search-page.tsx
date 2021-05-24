@@ -19,8 +19,11 @@ interface ProgramSearchPageProps {
 
 
 const Wrapper = styled.div`
+    width: 620px;
+    margin: 0 auto;
+
     > div {
-        margin: 60px 0;
+        margin: 48px 0;
     }
 
     .flex-row {
@@ -48,6 +51,11 @@ const RowTitle = styled.div`
     font-size: 20px;
 `
 
+const KeyboardWrapper = styled.div`
+    float: right;
+    margin-top: 8px;
+`
+
 
 const ProgramSearchPage: FC<ProgramSearchPageProps> = observer(props => {
     const store = useContext(ProgramSearchStore)
@@ -71,8 +79,8 @@ const ProgramSearchPage: FC<ProgramSearchPageProps> = observer(props => {
             />
         </Row>
 
-        <Row className="flex-row">
-            <Col xs={8}>
+        <Row gutter={0} className="flex-row">
+            <Col xs={6}>
                 <div className="height-filled">
                     <RowTitle>
                         {rowTitleFromTabKey()}
@@ -87,7 +95,7 @@ const ProgramSearchPage: FC<ProgramSearchPageProps> = observer(props => {
                     </Switch>
                 </div>
             </Col>
-            <Col xs={16}>
+            <Col xs={18}>
                 <Switch>
                     <Route path={`${match.url}/text`}>
                         <SimpleSearchBar
@@ -97,7 +105,9 @@ const ProgramSearchPage: FC<ProgramSearchPageProps> = observer(props => {
                     </Route>
 
                     <Route path={`${match.url}/keyboard`}>
-                        <Keyboard activedKeycaps={store.activedKeycaps} />
+                        <KeyboardWrapper>
+                            <Keyboard activedKeycaps={store.activedKeycaps} />
+                        </KeyboardWrapper>
                     </Route>
 
                     <Route path={`${match.url}/category`}>

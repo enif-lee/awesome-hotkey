@@ -4,6 +4,8 @@ import {observer} from 'mobx-react-lite'
 
 import SimpleKeycap from '../keycap/simple-keycap'
 
+import KeycapType from '../../models/keycap-type'
+
 
 interface KeycapListProps {
     keycaps: KeycapType[]
@@ -14,7 +16,7 @@ const Wrapper = styled.div`
     position: relative;
     overflow: hidden;
     left: -4px;
-    line-height: 24px;
+    line-height: 20px;
 
     .keycap-wrapper {
         float: left;

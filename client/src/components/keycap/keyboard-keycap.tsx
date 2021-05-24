@@ -18,10 +18,10 @@ const Wrapper = styled.div`
 
     position: relative;
     float: left;
-    margin: 4px;
+    margin: 2px;
     padding: 1px;
     background-color: #2B2D2F; // TODO: color
-    border-radius: 8px;
+    border-radius: 4px;
 
     .border {
         position: absolute;
@@ -29,9 +29,9 @@ const Wrapper = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        border-radius: 8px;
+        border-radius: 4px;
         background: linear-gradient(to right bottom, var(--yellow), var(--pink));
-        filter: blur(2px);
+        filter: blur(1px);
         opacity: 0;
         transition: all 0.3s ease-in-out;
     }
@@ -40,11 +40,10 @@ const Wrapper = styled.div`
         position: relative;
         width: 100%;
         height: 100%;
-        border-radius: 8px;
+        border-radius: 4px;
         background-color: #2B2D2F; // TODO: color
         color: #FFFFFF; // TODO: color
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 10px;
         word-break: break-all;
     }
 
@@ -79,6 +78,15 @@ const KeyboardKeycap: FC<KeyboardKeycapProps> = observer(props => {
 
 const cssFromKeycapType = (keycap: string) => {
     switch (keycap) {
+        case KeycapType.PrtSc:
+        case KeycapType.ScrollLock:
+        case KeycapType.PauseBreak:
+        case KeycapType.Insert:
+        case KeycapType.Home:
+        case KeycapType.PgUp:
+        case KeycapType.Del:
+        case KeycapType.End:
+        case KeycapType.PgDn:
         case KeycapType.Esc:
         case KeycapType.F1:
         case KeycapType.F2:
@@ -92,36 +100,38 @@ const cssFromKeycapType = (keycap: string) => {
         case KeycapType.F10:
         case KeycapType.F11:
         case KeycapType.F12:
-            return rectCSS(48, 24)
+            return rectCSS(28, 16)
 
         case KeycapType.Backspace:
         case KeycapType.Tab:
-            return rectCSS(80, 40)
+            return rectCSS(42, 25)
 
         case KeycapType.CapsLock:
         case KeycapType.Enter:
-            return rectCSS(92, 40)
+            return rectCSS(49, 25)
 
         case KeycapType.LShift:
         case KeycapType.RShift:
-            return rectCSS(120, 40)
+            return rectCSS(64, 25)
 
         case KeycapType.LCtrl:
         case KeycapType.LAlt:
+        case KeycapType.LOption:
+        case KeycapType.ROption:
+            return rectCSS(26, 30)
+
         case KeycapType.LCommand:
         case KeycapType.RCommand:
-        case KeycapType.RAlt:
-        case KeycapType.RCtrl:
-            return rectCSS(60, 48)
+            return rectCSS(34, 30)
 
         case KeycapType.Space:
-            return rectCSS(240, 48)
+            return rectCSS(148, 30)
 
         case KeycapType.Empty:
             return rectCSS(16, 16)
 
         default:
-            return rectCSS(48, 40)
+            return rectCSS(26, 25)
     }
 }
 

@@ -15,13 +15,18 @@ import ProgramSearchStore from '../../stores/program-search'
 
 
 const Wrapper = styled.div`
+    width: 620px;
+    margin: 0 auto;
+
     .row {
-        margin-bottom: 40px;
+        margin: 48px 0;
     }
 `
 
-const RowTitle = styled.h5`
+const RowTitle = styled.div`
+    line-height: 40px;
     text-align: left;
+    font-size: 16px;
 `
 
 const Dimmed = styled.div`
@@ -41,15 +46,17 @@ const ProgramMainPage: FC = observer(() => {
     return <Wrapper>
         <Switch>
             <Route path={match.url} exact>
-                <ProgramMainHeader
-                    iconImgURL={store.iconImgURL}
-                    isBookmarked={store.isBookmarked}
-                    title={store.title}
-                    subtitle={store.subtitle}
-                    onToggleBookmarked={store.toggleBookmarked}
-                />
-
                 <Grid fluid>
+                    <Row className="row">
+                        <ProgramMainHeader
+                            iconImgURL={store.iconImgURL}
+                            isBookmarked={store.isBookmarked}
+                            title={store.title}
+                            subtitle={store.subtitle}
+                            onToggleBookmarked={store.toggleBookmarked}
+                        />
+                    </Row>
+
                     <Row className="row">
                         <Col xs={6}>
                             <RowTitle>검색어로 찾기</RowTitle>

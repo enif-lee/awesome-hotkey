@@ -8,17 +8,18 @@ import {Grid, Row, Col} from 'rsuite'
 interface CategoryGridProps {
     categories: string[]
     selectedCategory: string
-    onSelectCategory: (string) => void
+    onSelectCategory?: (string) => void
 }
 
 
 const Btn = styled.a`
     display: inline-block;
     width: 100%;
-    height: 36px;
-    line-height: 36px;
-    margin-bottom: 10px;
-    border-radius: 18px;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border-radius: 16px;
     background-color: #2B2D2F; // TODO: color
     box-shadow: inset 0 0 0 2px #3F4045; // TODO: color
     color: #606060; // TODO: color

@@ -9,12 +9,12 @@ interface ProgramMainHeaderProps {
     isBookmarked: boolean
     title: string
     subtitle: string
-    onToggleBookmarked: () => void
+    onToggleBookmarked?: () => void
 }
 
 
 const Header = styled.div`
-    padding: 60px 0;
+    padding: 20px 0;
     text-align: center;
 
     > * {

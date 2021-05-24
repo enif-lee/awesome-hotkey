@@ -13,15 +13,12 @@ interface KeyboardProps {
 
 
 const Wrapper = styled.div`
-    display: inline-block;
-    // background-color: #F6F6F9;
-    // box-shadow: 0 1px 4px #ECECEF;
 `
 
 
 const Keyboard: FC<KeyboardProps> = observer(props => {
     const keycaps: KeycapType[] = Object.values(KeycapType)
-    const separatedColumnsCountPerRows: number = [13, 14, 14, 13, 12, 7]
+    const separatedColumnsCountPerRows: number = [9, 13, 14, 14, 13, 12, 7]
     let renderedColumn: number = 0
 
     return <Wrapper>

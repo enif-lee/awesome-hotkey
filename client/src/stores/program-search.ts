@@ -24,11 +24,11 @@ class ProgramSearch {
     // MARK: - Get
 
     public get title(): string {
-        return 'title'
+        return 'Photoshop'
     }
 
     public get subtitle(): string {
-        return 'subtitle'
+        return 'CC 2020'
     }
 
     public get iconImgURL(): string {
