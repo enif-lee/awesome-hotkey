@@ -1,5 +1,6 @@
 import 'rsuite/lib/styles/index.less';
 import 'rsuite/lib/styles/themes/dark/index.less'
+import './App.less'
 import {Content, Footer, Header} from "rsuite";
 import {Route, Switch} from "react-router-dom";
 import ProgramMainPage from "./pages/program/program-main-page";
@@ -10,6 +11,7 @@ import ErrorPage from "./pages/errors/error";
 import {ContentLayout} from "./components/content-layout";
 import {NavBar} from "./components/main-nav-menu";
 import {css} from "@emotion/css";
+import {PageFooter} from "./components/footertsx";
 
 function App() {
     return (
@@ -25,7 +27,7 @@ function App() {
                 </Switch>
             </Content>
             <Footer>
-                푸터야
+                <PageFooter/>
             </Footer>
         </>
 

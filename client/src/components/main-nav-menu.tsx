@@ -51,8 +51,8 @@ export const NavBar: FC = () => {
                 <MenuDropDownItem
                     onSelect={() => history.push("/programs/office-word")}>word</MenuDropDownItem>
             </MenuDropDown>
-            <MenuDropDown title="개발툴 및 협업툴"><MenuDropDownItem>Contact</MenuDropDownItem></MenuDropDown>
-            <MenuDropDown title="UI 및 UX"><MenuDropDownItem>Contact</MenuDropDownItem></MenuDropDown>
+            <MenuDropDown title="개발/협업"><MenuDropDownItem>Contact</MenuDropDownItem></MenuDropDown>
+            <MenuDropDown title="UI/UX"><MenuDropDownItem>Contact</MenuDropDownItem></MenuDropDown>
             <MenuDropDown title="그래픽디자인"><MenuDropDownItem>Contact</MenuDropDownItem></MenuDropDown>
             <MenuDropDown title="3D/AR"><MenuDropDownItem>Contact</MenuDropDownItem></MenuDropDown>
             <MenuDropDown title="사진"><MenuDropDownItem>Contact</MenuDropDownItem></MenuDropDown>
@@ -61,8 +61,8 @@ export const NavBar: FC = () => {
               height: 2rem;
               margin: .75rem 0.25rem;
             `}/>
-            <Nav.Item onSelect={() => history.push("/settings")}>관련 단축키 팁</Nav.Item>
-            <Nav.Item onSelect={() => history.push("/tool-tips")}>설정</Nav.Item>
+            <Nav.Item onSelect={() => history.push("/tool-tips")}>단축키 팁</Nav.Item>
+            <Nav.Item onSelect={() => history.push("/settings")}>설정</Nav.Item>
         </MainNav>
     </MainNavBar>;
 }

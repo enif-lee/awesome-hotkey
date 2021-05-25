@@ -12,6 +12,7 @@ import {css} from "@emotion/css";
 const MainBackground = styled.div`
   padding: 80px 0;
   background-image: url(${mainBgGd});
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -124,12 +125,13 @@ const RecommendProgramsComponentItemImg = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 12px;
+  margin-bottom: 0.5rem;
 `
 
 const RecommendProgramsComponentItem: FC = () => {
     return <Col lg={4} xs={8}>
         <RecommendProgramsComponentItemImg src="https://via.placeholder.com/100"/>
-        <p>프로그램 이름</p>
+        <p className={css`font-size: 0.75rem; margin-bottom: 0.75rem;`}>프로그램 이름</p>
     </Col>
 }
 
@@ -138,18 +140,28 @@ const RecommendProgramsComponent: FC = () => {
 
 
     return <>
-        <div className={css`width: 100%; padding: 0 60px;`}>
-            <p>자주 사용되는 프로그램</p>
-            <Grid fluid>
-                <Row>
-                    <RecommendProgramsComponentItem/>
-                    <RecommendProgramsComponentItem/>
-                    <RecommendProgramsComponentItem/>
-                    <RecommendProgramsComponentItem/>
-                    <RecommendProgramsComponentItem/>
-                    <RecommendProgramsComponentItem/>
-                </Row>
-            </Grid>
+        <div className={css`width: 100%; margin: 0 auto; padding-top: 60px; max-width: 900px;`}>
+            <FlexboxGrid justify={"center"} align={"middle"}>
+                <FlexboxGrid.Item colspan={2}>
+                    <Icon icon={"left"} size={"3x"} className={css`color: rgba(255, 255, 255, .25)`}/>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item colspan={20}>
+                    <Grid fluid>
+                        <Row>
+                            <p className={css`margin-bottom: 1rem; font-size: 1.25rem;`}>자주 사용되는 프로그램</p>
+                        </Row>
+                        <Row gutter={30}>
+                            <RecommendProgramsComponentItem/>
+                            <RecommendProgramsComponentItem/>
+                            <RecommendProgramsComponentItem/>
+                            <RecommendProgramsComponentItem/>
+                            <RecommendProgramsComponentItem/>
+                            <RecommendProgramsComponentItem/>
+                        </Row>
+                    </Grid>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item colspan={2}><Icon icon={"right"} size={"3x"} className={css`color: rgba(255, 255, 255, .25)`}/></FlexboxGrid.Item>
+            </FlexboxGrid>
         </div>
     </>
 }
@@ -199,6 +211,7 @@ const MainContentPage: FC = props => {
             </ContentLayout>
         </MainBackground>
         <ContentLayout shiftTop={true}>
+            <RecommendProgramsComponent/>
             <RecommendProgramsComponent/>
         </ContentLayout>
     </>
