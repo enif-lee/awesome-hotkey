@@ -1,6 +1,5 @@
 import 'rsuite/lib/styles/index.less';
 import 'rsuite/lib/styles/themes/dark/index.less'
-import './App.less'
 import {Content, Footer, Header} from "rsuite";
 import {Route, Switch} from "react-router-dom";
 import ProgramMainPage from "./pages/program/program-main-page";
