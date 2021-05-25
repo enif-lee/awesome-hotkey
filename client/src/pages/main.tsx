@@ -1,35 +1,23 @@
 import {FC, useEffect, useRef, useState} from "react"
-import {FlexboxGrid, Icon, Input, InputGroup, List} from "rsuite";
+import {Col, FlexboxGrid, Grid, Icon, Input, InputGroup, List, Row} from "rsuite";
 import InputGroupAddon from "rsuite/es/InputGroup/InputGroupAddon";
 import styled from "@emotion/styled";
 import svg from '../../assets/logo.svg'
 
-import mainBg from "../../assets/main_bg.svg";
 import mainBgGd from "../../assets/main_bg_gd.svg";
 import {ContentLayout} from "../components/content-layout";
+import {css} from "@emotion/css";
 
 
 const MainBackground = styled.div`
   padding: 80px 0;
-  //background-image: url(${mainBg});
+  background-image: url(${mainBgGd});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1000;
   height: 670px;
-  position: relative;
-  
-  &::before {
-    background-image: url(${mainBgGd});
-    background-position: center;
-    background-size: cover;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    position: absolute;
-    content: '';
-  }
+  position: relative; // don't remove this, for applying search bar z-index
 `
 
 
@@ -79,13 +67,13 @@ const SelectedInputGroup = styled.div`
 const RecentSearchList = styled.div`
   margin: 0 20px 20px 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  
+
   .sub-title {
     text-align: left;
     color: #606060;
     font-size: 12px;
     margin: 12px 0;
-    
+
   }
 
   .search-item-icon {
@@ -104,7 +92,7 @@ const RecentSearchList = styled.div`
 `
 
 const SearchList = styled(List)`
-    box-shadow: none;
+  box-shadow: none;
 `
 
 const SearchListItem = styled(List.Item)`
@@ -112,14 +100,14 @@ const SearchListItem = styled(List.Item)`
   background: rgba(0, 0, 0, 0);
   border: 0 !important;
   box-shadow: none;
-  
+
   &:hover {
     font-weight: bold;
     cursor: pointer;
   }
 `
 
-const SearchEntry : FC<{
+const SearchEntry: FC<{
     icon: JSX.Element,
     programName: string,
     time: string
@@ -131,13 +119,48 @@ const SearchEntry : FC<{
     </FlexboxGrid>;
 }
 
+
+const RecommendProgramsComponentItemImg = styled.img`
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+`
+
+const RecommendProgramsComponentItem: FC = () => {
+    return <Col lg={4} xs={8}>
+        <RecommendProgramsComponentItemImg src="https://via.placeholder.com/100"/>
+        <p>프로그램 이름</p>
+    </Col>
+}
+
+
+const RecommendProgramsComponent: FC = () => {
+
+
+    return <>
+        <div className={css`width: 100%; padding: 0 60px;`}>
+            <p>자주 사용되는 프로그램</p>
+            <Grid fluid>
+                <Row>
+                    <RecommendProgramsComponentItem/>
+                    <RecommendProgramsComponentItem/>
+                    <RecommendProgramsComponentItem/>
+                    <RecommendProgramsComponentItem/>
+                    <RecommendProgramsComponentItem/>
+                    <RecommendProgramsComponentItem/>
+                </Row>
+            </Grid>
+        </div>
+    </>
+}
+
 const MainContentPage: FC = props => {
 
     const recentSearch = [
-        {program: 'A', time:'2021.05.12'},
-        {program: 'B', time:'2021.05.12'},
-        {program: 'C', time:'2021.05.12'},
-        {program: 'D', time:'2021.05.12'},
+        {program: 'A', time: '2021.05.12'},
+        {program: 'B', time: '2021.05.12'},
+        {program: 'C', time: '2021.05.12'},
+        {program: 'D', time: '2021.05.12'},
     ]
 
     const [focused, setFocus] = useState(false);
@@ -148,7 +171,6 @@ const MainContentPage: FC = props => {
         inputRef.onfocus = () => setFocus(true);
         inputRef.onblur = () => setFocus(false);
     }, [])
-
 
 
     return <>
@@ -166,7 +188,9 @@ const MainContentPage: FC = props => {
                     {focused && <RecentSearchList>
                         <p className="sub-title">최근 검색한 툴</p>
                         <SearchList>
-                            {recentSearch.map(recent => <SearchListItem><SearchEntry icon={<Icon icon={"clock-o"}/>} programName={recent.program} time={recent.time}/></SearchListItem>)}
+                            {recentSearch.map(recent => <SearchListItem><SearchEntry icon={<Icon icon={"clock-o"}/>}
+                                                                                     programName={recent.program}
+                                                                                     time={recent.time}/></SearchListItem>)}
                         </SearchList>
                     </RecentSearchList>}
                 </SelectedInputGroup>
@@ -175,7 +199,7 @@ const MainContentPage: FC = props => {
             </ContentLayout>
         </MainBackground>
         <ContentLayout shiftTop={true}>
-            {'하이'}
+            <RecommendProgramsComponent/>
         </ContentLayout>
     </>
 }
