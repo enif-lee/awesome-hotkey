@@ -166,6 +166,31 @@ const RecommendProgramsComponent: FC = () => {
     </>
 }
 
+
+const ProgramCategoryCard: FC = () => {
+    return <div className={css`margin: 1.5rem 0.5rem; padding: 1.5rem; background-color: #101011; border: 1px solid rgba(255, 255, 255, .1)`}>
+        <h5 className={css`margin-bottom: 12px; text-align: left;`}>문서</h5>
+        <Grid fluid>
+            <Row className={css`margin-bottom: 12px;`}>
+                <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
+                <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
+                <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
+            </Row>
+            <Row className={css`margin-bottom: 12px;`}>
+                <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
+                <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
+            </Row>
+        </Grid>
+    </div>
+}
+const ProgramCategoryCardColumn: FC = () => {
+    return  <Col xs={24} smPush={2} sm={20} mdPush={4} md={16} lgPush={0} lg={8}>
+        <ProgramCategoryCard/>
+        <ProgramCategoryCard/>
+        <ProgramCategoryCard/>
+    </Col>
+}
+
 const MainContentPage: FC = props => {
 
     const recentSearch = [
@@ -213,6 +238,27 @@ const MainContentPage: FC = props => {
         <ContentLayout shiftTop={true}>
             <RecommendProgramsComponent/>
             <RecommendProgramsComponent/>
+        </ContentLayout>
+        <div className={css`height: 90px`}/>
+        <ContentLayout shiftTop={true}>
+            <Grid fluid>
+                <Row>
+                    <ProgramCategoryCardColumn/>
+                    <ProgramCategoryCardColumn/>
+                    <ProgramCategoryCardColumn/>
+                </Row>
+            </Grid>
+
+            <div>
+                <h4>관련 단축키 팁</h4>
+                <Grid fluid>
+                    <Row>
+                        <Col lg={8}>1</Col>
+                        <Col lg={8}>1</Col>
+                        <Col lg={8}>1</Col>
+                    </Row>
+                </Grid>
+            </div>
         </ContentLayout>
     </>
 }
