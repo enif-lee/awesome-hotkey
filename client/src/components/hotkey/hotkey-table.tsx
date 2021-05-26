@@ -9,7 +9,6 @@ import HotkeyModel from '../../models/hotkey-model'
 
 interface HotkeyTableProps {
     hotkeys: HotkeyModel[]
-    selectedHotkeyIndex: number
     onSelectHotkey?: (number) => void
 }
 
@@ -40,7 +39,6 @@ const HotkeyTable: FC<HotkeyTableProps> = observer(props => (
                 <HotkeyRow
                     description={hotkey.description}
                     keycaps={hotkey.keycaps}
-                    isActived={index == props.selectedHotkeyIndex}
                     onSelectHotkey={() => props.onSelectHotkey(index)}
                     key={index}
                 />

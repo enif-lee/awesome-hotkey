@@ -123,7 +123,6 @@ const ProgramSearchPage: FC = observer(() => {
         <Row>
             <HotkeyTable
                 hotkeys={store.filteredHotkeys(tabKeyFromLocation())}
-                selectedHotkeyIndex={store.selectedHotkeyIndex}
                 onSelectHotkey={store.selectHotkey}
             />
         </Row>

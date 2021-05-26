@@ -10,7 +10,6 @@ import KeycapType from '../../models/keycap-type'
 interface HotkeyRowProps {
     description: string
     keycaps: KeycapType[]
-    isActived: boolean
     onSelectHotkey?: () => void
 }
 
@@ -22,17 +21,11 @@ const Wrapper = styled.tr`
         cursor: pointer;
         background-color: #FFFFFF11; // TODO: color
     }
-
-    &.--active {
-        background-color: #FFFFFF11; // TODO: color
-    }
 `
 
 
 const HotkeyRow: FC<HotkeyRowProps> = props => (
-    <Wrapper
-        className={classNames({'--active': props.isActived})}
-        onClick={() => props.onSelectHotkey()}>
+    <Wrapper onClick={() => props.onSelectHotkey()}>
         <td>
             {props.description}
         </td>
