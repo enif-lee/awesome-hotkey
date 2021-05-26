@@ -14,10 +14,6 @@ import SimpleSearchBar from '../../components/search/simple-search-bar'
 import ProgramSearchStore from '../../stores/program-search'
 
 
-interface ProgramSearchPageProps {
-}
-
-
 const Wrapper = styled.div`
     width: 620px;
     margin: 0 auto;
@@ -57,7 +53,7 @@ const KeyboardWrapper = styled.div`
 `
 
 
-const ProgramSearchPage: FC<ProgramSearchPageProps> = observer(props => {
+const ProgramSearchPage: FC = observer(() => {
     const store = useContext(ProgramSearchStore)
 
     const match = useRouteMatch()

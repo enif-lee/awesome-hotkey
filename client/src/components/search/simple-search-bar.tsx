@@ -7,7 +7,7 @@ import Search from '../../assets/images/search.png'
 
 interface SimpleSearchBarProps {
     placeholder: string
-    onInputText?: (string) => void
+    onInputText: (string) => void
 }
 
 

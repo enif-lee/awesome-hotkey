@@ -4,16 +4,18 @@ import styled from '@emotion/styled'
 
 import KeycapList from '../keyboard/keycap-list'
 
+import KeycapType from '../../models/keycap-type'
+
 
 interface HotkeyRowProps {
     description: string
     keycaps: KeycapType[]
     isActived: boolean
-    onSelectHotkey: () => void
+    onSelectHotkey?: () => void
 }
 
 
-const Row = styled.tr`
+const Wrapper = styled.tr`
     transition: background-color 0.3s ease;
 
     &:hover {
@@ -28,7 +30,7 @@ const Row = styled.tr`
 
 
 const HotkeyRow: FC<HotkeyRowProps> = props => (
-    <Row
+    <Wrapper
         className={classNames({'--active': props.isActived})}
         onClick={() => props.onSelectHotkey()}>
         <td>
@@ -37,7 +39,7 @@ const HotkeyRow: FC<HotkeyRowProps> = props => (
         <td>
             <KeycapList keycaps={props.keycaps} />
         </td>
-    </Row>
+    </Wrapper>
 )
 
 

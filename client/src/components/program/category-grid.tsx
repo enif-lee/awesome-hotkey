@@ -41,8 +41,8 @@ const Btn = styled.a`
 `
 
 
-const CategoryGrid: FC<CategoryGridProps> = observer(props => {
-    return <Grid fluid>
+const CategoryGrid: FC<CategoryGridProps> = observer(props => (
+    <Grid fluid>
         <Row>
             {props.categories.map((category, index) => (
                 <Col xs={6} key={index}>
@@ -55,7 +55,7 @@ const CategoryGrid: FC<CategoryGridProps> = observer(props => {
             ))}
         </Row>
     </Grid>
-})
+))
 
 
 export default CategoryGrid

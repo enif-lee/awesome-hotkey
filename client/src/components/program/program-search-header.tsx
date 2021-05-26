@@ -38,8 +38,8 @@ const Subtitle = styled.div`
 `
 
 
-const ProgramSearchHeader: FC<ProgramSearchHeaderProps> = props => {
-    return <Wrapper>
+const ProgramSearchHeader: FC<ProgramSearchHeaderProps> = props => (
+    <Wrapper>
         <Grid fluid>
             <Row>
                 <Col xs={8}>
@@ -61,7 +61,7 @@ const ProgramSearchHeader: FC<ProgramSearchHeaderProps> = props => {
             </Row>
         </Grid>
     </Wrapper>
-}
+)
 
 
 export default ProgramSearchHeader

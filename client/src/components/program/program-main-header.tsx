@@ -13,7 +13,7 @@ interface ProgramMainHeaderProps {
 }
 
 
-const Header = styled.div`
+const Wrapper = styled.div`
     padding: 20px 0;
     text-align: center;
 

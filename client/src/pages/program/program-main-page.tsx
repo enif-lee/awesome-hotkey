@@ -29,13 +29,6 @@ const RowTitle = styled.div`
     font-size: 16px;
 `
 
-const Dimmed = styled.div`
-    width: 100%;
-    height: 200px;
-    margin-bottom: 20px;
-    background-color: lightgray;
-`
-
 
 const ProgramMainPage: FC = observer(() => {
     const store = useContext(ProgramSearchStore)

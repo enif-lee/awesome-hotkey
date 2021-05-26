@@ -62,17 +62,16 @@ const Empty = styled.div`
 const KeyboardKeycap: FC<KeyboardKeycapProps> = observer(props => {
     if (props.keycap == KeycapType.Empty) {
         return <Empty style={cssFromKeycapType(props.keycap)} />
-
-    } else {
-        return <Wrapper
-            className={classNames({'--active': props.isActived})}
-            style={cssFromKeycapType(props.keycap)}>
-            <div className="border"></div>
-            <div className="background">
-                {props.keycap}
-            </div>
-        </Wrapper>
     }
+
+    return <Wrapper
+        className={classNames({'--active': props.isActived})}
+        style={cssFromKeycapType(props.keycap)}>
+        <div className="border"></div>
+        <div className="background">
+            {props.keycap}
+        </div>
+    </Wrapper>
 })
 
 
