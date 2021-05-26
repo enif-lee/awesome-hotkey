@@ -36,6 +36,8 @@ const ProgramMainPage: FC = observer(() => {
     const match = useRouteMatch()
     const {programCode} = useParams<{programCode: string}>()
 
+    store.setProgramCode(programCode)
+
     return <Wrapper>
         <Switch>
             <Route path={match.url} exact>
@@ -88,7 +90,9 @@ const ProgramMainPage: FC = observer(() => {
                 </Grid>
             </Route>
 
-            <Route path={`${match.url}/search`}><ProgramSearchPage /></Route>
+            <Route path={`/programs/:programCode/search`}>
+                <ProgramSearchPage />
+            </Route>
         </Switch>
     </Wrapper>
 })

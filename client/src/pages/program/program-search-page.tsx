@@ -2,7 +2,7 @@ import {FC, useContext} from 'react'
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
 import {Row, Col} from 'rsuite'
-import {Route, Switch, useRouteMatch} from 'react-router-dom'
+import {Route, Switch, useRouteMatch, useParams} from 'react-router-dom'
 
 import CategoryGrid from '../../components/program/category-grid'
 import HotkeyTable from '../../components/hotkey/hotkey-table'
@@ -57,6 +57,9 @@ const ProgramSearchPage: FC = observer(() => {
     const store = useContext(ProgramSearchStore)
 
     const match = useRouteMatch()
+    const {programCode} = useParams<{programCode: string}>()
+
+    store.setProgramCode(programCode)
 
     return <Wrapper>
         <Row>

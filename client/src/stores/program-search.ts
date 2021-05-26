@@ -10,6 +10,8 @@ const CategoryAll: string = 'All'
 
 class ProgramSearch {
 
+    private _programCode: string = ''
+
     private _isBookmarked: boolean = false
     private _searchingText: string = ''
     private _selectedCategory: string = ''
@@ -107,8 +109,15 @@ class ProgramSearch {
 
     // MARK: - Set
 
+    public setProgramCode = (code: string) => {
+        this._programCode = code
+    }
+
     public toggleBookmarked = () => {
         this._isBookmarked = !this._isBookmarked
+
+        // TODO: Bookmark
+        console.log(this._programCode, this._isBookmarked)
     }
 
     public searchText = (text: string) => {
