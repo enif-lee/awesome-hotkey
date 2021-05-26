@@ -13,6 +13,7 @@ import {NavBar} from "./components/main-nav-menu";
 import {css} from "@emotion/css";
 import {PageFooter} from "./components/footertsx";
 
+
 function App() {
     return (
         <div className={css`min-height: calc(100vh);
@@ -40,4 +41,5 @@ function App() {
     )
 }
 
-export default App
+
+export default App;
