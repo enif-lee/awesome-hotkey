@@ -6,7 +6,7 @@ import {css} from "@emotion/css";
 import logo from '../../assets/logo.svg'
 
 const MainNavBar = styled.div`
-  z-index: 9999999;
+  z-index: 1010;
   height: 125px;
   background-color: rgba(0, 0, 0, 0) !important;
   width: 100%;
