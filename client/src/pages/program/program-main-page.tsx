@@ -58,7 +58,10 @@ const ProgramMainPage: FC = observer(() => {
                         </Col>
                         <Col xs={18}>
                             <Link to={`${match.url}/search/text`}>
-                                <SimpleSearchBar placeholder="검색하실 기능 또는 단축키를 입력하세요 :)" />
+                                <SimpleSearchBar
+                                    placeholder="검색하실 기능 또는 단축키를 입력하세요 :)"
+                                    onInputText={store.searchText}
+                                />
                             </Link>
                         </Col>
                     </Row>
@@ -83,6 +86,7 @@ const ProgramMainPage: FC = observer(() => {
                                 <CategoryGrid
                                     categories={store.categories}
                                     selectedCategory={store.selectedCategory}
+                                    onSelectCategory={store.selectCategory}
                                 />
                             </Link>
                         </Col>

@@ -1,4 +1,4 @@
-const enum KeycapType {
+enum KeycapType {
     PrtSc = 'PrtSc',
     ScrollLock = 'ScrollLock',
     PauseBreak = 'PauseBreak',

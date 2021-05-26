@@ -47,7 +47,7 @@ const ProgramSearchTabbar: FC<ProgramSearchHeaderProps> = props => {
         {props.tabs.map((tab, index) => (
             <Col xs={24 / props.tabs.length} key={index}>
                 <Link to={[match.url, tab.key].join('/')}>
-                    <Tab className={classNames({'--active': tab.key == props.selectedTabKey})}>
+                    <Tab className={classNames({'--active': tab.key === props.selectedTabKey})}>
                         {tab.title}
                     </Tab>
                 </Link>

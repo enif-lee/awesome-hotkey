@@ -9,7 +9,7 @@ interface ProgramMainHeaderProps {
     isBookmarked: boolean
     title: string
     subtitle: string
-    onToggleBookmarked?: () => void
+    onToggleBookmarked: () => void
 }
 
 

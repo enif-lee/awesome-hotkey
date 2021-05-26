@@ -91,7 +91,7 @@ class ProgramSearch {
         return this._selectedCategory
     }
     
-    public filteredHotkeys = (tab: string) => {
+    public filteredHotkeys(tab: string): HotkeyModel[] {
         switch(tab) {
             case 'text':
                 return this.hotkeys
@@ -103,6 +103,9 @@ class ProgramSearch {
             case 'category':
                 return this.hotkeys
                     .filter((hotkey) => this._selectedCategory === '' || hotkey.categories.includes(this._selectedCategory))
+
+            default:
+                return []
         }
     }
 

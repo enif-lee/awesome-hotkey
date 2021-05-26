@@ -1,4 +1,4 @@
-import {FC, useContext} from 'react'
+import {FC} from 'react'
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
 
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 
 const Keyboard: FC<KeyboardProps> = observer(props => {
     const keycaps: KeycapType[] = Object.values(KeycapType)
-    const separatedColumnsCountPerRows: number = [9, 13, 14, 14, 13, 12, 7]
+    const separatedColumnsCountPerRows: number[] = [9, 13, 14, 14, 13, 12, 7]
     let renderedColumn: number = 0
 
     return <Wrapper>

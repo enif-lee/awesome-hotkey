@@ -8,7 +8,7 @@ import {Grid, Row, Col} from 'rsuite'
 interface CategoryGridProps {
     categories: string[]
     selectedCategory: string
-    onSelectCategory?: (string) => void
+    onSelectCategory: (category: string) => void
 }
 
 
@@ -47,7 +47,7 @@ const CategoryGrid: FC<CategoryGridProps> = observer(props => (
             {props.categories.map((category, index) => (
                 <Col xs={6} key={index}>
                     <Btn
-                        className={classNames({'--active': category == props.selectedCategory})}
+                        className={classNames({'--active': category === props.selectedCategory})}
                         onClick={() => props.onSelectCategory(category)}>
                         {category}
                     </Btn>

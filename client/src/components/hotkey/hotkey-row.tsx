@@ -25,7 +25,7 @@ const Wrapper = styled.tr`
 
 
 const HotkeyRow: FC<HotkeyRowProps> = props => (
-    <Wrapper onClick={() => props.onSelectHotkey()}>
+    <Wrapper onClick={props.onSelectHotkey}>
         <td>
             {props.description}
         </td>

@@ -130,13 +130,13 @@ const ProgramSearchPage: FC = observer(() => {
 })
 
 
-const tabKeyFromLocation = () => {
+function tabKeyFromLocation(): string {
     const components: string[] = location.pathname.split('/')
     
     return components[components.length - 1]
 }
 
-const rowTitleFromTabKey = () => {
+function rowTitleFromTabKey(): string {
     switch(tabKeyFromLocation()) {
         case 'text':
             return '검색어로 찾기'
@@ -146,6 +146,9 @@ const rowTitleFromTabKey = () => {
 
         case 'category':
             return '분류별로 찾기'
+
+        default:
+            return ''
     }
 }
 

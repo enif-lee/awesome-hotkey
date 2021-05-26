@@ -1,4 +1,5 @@
 import {FC} from 'react'
+import {css} from '@emotion/css'
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
 
@@ -9,7 +10,7 @@ import HotkeyModel from '../../models/hotkey-model'
 
 interface HotkeyTableProps {
     hotkeys: HotkeyModel[]
-    onSelectHotkey?: (number) => void
+    onSelectHotkey: (index: number) => void
 }
 
 
@@ -29,8 +30,8 @@ const HotkeyTable: FC<HotkeyTableProps> = observer(props => (
     <Wrapper>
         <thead>
             <tr>
-                <th width="66.66%">Command</th>
-                <th width="33.33%">Shortcut</th>
+                <th className={css`width: 66.66%`}>Command</th>
+                <th className={css`width: 33.33%`}>Shortcut</th>
             </tr>
         </thead>
 
