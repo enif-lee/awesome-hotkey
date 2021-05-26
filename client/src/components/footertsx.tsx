@@ -6,7 +6,7 @@ import footerLogo from "../../assets/footer-logo.svg"
 
 
 const FooterLayout = styled.div`
-  background-color: #1A1A1A
+  background-color: #1A1A1A;
 `
 
 

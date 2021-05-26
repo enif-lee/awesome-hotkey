@@ -5,7 +5,6 @@ import styled from "@emotion/styled";
 import svg from '../../assets/logo.svg'
 
 import mainBgGd from "../../assets/main_bg_gd.svg";
-import {ContentLayout} from "../components/content-layout";
 import {css} from "@emotion/css";
 
 
@@ -20,7 +19,6 @@ const MainBackground = styled.div`
   height: 670px;
   position: relative; // don't remove this, for applying search bar z-index
 `
-
 
 const MainTitle = styled.h1`
   font-size: 3rem;
@@ -108,6 +106,14 @@ const SearchListItem = styled(List.Item)`
   }
 `
 
+export const ContentLayout: FC = ({children}) => {
+    return <FlexboxGrid justify={"center"} align={"middle"} className={css`text-align: center;`}>
+        <FlexboxGrid.Item colspan={16}>
+            {children}
+        </FlexboxGrid.Item>
+    </FlexboxGrid>
+}
+
 const SearchEntry: FC<{
     icon: JSX.Element,
     programName: string,
@@ -131,7 +137,8 @@ const RecommendProgramsComponentItemImg = styled.img`
 const RecommendProgramsComponentItem: FC = () => {
     return <Col lg={4} xs={8}>
         <RecommendProgramsComponentItemImg src="https://via.placeholder.com/100"/>
-        <p className={css`font-size: 0.75rem; margin-bottom: 0.75rem;`}>프로그램 이름</p>
+        <p className={css`font-size: 0.75rem;
+          margin-bottom: 0.75rem;`}>프로그램 이름</p>
     </Col>
 }
 
@@ -140,15 +147,19 @@ const RecommendProgramsComponent: FC = () => {
 
 
     return <>
-        <div className={css`width: 100%; margin: 0 auto; padding-top: 60px; max-width: 900px;`}>
+        <div className={css`width: 100%;
+          margin: 0 auto;
+          padding-top: 60px;
+          max-width: 900px;`}>
             <FlexboxGrid justify={"center"} align={"middle"}>
-                <FlexboxGrid.Item colspan={2}>
-                    <Icon icon={"left"} size={"3x"} className={css`color: rgba(255, 255, 255, .25)`}/>
+                <FlexboxGrid.Item colspan={2}><Icon icon={"left"} size={"3x"}
+                                                    className={css`color: rgba(255, 255, 255, .25)`}/>
                 </FlexboxGrid.Item>
                 <FlexboxGrid.Item colspan={20}>
                     <Grid fluid>
                         <Row>
-                            <p className={css`margin-bottom: 1rem; font-size: 1.25rem;`}>자주 사용되는 프로그램</p>
+                            <p className={css`margin-bottom: 1rem;
+                              font-size: 1.25rem;`}>자주 사용되는 프로그램</p>
                         </Row>
                         <Row gutter={30}>
                             <RecommendProgramsComponentItem/>
@@ -160,7 +171,8 @@ const RecommendProgramsComponent: FC = () => {
                         </Row>
                     </Grid>
                 </FlexboxGrid.Item>
-                <FlexboxGrid.Item colspan={2}><Icon icon={"right"} size={"3x"} className={css`color: rgba(255, 255, 255, .25)`}/></FlexboxGrid.Item>
+                <FlexboxGrid.Item colspan={2}><Icon icon={"right"} size={"3x"}
+                                                    className={css`color: rgba(255, 255, 255, .25)`}/></FlexboxGrid.Item>
             </FlexboxGrid>
         </div>
     </>
@@ -168,8 +180,12 @@ const RecommendProgramsComponent: FC = () => {
 
 
 const ProgramCategoryCard: FC = () => {
-    return <div className={css`margin: 1.5rem 0.5rem; padding: 1.5rem; background-color: #101011; border: 1px solid rgba(255, 255, 255, .1)`}>
-        <h5 className={css`margin-bottom: 12px; text-align: left;`}>문서</h5>
+    return <div className={css`margin: 1.5rem 0.5rem;
+      padding: 1.5rem;
+      background-color: #101011;
+      border: 1px solid rgba(255, 255, 255, .1)`}>
+        <h5 className={css`margin-bottom: 12px;
+          text-align: left;`}>문서</h5>
         <Grid fluid>
             <Row className={css`margin-bottom: 12px;`}>
                 <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
@@ -184,11 +200,45 @@ const ProgramCategoryCard: FC = () => {
     </div>
 }
 const ProgramCategoryCardColumn: FC = () => {
-    return  <Col xs={24} smPush={2} sm={20} mdPush={4} md={16} lgPush={0} lg={8}>
+    return <Col xs={24} smPush={2} sm={20} mdPush={3} md={18} lgPush={0} lg={8}>
         <ProgramCategoryCard/>
         <ProgramCategoryCard/>
         <ProgramCategoryCard/>
     </Col>
+}
+
+const RelativeHotKeyTips: FC = () => {
+    return <FlexboxGrid justify={"center"} align={"middle"}>
+        <FlexboxGrid.Item colspan={20}>
+            <div className={css`padding: 2rem 0;`}>
+                <h4 className={css`text-align: center;`}>관련 단축키 팁</h4>
+                <div className={css`margin: 0 auto;`}>
+                    <hr className={css`width: 35px;
+                      height: 5px;
+                      background-color: white;`}/>
+                </div>
+                <Grid fluid className={css`max-width: 1200px;`}>
+                    <Row>
+                        <Col lg={8} sm={24}>
+                            <div className={css`padding: 20px 10px;
+                              overflow: hidden;`}><img className={css`width: 100%;`}
+                                                       src={"https://via.placeholder.com/400x255"}/></div>
+                        </Col>
+                        <Col lg={8} sm={24}>
+                            <div className={css`padding: 20px 10px;
+                              overflow: hidden;`}><img className={css`width: 100%;`}
+                                                       src={"https://via.placeholder.com/400x255"}/></div>
+                        </Col>
+                        <Col lg={8} sm={24}>
+                            <div className={css`padding: 20px 10px;
+                              overflow: hidden;`}><img className={css`width: 100%;`}
+                                                       src={"https://via.placeholder.com/400x255"}/></div>
+                        </Col>
+                    </Row>
+                </Grid>
+            </div>
+        </FlexboxGrid.Item>
+    </FlexboxGrid>
 }
 
 const MainContentPage: FC = props => {
@@ -212,7 +262,7 @@ const MainContentPage: FC = props => {
 
     return <>
         <MainBackground>
-            <ContentLayout shiftTop={true}>
+            <ContentLayout>
                 <MainLogo src={svg} alt={"logo"}/>
                 <MainTitle>We'll find you a Hotkey.</MainTitle>
                 <MainSubTitle>단축키를 사용하시면 업무효율을 200% 올려줄 수 있습니다!</MainSubTitle>
@@ -225,41 +275,30 @@ const MainContentPage: FC = props => {
                     {focused && <RecentSearchList>
                         <p className="sub-title">최근 검색한 툴</p>
                         <SearchList>
-                            {recentSearch.map(recent => <SearchListItem><SearchEntry icon={<Icon icon={"clock-o"}/>}
-                                                                                     programName={recent.program}
-                                                                                     time={recent.time}/></SearchListItem>)}
+                            {recentSearch.map(({program, time}) => <SearchListItem>
+                                <SearchEntry icon={<Icon icon={"clock-o"}/>} programName={program} time={time}/>
+                            </SearchListItem>)}
                         </SearchList>
                     </RecentSearchList>}
                 </SelectedInputGroup>
-
-
             </ContentLayout>
         </MainBackground>
-        <ContentLayout shiftTop={true}>
+        <ContentLayout>
             <RecommendProgramsComponent/>
             <RecommendProgramsComponent/>
         </ContentLayout>
-        <div className={css`height: 90px`}/>
-        <ContentLayout shiftTop={true}>
-            <Grid fluid>
-                <Row>
-                    <ProgramCategoryCardColumn/>
-                    <ProgramCategoryCardColumn/>
-                    <ProgramCategoryCardColumn/>
-                </Row>
-            </Grid>
-
-            <div>
-                <h4>관련 단축키 팁</h4>
-                <Grid fluid>
+        <div className={css`margin-top: 90px;`}>
+            <ContentLayout>
+                <Grid fluid className={css`max-width: 1000px;`}>
                     <Row>
-                        <Col lg={8}>1</Col>
-                        <Col lg={8}>1</Col>
-                        <Col lg={8}>1</Col>
+                        <ProgramCategoryCardColumn/>
+                        <ProgramCategoryCardColumn/>
+                        <ProgramCategoryCardColumn/>
                     </Row>
                 </Grid>
-            </div>
-        </ContentLayout>
+            </ContentLayout>
+        </div>
+        <RelativeHotKeyTips/>
     </>
 }
 

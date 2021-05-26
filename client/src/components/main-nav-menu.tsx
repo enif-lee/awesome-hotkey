@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import {Divider, Dropdown, Nav} from "rsuite";
 import {FC} from "react";
-import {useHistory, Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import {css} from "@emotion/css";
 import logo from '../../assets/logo.svg'
 
@@ -18,7 +18,6 @@ const MainNav = styled(Nav)`
   margin: 0 auto;
   float: none;
   text-align: center;
-  
   > ul > li {
     margin: 10px 0;
   }
