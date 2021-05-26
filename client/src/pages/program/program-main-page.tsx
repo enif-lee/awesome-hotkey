@@ -1,27 +1,97 @@
-import {FC} from "react";
-import {Link, Route, Switch, useParams, useRouteMatch} from "react-router-dom";
-import KeySearchByCategoryPage from "./search/search-by-category";
-import KeySearchByKeyboardPage from "./search/search-by-keyboard";
-import KeySearchByTextPage from "./search/search-by-text";
+import {FC, useContext} from 'react';
+import styled from '@emotion/styled'
+import {observer} from 'mobx-react-lite'
+import {Link, Route, Switch, useParams, useRouteMatch} from 'react-router-dom'
+import {Grid, Row, Col} from 'rsuite'
 
-const ProgramMainPage: FC = props => {
-    const match = useRouteMatch();
-    const { programCode } = useParams<{ programCode: string}>()
-    return <>
+import CategoryGrid from '../../components/program/category-grid'
+import Keyboard from '../../components/keyboard/keyboard'
+import ProgramMainHeader from '../../components/program/program-main-header'
+import SimpleSearchBar from '../../components/search/simple-search-bar'
+
+import ProgramSearchPage from './program-search-page'
+
+import ProgramSearchStore from '../../stores/program-search'
+
+
+const Wrapper = styled.div`
+    width: 620px;
+    margin: 0 auto;
+
+    .row {
+        margin: 48px 0;
+    }
+`
+
+const RowTitle = styled.div`
+    line-height: 40px;
+    text-align: left;
+    font-size: 16px;
+`
+
+
+const ProgramMainPage: FC = observer(() => {
+    const store = useContext(ProgramSearchStore)
+
+    const match = useRouteMatch()
+    const {programCode} = useParams<{programCode: string}>()
+
+    return <Wrapper>
         <Switch>
             <Route path={match.url} exact>
-                {programCode} 프로그램 상세
-                <ul>
-                    <li><Link to={`${match.url}/search/keyboard`}>Keyboard</Link></li>
-                    <li><Link to={`${match.url}/search/category`}>Category</Link></li>
-                    <li><Link to={`${match.url}/search/text`}>Text</Link></li>
-                </ul>
+                <Grid fluid>
+                    <Row className="row">
+                        <ProgramMainHeader
+                            iconImgURL={store.iconImgURL}
+                            isBookmarked={store.isBookmarked}
+                            title={store.title}
+                            subtitle={store.subtitle}
+                            onToggleBookmarked={store.toggleBookmarked}
+                        />
+                    </Row>
+
+                    <Row className="row">
+                        <Col xs={6}>
+                            <RowTitle>검색어로 찾기</RowTitle>
+                        </Col>
+                        <Col xs={18}>
+                            <Link to={`${match.url}/search/text`}>
+                                <SimpleSearchBar placeholder="검색하실 기능 또는 단축키를 입력하세요 :)" />
+                            </Link>
+                        </Col>
+                    </Row>
+
+                    <Row className="row">
+                        <Col xs={6}>
+                            <RowTitle>키보드로 찾기</RowTitle>
+                        </Col>
+                        <Col xs={18}>
+                            <Link to={`${match.url}/search/keyboard`}>
+                                <Keyboard activedKeycaps={store.activedKeycaps} />
+                            </Link>
+                        </Col>
+                    </Row>
+
+                    <Row className="row">
+                        <Col xs={6}>
+                            <RowTitle>분류별로 찾기</RowTitle>
+                        </Col>
+                        <Col xs={18}>
+                            <Link to={`${match.url}/search/category`}>
+                                <CategoryGrid
+                                    categories={store.categories}
+                                    selectedCategory={store.selectedCategory}
+                                />
+                            </Link>
+                        </Col>
+                    </Row>
+                </Grid>
             </Route>
-            <Route path={`${match.url}/search/category`}><KeySearchByCategoryPage/></Route>
-            <Route path={`${match.url}/search/keyboard`}><KeySearchByKeyboardPage/></Route>
-            <Route path={`${match.url}/search/text`}><KeySearchByTextPage/></Route>
+
+            <Route path={`${match.url}/search`}><ProgramSearchPage /></Route>
         </Switch>
-    </>
-}
+    </Wrapper>
+})
+
 
 export default ProgramMainPage

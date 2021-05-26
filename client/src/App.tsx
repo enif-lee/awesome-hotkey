@@ -8,10 +8,12 @@ import SettingPage from "./pages/settings";
 import MainContentPage from "./pages/main";
 import ToolTipsPage from "./pages/tool-tips-page";
 import ErrorPage from "./pages/errors/error";
+
 import {ContentLayout} from "./components/content-layout";
 import {NavBar} from "./components/main-nav-menu";
 import {css} from "@emotion/css";
 import {PageFooter} from "./components/footertsx";
+
 
 function App() {
     return (
@@ -30,8 +32,8 @@ function App() {
                 <PageFooter/>
             </Footer>
         </>
-
     )
 }
 
-export default App
+
+export default App;
