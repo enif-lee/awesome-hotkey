@@ -28,7 +28,6 @@ const ProgramImg = styled.img`
   background-color: #FFFFFF11; // TODO: color
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) // TODO: color
 `
-// testest
 const BookmarkBtn = styled.a`
   position: absolute;
   right: -16px;
