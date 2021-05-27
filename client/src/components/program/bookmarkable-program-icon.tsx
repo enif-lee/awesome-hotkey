@@ -61,7 +61,7 @@ const BookmarkableProgramIcon: FC<BookmarkableProgramIconProps> = props => (
         <ProgramImg src={props.imgURL} />
         <BookmarkBtn
             className={classNames({'--active': props.isBookmarked})}
-            onClick={() => props.onToggleBookmarked()}
+            onClick={() => props.onToggleBookmarked && props.onToggleBookmarked()}
         />
     </Wrapper>
 )
