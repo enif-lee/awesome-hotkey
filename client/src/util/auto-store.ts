@@ -7,6 +7,7 @@ export function autoSave(_this: any, name: string) {
         set(_this, JSON.parse(storedJson))
     }
     autorun(() => {
+        console.debug(name, "저장됨!")
         const value = toJS(_this)
         localStorage.setItem(name, JSON.stringify(value))
     })

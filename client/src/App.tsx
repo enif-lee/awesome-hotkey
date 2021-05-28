@@ -22,7 +22,9 @@ function App() {
             <Header><NavBar/></Header>
             <Content className={css`min-width: 768px;`}>
                 <Switch>
-                    <Route path="/" exact><MainContentPage/></Route>
+                    <Route path="/" exact>
+                        <MainContentPage/>
+                    </Route>
                     <Route
                         path="/programs/:programCode"><PageContentLayout><ProgramMainPage/></PageContentLayout></Route>
                     <Route path="/settings"><PageContentLayout><SettingPage/></PageContentLayout></Route>

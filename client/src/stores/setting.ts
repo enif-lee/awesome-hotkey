@@ -8,14 +8,8 @@ export enum OsType {
 }
 
 export class SettingStore {
-    constructor() {
-        makeAutoObservable(this)
-        this._fontSize = 16;
-        this._os = window.navigator.platform.includes("Win") ? OsType.Windows : OsType.Osx;
-        autoSave(this, 'setting')
-    }
-
-    _fontSize: number
+    _fontSize: number = 16;
+    _os: OsType = window.navigator.platform.includes("Win") ? OsType.Windows : OsType.Osx;
 
     get fontSize() {
         return this._fontSize
@@ -25,7 +19,12 @@ export class SettingStore {
         this._fontSize = size
     }
 
-    _os: OsType
+    constructor() {
+        makeAutoObservable(this)
+        // this._fontSize = 16;
+        // this._os = window.navigator.platform.includes("Win") ? OsType.Windows : OsType.Osx;
+        autoSave(this, 'setting')
+    }
 
     get os(): OsType {
         return this._os;
@@ -41,4 +40,4 @@ export class SettingStore {
     }
 }
 
-export const settingStore = new SettingStore();
+export const setting = new SettingStore();

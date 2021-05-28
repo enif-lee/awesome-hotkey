@@ -4,7 +4,7 @@ import {Icon, IconButton, List, Modal, SelectPicker} from "rsuite";
 import externalLinkIcon from "../../assets/icon/external-link.svg"
 import {css} from "@emotion/css";
 import {observer} from "mobx-react-lite";
-import {settingStore} from "../stores/setting-store";
+import {setting} from "../stores/setting";
 
 
 const SettingPageWrap = styled.div`
@@ -52,12 +52,8 @@ const ExternalLink: FC<{ url: string }> = ({url}) => <Action>
 </Action>
 
 const SettingPage: FC = observer(() => {
-        const setting = settingStore
-
-        console.debug(setting.fontSize)
         const textSizes = [{label: "큼", value: 20}, {label: "중간(권장)", value: 16}, {label: "작음", value: 12}];
         const osOptions = [{label: "windows", value: "windows"}, {label: "osx", value: "osx"}];
-
         const [open, setOpen] = useState(false);
 
         return <SettingPageWrap>
@@ -65,8 +61,9 @@ const SettingPage: FC = observer(() => {
             <List bordered>
                 <SettingListItem>
                     글꼴크기
-                    <Action><SettingSelectPicker data={textSizes} defaultValue={setting.fontSize} value={setting.fontSize}
-                                                 onChange={(size) => setting.setFontSize(size)}/></Action>
+                    <Action><SettingSelectPicker data={textSizes} defaultValue={setting.fontSize}
+                                                 value={setting.fontSize}
+                                                 onChange={(size) => setting.fontSize = size}/></Action>
                 </SettingListItem>
                 <SettingListItem>
                     즐겨찾는 프로그램
