@@ -2,14 +2,7 @@ import {FC} from 'react'
 import classNames from 'classnames'
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
-import {Grid, Row, Col} from 'rsuite'
-
-
-interface CategoryGridProps {
-    categories: string[]
-    selectedCategory: string
-    onSelectCategory: (category: string) => void
-}
+import {Col, Grid, Row} from 'rsuite'
 
 
 const Btn = styled.a`
@@ -33,12 +26,19 @@ const Btn = styled.a`
         text-decoration: none;
     }
 
-    &.--active {
-        background-color: #3F4045; // TODO: color
-        box-shadow: inset 0 0 0 2px #2B2D2F; // TODO: color
-        color: #FFFFFF; // TODO: color
-    }
+  &.--active {
+    background-color: #3F4045; // TODO: color
+    box-shadow: inset 0 0 0 2px #2B2D2F; // TODO: color
+    color: #FFFFFF; // TODO: color
+  }
 `
+
+
+interface CategoryGridProps {
+    categories: string[]
+    selectedCategory: string
+    onSelectCategory: (category: string) => void
+}
 
 
 const CategoryGrid: FC<CategoryGridProps> = observer(props => (

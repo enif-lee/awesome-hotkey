@@ -1,8 +1,8 @@
-import {FC, useContext} from 'react';
+import {FC} from 'react';
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
 import {Link, Route, Switch, useParams, useRouteMatch} from 'react-router-dom'
-import {Grid, Row, Col} from 'rsuite'
+import {Col, Grid, Row} from 'rsuite'
 
 import CategoryGrid from '../../components/program/category-grid'
 import Keyboard from '../../components/keyboard/keyboard'
@@ -10,8 +10,7 @@ import ProgramMainHeader from '../../components/program/program-main-header'
 import SimpleSearchBar from '../../components/search/simple-search-bar'
 
 import ProgramSearchPage from './program-search-page'
-
-import ProgramSearchStore from '../../stores/program-search'
+import {useProgramSearchStoreContext} from "../../stores/program-search";
 
 
 const Wrapper = styled.div`
@@ -31,7 +30,7 @@ const RowTitle = styled.div`
 
 
 const ProgramMainPage: FC = observer(() => {
-    const store = useContext(ProgramSearchStore)
+    const store = useProgramSearchStoreContext()
 
     const match = useRouteMatch()
     const {programCode} = useParams<{programCode: string}>()

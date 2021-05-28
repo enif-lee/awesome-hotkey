@@ -37,7 +37,6 @@ function App() {
                 <PageFooter/>
             </Footer>
         </div>
-
     )
 }
 

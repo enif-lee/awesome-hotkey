@@ -1,4 +1,4 @@
-import {FC, useContext} from 'react'
+import {FC} from 'react'
 import classNames from 'classnames/bind'
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
@@ -67,7 +67,7 @@ const KeyboardKeycap: FC<KeyboardKeycapProps> = observer(props => {
     return <Wrapper
         className={classNames({'--active': props.isActived})}
         style={cssFromKeycapType(props.keycap)}>
-        <div className="border"></div>
+        <div className="border"/>
         <div className="background">
             {props.keycap}
         </div>
