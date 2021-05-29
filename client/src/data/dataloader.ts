@@ -44,7 +44,11 @@ export function getStaticData(): StaticData {
     return staticData as any;
 }
 
-export function isSupportProgram(code: ProgramCode) {
+export function getPrograms(): Program[] {
+    return getStaticData().programs;
+}
+
+export function isSupportProgram(code: ProgramCode): boolean {
     return getStaticData().programs.some(program => program.code == code);
 }
 
@@ -56,11 +60,11 @@ export function getProgramDetail(code: ProgramCode): Program {
 }
 
 
-export function getProgramHotkeyCategories(code: ProgramCode) {
+export function getProgramHotkeyCategories(code: ProgramCode): string[] {
     const categories = getProgramHotkeys(code).map(hotkey => hotkey.category).flat();
     return [...new Set(categories)]
 }
 
-export function getProgramHotkeys(code: ProgramCode) {
+export function getProgramHotkeys(code: ProgramCode): Hotkey[] {
     return getStaticData().hotkeys.filter(hotkey => hotkey.programCode == code)
 }

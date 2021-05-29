@@ -16,7 +16,7 @@ const CategoryAll: string = 'All'
 
 
 export class ProgramSearchStore {
-    private _programCode: string = ''
+    programCode: string = ''
     private _searchingText: string = ''
     private _selectedCategory: string = ''
     private _selectedHotkeyIndex: number = -1
@@ -29,7 +29,7 @@ export class ProgramSearchStore {
             bookmarkStore: false,
             settingStore: false
         })
-        this._programCode = code;
+        this.programCode = code;
         this.bookmarkStore = bookmarkStore;
         this.settingStore = settingStore;
         this._detail = getProgramDetail(code)
@@ -45,22 +45,22 @@ export class ProgramSearchStore {
     }
 
     public get iconImgURL(): string {
-        return this._detail.image;
+        return "/image/" + this._detail.image;
     }
 
     public get isBookmarked(): boolean {
-        return this.bookmarkStore.isBookmarked(this._programCode)
+        return this.bookmarkStore.isBookmarked(this.programCode)
     }
 
     public get categories(): string[] {
         return [
-            ...getProgramHotkeyCategories(this._programCode),
+            ...getProgramHotkeyCategories(this.programCode),
             CategoryAll
         ]
     }
 
     public get hotkeys(): HotkeyModel[] {
-        return getProgramHotkeys(this._programCode)
+        return getProgramHotkeys(this.programCode)
             .map<HotkeyModel>(key => ({
                 description: key.description.ko,
                 keycaps: (key.key[this.settingStore.os] || []).map(value => KeyKeycapMap[value] || KeycapType.Empty),
@@ -104,12 +104,8 @@ export class ProgramSearchStore {
 
 
     // MARK: - Set
-    public setProgramCode = (code: string) => {
-        this._programCode = code
-    }
-
     public toggleBookmarked = () => {
-        return this.bookmarkStore.toggleBookmark(this._programCode)
+        return this.bookmarkStore.toggleBookmark(this.programCode)
     }
 
     public searchText = (text: string) => {
@@ -121,7 +117,6 @@ export class ProgramSearchStore {
             this._selectedCategory = ''
             return
         }
-
         this._selectedCategory = category
     }
 

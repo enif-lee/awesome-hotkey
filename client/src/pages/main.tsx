@@ -1,11 +1,15 @@
-import {FC, useEffect, useRef, useState} from "react"
-import {Col, FlexboxGrid, Grid, Icon, Input, InputGroup, List, Row} from "rsuite";
+import {FC, useCallback, useEffect, useMemo, useState} from "react"
+import {Col, FlexboxGrid, Grid, Icon, Input, InputGroup, List, Notification, Row} from "rsuite";
 import InputGroupAddon from "rsuite/es/InputGroup/InputGroupAddon";
 import styled from "@emotion/styled";
 import svg from '../../assets/logo.svg'
 
 import mainBgGd from "../../assets/main_bg_gd.svg";
 import {css} from "@emotion/css";
+import {observer} from "mobx-react-lite";
+import {recentSearchStore} from "../stores/recent-search-store";
+import {Link, useHistory} from "react-router-dom";
+import {getPrograms} from "../data/dataloader";
 
 
 const MainBackground = styled.div`
@@ -98,6 +102,7 @@ const SearchListItem = styled(List.Item)`
   padding: 0.75rem 1rem;
   background: rgba(0, 0, 0, 0);
   border: 0 !important;
+  color: white;
   box-shadow: none;
 
   &:hover {
@@ -117,12 +122,12 @@ export const ContentLayout: FC = ({children}) => {
 const SearchEntry: FC<{
     icon: JSX.Element,
     programName: string,
-    time: string
+    time?: string
 }> = ({programName, time, icon}) => {
     return <FlexboxGrid>
         <FlexboxGrid.Item className="search-item-icon" colspan={2}>{icon}</FlexboxGrid.Item>
         <FlexboxGrid.Item className="search-item-program" colspan={18}><span>{programName}</span></FlexboxGrid.Item>
-        <FlexboxGrid.Item className="search-item-time" colspan={4}><span>{time}</span></FlexboxGrid.Item>
+        {time && <FlexboxGrid.Item className="search-item-time" colspan={4}><span>{time}</span></FlexboxGrid.Item>}
     </FlexboxGrid>;
 }
 
@@ -241,25 +246,47 @@ const RelativeHotKeyTips: FC = () => {
     </FlexboxGrid>
 }
 
-const MainContentPage: FC = props => {
+function takeFilteredList<T extends { name: string, code: string }>(entries: T[], filter: string): T[] {
+    const lowerFilter = filter.toLowerCase();
+    return entries
+        .filter(({name, code}) => name.toLowerCase().includes(lowerFilter) || code.toLowerCase().includes(lowerFilter))
+        .slice(0, 5)
+}
 
-    const recentSearch = [
-        {program: 'A', time: '2021.05.12'},
-        {program: 'B', time: '2021.05.12'},
-        {program: 'C', time: '2021.05.12'},
-        {program: 'D', time: '2021.05.12'},
-    ]
+const MainContentPage: FC = observer(props => {
+    const [recentHistories, setFocus] = useState(false);
+    const [searchText, setSearchText] = useState('');
 
-    const [focused, setFocus] = useState(false);
+    const programs = useMemo(() => getPrograms(), []);
+    const history = useHistory();
 
-    const input = useRef<HTMLInputElement>(null);
+    const close = useCallback(() => setFocus(false), []);
+    const open = useCallback((e: Event) => setTimeout(() => setFocus(true), 0), [])
+
     useEffect(() => {
-        const inputRef = input.current!;
-        inputRef.onfocus = () => setFocus(true);
-        inputRef.onblur = () => setFocus(false);
-    }, [])
+        if (recentHistories) {
+            window.addEventListener('click', close)
+        } else {
+            window.removeEventListener('click', close)
+        }
+    }, [recentHistories])
 
+    const recentSearch = recentSearchStore.searchHistory
+    const searchPrograms = takeFilteredList(programs, searchText);
+    const onPressEnterSearch = () => {
+        let programCode: string = searchText
+            ? searchPrograms[0]?.code
+            : recentSearch[0]?.code;
 
+        if (!programCode) {
+            Notification["error"]({
+                title: "검색된 프로그램이 없습니다.",
+                description: "최소 하나 이상의 검색된 결과가 있어야합니다."
+            })
+            return;
+        }
+        history.push('/programs/' + programCode)
+    };
     return <>
         <MainBackground>
             <ContentLayout>
@@ -268,18 +295,39 @@ const MainContentPage: FC = props => {
                 <MainSubTitle>단축키를 사용하시면 업무효율을 200% 올려줄 수 있습니다!</MainSubTitle>
 
                 <SelectedInputGroup>
-                    <MainInputGroup>
-                        <MainInputGroupAddon><Icon icon={"search"}/></MainInputGroupAddon>
-                        <MainSearchInput placeholder={"Input program name to search."} inputRef={input}/>
-                    </MainInputGroup>
-                    {focused && <RecentSearchList>
-                        <p className="sub-title">최근 검색한 툴</p>
-                        <SearchList>
-                            {recentSearch.map(({program, time}) => <SearchListItem>
-                                <SearchEntry icon={<Icon icon={"clock-o"}/>} programName={program} time={time}/>
-                            </SearchListItem>)}
-                        </SearchList>
-                    </RecentSearchList>}
+                    <form onClick={e => e.stopPropagation()} onSubmit={e => e.preventDefault()}>
+                        <MainInputGroup>
+                            <MainInputGroupAddon><Icon icon={"search"}/></MainInputGroupAddon>
+                            <MainSearchInput placeholder={"Input program name to search."} onClick={open}
+                                             onChange={setSearchText} onPressEnter={onPressEnterSearch}/>
+                        </MainInputGroup>
+                        {recentHistories && <RecentSearchList>
+                            {!searchText && <>
+                                <p className="sub-title">최근 검색한 툴</p>
+                                <SearchList>
+                                    {recentSearch.map(({name, code, time}) =>
+                                        <Link to={"/programs/" + code} key={code}>
+                                            <SearchListItem>
+                                                <SearchEntry icon={<Icon icon={"clock-o"}/>}
+                                                             programName={name}
+                                                             time={new Date(time).toLocaleDateString()}/>
+                                            </SearchListItem>
+                                        </Link>
+                                    )}
+                                </SearchList></>}
+                            {searchText && <><p className="sub-title">검색된 툴</p>
+                                <SearchList>
+                                    {searchPrograms
+                                        .map(({name, code}) => <Link to={"/programs/" + code} key={code}>
+                                                <SearchListItem>
+                                                    <SearchEntry icon={<Icon icon={"project"}/>} programName={name}/>
+                                                </SearchListItem>
+                                            </Link>
+                                        )}
+                                </SearchList>
+                            </>}
+                        </RecentSearchList>}
+                    </form>
                 </SelectedInputGroup>
             </ContentLayout>
         </MainBackground>
@@ -300,6 +348,6 @@ const MainContentPage: FC = props => {
         </div>
         <RelativeHotKeyTips/>
     </>
-}
+})
 
 export default MainContentPage

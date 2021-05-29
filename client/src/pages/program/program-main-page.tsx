@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import {FC, useEffect} from 'react';
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
 import {Link, Route, Switch, useHistory, useParams, useRouteMatch} from 'react-router-dom'
@@ -12,6 +12,7 @@ import SimpleSearchBar from '../../components/search/simple-search-bar'
 import ProgramSearchPage from './program-search-page'
 import {ProgramSearchStore, ProgramSearchStoreContext, useProgramSearchStore} from "../../stores/program-search-store";
 import {isSupportProgram} from "../../data/dataloader";
+import {recentSearchStore} from "../../stores/recent-search-store";
 
 
 const Wrapper = styled.div`
@@ -48,6 +49,10 @@ export const ProgramMainPageContextWrapper: FC = () => {
 const ProgramMainPage: FC = observer(() => {
     const store = useProgramSearchStore();
     const match = useRouteMatch()
+    useEffect(() => {
+        recentSearchStore.markHistory(store.programCode)
+    }, [])
+
     return <Wrapper>
         <Switch>
             <Route path={match.url} exact>
