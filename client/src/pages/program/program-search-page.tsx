@@ -11,7 +11,7 @@ import KeycapList from '../../components/keyboard/keycap-list'
 import ProgramSearchHeader from '../../components/program/program-search-header'
 import SimpleSearchBar from '../../components/search/simple-search-bar'
 
-import {useProgramSearchStoreContext} from '../../stores/program-search'
+import {programSearchStore} from '../../stores/program-search'
 
 
 const Wrapper = styled.div`
@@ -54,7 +54,7 @@ const KeyboardWrapper = styled.div`
 
 
 const ProgramSearchPage: FC = observer(() => {
-    const store = useProgramSearchStoreContext()
+    const store = programSearchStore
 
     const match = useRouteMatch()
     const {programCode} = useParams<{programCode: string}>()

@@ -10,7 +10,7 @@ import ProgramMainHeader from '../../components/program/program-main-header'
 import SimpleSearchBar from '../../components/search/simple-search-bar'
 
 import ProgramSearchPage from './program-search-page'
-import {useProgramSearchStoreContext} from "../../stores/program-search";
+import {programSearchStore} from "../../stores/program-search";
 
 
 const Wrapper = styled.div`
@@ -30,7 +30,7 @@ const RowTitle = styled.div`
 
 
 const ProgramMainPage: FC = observer(() => {
-    const store = useProgramSearchStoreContext()
+    const store = programSearchStore;
 
     const match = useRouteMatch()
     const {programCode} = useParams<{programCode: string}>()

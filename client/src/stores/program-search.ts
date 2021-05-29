@@ -1,4 +1,3 @@
-import {createContext, useContext} from 'react'
 import {makeAutoObservable} from 'mobx'
 import KeycapType from '../models/keycap-type'
 import HotkeyModel from '../models/hotkey-model'
@@ -139,8 +138,4 @@ class ProgramSearch {
 
 }
 
-const programSearchContext = createContext(new ProgramSearch());
-
-export function useProgramSearchStoreContext() {
-    return useContext(programSearchContext);
-}
+export const programSearchStore = new ProgramSearch();
