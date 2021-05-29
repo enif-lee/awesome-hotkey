@@ -4,6 +4,7 @@ specifiers:
   '@emotion/css': ^11.1.3
   '@emotion/react': ^11.4.0
   '@emotion/styled': '^11.3.0 '
+  '@types/js-cookie': ^2.2.6
   '@types/lodash': ^4.14.170
   '@types/react': ^16.14.7
   '@types/react-dom': ^16.9.13
@@ -43,6 +44,7 @@ dependencies:
   rsuite: 4.10.1_react-dom@16.14.0+react@16.14.0
 
 devDependencies:
+  '@types/js-cookie': 2.2.6
   '@types/lodash': 4.14.170
   '@types/react': 16.14.8
   '@types/react-dom': 16.9.13
@@ -394,23 +396,27 @@ packages:
     dev: false
 
   /@emotion/utils/1.0.0:
-    resolution: {integrity: sha512-mQC2b3XLDs6QCW+pDQDiyO/EdGZYOygE8s5N5rrzjSI4M3IejPE/JPndCBwRT9z982aqQNi6beWs1UeayrQxxA==}
+    resolution: { integrity: sha512-mQC2b3XLDs6QCW+pDQDiyO/EdGZYOygE8s5N5rrzjSI4M3IejPE/JPndCBwRT9z982aqQNi6beWs1UeayrQxxA== }
     dev: false
 
   /@emotion/weak-memoize/0.2.5:
-    resolution: {integrity: sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==}
+    resolution: { integrity: sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA== }
     dev: false
 
   /@types/history/4.7.8:
-    resolution: {integrity: sha512-S78QIYirQcUoo6UJZx9CSP0O2ix9IaeAXwQi26Rhr/+mg7qqPy8TzaxHSUut7eGjL8WmLccT7/MXf304WjqHcA==}
+    resolution: { integrity: sha512-S78QIYirQcUoo6UJZx9CSP0O2ix9IaeAXwQi26Rhr/+mg7qqPy8TzaxHSUut7eGjL8WmLccT7/MXf304WjqHcA== }
+    dev: true
+
+  /@types/js-cookie/2.2.6:
+    resolution: { integrity: sha512-+oY0FDTO2GYKEV0YPvSshGq9t7YozVkgvXLty7zogQNuCxBhT9/3INX9Q7H1aRZ4SUDRXAKlJuA4EA5nTt7SNw== }
     dev: true
 
   /@types/lodash/4.14.170:
-    resolution: {integrity: sha512-bpcvu/MKHHeYX+qeEN8GE7DIravODWdACVA1ctevD8CN24RhPZIKMn9ntfAsrvLfSX3cR5RrBKAbYm9bGs0A+Q==}
+    resolution: { integrity: sha512-bpcvu/MKHHeYX+qeEN8GE7DIravODWdACVA1ctevD8CN24RhPZIKMn9ntfAsrvLfSX3cR5RrBKAbYm9bGs0A+Q== }
     dev: true
 
   /@types/parse-json/4.0.0:
-    resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
+    resolution: { integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA== }
     dev: false
 
   /@types/prop-types/15.7.3:
