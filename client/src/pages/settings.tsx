@@ -95,12 +95,18 @@ const SettingPage: FC = observer(() => {
             </List>
             <Modal show={open} onHide={() => setOpen(false)}>
                 <Modal.Header>
-                    <Modal.Title>Modal Title</Modal.Title>
+                    <Modal.Title>북마크된 프로그램</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <List bordered>
                         {programs.map(program => <List.Item>
-                            {program.name}({program.code})
+                            <img className={css`width: 32px;
+                              height: 32px;
+                              border-radius: 4px;
+                              overflow: hidden;
+                              margin-right: 16px;`} src={"/image/" + program.image}/>
+
+                            {program.name} ({program.code})
                             <IconButton appearance={"subtle"} icon={<Icon icon={"close"}/>}
                                         onClick={() => bookmarkStore.toggleBookmark(program.code)}/>
                         </List.Item>)}
