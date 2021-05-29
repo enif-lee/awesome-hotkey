@@ -1,5 +1,5 @@
 import {FC, useCallback, useEffect, useMemo, useState} from "react"
-import {Col, FlexboxGrid, Grid, Icon, Input, InputGroup, List, Notification, Row} from "rsuite";
+import {Button, Col, FlexboxGrid, Grid, Icon, Input, InputGroup, List, Notification, Row} from "rsuite";
 import InputGroupAddon from "rsuite/es/InputGroup/InputGroupAddon";
 import styled from "@emotion/styled";
 import svg from '../../assets/logo.svg'
@@ -9,7 +9,9 @@ import {css} from "@emotion/css";
 import {observer} from "mobx-react-lite";
 import {recentSearchStore} from "../stores/recent-search-store";
 import {Link, useHistory} from "react-router-dom";
-import {getPrograms} from "../data/dataloader";
+import {getPrograms, Program} from "../data/dataloader";
+import {bookmarkStore} from "../stores/bookmark-store";
+import {useMedia} from "react-use";
 
 
 const MainBackground = styled.div`
@@ -139,45 +141,50 @@ const RecommendProgramsComponentItemImg = styled.img`
   margin-bottom: 0.5rem;
 `
 
-const RecommendProgramsComponentItem: FC = () => {
-    return <Col lg={4} xs={8}>
-        <RecommendProgramsComponentItemImg src="https://via.placeholder.com/100"/>
+const RecommendProgramsComponentItem: FC<{ program: Program }> = ({program}) => {
+    const colSpan = useMedia('(min-width: 1200px)') ? 4 : 8;
+
+    return <FlexboxGrid.Item colspan={colSpan}>
+        <RecommendProgramsComponentItemImg src={"/image/" + program.image}/>
         <p className={css`font-size: 0.75rem;
-          margin-bottom: 0.75rem;`}>프로그램 이름</p>
-    </Col>
+          margin-bottom: 0.75rem;`}>{program.name}</p>
+    </FlexboxGrid.Item>
 }
 
 
-const RecommendProgramsComponent: FC = () => {
+const RecommendProgramsComponent: FC<{ title: string, programs: Program[] }> = ({title, programs}) => {
+    const [pageIndex, setPage] = useState(0);
+    const next = useCallback(() => setPage(pageIndex + 1), [pageIndex]);
+    const prev = useCallback(() => setPage(pageIndex - 1), [pageIndex]);
 
-
+    const isWide = useMedia('(min-width: 1200px)');
+    const page = isWide ? 6 : 3;
+    const pagePrograms = programs.slice(pageIndex * page, pageIndex * page + page);
+    console.log(pagePrograms)
     return <>
         <div className={css`width: 100%;
           margin: 0 auto;
           padding-top: 60px;
           max-width: 900px;`}>
             <FlexboxGrid justify={"center"} align={"middle"}>
-                <FlexboxGrid.Item colspan={2}><Icon icon={"left"} size={"3x"}
-                                                    className={css`color: rgba(255, 255, 255, .25)`}/>
+                <FlexboxGrid.Item colspan={2}>
+                    {pageIndex != 0 && <Button onClick={prev}>
+                        <Icon icon={"left"} size={"3x"} className={css`color: rgba(255, 255, 255, .25)`}/>
+                    </Button>}
                 </FlexboxGrid.Item>
                 <FlexboxGrid.Item colspan={20}>
-                    <Grid fluid>
-                        <Row>
-                            <p className={css`margin-bottom: 1rem;
-                              font-size: 1.25rem;`}>자주 사용되는 프로그램</p>
-                        </Row>
-                        <Row gutter={30}>
-                            <RecommendProgramsComponentItem/>
-                            <RecommendProgramsComponentItem/>
-                            <RecommendProgramsComponentItem/>
-                            <RecommendProgramsComponentItem/>
-                            <RecommendProgramsComponentItem/>
-                            <RecommendProgramsComponentItem/>
-                        </Row>
-                    </Grid>
+                    <p className={css`margin-bottom: 1rem;
+                      font-size: 1.25rem;`}>{title}</p>
+                    <FlexboxGrid justify={"center"} align={"middle"}>
+                        {pagePrograms.map(program => <RecommendProgramsComponentItem program={program}/>)}
+                    </FlexboxGrid>
                 </FlexboxGrid.Item>
-                <FlexboxGrid.Item colspan={2}><Icon icon={"right"} size={"3x"}
-                                                    className={css`color: rgba(255, 255, 255, .25)`}/></FlexboxGrid.Item>
+                <FlexboxGrid.Item colspan={2}>
+                    {Math.floor(programs.length / page) - 1 > pageIndex &&
+                    <Button onClick={next} disabled={Math.floor(programs.length / page) <= pageIndex}>
+                        <Icon icon={"right"} size={"3x"} className={css`color: rgba(255, 255, 255, .25)`}/>
+                    </Button>}
+                </FlexboxGrid.Item>
             </FlexboxGrid>
         </div>
     </>
@@ -332,8 +339,8 @@ const MainContentPage: FC = observer(props => {
             </ContentLayout>
         </MainBackground>
         <ContentLayout>
-            <RecommendProgramsComponent/>
-            <RecommendProgramsComponent/>
+            <RecommendProgramsComponent title={"즐겨찾는 프로그램"} programs={bookmarkStore.bookmarksWithDetail}/>
+            <RecommendProgramsComponent title={"자주 사용하는 프로그램"} programs={programs}/>
         </ContentLayout>
         <div className={css`margin-top: 90px;`}>
             <ContentLayout>
