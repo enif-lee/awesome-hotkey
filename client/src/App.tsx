@@ -3,7 +3,7 @@ import 'rsuite/lib/styles/themes/dark/index.less'
 import './App.less'
 import {Content, Footer, Header} from "rsuite";
 import {Route, Switch} from "react-router-dom";
-import ProgramMainPage from "./pages/program/program-main-page";
+import {ProgramMainPageContextWrapper} from "./pages/program/program-main-page";
 import SettingPage from "./pages/settings";
 import MainContentPage from "./pages/main";
 import ToolTipsPage from "./pages/tool-tips-page";
@@ -25,8 +25,9 @@ function App() {
                     <Route path="/" exact>
                         <MainContentPage/>
                     </Route>
-                    <Route
-                        path="/programs/:programCode"><PageContentLayout><ProgramMainPage/></PageContentLayout></Route>
+                    <Route path="/programs/:programCode">
+                        <PageContentLayout><ProgramMainPageContextWrapper/></PageContentLayout>
+                    </Route>
                     <Route path="/settings"><PageContentLayout><SettingPage/></PageContentLayout></Route>
                     <Route path="/tool-tips"><PageContentLayout><ToolTipsPage/></PageContentLayout></Route>
                     <Route path="/**"><PageContentLayout><ErrorPage code={404}/></PageContentLayout></Route>

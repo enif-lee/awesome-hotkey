@@ -48,7 +48,7 @@ export const NavBar: FC = () => {
             </Link>
             <MenuDropDown title="문서">
                 <MenuDropDownItem
-                    onSelect={() => history.push("/programs/office-word")}>word</MenuDropDownItem>
+                    onSelect={() => history.push("/programs/adobe.photoshop")}>word</MenuDropDownItem>
             </MenuDropDown>
             <MenuDropDown title="개발/협업"><MenuDropDownItem>Contact</MenuDropDownItem></MenuDropDown>
             <MenuDropDown title="UI/UX"><MenuDropDownItem>Contact</MenuDropDownItem></MenuDropDown>

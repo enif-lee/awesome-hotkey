@@ -40,4 +40,4 @@ export class SettingStore {
     }
 }
 
-export const setting = new SettingStore();
+export const settingStore = new SettingStore();

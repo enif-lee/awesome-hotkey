@@ -11,55 +11,58 @@ import KeycapList from '../../components/keyboard/keycap-list'
 import ProgramSearchHeader from '../../components/program/program-search-header'
 import SimpleSearchBar from '../../components/search/simple-search-bar'
 
-import {programSearchStore} from '../../stores/program-search'
+import {useProgramSearchStore} from '../../stores/program-search-store'
 
 
 const Wrapper = styled.div`
-    width: 620px;
-    margin: 0 auto;
+  width: 620px;
+  margin: 0 auto;
 
-    > div {
-        margin: 48px 0;
-    }
+  > div {
+    margin: 48px 0;
+  }
 
-    .flex-row {
-        display: flex;
+  .flex-row {
+    display: flex;
 
-        .height-filled {
-            position: relative;
-            height: 100%;
-            text-align: left;
+    .height-filled {
+      position: relative;
+      height: 100%;
+      text-align: left;
 
-            .bottom-fixed {
-                position: absolute;
-                bottom: 0;
+      .bottom-fixed {
+        position: absolute;
+        bottom: 0;
 
-                > div {
-                    display: inline-block;
-                }
-            }
+        > div {
+          display: inline-block;
         }
+      }
     }
+  }
 `
 
 const RowTitle = styled.div`
-    line-height: 40px;
-    font-size: 20px;
+  line-height: 40px;
+  font-size: 20px;
 `
 
 const KeyboardWrapper = styled.div`
-    float: right;
-    margin-top: 8px;
+  float: right;
+  margin-top: 8px;
 `
 
 
+const SearchTypeDescriptionMap: Record<string, string> = {
+    "type": "검색어로 찾기",
+    "keyboard": "키보드로 찾기",
+    "category": "분류별로 찾기",
+};
+
 const ProgramSearchPage: FC = observer(() => {
-    const store = programSearchStore
-
+    const store = useProgramSearchStore()
     const match = useRouteMatch()
-    const {programCode} = useParams<{programCode: string}>()
-
-    store.setProgramCode(programCode)
+    const {type} = useParams<{ programCode: string, type: string }>()
 
     return <Wrapper>
         <Row>
@@ -73,7 +76,7 @@ const ProgramSearchPage: FC = observer(() => {
                     {key: 'keyboard', title: '키보드 검색'},
                     {key: 'category', title: '기능별 검색'}
                 ]}
-                selectedTabKey={tabKeyFromLocation()}
+                selectedTabKey={type}
                 onToggleBookmarked={store.toggleBookmarked}
             />
         </Row>
@@ -82,75 +85,41 @@ const ProgramSearchPage: FC = observer(() => {
             <Col xs={6}>
                 <div className="height-filled">
                     <RowTitle>
-                        {rowTitleFromTabKey()}
+                        {SearchTypeDescriptionMap[type]}
                     </RowTitle>
-                    
+
                     <Switch>
                         <Route path={`${match.url}/keyboard`}>
                             <div className="bottom-fixed">
-                                <KeycapList keycaps={store.activedKeycaps} />
+                                <KeycapList keycaps={store.activedKeycaps}/>
                             </div>
                         </Route>
                     </Switch>
                 </div>
             </Col>
             <Col xs={18}>
-                <Switch>
-                    <Route path={`${match.url}/text`}>
-                        <SimpleSearchBar
-                            placeholder="검색하실 기능 또는 단축키를 입력하세요 :)"
-                            onInputText={store.searchText}
-                        />
-                    </Route>
-
-                    <Route path={`${match.url}/keyboard`}>
-                        <KeyboardWrapper>
-                            <Keyboard activedKeycaps={store.activedKeycaps} />
-                        </KeyboardWrapper>
-                    </Route>
-
-                    <Route path={`${match.url}/category`}>
-                        <CategoryGrid
-                            categories={store.categories}
-                            selectedCategory={store.selectedCategory}
-                            onSelectCategory={store.selectCategory}
-                        />
-                    </Route>
-                </Switch>
+                {type == "text" && <SimpleSearchBar
+                    placeholder="검색하실 기능 또는 단축키를 입력하세요 :)"
+                    onInputText={store.searchText}
+                />}
+                {type == "keyboard" && <KeyboardWrapper>
+                    <Keyboard activedKeycaps={store.activedKeycaps}/>
+                </KeyboardWrapper>}
+                {type == "category" && <CategoryGrid
+                    categories={store.categories}
+                    selectedCategory={store.selectedCategory}
+                    onSelectCategory={store.selectCategory}
+                />}
             </Col>
         </Row>
 
         <Row>
             <HotkeyTable
-                hotkeys={store.filteredHotkeys(tabKeyFromLocation())}
+                hotkeys={store.filteredHotkeys(type)}
                 onSelectHotkey={store.selectHotkey}
             />
         </Row>
     </Wrapper>
 })
-
-
-function tabKeyFromLocation(): string {
-    const components: string[] = location.pathname.split('/')
-    
-    return components[components.length - 1]
-}
-
-function rowTitleFromTabKey(): string {
-    switch(tabKeyFromLocation()) {
-        case 'text':
-            return '검색어로 찾기'
-
-        case 'keyboard':
-            return '키보드로 찾기'
-
-        case 'category':
-            return '분류별로 찾기'
-
-        default:
-            return ''
-    }
-}
-
 
 export default ProgramSearchPage

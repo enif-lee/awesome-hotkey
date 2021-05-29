@@ -43,3 +43,24 @@ export interface StaticData {
 export function getStaticData(): StaticData {
     return staticData as any;
 }
+
+export function isSupportProgram(code: ProgramCode) {
+    return getStaticData().programs.some(program => program.code == code);
+}
+
+export function getProgramDetail(code: ProgramCode): Program {
+    const detail = getStaticData().programs.find(program => program.code == code);
+    if (!detail)
+        throw new Error("찾을 수 없는 프로그램 코드입니다.")
+    return detail;
+}
+
+
+export function getProgramHotkeyCategories(code: ProgramCode) {
+    const categories = getProgramHotkeys(code).map(hotkey => hotkey.category).flat();
+    return [...new Set(categories)]
+}
+
+export function getProgramHotkeys(code: ProgramCode) {
+    return getStaticData().hotkeys.filter(hotkey => hotkey.programCode == code)
+}

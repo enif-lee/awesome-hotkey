@@ -1,7 +1,7 @@
 import {FC} from 'react';
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
-import {Link, Route, Switch, useParams, useRouteMatch} from 'react-router-dom'
+import {Link, Route, Switch, useHistory, useParams, useRouteMatch} from 'react-router-dom'
 import {Col, Grid, Row} from 'rsuite'
 
 import CategoryGrid from '../../components/program/category-grid'
@@ -10,33 +10,44 @@ import ProgramMainHeader from '../../components/program/program-main-header'
 import SimpleSearchBar from '../../components/search/simple-search-bar'
 
 import ProgramSearchPage from './program-search-page'
-import {programSearchStore} from "../../stores/program-search";
+import {ProgramSearchStore, ProgramSearchStoreContext, useProgramSearchStore} from "../../stores/program-search-store";
+import {isSupportProgram} from "../../data/dataloader";
 
 
 const Wrapper = styled.div`
-    width: 620px;
-    margin: 0 auto;
+  width: 620px;
+  margin: 0 auto;
 
-    .row {
-        margin: 48px 0;
-    }
+  .row {
+    margin: 48px 0;
+  }
 `
 
 const RowTitle = styled.div`
-    line-height: 40px;
-    text-align: left;
-    font-size: 16px;
+  line-height: 40px;
+  text-align: left;
+  font-size: 16px;
 `
 
 
+export const ProgramMainPageContextWrapper: FC = () => {
+    const {programCode} = useParams<{ programCode: string }>()
+    const history = useHistory();
+    if (!isSupportProgram(programCode)) {
+        history.push("/not-found")
+        return <></>
+    }
+    return <>
+        <ProgramSearchStoreContext.Provider value={new ProgramSearchStore(programCode)}>
+            <ProgramMainPage/>
+        </ProgramSearchStoreContext.Provider>
+    </>
+}
+
+
 const ProgramMainPage: FC = observer(() => {
-    const store = programSearchStore;
-
+    const store = useProgramSearchStore();
     const match = useRouteMatch()
-    const {programCode} = useParams<{programCode: string}>()
-
-    store.setProgramCode(programCode)
-
     return <Wrapper>
         <Switch>
             <Route path={match.url} exact>
@@ -71,7 +82,7 @@ const ProgramMainPage: FC = observer(() => {
                         </Col>
                         <Col xs={18}>
                             <Link to={`${match.url}/search/keyboard`}>
-                                <Keyboard activedKeycaps={store.activedKeycaps} />
+                                <Keyboard activedKeycaps={store.activedKeycaps}/>
                             </Link>
                         </Col>
                     </Row>
@@ -93,12 +104,9 @@ const ProgramMainPage: FC = observer(() => {
                 </Grid>
             </Route>
 
-            <Route path={`/programs/:programCode/search`}>
-                <ProgramSearchPage />
+            <Route path={`/programs/:programCode/search/:type`}>
+                <ProgramSearchPage/>
             </Route>
         </Switch>
     </Wrapper>
 })
-
-
-export default ProgramMainPage

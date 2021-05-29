@@ -2,7 +2,7 @@ import {FC} from 'react'
 import classNames from 'classnames/bind'
 import styled from '@emotion/styled'
 import {Link, useRouteMatch} from 'react-router-dom'
-import {Row, Col} from 'rsuite'
+import {Col, Row} from 'rsuite'
 
 import TabModel from '../../models/tab-model'
 
@@ -41,12 +41,12 @@ const Tab = styled.div`
 
 
 const ProgramSearchTabbar: FC<ProgramSearchHeaderProps> = props => {
-    const match = useRouteMatch()
+    const match = useRouteMatch<{ programCode: string, type: string }>()
 
     return <Row gutter={16}>
         {props.tabs.map((tab, index) => (
             <Col xs={24 / props.tabs.length} key={index}>
-                <Link to={[match.url, tab.key].join('/')}>
+                <Link to={match.path.replace(":programCode", match.params.programCode).replace(":type", tab.key)}>
                     <Tab className={classNames({'--active': tab.key === props.selectedTabKey})}>
                         {tab.title}
                     </Tab>
