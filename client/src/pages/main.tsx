@@ -9,9 +9,10 @@ import {css} from "@emotion/css";
 import {observer} from "mobx-react-lite";
 import {recentSearchStore} from "../stores/recent-search-store";
 import {Link, useHistory} from "react-router-dom";
-import {getPrograms, Program} from "../data/dataloader";
+import {getPrograms, getProgramsByCategory, Program} from "../data/dataloader";
 import {bookmarkStore} from "../stores/bookmark-store";
 import {useMedia} from "react-use";
+import _ from "lodash";
 
 
 const MainBackground = styled.div`
@@ -113,6 +114,10 @@ const SearchListItem = styled(List.Item)`
   }
 `
 
+function useWideCheck(): boolean {
+    return useMedia('(min-width: 1200px)');
+}
+
 export const ContentLayout: FC = ({children}) => {
     return <FlexboxGrid justify={"center"} align={"middle"} className={css`text-align: center;`}>
         <FlexboxGrid.Item colspan={16}>
@@ -142,12 +147,16 @@ const RecommendProgramsComponentItemImg = styled.img`
 `
 
 const RecommendProgramsComponentItem: FC<{ program: Program }> = ({program}) => {
-    const colSpan = useMedia('(min-width: 1200px)') ? 4 : 8;
+    const colSpan = useWideCheck() ? 4 : 8;
 
     return <FlexboxGrid.Item colspan={colSpan}>
-        <RecommendProgramsComponentItemImg src={"/image/" + program.image}/>
-        <p className={css`font-size: 0.75rem;
-          margin-bottom: 0.75rem;`}>{program.name}</p>
+        <Link to={"/programs/" + program.code}>
+            <RecommendProgramsComponentItemImg src={"/image/" + program.image}/>
+            <p className={css`font-size: 0.75rem;
+              margin-bottom: 0.75rem;
+              color: white;
+              text-decoration: none;`}>{program.name}</p>
+        </Link>
     </FlexboxGrid.Item>
 }
 
@@ -157,7 +166,7 @@ const RecommendProgramsComponent: FC<{ title: string, programs: Program[] }> = (
     const next = useCallback(() => setPage(pageIndex + 1), [pageIndex]);
     const prev = useCallback(() => setPage(pageIndex - 1), [pageIndex]);
 
-    const isWide = useMedia('(min-width: 1200px)');
+    const isWide = useWideCheck();
     const page = isWide ? 6 : 3;
     const pagePrograms = programs.slice(pageIndex * page, pageIndex * page + page);
     console.log(pagePrograms)
@@ -191,35 +200,45 @@ const RecommendProgramsComponent: FC<{ title: string, programs: Program[] }> = (
 }
 
 
-const ProgramCategoryCard: FC = () => {
+type ProgramCategoryCardProps = { title: string, category: string };
+const ProgramCategoryCard: FC<ProgramCategoryCardProps> = ({title, category}) => {
+
+    const programs = useMemo(() => getProgramsByCategory(category), [category]);
+    const chunkedPrograms = _.chunk(programs, 3);
+    const padding = useWideCheck()
+        ? 0
+        : 20;
     return <div className={css`margin: 1.5rem 0.5rem;
       padding: 1.5rem;
       background-color: #101011;
       border: 1px solid rgba(255, 255, 255, .1)`}>
         <h5 className={css`margin-bottom: 12px;
-          text-align: left;`}>문서</h5>
+          text-align: left;`}>{title}</h5>
         <Grid fluid>
-            <Row className={css`margin-bottom: 12px;`}>
-                <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
-                <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
-                <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
-            </Row>
-            <Row className={css`margin-bottom: 12px;`}>
-                <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
-                <Col sm={8}><img src="https://via.placeholder.com/100" className={css`width: 100%`}/></Col>
-            </Row>
+            {chunkedPrograms.map(chunk =>
+                <Row className={css`margin-bottom: 12px;`}>
+                    {chunk.map(program => <Link to={"/programs/" + program.code}>
+                        <Col sm={8}>
+                            <img src={"/image/" + program.image} className={css`width: 100%;
+                              padding: ${padding}px`}/>
+                        </Col>
+                    </Link>)}
+                </Row>
+            )}
         </Grid>
     </div>
 }
-const ProgramCategoryCardColumn: FC = () => {
+
+type ProgramCategoryCardColumn = {
+    cards: ProgramCategoryCardProps[]
+}
+const ProgramCategoryCardColumn: FC<ProgramCategoryCardColumn> = ({cards}) => {
     return <Col xs={24} smPush={2} sm={20} mdPush={3} md={18} lgPush={0} lg={8}>
-        <ProgramCategoryCard/>
-        <ProgramCategoryCard/>
-        <ProgramCategoryCard/>
+        {cards.map(card => <ProgramCategoryCard {...card} />)}
     </Col>
 }
 
-const RelativeHotKeyTips: FC = () => {
+const RelativeHotKeyTips: FC<{ tooltips: string[] }> = ({tooltips}) => {
     return <FlexboxGrid justify={"center"} align={"middle"}>
         <FlexboxGrid.Item colspan={20}>
             <div className={css`padding: 2rem 0;`}>
@@ -231,21 +250,14 @@ const RelativeHotKeyTips: FC = () => {
                 </div>
                 <Grid fluid className={css`max-width: 1200px;`}>
                     <Row>
-                        <Col lg={8} sm={24}>
-                            <div className={css`padding: 20px 10px;
-                              overflow: hidden;`}><img className={css`width: 100%;`}
-                                                       src={"https://via.placeholder.com/400x255"}/></div>
-                        </Col>
-                        <Col lg={8} sm={24}>
-                            <div className={css`padding: 20px 10px;
-                              overflow: hidden;`}><img className={css`width: 100%;`}
-                                                       src={"https://via.placeholder.com/400x255"}/></div>
-                        </Col>
-                        <Col lg={8} sm={24}>
-                            <div className={css`padding: 20px 10px;
-                              overflow: hidden;`}><img className={css`width: 100%;`}
-                                                       src={"https://via.placeholder.com/400x255"}/></div>
-                        </Col>
+                        {tooltips.slice(0, 3).map(tipId => <Col lg={8} sm={24}>
+                            <Link to={"tool-tips/" + tipId}>
+                                <div className={css`padding: 20px 10px;
+                                  overflow: hidden;`}>
+                                    <img className={css`width: 100%;`} src={`/image/tool-tip/${tipId}.png`}/>
+                                </div>
+                            </Link>
+                        </Col>)}
                     </Row>
                 </Grid>
             </div>
@@ -346,14 +358,24 @@ const MainContentPage: FC = observer(props => {
             <ContentLayout>
                 <Grid fluid className={css`max-width: 1000px;`}>
                     <Row>
-                        <ProgramCategoryCardColumn/>
-                        <ProgramCategoryCardColumn/>
-                        <ProgramCategoryCardColumn/>
+                        <ProgramCategoryCardColumn cards={[
+                            {title: "문서", category: "document"},
+                            {title: "개발", category: "development"},
+                        ]}/>
+                        <ProgramCategoryCardColumn cards={[
+                            {title: "그래픽디자인", category: "graphic"},
+                            {title: "UX/UI", category: "ux/ui"},
+                            {title: "사진", category: "picture"},
+                        ]}/>
+                        <ProgramCategoryCardColumn cards={[
+                            {title: "3D/AR", category: "3d/ar"},
+                            {title: "비디오", category: "video"},
+                        ]}/>
                     </Row>
                 </Grid>
             </ContentLayout>
         </div>
-        <RelativeHotKeyTips/>
+        <RelativeHotKeyTips tooltips={["1", "2", "3", "4", "5", "6"]}/>
     </>
 })
 

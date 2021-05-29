@@ -48,6 +48,10 @@ export function getPrograms(): Program[] {
     return getStaticData().programs;
 }
 
+export function getProgramsByCategory(category: string): Program[] {
+    return getStaticData().programs.filter(program => program.category.includes(category));
+}
+
 export function isSupportProgram(code: ProgramCode): boolean {
     return getStaticData().programs.some(program => program.code == code);
 }
