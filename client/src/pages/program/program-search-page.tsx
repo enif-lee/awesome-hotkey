@@ -54,7 +54,7 @@ const KeyboardWrapper = styled.div`
 
 
 const SearchTypeDescriptionMap: Record<string, string> = {
-    "type": "검색어로 찾기",
+    "text": "검색어로 찾기",
     "keyboard": "키보드로 찾기",
     "category": "분류별로 찾기",
 };
