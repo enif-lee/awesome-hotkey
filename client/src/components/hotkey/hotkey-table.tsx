@@ -1,7 +1,6 @@
 import {FC} from 'react'
 import {css} from '@emotion/css'
 import styled from '@emotion/styled'
-import {observer} from 'mobx-react-lite'
 
 import HotkeyRow from './hotkey-row'
 
@@ -10,7 +9,7 @@ import HotkeyModel from '../../models/hotkey-model'
 
 interface HotkeyTableProps {
     hotkeys: HotkeyModel[]
-    onSelectHotkey: (index: number) => void
+    onSelectHotkey?: (index: number) => void
 }
 
 
@@ -26,7 +25,7 @@ const Wrapper = styled.table`
 `
 
 
-const HotkeyTable: FC<HotkeyTableProps> = observer(props => (
+const HotkeyTable: FC<HotkeyTableProps> = props => (
     <Wrapper>
         <thead>
             <tr>
@@ -40,13 +39,13 @@ const HotkeyTable: FC<HotkeyTableProps> = observer(props => (
                 <HotkeyRow
                     description={hotkey.description}
                     keycaps={hotkey.keycaps}
-                    onSelectHotkey={() => props.onSelectHotkey(index)}
+                    onSelectHotkey={() => props.onSelectHotkey && props.onSelectHotkey(index)}
                     key={index}
                 />
             ))}
         </tbody>
     </Wrapper>
-))
+)
 
 
 export default HotkeyTable

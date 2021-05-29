@@ -4,7 +4,7 @@ import {Icon, IconButton, List, Modal, SelectPicker} from "rsuite";
 import externalLinkIcon from "../../assets/icon/external-link.svg"
 import {css} from "@emotion/css";
 import {observer} from "mobx-react-lite";
-import {settingStore} from "../stores/settingStore";
+import {settingStore} from "../stores/setting-store";
 import {bookmarkStore} from "../stores/bookmark-store";
 
 

@@ -10,7 +10,7 @@ import {
     ProgramCode
 } from "../data/dataloader";
 import {createContext, useContext} from "react";
-import {SettingStore, settingStore} from "./settingStore";
+import {SettingStore, settingStore} from "./setting-store";
 
 const CategoryAll: string = 'All'
 
@@ -18,8 +18,8 @@ const CategoryAll: string = 'All'
 export class ProgramSearchStore {
     programCode: string = ''
     private _searchingText: string = ''
+    private _selectedKeycaps: KeycapType[] = []
     private _selectedCategory: string = ''
-    private _selectedHotkeyIndex: number = -1
     bookmarkStore: BookmarkStore;
     settingStore: SettingStore;
     private _detail: Program;
@@ -59,6 +59,14 @@ export class ProgramSearchStore {
         ]
     }
 
+    public get activedKeycaps(): KeycapType[] {
+        return this._selectedKeycaps
+    }
+
+    public get hasActivedKeycaps(): boolean {
+        return !!this.activedKeycaps.length
+    }
+
     public get hotkeys(): HotkeyModel[] {
         return getProgramHotkeys(this.programCode)
             .map<HotkeyModel>(key => ({
@@ -66,14 +74,6 @@ export class ProgramSearchStore {
                 keycaps: (key.key[this.settingStore.os] || []).map(value => KeyKeycapMap[value] || KeycapType.Empty),
                 categories: key.category
             }));
-    }
-
-    public get activedKeycaps(): KeycapType[] {
-        if (this._selectedHotkeyIndex < 0) {
-            return []
-        }
-
-        return this.hotkeys[this._selectedHotkeyIndex].keycaps
     }
 
     public get selectedCategory(): string {
@@ -88,10 +88,20 @@ export class ProgramSearchStore {
         switch (tab) {
             case 'text':
                 return this.hotkeys
-                    .filter((hotkey) => (hotkey.description || '').includes(this._searchingText))
+                    .filter((hotkey) => (
+                        [hotkey.description, ...hotkey.keycaps]
+                            .map(string => string.toLowerCase())
+                            .join(' ')
+                            .includes(this._searchingText.toLowerCase())
+                    ))
 
             case 'keyboard':
                 return this.hotkeys
+                    .filter(hotkey => (
+                        !this._selectedKeycaps
+                            .map(keycap => hotkey.keycaps.includes(keycap))
+                            .includes(false)
+                    ))
 
             case 'category':
                 return this.hotkeys
@@ -112,19 +122,28 @@ export class ProgramSearchStore {
         this._searchingText = text
     }
 
+    public toggleKeycap = (keycap: KeycapType) => {
+        let foundIndex: number = this._selectedKeycaps.indexOf(keycap, 0)
+
+        if(foundIndex > -1) {
+            this._selectedKeycaps.splice(foundIndex, 1)
+            return
+        }
+
+        this._selectedKeycaps.push(keycap)
+    }
+
     public selectCategory = (category: string) => {
         if (category === CategoryAll) {
             this._selectedCategory = ''
             return
         }
+
         this._selectedCategory = category
     }
 
-    public selectHotkey = (index: number) => {
-        this._selectedHotkeyIndex = index
-    }
-
 }
+
 
 export const ProgramSearchStoreContext = createContext<ProgramSearchStore>(new ProgramSearchStore("adobe.photoshop"))
 

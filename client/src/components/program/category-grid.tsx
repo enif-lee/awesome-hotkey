@@ -6,7 +6,7 @@ import {Col, Grid, Row} from 'rsuite'
 
 
 const Btn = styled.a`
-    display: inline-block;
+    display: block;
     width: 100%;
     height: 32px;
     line-height: 32px;
@@ -17,20 +17,21 @@ const Btn = styled.a`
     box-shadow: inset 0 0 0 2px #3F4045; // TODO: color
     color: #606060; // TODO: color
     text-align: center;
+    text-overflow: ellipsis;
+    word-break: break-all;
     font-size: 16px;
+    overflow: hidden;
     transition: all 0.2s ease;
 
     &:hover {
-        cursor: pointer;
         color: #FFFFFF; // TODO: color
-        text-decoration: none;
     }
 
-  &.--active {
-    background-color: #3F4045; // TODO: color
-    box-shadow: inset 0 0 0 2px #2B2D2F; // TODO: color
-    color: #FFFFFF; // TODO: color
-  }
+    &.--active {
+        background-color: #3F4045; // TODO: color
+        box-shadow: inset 0 0 0 2px #2B2D2F; // TODO: color
+        color: #FFFFFF; // TODO: color
+    }
 `
 
 

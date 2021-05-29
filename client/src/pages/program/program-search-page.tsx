@@ -2,19 +2,24 @@ import {FC} from 'react'
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
 import {Col, Row} from 'rsuite'
-import {Route, Switch, useParams, useRouteMatch} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 
 import CategoryGrid from '../../components/program/category-grid'
 import HotkeyTable from '../../components/hotkey/hotkey-table'
 import Keyboard from '../../components/keyboard/keyboard'
-import KeycapList from '../../components/keyboard/keycap-list'
+import KeyboardGuide from '../../components/keyboard/keyboard-guide'
+import KeycapList from '../../components/keycap/keycap-list'
 import ProgramSearchHeader from '../../components/program/program-search-header'
 import SimpleSearchBar from '../../components/search/simple-search-bar'
+import TipWidget from '../../components/tip-widget'
 
 import {useProgramSearchStore} from '../../stores/program-search-store'
 
 
 const Wrapper = styled.div`
+`
+
+const Container = styled.div`
   width: 620px;
   margin: 0 auto;
 
@@ -40,6 +45,15 @@ const Wrapper = styled.div`
       }
     }
   }
+
+  .fade-enter {
+      opacity: 0;
+      
+      &.fade-enter-active {
+          opacity: 1;
+      }
+    }
+}
 `
 
 const RowTitle = styled.div`
@@ -47,10 +61,23 @@ const RowTitle = styled.div`
   font-size: 20px;
 `
 
-const KeyboardWrapper = styled.div`
+const KeyboardContainer = styled.div`
   float: right;
   margin-top: 8px;
 `
+
+const TipWidgetContainer = styled.div`
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin-left: 400px;
+`
+
+
+const animationStyles = {
+    entering: { opacity: 0 },
+    entered: { opacity: 1 }
+}
 
 
 const SearchTypeDescriptionMap: Record<string, string> = {
@@ -61,64 +88,72 @@ const SearchTypeDescriptionMap: Record<string, string> = {
 
 const ProgramSearchPage: FC = observer(() => {
     const store = useProgramSearchStore()
-    const match = useRouteMatch()
     const {type} = useParams<{ programCode: string, type: string }>()
 
     return <Wrapper>
-        <Row>
-            <ProgramSearchHeader
-                iconImgURL={store.iconImgURL}
-                isBookmarked={store.isBookmarked}
-                title={store.title}
-                subtitle={store.subtitle}
-                tabs={[
-                    {key: 'text', title: '키워드 검색'},
-                    {key: 'keyboard', title: '키보드 검색'},
-                    {key: 'category', title: '기능별 검색'}
-                ]}
-                selectedTabKey={type}
-                onToggleBookmarked={store.toggleBookmarked}
+        <Container>
+            <Row>
+                <ProgramSearchHeader
+                    iconImgURL={store.iconImgURL}
+                    isBookmarked={store.isBookmarked}
+                    title={store.title}
+                    subtitle={store.subtitle}
+                    tabs={[
+                        {key: 'text', title: '키워드 검색'},
+                        {key: 'keyboard', title: '키보드 검색'},
+                        {key: 'category', title: '기능별 검색'}
+                    ]}
+                    selectedTabKey={type}
+                    onToggleBookmarked={store.toggleBookmarked}
+                />
+            </Row>
+
+            <Row gutter={0} className="flex-row">
+                <Col xs={6}>
+                    <div className="height-filled">
+                        <RowTitle>
+                            {SearchTypeDescriptionMap[type]}
+                        </RowTitle>
+                        
+                        {type == 'keyboard' && <div className="bottom-fixed">
+                            {store.hasActivedKeycaps && <KeycapList keycaps={store.activedKeycaps} />}
+                            {!store.hasActivedKeycaps && <KeyboardGuide />}
+                        </div>}
+                    </div>
+                </Col>
+                <Col xs={18}>
+                    {type == "text" && <SimpleSearchBar
+                        placeholder="검색하실 기능 또는 단축키를 입력하세요 :)"
+                        onInputText={store.searchText}
+                    />}
+                    {type == "keyboard" && <KeyboardContainer>
+                        <Keyboard
+                            activedKeycaps={store.activedKeycaps}
+                            os={store.settingStore.os}
+                            onSelectKeycap={store.toggleKeycap}
+                        />
+                    </KeyboardContainer>}
+                    {type == "category" && <CategoryGrid
+                        categories={store.categories}
+                        selectedCategory={store.selectedCategory}
+                        onSelectCategory={store.selectCategory}
+                    />}
+                </Col>
+            </Row>
+
+            <Row>
+                <HotkeyTable
+                    hotkeys={store.filteredHotkeys(type)}
+                />
+            </Row>
+        </Container>
+
+        <TipWidgetContainer>
+            <TipWidget
+                imgURL="https://picsum.photos/200/300"
+                description="test"
             />
-        </Row>
-
-        <Row gutter={0} className="flex-row">
-            <Col xs={6}>
-                <div className="height-filled">
-                    <RowTitle>
-                        {SearchTypeDescriptionMap[type]}
-                    </RowTitle>
-
-                    <Switch>
-                        <Route path={`${match.url}/keyboard`}>
-                            <div className="bottom-fixed">
-                                <KeycapList keycaps={store.activedKeycaps}/>
-                            </div>
-                        </Route>
-                    </Switch>
-                </div>
-            </Col>
-            <Col xs={18}>
-                {type == "text" && <SimpleSearchBar
-                    placeholder="검색하실 기능 또는 단축키를 입력하세요 :)"
-                    onInputText={store.searchText}
-                />}
-                {type == "keyboard" && <KeyboardWrapper>
-                    <Keyboard activedKeycaps={store.activedKeycaps}/>
-                </KeyboardWrapper>}
-                {type == "category" && <CategoryGrid
-                    categories={store.categories}
-                    selectedCategory={store.selectedCategory}
-                    onSelectCategory={store.selectCategory}
-                />}
-            </Col>
-        </Row>
-
-        <Row>
-            <HotkeyTable
-                hotkeys={store.filteredHotkeys(type)}
-                onSelectHotkey={store.selectHotkey}
-            />
-        </Row>
+        </TipWidgetContainer>
     </Wrapper>
 })
 

@@ -30,6 +30,11 @@ const RowTitle = styled.div`
   font-size: 16px;
 `
 
+const KeyboardContainer = styled.div`
+  float: right;
+  margin-top: 8px;
+`
+
 
 export const ProgramMainPageContextWrapper: FC = () => {
     const {programCode} = useParams<{ programCode: string }>()
@@ -86,9 +91,14 @@ const ProgramMainPage: FC = observer(() => {
                             <RowTitle>키보드로 찾기</RowTitle>
                         </Col>
                         <Col xs={18}>
-                            <Link to={`${match.url}/search/keyboard`}>
-                                <Keyboard activedKeycaps={store.activedKeycaps}/>
-                            </Link>
+                            <KeyboardContainer>
+                                <Link to={`${match.url}/search/keyboard`}>
+                                    <Keyboard
+                                        activedKeycaps={store.activedKeycaps}
+                                        os={store.settingStore.os}
+                                    />
+                                </Link>
+                            </KeyboardContainer>
                         </Col>
                     </Row>
 

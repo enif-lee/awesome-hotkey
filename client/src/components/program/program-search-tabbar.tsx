@@ -27,9 +27,7 @@ const Tab = styled.div`
     transition: all 0.2s ease;
 
     &:hover {
-        cursor: pointer;
         color: #FFFFFF; // TODO: color
-        text-decoration: none;
     }
 
     &.--active {
