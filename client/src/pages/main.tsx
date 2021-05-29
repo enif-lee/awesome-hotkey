@@ -205,8 +205,8 @@ const ProgramCategoryCard: FC<ProgramCategoryCardProps> = ({title, category}) =>
     const programs = useMemo(() => getProgramsByCategory(category), [category]);
     const chunkedPrograms = _.chunk(programs, 3);
     const padding = useWideCheck()
-        ? 0
-        : 20;
+        ? 8
+        : 24;
     return <div className={css`margin: 1.5rem 0.5rem;
       padding: 1.5rem;
       background-color: #101011;
@@ -217,9 +217,10 @@ const ProgramCategoryCard: FC<ProgramCategoryCardProps> = ({title, category}) =>
             {chunkedPrograms.map(chunk =>
                 <Row className={css`margin-bottom: 12px;`}>
                     {chunk.map(program => <Link to={"/programs/" + program.code}>
-                        <Col sm={8}>
+                        <Col sm={8} className={css`padding: ${padding}px`}>
                             <img src={"/image/" + program.image} className={css`width: 100%;
-                              padding: ${padding}px`}/>
+                              border-radius: 8px;
+                              overflow: hidden;`}/>
                         </Col>
                     </Link>)}
                 </Row>
