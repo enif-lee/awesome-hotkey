@@ -1,4 +1,4 @@
-import staticData from './program-hotkeys.json'
+import staticData from '../../../tools/data/result.json'
 
 export type ProgramCategoryCode = string
 export type ProgramCode = string

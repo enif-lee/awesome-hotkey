@@ -1,4 +1,46 @@
 {
+  "programCategories": [
+    {
+      "code": "development",
+      "name": "개발"
+    },
+    {
+      "code": "ux/ui",
+      "name": "UX/UI"
+    },
+    {
+      "code": "document",
+      "name": "문서"
+    },
+    {
+      "code": "graphic",
+      "name": "그래픽"
+    },
+    {
+      "code": "3d/ar",
+      "name": "3D/AR"
+    },
+    {
+      "code": "picture",
+      "name": "사진"
+    },
+    {
+      "code": "video",
+      "name": "영상"
+    },
+    {
+      "code": "collaboration",
+      "name": "협업"
+    },
+    {
+      "code": "chat",
+      "name": "채팅"
+    },
+    {
+      "code": "conference",
+      "name": "회의"
+    }
+  ],
   "programs": [
     {
       "code": "adobe.illustrator",
@@ -157,7 +199,7 @@
       "name": "Jetbrains Websotrm",
       "description": "웹(Javascript,Typescript,Html..) 통합 개발툴",
       "version": null,
-      "image": "programs/jetbrains/webstorm.jpeg",
+      "image": "programs/jetbrains/webstorm.png",
       "category": [
         "development"
       ]
@@ -288,7 +330,7 @@
     {
       "code": "microsoft.teams",
       "name": "Microsoft Teams",
-      "description": null,
+      "description": "작업 공간 채팅 및 화상 회의, 파일 스토리지 및 애플리케이션 통합을 제공",
       "version": null,
       "image": "programs/teams.png",
       "category": [
@@ -300,7 +342,7 @@
     {
       "code": "excel",
       "name": "Microsoft Excel",
-      "description": null,
+      "description": "회계 및 각종 데이터베이스 관리에 유용한 스프레드시트 프로그램",
       "version": null,
       "image": "programs/office/microsoft_office_excel_512x512.png",
       "category": [
@@ -310,7 +352,7 @@
     {
       "code": "powerpoinnnt",
       "name": "Microsoft PowerPoint",
-      "description": null,
+      "description": "설득 기술의 형태로 가장 적절하게 사용할 수 있는 프레젠테이션 소프트웨어",
       "version": null,
       "image": "programs/office/microsoft_power_point_office_512x512.png",
       "category": [
@@ -320,7 +362,7 @@
     {
       "code": "word",
       "name": "Microsoft Word",
-      "description": null,
+      "description": "마이크로소프트에서 개발한 워드 프로세서",
       "version": null,
       "image": "programs/office/microsoft_office_word_512x512.png",
       "category": [
@@ -330,7 +372,7 @@
     {
       "code": "outlook",
       "name": "Microsoft Outlook",
-      "description": null,
+      "description": "마이크로소프트사에서 개발한 개인 정보 관리자 응용 프로그램",
       "version": null,
       "image": "programs/office/microsoft_office_outlook_512x512.png",
       "category": [
@@ -340,7 +382,7 @@
     {
       "code": "access",
       "name": "Microsoft Access",
-      "description": null,
+      "description": "마이크로소프트 오피스에 포함된 데이터베이스 프로그램",
       "version": null,
       "image": "programs/office/microsoft_office_access_512x512.png",
       "category": [
@@ -350,7 +392,7 @@
     {
       "code": "figma",
       "name": "Figma",
-      "description": null,
+      "description": "웹 기반 인 벡터 그래픽 편집기 및 프로토 타이핑 도구",
       "version": null,
       "image": "programs/ui_ux/피그마_512x512.png",
       "category": [
@@ -360,7 +402,7 @@
     {
       "code": "sketch",
       "name": "Sketch",
-      "description": null,
+      "description": "네덜란드 회사 스케치 B.V에서 개발한 macOS용 벡터 그래픽 편집기",
       "version": null,
       "image": "programs/ui_ux/스케치_512x512.png",
       "category": [
@@ -370,8 +412,8 @@
     {
       "code": "threeds-max",
       "name": "3ds Max",
-      "description": null,
-      "version": null,
+      "description": "3D 모델링, 애니메이션, 렌더링 및 시각화를 위한 프로그램",
+      "version": "2020",
       "image": "programs/3d/3dmax2021_512x512.jpg",
       "category": [
         "3d/ar"
@@ -380,7 +422,7 @@
     {
       "code": "maya",
       "name": "Maya",
-      "description": null,
+      "description": "3D 모델링, 컴퓨터 애니메이션, 시각 효과, 3D 렌더링을 위한 소프트웨어",
       "version": null,
       "image": "programs/3d/마야2020_256x256.png",
       "category": [
@@ -390,7 +432,7 @@
     {
       "code": "blender",
       "name": "blender",
-      "description": null,
+      "description": "오픈소스 자유 소프트웨어(무료), 3D 컴퓨터 그래픽 제작 소프트웨어",
       "version": null,
       "image": "programs/3d/블랜더_512x512.png",
       "category": [
@@ -400,7 +442,7 @@
     {
       "code": "rhino",
       "name": "Rhino",
-      "description": null,
+      "description": "상용 3D 컴퓨터 그래픽스 및 컴퓨터 지원 설계(CAD) 응용 소프트웨어",
       "version": null,
       "image": "programs/3d/라이노_256x256.png",
       "category": [
@@ -410,7 +452,7 @@
     {
       "code": "cinema-fourd",
       "name": "Cinema 4D",
-      "description": null,
+      "description": "Maxon 이 개발한 3D 모델링 및 렌더링, 애니메이션 소프트웨어",
       "version": null,
       "image": "programs/3d/시네마포디_512x512.png",
       "category": [
@@ -438,48 +480,16 @@
         "development",
         "collaboration"
       ]
-    }
-  ],
-  "programCategories": [
-    {
-      "code": "development",
-      "name": "개발"
     },
     {
-      "code": "ux/ui",
-      "name": "UX/UI"
-    },
-    {
-      "code": "document",
-      "name": "문서"
-    },
-    {
-      "code": "graphic",
-      "name": "그래픽"
-    },
-    {
-      "code": "3d/ar",
-      "name": "3D/AR"
-    },
-    {
-      "code": "picture",
-      "name": "사진"
-    },
-    {
-      "code": "video",
-      "name": "영상"
-    },
-    {
-      "code": "collaboration",
-      "name": "협업"
-    },
-    {
-      "code": "chat",
-      "name": "채팅"
-    },
-    {
-      "code": "conference",
-      "name": "회의"
+      "code": "Sketchup",
+      "name": "SketchUp",
+      "description": "누구나 쉽고 빠르게 원하는 형태로 구현가능한 3D 모델링 프로그램",
+      "version": null,
+      "image": "programs/sketchup.png",
+      "category": [
+        "3d/ar"
+      ]
     }
   ],
   "hotkeys": [
