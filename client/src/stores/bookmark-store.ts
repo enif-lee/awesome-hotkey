@@ -1,6 +1,6 @@
 import {makeAutoObservable} from "mobx";
 import {autoSave} from "../util/auto-store";
-import {ProgramCode} from "../data/dataloader";
+import {getProgramDetail, Program, ProgramCode} from "../data/dataloader";
 
 export class BookmarkStore {
     programs: ProgramCode[] = []
@@ -20,6 +20,10 @@ export class BookmarkStore {
         } else {
             this.programs = [code, ...this.programs]
         }
+    }
+
+    public get bookmarksWithDetail(): Program[] {
+        return this.programs.map(code => getProgramDetail(code));
     }
 
     toJson(): any {

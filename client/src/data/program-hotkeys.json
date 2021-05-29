@@ -1,22 +1,495 @@
 {
+  "programCategories": [
+    {
+      "code": "development",
+      "name": "개발"
+    },
+    {
+      "code": "ux/ui",
+      "name": "UX/UI"
+    },
+    {
+      "code": "document",
+      "name": "문서"
+    },
+    {
+      "code": "graphic",
+      "name": "그래픽"
+    },
+    {
+      "code": "3d/ar",
+      "name": "3D/AR"
+    },
+    {
+      "code": "picture",
+      "name": "사진"
+    },
+    {
+      "code": "video",
+      "name": "영상"
+    },
+    {
+      "code": "collaboration",
+      "name": "협업"
+    },
+    {
+      "code": "chat",
+      "name": "채팅"
+    },
+    {
+      "code": "conference",
+      "name": "회의"
+    }
+  ],
   "programs": [
     {
       "code": "adobe.illustrator",
-      "name": null,
-      "description": null,
-      "version": null
+      "name": "Illustrator",
+      "description": "일러스트레이션",
+      "version": "cc2021",
+      "image": "programs/adobe/Illustrator-512.png",
+      "category": [
+        "graphic"
+      ]
     },
     {
       "code": "adobe.photoshop",
-      "name": null,
+      "name": "Photoshop",
+      "description": "이미지편집 및 보정/드로잉",
+      "version": "cc2021",
+      "image": "programs/adobe/Photoshop-512.png",
+      "category": [
+        "graphic"
+      ]
+    },
+    {
+      "code": "adobe.indesign",
+      "name": "InDesign",
+      "description": "인쇄 및 디지털 레이아웃 디자인",
+      "version": "cc2021",
+      "image": "programs/adobe/InDesign-512.png",
+      "category": [
+        "graphic"
+      ]
+    },
+    {
+      "code": "adobe.xd",
+      "name": "Adobe XD",
+      "description": "모바일/웹 인터페이스 디자인의 인터렉티브한 디자인/프로토타입",
+      "version": "cc2021",
+      "image": "programs/adobe/XD-512.png",
+      "category": [
+        "ux/ui"
+      ]
+    },
+    {
+      "code": "adobe.premeire-pro",
+      "name": "Premiere Pro",
+      "description": "비디오 제작,편집",
+      "version": "cc2021",
+      "image": "programs/adobe/Premiere-512.png",
+      "category": [
+        "video"
+      ]
+    },
+    {
+      "code": "adebe.after-effect",
+      "name": "After Effect",
+      "description": "시각효과 및 모션그래픽 제작",
+      "version": "cc2021",
+      "image": "programs/adobe/After Effects-512.png",
+      "category": [
+        "graphic",
+        "video"
+      ]
+    },
+    {
+      "code": "adebe.audition",
+      "name": "Audition",
+      "description": "디지털 오디오 디자인 믹싱",
+      "version": "cc2021",
+      "image": "programs/adobe/Audition-512.png",
+      "category": [
+        "video"
+      ]
+    },
+    {
+      "code": "adobe.premiererush",
+      "name": "PremiereRush",
+      "description": "온라인비디오 제작 편집 공유",
+      "version": "cc2021",
+      "image": "programs/adobe/Premiere Rush-512.png",
+      "category": [
+        "video"
+      ]
+    },
+    {
+      "code": "adobe.animate",
+      "name": "Animate",
+      "description": "인터렉티브 애니메이션 제작",
+      "version": "cc2021",
+      "image": "programs/adobe/Animate-512.png",
+      "category": [
+        "video"
+      ]
+    },
+    {
+      "code": "adobe.spark",
+      "name": "Spark",
+      "description": "사운드 트랙과 자동효과 사용해서 비디오제작",
+      "version": "cc2021",
+      "image": "programs/adobe/Spark-512.png",
+      "category": [
+        "video"
+      ]
+    },
+    {
+      "code": "adobe.lightroom",
+      "name": "Lightroom",
+      "description": "사진보정/구성(웹에서의 일괄편집 및 공동작업에 적합)",
+      "version": "cc2021",
+      "image": "programs/adobe/Lightroom-512.png",
+      "category": [
+        "picture"
+      ]
+    },
+    {
+      "code": "aodbe.lightroomclassic",
+      "name": "Lightroom Classic",
+      "description": "사진보정/구성(대량의 사진에 대한 복잡한 구성에 적합)",
+      "version": "cc2021",
+      "image": "programs/adobe/Lightroom Classic-512.png",
+      "category": [
+        "picture"
+      ]
+    },
+    {
+      "code": "adobe.dreamweaver",
+      "name": "Dreamweaver",
+      "description": "세련된 반응형 웹사이트 디자인 및 개발",
+      "version": "cc2021",
+      "image": "programs/adobe/Dreamweaver-512.png",
+      "category": [
+        "ux/ui",
+        "development"
+      ]
+    },
+    {
+      "code": "jetbrains.intellij",
+      "name": "Jetbrains Intellij",
+      "description": "Java(Jvm) 통합 개발툴",
+      "version": null,
+      "image": "업로드 ## 구글에다가 올려놨음",
+      "category": [
+        "development"
+      ]
+    },
+    {
+      "code": "jetbrains.rider",
+      "name": "Jetbrains Rider",
+      "description": "C# 통합 개발툴",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "development"
+      ]
+    },
+    {
+      "code": "jetbrains.webstorm",
+      "name": "Jetbrains Websotrm",
+      "description": "웹(Javascript,Typescript,Html..) 통합 개발툴",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "development"
+      ]
+    },
+    {
+      "code": "jetbrains.goland",
+      "name": "Jetbrains Goland",
+      "description": "Golang 기반 통합 기반 툴",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "development"
+      ]
+    },
+    {
+      "code": "visual-studio-code",
+      "name": "Visual studio code",
+      "description": "Microsoft에서 만든 경량 개발 가능한 경량 텍스트 에디터",
+      "version": null,
+      "image": "programs/dev-tools/512px-Visual_Studio_Code_1.35_icon.svg.png",
+      "category": [
+        "development"
+      ]
+    },
+    {
+      "code": "visual-studio",
+      "name": "Visual studio",
+      "description": "Microsoft에서 개발한 C++/C/C#용 통합 개발툴",
+      "version": null,
+      "image": "programs/dev-tools/Visual-Studio_512x512.png",
+      "category": [
+        "development"
+      ]
+    },
+    {
+      "code": "xcode",
+      "name": "Xcode",
+      "description": "Apple에서 개발한 통합개발툴",
+      "version": null,
+      "image": "programs/dev-tools/xcode_512x512.png",
+      "category": [
+        "development"
+      ]
+    },
+    {
+      "code": "jira",
+      "name": "Jira",
+      "description": "프로젝트 매니징/이슈트래킹/애자일 프로세스",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "collaboration"
+      ]
+    },
+    {
+      "code": "confluence",
+      "name": "Conluence",
+      "description": "문서화/위키",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "document",
+        "collaboration"
+      ]
+    },
+    {
+      "code": "trello",
+      "name": "Trello",
+      "description": "프로젝트 매니징 및 이슈 트래킹 도구",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "collaboration"
+      ]
+    },
+    {
+      "code": "slack",
+      "name": "Slack",
+      "description": "팀 커뮤니케이션/회의",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "chat",
+        "conference"
+      ]
+    },
+    {
+      "code": "notion",
+      "name": "Notion",
+      "description": "블럭 기반 유연한 문서화 도구",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "chat",
+        "conference"
+      ]
+    },
+    {
+      "code": "google.meet",
+      "name": "Google Meet",
+      "description": "화상 회의",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "conference"
+      ]
+    },
+    {
+      "code": "zoom",
+      "name": "Zoom",
+      "description": "화상 회의",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "conference"
+      ]
+    },
+    {
+      "code": "zeplin",
+      "name": "Zeplin",
+      "description": "디자이너와 개발자의 효율적인 협업을 위한 GUI가이드 프로그램",
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "conference",
+        "ux/ui"
+      ]
+    },
+    {
+      "code": "microsoft.teams",
+      "name": "Microsoft Teams",
       "description": null,
-      "version": null
+      "version": null,
+      "image": "업로드",
+      "category": [
+        "collaboration",
+        "chat",
+        "conference"
+      ]
+    },
+    {
+      "code": "excel",
+      "name": "Microsoft Excel",
+      "description": null,
+      "version": null,
+      "image": "programs/office/microsoft_office_excel_512x512.png",
+      "category": [
+        "document"
+      ]
+    },
+    {
+      "code": "powerpoinnnt",
+      "name": "Microsoft PowerPoint",
+      "description": null,
+      "version": null,
+      "image": "programs/office/microsoft_power_point_office_512x512.png",
+      "category": [
+        "document"
+      ]
+    },
+    {
+      "code": "word",
+      "name": "Microsoft Word",
+      "description": null,
+      "version": null,
+      "image": "programs/office/microsoft_office_word_512x512.png",
+      "category": [
+        "document"
+      ]
+    },
+    {
+      "code": "outlook",
+      "name": "Microsoft Outlook",
+      "description": null,
+      "version": null,
+      "image": "programs/office/microsoft_office_outlook_512x512.png",
+      "category": [
+        "document"
+      ]
+    },
+    {
+      "code": "access",
+      "name": "Microsoft Access",
+      "description": null,
+      "version": null,
+      "image": "programs/office/microsoft_office_access_512x512.png",
+      "category": [
+        "document"
+      ]
+    },
+    {
+      "code": "figma",
+      "name": "Figma",
+      "description": null,
+      "version": null,
+      "image": "programs/ui_ux/피그마_512x512.png",
+      "category": [
+        "ux/ui"
+      ]
+    },
+    {
+      "code": "sketch",
+      "name": "Sketch",
+      "description": null,
+      "version": null,
+      "image": "programs/ui_ux/스케치_512x512.png",
+      "category": [
+        "ux/ui"
+      ]
+    },
+    {
+      "code": "threeds-max",
+      "name": "3ds Max",
+      "description": null,
+      "version": null,
+      "image": "programs/3d/3dmax2021_512x512.jpg",
+      "category": [
+        "3d/ar"
+      ]
+    },
+    {
+      "code": "maya",
+      "name": "Maya",
+      "description": null,
+      "version": null,
+      "image": "programs/3d/마야2020_256x256.png",
+      "category": [
+        "3d/ar"
+      ]
+    },
+    {
+      "code": "blender",
+      "name": "blender",
+      "description": null,
+      "version": null,
+      "image": "programs/3d/블랜더_512x512.png",
+      "category": [
+        "3d/ar"
+      ]
+    },
+    {
+      "code": "rhino",
+      "name": "Rhino",
+      "description": null,
+      "version": null,
+      "image": "programs/3d/라이노_256x256.png",
+      "category": [
+        "3d/ar"
+      ]
+    },
+    {
+      "code": "cinema-fourd",
+      "name": "Cinema 4D",
+      "description": null,
+      "version": null,
+      "image": "programs/3d/시네마포디_512x512.png",
+      "category": [
+        "3d/ar"
+      ]
+    },
+    {
+      "code": "github",
+      "name": "Github",
+      "description": "Git 호스팅 / 이슈 트래킹 / 오픈소스 플랫폼",
+      "version": null,
+      "image": null,
+      "category": [
+        "development",
+        "collaboration"
+      ]
+    },
+    {
+      "code": "gitlab",
+      "name": "Gitlab",
+      "description": "Git 호스팅 / 통합 프로젝트 매니징 도구",
+      "version": null,
+      "image": null,
+      "category": [
+        "development",
+        "collaboration"
+      ]
     }
   ],
   "hotkeys": [
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Transform"
+      ],
       "description": {
         "en": "Free Transform",
         "ko": "자유 변형"
@@ -34,7 +507,10 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Brush"
+      ],
       "description": {
         "en": "Switching between painting and erasing the same brush shape",
         "ko": "동일한 브러시 모양으로 페인팅과 지우기 간 전환"
@@ -50,7 +526,10 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Brush"
+      ],
       "description": {
         "en": "Reduce brush size",
         "ko": "브러시 크기 줄임"
@@ -66,7 +545,10 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Brush"
+      ],
       "description": {
         "en": "Brush larger",
         "ko": "브러시 더 크게"
@@ -82,7 +564,10 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Brush"
+      ],
       "description": {
         "en": "Decrease Brush Hardness",
         "ko": "브러시 경도 낮춤"
@@ -98,7 +583,10 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Brush"
+      ],
       "description": {
         "en": "Increase brush hardness",
         "ko": "브러시 경도 높임"
@@ -114,7 +602,10 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Brush"
+      ],
       "description": {
         "en": "1 also rotate the brush tip",
         "ko": "브러시 끝을 1도 회전"
@@ -130,10 +621,13 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Brush"
+      ],
       "description": {
-        "en": null,
-        "ko": null
+        "en": "1 also rotate the brush tip",
+        "ko": "브러시 끝을 1도 회전"
       },
       "key": {
         "windows": [
@@ -146,7 +640,10 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Brush"
+      ],
       "description": {
         "en": "15 rotates the brush tip",
         "ko": "브러시 끝을 15도 회전"
@@ -164,10 +661,13 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Brush"
+      ],
       "description": {
-        "en": null,
-        "ko": null
+        "en": "15 rotates the brush tip",
+        "ko": "브러시 끝을 15도 회전"
       },
       "key": {
         "windows": [
@@ -182,7 +682,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
         "en": "Default Foreground / Background Color",
         "ko": "기본 전경/배경 색상"
@@ -198,7 +700,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
         "en": "Foreground / background color transition",
         "ko": "전경/배경 색상 전환"
@@ -214,10 +718,12 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
-        "en": "Align layers to the screen size",
-        "ko": "화면 크기에 레이어 맞추기"
+        "en": "Fit to screen size layer (layer holding down the key click)",
+        "ko": "화면 크기에 레이어 맞추기(키를 누른 채 레이어 click)"
       },
       "key": {
         "windows": [
@@ -230,7 +736,10 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Layers"
+      ],
       "description": {
         "en": "Create a new layer via copy",
         "ko": "복사를 통해 새 레이어 만들기"
@@ -248,7 +757,10 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often",
+        "Layers"
+      ],
       "description": {
         "en": "Cut through the Create New Layer",
         "ko": "잘라내기를 통해 새 레이어 만들기"
@@ -268,26 +780,32 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
         "en": "Add to selection",
         "ko": "선택 영역에 추가"
       },
       "key": {
         "windows": [
-          "shft"
+          "shft",
+          "drag"
         ],
         "osx": [
-          "shft"
+          "shft",
+          "drag"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
-        "en": "Brush or delete color swatches",
-        "ko": "브러시 또는 색상 견본 삭제"
+        "en": "Brush or color swatch to delete (hold down a key brushes or Swatches click)",
+        "ko": "브러시 또는 색상 견본 삭제(키를 누른 채 브러시 또는 색상 견본 click)"
       },
       "key": {
         "windows": [
@@ -300,10 +818,12 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
-        "en": "Automatic selection switch to the move tool",
-        "ko": "이동 도구로 자동 선택 전환"
+        "en": "(Click while pressing the key) automatically selects switch to the move tool",
+        "ko": "이동 도구로 자동 선택 전환(키를 누른 상태에서 click)"
       },
       "key": {
         "windows": [
@@ -316,7 +836,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
         "en": "Close all open documents other than the current document",
         "ko": "현재 문서 이외의 열려 있는 모든 문서 닫기"
@@ -336,7 +858,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
         "en": "All manner mode cancel the dialog window (including the starting workspace)",
         "ko": "모든 모드 방식 대화 상자 창 취소(시작 작업 영역 포함)"
@@ -352,7 +876,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
         "en": "Choose the first field in the edit toolbar",
         "ko": "도구 모음의 첫 번째 편집 필드 선택"
@@ -368,7 +894,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
         "en": "Move from field",
         "ko": "필드 간 이동"
@@ -384,7 +912,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
         "en": "Move from field to field in the opposite direction",
         "ko": "반대 방향으로 필드 간 이동"
@@ -402,7 +932,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
         "en": "Change the settings back to clear",
         "ko": "취소를 다시 설정으로 변경"
@@ -419,7 +951,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "기능키사용"
+        "Function Key"
       ],
       "description": {
         "en": "Help Start",
@@ -434,7 +966,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "Undo / Redo",
         "ko": "취소/다시 실행"
@@ -448,7 +982,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "Cut",
         "ko": "오리기"
@@ -464,7 +1000,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "copy",
         "ko": "복사"
@@ -480,7 +1018,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "paste",
         "ko": "붙여넣기"
@@ -496,7 +1036,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "Hide Brushes panel Show /",
         "ko": "브러시 패널 표시/숨기기"
@@ -512,7 +1054,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "Color Panel Show / Hide",
         "ko": "색상 패널 표시/숨기기"
@@ -528,7 +1072,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "Layers panel Show / Hide",
         "ko": "레이어 패널 표시/숨기기"
@@ -544,7 +1090,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "Information Panel Show / Hide",
         "ko": "정보 패널 표시/숨기기"
@@ -560,7 +1108,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "Actions panel Show / Hide",
         "ko": "액션 패널 표시/숨기기"
@@ -577,7 +1127,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "Revert",
         "ko": "되돌리기"
@@ -593,7 +1145,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "seven",
         "ko": "칠"
@@ -611,7 +1165,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "Selection feather",
         "ko": "선택 영역 페더"
@@ -629,7 +1185,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Function Key"
+      ],
       "description": {
         "en": "Invert Selection",
         "ko": "선택 영역 반전"
@@ -648,11 +1206,11 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "도구선택"
+        "Tool Selection"
       ],
       "description": {
-        "en": "Switch using the same shortcuts to other tools",
-        "ko": "동일한 단축키를 사용하여 다른 도구로 전환"
+        "en": "Switch using the same shortcuts to other tools\n(Pressing the shortcut by holding down the key (Use shft key to the tool Transfer case preference is selected))",
+        "ko": "동일한 단축키를 사용하여 다른 도구로 전환\n(키를 누른 상태로 단축키 누름([도구 전환에 shft 키 사용] 환경 설정이 선택된 경우))"
       },
       "key": {
         "windows": [
@@ -665,10 +1223,12 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
-        "en": "Then switch hidden tools",
-        "ko": "숨겨진 도구 차례로 전환"
+        "en": "Then switch hidden tools\n(Tool, hold down the key and click (add reference point, delete anchor point, and convert point tools except))",
+        "ko": "숨겨진 도구 차례로 전환\n(키를 누른 상태에서 도구 click(기준점 추가, 기준점 삭제 및 포인트 도구 변환 제외))"
       },
       "key": {
         "windows": [
@@ -681,7 +1241,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Go to Tools",
         "ko": "이동 도구"
@@ -697,10 +1259,12 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
-        "en": "Rectangular Marquee tool †\nCircular Marquee tool",
-        "ko": "사각형 선택 윤곽 도구†\n원형 선택 윤곽 도구"
+        "en": "Rectangular Marquee tool\nCircular Marquee tool",
+        "ko": "사각형 선택 윤곽 도구\n원형 선택 윤곽 도구"
       },
       "key": {
         "windows": [
@@ -713,7 +1277,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Lasso tool\nPolygonal lasso tool\nMagnetic Lasso tool",
         "ko": "올가미 도구\n다각형 올가미 도구\n자석 올가미 도구"
@@ -729,7 +1295,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Magic Wand tool\nQuick Selection tool",
         "ko": "자동 선택 도구\n빠른 선택 도구"
@@ -745,7 +1313,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Crop Tool\nPartition Tool\nSelect the partition tool",
         "ko": "자르기 도구\n분할 영역 도구\n분할 영역 선택 도구"
@@ -761,7 +1331,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Eyedropper tool †\nColor Sampler tool\nRuler tool\nNotes Tool",
         "ko": "스포이드 도구†\n색상 샘플러 도구\n눈금자 도구\n노트 도구"
@@ -777,7 +1349,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Spot Healing Brush tool\nHealing Brush tool\nPatch tool\nRed Eye tool",
         "ko": "스팟 복구 브러시 도구\n복구 브러시 도구\n패치 도구\n적목 현상 도구"
@@ -793,7 +1367,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Brush tool\nPencil tool\nColor replacement tool\nMixer Brush tool",
         "ko": "브러시 도구\n연필 도구\n색상 대체 도구\n혼합 브러시 도구"
@@ -809,7 +1385,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Clone Stamp Tool\nPattern Stamp tool",
         "ko": "복제 도장 도구\n패턴 도장 도구"
@@ -825,7 +1403,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "History Brush tool\nArt History Brush tool",
         "ko": "작업 내역 브러시 도구\n미술 작업 내역 브러시 도구"
@@ -841,7 +1421,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Eraser tool †\nBackground Eraser tool\nMagic Eraser tool",
         "ko": "지우개 도구†\n배경 지우개 도구\n자동 지우개 도구"
@@ -857,7 +1439,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Gradient tool\nPaint Bucket tool",
         "ko": "그레이디언트 도구\n페인트 통 도구"
@@ -873,7 +1457,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Dodge Tool\nBurn tool\nSponge Tool",
         "ko": "닷지 도구\n번 도구\n스폰지 도구"
@@ -889,7 +1475,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Pen tool\nFreeform Pen tool",
         "ko": "펜 도구\n자유 형태 펜 도구"
@@ -905,7 +1493,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Horizontal Type tool\nVertical Type tool\nHorizontal text mask tool\nVertical Type Mask Tool",
         "ko": "수평 문자 도구\n세로 문자 도구\n수평 문자 마스크 도구\n세로 문자 마스크 도구"
@@ -921,7 +1511,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Path Selection tool\nDirect Selection tool",
         "ko": "패스 선택 도구\n직접 선택 도구"
@@ -937,7 +1529,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Rectangle tool\nRounded Rectangle tool\nCircular tool\nPolygon tool\nLine Tool\nCustom Shape tool",
         "ko": "사각형 도구\n모서리가 둥근 사각형 도구\n원형 도구\n다각형 도구\n선 도구\n사용자 정의 모양 도구"
@@ -953,10 +1547,12 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
-        "en": "Hand tool †",
-        "ko": "손 도구†"
+        "en": "Hand tools",
+        "ko": "손 도구"
       },
       "key": {
         "windows": [
@@ -969,7 +1565,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Rotate View tool",
         "ko": "보기 회전 도구"
@@ -985,10 +1583,12 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
-        "en": "Zoom tool †",
-        "ko": "돋보기 도구†"
+        "en": "Zoom tool",
+        "ko": "돋보기 도구"
       },
       "key": {
         "windows": [
@@ -1001,7 +1601,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Default Foreground / Background Color",
         "ko": "기본 전경/배경 색상"
@@ -1017,7 +1619,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Foreground / background color transition",
         "ko": "전경/배경 색상 전환"
@@ -1033,7 +1637,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Standard / Quick Mask mode switch",
         "ko": "표준/빠른 마스크 모드 전환"
@@ -1049,7 +1655,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Content-aware move tool",
         "ko": "내용 인식 이동 도구"
@@ -1065,7 +1673,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Perspective Crop tool",
         "ko": "원근 자르기 도구"
@@ -1081,7 +1691,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Property Tools",
         "ko": "대지 도구"
@@ -1097,7 +1709,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Rotate View tool",
         "ko": "보기 회전 도구"
@@ -1113,7 +1727,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Preserve Transparency switch",
         "ko": "투명도 유지 전환"
@@ -1129,7 +1745,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Decrease Brush Hardness",
         "ko": "브러시 경도 낮춤"
@@ -1145,7 +1763,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Increase brush hardness",
         "ko": "브러시 경도 높임"
@@ -1161,7 +1781,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Previous brush",
         "ko": "이전 브러시"
@@ -1177,7 +1799,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "Then brush",
         "ko": "다음 브러시"
@@ -1193,7 +1817,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "The first brush",
         "ko": "첫 번째 브러시"
@@ -1209,7 +1835,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Tool Selection"
+      ],
       "description": {
         "en": "End Brush",
         "ko": "최종 브러시"
@@ -1226,7 +1854,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "이미지보기"
+        "View Image"
       ],
       "description": {
         "en": "Cycling between open documents",
@@ -1245,7 +1873,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Switch to the previous document",
         "ko": "이전 문서로 전환"
@@ -1265,7 +1895,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Open and close the file in Photoshop Bridge",
         "ko": "Photoshop에서 파일을 닫고 Bridge 열기"
@@ -1285,7 +1917,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Switching between standard mode and Quick Mask mode",
         "ko": "표준 모드와 빠른 마스크 모드 간 전환"
@@ -1301,7 +1935,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Switching between Standard screen mode, the menu bar contains a full screen mode and full screen mode (forward)",
         "ko": "표준 화면 모드, 메뉴 막대가 포함된 전체 화면 모드 및 전체 화면 모드 간 전환(앞으로)"
@@ -1317,7 +1953,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Switching between Standard screen mode, the menu bar in full-screen mode and full screen mode, including the (Back)",
         "ko": "표준 화면 모드, 메뉴 막대가 포함된 전체 화면 모드 및 전체 화면 모드 간 전환(뒤로)"
@@ -1335,10 +1973,12 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
-        "en": "Canvas color conversion (forward) (or click on the canvas background, right-click it and select color)",
-        "ko": "캔버스 색상 전환(앞으로) (또는캔버스배경을마우스오른쪽단추로클릭하고색상선택)"
+        "en": "Canvas color conversion (forward) (or click the right mouse button and select the canvas background color)",
+        "ko": "캔버스 색상 전환(앞으로) (또는캔버스배경을마우스오른쪽단추로click하고색상선택)"
       },
       "key": {
         "windows": [
@@ -1353,7 +1993,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Canvas color transition (back)",
         "ko": "캔버스 색상 전환(뒤로)"
@@ -1373,26 +2015,12 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
-        "en": "Fit image to window size",
-        "ko": "창 크기에 이미지 맞추기"
-      },
-      "key": {
-        "windows": [
-          "손도구를두번클릭"
-        ],
-        "osx": [
-          "손도구를두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Zoom to 100% (double-click the Zoom tool)",
-        "ko": "100%로 확대 (돋보기도구두번클릭)"
+        "en": "Zoom to 100% (magnifier tool, double click)",
+        "ko": "100%로 확대 (돋보기도구두번click)"
       },
       "key": {
         "windows": [
@@ -1407,7 +2035,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "If it is not a text-editing mode switch to the Hand tool",
         "ko": "텍스트 편집 모드가 아닌 경우 손 도구로 전환"
@@ -1423,7 +2053,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Hand tool to move multiple documents simultaneously",
         "ko": "[손] 도구로 여러 문서를 동시에 이동"
@@ -1441,7 +2073,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Switch to Zoom tool",
         "ko": "확대 도구로 전환"
@@ -1459,7 +2093,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Switch to Zoom tool",
         "ko": "축소 도구로 전환"
@@ -1477,7 +2113,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Select Zoom in / out during a drag marquee with the Zoom tool to move",
         "ko": "돋보기 도구로 drag하는 동안 확대/축소 선택 윤곽 이동"
@@ -1495,59 +2133,67 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Applying the zoom in / zoom ratio and maintain the enlargement / reduction ratio boxes activities",
         "ko": "확대/축소 비율을 적용하고 확대/축소 비율 상자를 활성으로 유지"
       },
       "key": {
         "windows": [
-          "내비게이터패널의확대/축소비율상자에서shft",
-          "enter누르기"
+          "shft",
+          "enter"
         ],
         "osx": [
-          "내비게이터패널의확대/축소비율상자에서shft",
-          "return누르기"
+          "shft",
+          "enter"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Specific areas of an image zoom",
         "ko": "이미지의 특정 영역 확대"
       },
       "key": {
         "windows": [
-          "내비게이터패널의미리보기에서ctrl",
+          "ctrl",
           "drag"
         ],
         "osx": [
-          "내비게이터패널의미리보기에서cmd",
+          "ctrl",
           "drag"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
-        "en": "Temporarily magnify image",
-        "ko": "일시적으로 이미지 확대"
+        "en": "Temporary (keep hansangtae click the image, press the key) to enlarge",
+        "ko": "일시적으로 이미지 확대(키를누르고이미지를click한상태유지)"
       },
       "key": {
         "windows": [
-          "h키를누르고이미지를클릭한상태유지"
+          "h"
         ],
         "osx": [
-          "h키를누르고이미지를클릭한상태유지"
+          "h"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Scroll image with Hand tool",
         "ko": "손 도구로 이미지 스크롤"
@@ -1555,33 +2201,55 @@
       "key": {
         "windows": [
           "space",
-          "drag또는내비게이터패널에서보기영역상자drag"
+          "drag"
         ],
         "osx": [
           "space",
-          "drag또는내비게이터패널에서보기영역상자drag"
+          "drag"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Up / down to scroll one screen",
         "ko": "위/아래로 한 화면 스크롤"
       },
       "key": {
         "windows": [
-          "pageup또는pagedown"
+          "pageup"
         ],
         "osx": [
-          "pageup또는pagedown†"
+          "pageup"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
+      "description": {
+        "en": "Up / down to scroll one screen",
+        "ko": "위/아래로 한 화면 스크롤"
+      },
+      "key": {
+        "windows": [
+          "pagedown"
+        ],
+        "osx": [
+          "pagedown"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Up / down scrolling 10 units",
         "ko": "위/아래로 10단위 스크롤"
@@ -1589,33 +2257,75 @@
       "key": {
         "windows": [
           "shft",
-          "pageup또는pagedown"
+          "pageup"
         ],
         "osx": [
           "shft",
-          "pageup또는pagedown†"
+          "pageup"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
+      "description": {
+        "en": "Up / down scrolling 10 units",
+        "ko": "위/아래로 10단위 스크롤"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "pagedown"
+        ],
+        "osx": [
+          "shft",
+          "pagedown"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Left / right to move around the corner to see below",
         "ko": "왼쪽 위/오른쪽 아래 모퉁이로 보기 이동"
       },
       "key": {
         "windows": [
-          "home또는end"
+          "home"
         ],
         "osx": [
-          "home또는end"
+          "home"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
+      "description": {
+        "en": "Left / right to move around the corner to see below",
+        "ko": "왼쪽 위/오른쪽 아래 모퉁이로 보기 이동"
+      },
+      "key": {
+        "windows": [
+          "end"
+        ],
+        "osx": [
+          "end"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "On / off switch the layer mask to rubylith (which have the mask layer is selected)",
         "ko": "레이어 마스크를 루비리스로 켬/끔 전환(레이어 마스크가 선택되어 있어야 함)"
@@ -1631,7 +2341,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Foreground / background color transition",
         "ko": "전경/배경 색상 전환"
@@ -1647,7 +2359,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Standard / Quick Mask mode switch",
         "ko": "표준/빠른 마스크 모드 전환"
@@ -1663,7 +2377,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Content-aware move tool",
         "ko": "내용 인식 이동 도구"
@@ -1679,7 +2395,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Perspective Crop tool",
         "ko": "원근 자르기 도구"
@@ -1695,7 +2413,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Property Tools",
         "ko": "대지 도구"
@@ -1711,7 +2431,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Rotate View tool",
         "ko": "보기 회전 도구"
@@ -1727,7 +2449,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Preserve Transparency switch",
         "ko": "투명도 유지 전환"
@@ -1743,7 +2467,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Decrease Brush Hardness",
         "ko": "브러시 경도 낮춤"
@@ -1759,7 +2485,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Increase brush hardness",
         "ko": "브러시 경도 높임"
@@ -1775,7 +2503,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Previous brush",
         "ko": "이전 브러시"
@@ -1791,7 +2521,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "Then brush",
         "ko": "다음 브러시"
@@ -1807,7 +2539,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "The first brush",
         "ko": "첫 번째 브러시"
@@ -1823,7 +2557,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "View Image"
+      ],
       "description": {
         "en": "End Brush",
         "ko": "최종 브러시"
@@ -1840,7 +2576,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "픽셀 유동화 필터 사용"
+        "Pixel Floating"
       ],
       "description": {
         "en": "Transform tool",
@@ -1857,7 +2593,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "Reconstruct tool",
         "ko": "재구성 도구"
@@ -1873,7 +2611,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "Clockwise turning tool",
         "ko": "시계 방향 돌리기 도구"
@@ -1889,7 +2629,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "A concave tool",
         "ko": "오목 도구"
@@ -1905,7 +2647,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "Convex tool",
         "ko": "볼록 도구"
@@ -1921,7 +2665,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "Pushing the left tool",
         "ko": "왼쪽 밀기 도구"
@@ -1937,7 +2683,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "Mask holding tool",
         "ko": "마스크 고정 도구"
@@ -1953,7 +2701,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "Mask undocked tool",
         "ko": "마스크 고정 해제 도구"
@@ -1969,74 +2719,119 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "Convex, concave, and the direction reverse to the left pushing tool",
         "ko": "볼록, 오목 및 왼쪽 밀기 도구의 방향 반전"
       },
       "key": {
         "windows": [
-          "alt",
-          "도구"
+          "alt"
         ],
         "osx": [
-          "opt",
-          "도구"
+          "opt"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
-        "en": "Successively sampling distortion",
-        "ko": "연속적으로 왜곡 샘플링"
+        "en": "Successively sampling distortion\n(In the preview tool in the reconstruction, displacement, and select the best tweaks or association mode)",
+        "ko": "연속적으로 왜곡 샘플링\n(재구성도구,변위,최대한비틀기또는연관모드를선택한상태에서 미리보기에서)"
       },
       "key": {
         "windows": [
-          "재구성도구,변위,최대한비틀기또는연관모드를선택한상태에서미리보기에서alt",
+          "alt",
           "drag"
         ],
         "osx": [
-          "재구성도구,변위,최대한비틀기또는연관모드를선택하고미리보기에서opt키를누른상태에서drag"
+          "alt",
+          "drag"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "For size 2 by brush, density, a reduced / increased by a case of the pressure, rate, stir stroke jitter",
         "ko": "브러시 크기의 경우 2만큼, 조밀도, 압력, 비율, 휘몰아치기 지터의 경우 1만큼 감소/증가"
       },
       "key": {
         "windows": [
-          "브러시크기,조밀도,압력,비율또는휘몰아치기지터텍스트상자의down/up†"
+          "down"
         ],
         "osx": [
-          "브러시크기,조밀도,압력,비율또는휘몰아치기지터텍스트상자의down/up†"
+          "down"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "For size 2 by brush, density, a reduced / increased by a case of the pressure, rate, stir stroke jitter",
         "ko": "브러시 크기의 경우 2만큼, 조밀도, 압력, 비율, 휘몰아치기 지터의 경우 1만큼 감소/증가"
       },
       "key": {
         "windows": [
-          "브러시크기,조밀도,압력,비율또는휘몰아치기지터슬라이더가표시된상태에서left/right†"
+          "up"
         ],
         "osx": [
-          "브러시크기,조밀도,압력,비율또는휘몰아치기지터슬라이더가표시된상태에서left/right†"
+          "up"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
+      "description": {
+        "en": "For size 2 by brush, density, a reduced / increased by a case of the pressure, rate, stir stroke jitter",
+        "ko": "브러시 크기의 경우 2만큼, 조밀도, 압력, 비율, 휘몰아치기 지터의 경우 1만큼 감소/증가"
+      },
+      "key": {
+        "windows": [
+          "left"
+        ],
+        "osx": [
+          "left"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Pixel Floating"
+      ],
+      "description": {
+        "en": "For size 2 by brush, density, a reduced / increased by a case of the pressure, rate, stir stroke jitter",
+        "ko": "브러시 크기의 경우 2만큼, 조밀도, 압력, 비율, 휘몰아치기 지터의 경우 1만큼 감소/증가"
+      },
+      "key": {
+        "windows": [
+          "right†"
+        ],
+        "osx": [
+          "right†"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "Right from the controls on the circulation between",
         "ko": "오른쪽 위에서부터 컨트롤 사이 순환"
@@ -2052,7 +2847,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "From circulating among the lower-right control",
         "ko": "오른쪽 아래에서부터 컨트롤 사이 순환"
@@ -2070,7 +2867,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Pixel Floating"
+      ],
       "description": {
         "en": "Change the settings back to clear",
         "ko": "취소를 다시 설정으로 변경"
@@ -2087,7 +2886,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "크기변경"
+        "Transform"
       ],
       "description": {
         "en": "Increase or decrease the size by 10",
@@ -2105,7 +2904,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "소실점 표시"
+        "Vanishing Point"
       ],
       "description": {
         "en": "2x zoom (temporarily)",
@@ -2122,7 +2921,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "enlargement",
         "ko": "확대"
@@ -2141,7 +2942,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "reduction",
         "ko": "축소"
@@ -2159,10 +2962,12 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
-        "en": "Adjust the view (Hand tool and double click)",
-        "ko": "보기에 맞게 조정(손도구두번클릭)"
+        "en": "Adjust the view (hand tools twice click)",
+        "ko": "보기에 맞게 조정(손도구두번click)"
       },
       "key": {
         "windows": [
@@ -2177,7 +2982,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Increase brush size (Brush, Stamp tools)",
         "ko": "브러시 크기 증가(브러시, 도장 도구)"
@@ -2193,7 +3000,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Reduced size brush (brush, a stamp tool)",
         "ko": "브러시 크기 감소(브러시, 도장 도구)"
@@ -2209,7 +3018,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Increased hardness brush (brush, a stamp tool)",
         "ko": "브러시 경도 증가(브러시, 도장 도구)"
@@ -2227,7 +3038,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Brush hardness decreased (brush, a stamp tool)",
         "ko": "브러시 경도 감소(브러시, 도장 도구)"
@@ -2245,7 +3058,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "The last action canceled",
         "ko": "마지막 액션 취소"
@@ -2263,7 +3078,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "The last action Redo",
         "ko": "마지막 액션 다시 실행"
@@ -2283,7 +3100,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Deselect All",
         "ko": "모두 선택 해제"
@@ -2301,7 +3120,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Selection, and a flat-hiding",
         "ko": "선택 영역 및 평면 숨기기"
@@ -2319,7 +3140,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "The selection moves one pixel",
         "ko": "선택 영역을 1픽셀 이동"
@@ -2335,7 +3158,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "The selection moves one pixel",
         "ko": "선택 영역을 1픽셀 이동"
@@ -2351,7 +3176,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "The selection moves one pixel",
         "ko": "선택 영역을 1픽셀 이동"
@@ -2367,7 +3194,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "The selection moves one pixel",
         "ko": "선택 영역을 1픽셀 이동"
@@ -2383,7 +3212,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "The selection of 10 pixels moved",
         "ko": "선택 영역을 10픽셀 이동"
@@ -2401,7 +3232,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "The selection of 10 pixels moved",
         "ko": "선택 영역을 10픽셀 이동"
@@ -2419,7 +3252,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "The selection of 10 pixels moved",
         "ko": "선택 영역을 10픽셀 이동"
@@ -2437,7 +3272,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "The selection of 10 pixels moved",
         "ko": "선택 영역을 10픽셀 이동"
@@ -2455,7 +3292,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "copy",
         "ko": "복사"
@@ -2473,7 +3312,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "paste",
         "ko": "붙여넣기"
@@ -2491,7 +3332,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Finally, repeat copying and moving",
         "ko": "마지막 복제 및 이동 반복"
@@ -2511,7 +3354,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Create a flow area in the current selection",
         "ko": "현재의 선택 영역에서 유동 영역 만들기"
@@ -2527,7 +3372,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "To fill the selected area with the image beneath the pointer",
         "ko": "선택 영역을 포인터 아래의 이미지로 칠하기"
@@ -2545,7 +3392,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Make a copy of the selection to the selected flow area",
         "ko": "선택 영역의 복제본을 선택한 유동 영역으로 만들기"
@@ -2565,7 +3414,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "It limits the selection to the 15 ° rotation",
         "ko": "선택 영역을 15° 회전으로 제한"
@@ -2583,7 +3434,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Select a plane under another selected plane in",
         "ko": "선택된 다른 평면 아래에 있는 평면 선택"
@@ -2599,7 +3452,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Create a 90 ° plane of the upper plane",
         "ko": "상위 평면의 90° 평면 만들기"
@@ -2617,7 +3472,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Vanishing Point"
+      ],
       "description": {
         "en": "Delete last node while creating plane",
         "ko": "평면을 만드는 동안 마지막 노드 삭제"
@@ -2633,24 +3490,8 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Fit the entire canvas plane in the camera",
-        "ko": "캔버스 평면 전체를 카메라에 맞추기"
-      },
-      "key": {
-        "windows": [
-          "평면만들기도구를두번클릭"
-        ],
-        "osx": [
-          "평면만들기도구를두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
       "category": [
-        "[Camera Raw] 대화 상자 사용"
+        "Camera Raw"
       ],
       "description": {
         "en": "Zoom tool",
@@ -2667,7 +3508,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Hand tools",
         "ko": "손 도구"
@@ -2683,7 +3526,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "White Balance tool",
         "ko": "흰색 균형 도구"
@@ -2699,7 +3544,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Color Sampler tool",
         "ko": "색상 샘플러 도구"
@@ -2715,7 +3562,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Crop Tool",
         "ko": "자르기 도구"
@@ -2731,7 +3580,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Straighten tool to",
         "ko": "똑바르게 하기 도구"
@@ -2747,7 +3598,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Spot Removal tool",
         "ko": "스팟 제거 도구"
@@ -2763,7 +3616,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Red Eye Removal tool",
         "ko": "적목 현상 제거 도구"
@@ -2779,7 +3634,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "The main panel",
         "ko": "기본 패널"
@@ -2799,7 +3656,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Panel Tone Curve",
         "ko": "톤 곡선 패널"
@@ -2819,7 +3678,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Detail panel",
         "ko": "세부 묘사 패널"
@@ -2839,7 +3700,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "HSL / Grayscale panel",
         "ko": "HSL/회색 음영 패널"
@@ -2859,7 +3722,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Split Toning panel",
         "ko": "토닝 분할 패널"
@@ -2879,7 +3744,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Lens Correction panel",
         "ko": "렌즈 교정 패널"
@@ -2899,7 +3766,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Camera Calibration panel",
         "ko": "카메라 보정 패널"
@@ -2919,7 +3788,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Presets panel",
         "ko": "사전 설정 패널"
@@ -2933,13 +3804,15 @@
         "osx": [
           "cmd",
           "opt",
-          "9(macosuniversalaccess확대/축소단축키를[시스템환경설정]에서비활성화해야함)"
+          "9"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Open Snapshot panel",
         "ko": "스냅샷 열기 패널"
@@ -2959,7 +3832,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Parameters target curves adjustment tool",
         "ko": "매개 변수 곡선 대상 조정 도구"
@@ -2981,7 +3856,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Hue target adjustment tool",
         "ko": "색조 대상 조정 도구"
@@ -3003,7 +3880,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Saturation Target Adjustment tool",
         "ko": "채도 대상 조정 도구"
@@ -3025,7 +3904,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Luminance targeted adjustment tool",
         "ko": "광도 대상 조정 도구"
@@ -3047,7 +3928,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Shades of gray mixed target adjustment tool",
         "ko": "회색 음영 혼합 대상 조정 도구"
@@ -3069,7 +3952,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "The target adjustment tool last used",
         "ko": "마지막 사용된 대상 조정 도구"
@@ -3085,7 +3970,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Adjustment Brush tool",
         "ko": "조정 브러시 도구"
@@ -3101,7 +3988,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Gradually filter tool",
         "ko": "점차적 필터 도구"
@@ -3117,7 +4006,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Brush size increase / decrease",
         "ko": "브러시 크기 늘리기/줄이기"
@@ -3125,19 +4016,19 @@
       "key": {
         "windows": [
           "alt",
-          "]/alt",
           "["
         ],
         "osx": [
           "opt",
-          "]/opt",
           "["
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Increase / decrease brush feathering",
         "ko": "브러시 페더 늘리기/줄이기"
@@ -3146,14 +4037,10 @@
         "windows": [
           "alt",
           "shft",
-          "]/alt",
-          "shft",
           "["
         ],
         "osx": [
           "opt",
-          "shft",
-          "]/opt",
           "shft",
           "["
         ]
@@ -3161,7 +4048,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Adjustment Brush tool flow in increments of 10 increase / decrease",
         "ko": "10 증분 단위로 조정 브러시 도구 플로우 늘리기/줄이기"
@@ -3169,18 +4058,38 @@
       "key": {
         "windows": [
           "alt",
-          "=(등호)/alt",
-          "-(하이픈)"
+          "="
         ],
         "osx": [
-          "opt=(등호)/opt",
-          "-(하이픈)"
+          "opt="
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "Adjustment Brush tool flow in increments of 10 increase / decrease",
+        "ko": "10 증분 단위로 조정 브러시 도구 플로우 늘리기/줄이기"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "-"
+        ],
+        "osx": [
+          "opt",
+          "-"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Temporarily switch to the Add mode for the Adjustment Brush tool in Clear mode or switch the Clear mode Add mode",
         "ko": "조정 브러시 도구에 대해 [추가] 모드를 [지우기] 모드로 일시적으로 전환하거나 [지우기] 모드를 [추가] 모드로 전환"
@@ -3196,7 +4105,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Temporary Adjustment Brush tool size increase / decrease",
         "ko": "임시 [조정 브러시] 도구 크기 늘리기/줄이기"
@@ -3204,19 +4115,19 @@
       "key": {
         "windows": [
           "alt",
-          "]/alt",
           "["
         ],
         "osx": [
-          "opt",
-          "]/opt",
+          "alt",
           "["
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Temporary Adjustment Brush tool feather Increase / decrease",
         "ko": "임시 [조정 브러시] 도구 페더 늘리기/줄이기"
@@ -3225,14 +4136,10 @@
         "windows": [
           "alt",
           "shft",
-          "]/alt",
-          "shft",
           "["
         ],
         "osx": [
           "opt",
-          "shft",
-          "]/opt",
           "shft",
           "["
         ]
@@ -3240,7 +4147,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "10 temporary Adjustment Brush tool flow in increments of increase / decrease",
         "ko": "10 증분 단위로 임시 조정 브러시 도구 플로우 늘리기/줄이기"
@@ -3248,18 +4157,38 @@
       "key": {
         "windows": [
           "alt",
-          "=(등호)/alt",
-          "-(하이픈)"
+          "="
         ],
         "osx": [
-          "opt=(등호)/opt",
-          "-(하이픈)"
+          "opt="
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "10 temporary Adjustment Brush tool flow in increments of increase / decrease",
+        "ko": "10 증분 단위로 임시 조정 브러시 도구 플로우 늘리기/줄이기"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "-"
+        ],
+        "osx": [
+          "opt",
+          "-"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Adjustment Brush tool or gradually Filter switch from Add or Erase mode of a New Mode",
         "ko": "[조정 브러시] 도구 또는 [점차적 필터]의 [추가] 또는 [지우기] 모드에서 [새로 만들기] 모드로 전환"
@@ -3275,7 +4204,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "For the Adjustment Brush tool Auto Mask On / Off",
         "ko": "조정 브러시 도구에 대한 [자동 마스크] 켜기/끄기"
@@ -3291,7 +4222,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Adjustment Brush Show Mask Tool for On / Off",
         "ko": "[조정 브러시] 도구에 대한 [마스크 표시] 켜기/끄기"
@@ -3307,7 +4240,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Switching between the pins on the Adjustment Brush tool",
         "ko": "조정 브러시 도구의 핀 사이 전환"
@@ -3323,7 +4258,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "The gradual transition filters, overlays Spot Removal tool, or Red Eye Removal tool.",
         "ko": "점차적 필터, 스팟 제거 도구 또는 적목 현상 제거 도구의 오버레이를 전환합니다."
@@ -3339,43 +4276,85 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Left to rotate the image",
         "ko": "왼쪽으로 이미지 회전"
       },
       "key": {
         "windows": [
-          "l또는ctrl",
+          "l"
+        ],
+        "osx": [
+          "l"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "Left to rotate the image",
+        "ko": "왼쪽으로 이미지 회전"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
           "]"
         ],
         "osx": [
-          "l또는cmd",
+          "cmd",
           "]"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Image Rotate Right",
         "ko": "오른쪽으로 이미지 회전"
       },
       "key": {
         "windows": [
-          "r또는ctrl",
+          "r"
+        ],
+        "osx": [
+          "r"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "Image Rotate Right",
+        "ko": "오른쪽으로 이미지 회전"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
           "["
         ],
         "osx": [
-          "r또는cmd",
+          "cmd",
           "["
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "enlargement",
         "ko": "확대"
@@ -3383,19 +4362,19 @@
       "key": {
         "windows": [
           "ctrl",
-          "",
-          "(더하기)"
+          "+"
         ],
         "osx": [
           "cmd",
-          "",
-          "(더하기)"
+          "+"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "reduction",
         "ko": "축소"
@@ -3403,17 +4382,19 @@
       "key": {
         "windows": [
           "ctrl",
-          "-(하이픈)"
+          "-"
         ],
         "osx": [
           "cmd",
-          "-(하이픈)"
+          "-"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Temporarily switch to Zoom tool\n(It does not work properly when [to straighten tool is selected. If Crop tool is active, temporarily switches to Straighten tool.)",
         "ko": "[확대 도구]로 일시적 전환\n([똑바르게 하기 도구]가 선택된 경우 제대로 작동하지 않습니다. [자르기 도구]가 활성화되어 있는 경우 일시적으로 [똑바르게 하기 도구]로 전환됩니다.)"
@@ -3429,7 +4410,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Temporarily switch to Zoom Out tool and change the Open Image button to the Open copy], and then change the Cancel button to Reset.",
         "ko": "일시적으로 축소 도구로 전환하고 이미지 열기 단추를 [사본 열기]로 변경하고 [취소] 단추를 [다시 설정]으로 변경합니다."
@@ -3445,7 +4428,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Preview conversion",
         "ko": "미리 보기 전환"
@@ -3461,7 +4446,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Full Screen Mode",
         "ko": "전체 화면 모드"
@@ -3477,7 +4464,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Temporarily activate the White Balance tool and change the Open Image button to Open Object.\n(If the crop tool activation does not work)",
         "ko": "일시적으로 [흰색 균형] 도구를 활성화하고 [이미지 열기] 단추를 [오브젝트 열기]로 변경합니다.\n(자르기 도구가 활성화된 경우 작동하지 않습니다)"
@@ -3493,72 +4482,197 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Select multiple points in Curves panel",
         "ko": "곡선 패널에서 여러 점 선택"
       },
       "key": {
         "windows": [
-          "첫번째점을클릭하고shft키를누른상태에서다른점들을클릭"
+          "shft"
         ],
         "osx": [
-          "첫번째점을클릭하고shft키를누른상태에서다른점들을클릭"
+          "shft"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
-        "en": "Additional points in the curve of the curved panel",
-        "ko": "곡선 패널의 곡선에 점 추가"
+        "en": "Additional points in the curve of the curved panel\n(Preview, hold down the key click)",
+        "ko": "곡선 패널의 곡선에 점 추가\n(키를 누른 상태에서 미리보기 click)"
       },
       "key": {
         "windows": [
-          "ctrl키를누른상태에서미리보기클릭"
+          "ctrl"
         ],
         "osx": [
-          "cmd",
-          "미리보기클릭"
+          "cmd"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Move the selected point on the curved panel (1 unit)",
         "ko": "곡선 패널에서 선택한 점 이동(1단위)"
       },
       "key": {
         "windows": [
-          "화살표키"
+          "left"
         ],
         "osx": [
-          "화살표키"
+          "left"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "Move the selected point on the curved panel (1 unit)",
+        "ko": "곡선 패널에서 선택한 점 이동(1단위)"
+      },
+      "key": {
+        "windows": [
+          "up"
+        ],
+        "osx": [
+          "up"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "Move the selected point on the curved panel (1 unit)",
+        "ko": "곡선 패널에서 선택한 점 이동(1단위)"
+      },
+      "key": {
+        "windows": [
+          "right"
+        ],
+        "osx": [
+          "right"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "Move the selected point on the curved panel (1 unit)",
+        "ko": "곡선 패널에서 선택한 점 이동(1단위)"
+      },
+      "key": {
+        "windows": [
+          "down"
+        ],
+        "osx": [
+          "down"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Move the selected point on the curved panel (10 units)",
         "ko": "곡선 패널에서 선택한 점 이동(10단위)"
       },
       "key": {
         "windows": [
-          "shft키를누른상태에서화살표키를클릭"
+          "shft",
+          "left"
         ],
         "osx": [
-          "shft키를누른상태에서화살표키를클릭"
+          "shft",
+          "left"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "Move the selected point on the curved panel (10 units)",
+        "ko": "곡선 패널에서 선택한 점 이동(10단위)"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "up"
+        ],
+        "osx": [
+          "shft",
+          "up"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "Move the selected point on the curved panel (10 units)",
+        "ko": "곡선 패널에서 선택한 점 이동(10단위)"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "right"
+        ],
+        "osx": [
+          "shft",
+          "right"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "Move the selected point on the curved panel (10 units)",
+        "ko": "곡선 패널에서 선택한 점 이동(10단위)"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "down"
+        ],
+        "osx": [
+          "shft",
+          "down"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Open selected images in Camera Raw dialog box from Bridge",
         "ko": "Bridge의 Camera Raw 대화 상자에서 선택한 이미지 열기"
@@ -3576,41 +4690,29 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
-        "en": "Skip the Camera Raw dialog box, select Open image from Bridge",
-        "ko": "Camera Raw 대화 상자를 생략하고 Bridge에서 선택한 이미지 열기"
+        "en": "Skip the Camera Raw dialog box, select Open image in Bridge (click image nureumyeo key twice)",
+        "ko": "Camera Raw 대화 상자를 생략하고 Bridge에서 선택한 이미지 열기 (키를 누르며 이미지두번click)"
       },
       "key": {
         "windows": [
           "shft",
-          "이미지두번클릭"
+          ""
         ],
         "osx": [
           "shft",
-          "이미지두번클릭"
+          ""
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Bright areas appear to be clipped in Preview",
-        "ko": "미리 보기에서 클리핑할 밝은 영역 표시"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태로[노출],[복구]또는[검정]슬라이더drag"
-        ],
-        "osx": [
-          "opt키를누른상태로[노출],[복구]또는[검정]슬라이더drag"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Highlight clipping warning",
         "ko": "밝은 영역 클리핑 경고"
@@ -3626,7 +4728,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Dark clipping warning",
         "ko": "어두운 영역 클리핑 경고"
@@ -3642,7 +4746,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "(Filmstrip mode) 1 - 5 star rating added",
         "ko": "(필름 스트립 모드) 1 - 5 별 등급 추가"
@@ -3650,17 +4756,99 @@
       "key": {
         "windows": [
           "ctrl",
-          "1-5"
+          "1"
         ],
         "osx": [
           "cmd",
-          "1-5"
+          "1"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "(Filmstrip mode) 1 - 5 star rating added",
+        "ko": "(필름 스트립 모드) 1 - 5 별 등급 추가"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "2"
+        ],
+        "osx": [
+          "cmd",
+          "2"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "(Filmstrip mode) 1 - 5 star rating added",
+        "ko": "(필름 스트립 모드) 1 - 5 별 등급 추가"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "3"
+        ],
+        "osx": [
+          "cmd",
+          "3"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "(Filmstrip mode) 1 - 5 star rating added",
+        "ko": "(필름 스트립 모드) 1 - 5 별 등급 추가"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "4"
+        ],
+        "osx": [
+          "cmd",
+          "4"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "(Filmstrip mode) 1 - 5 star rating added",
+        "ko": "(필름 스트립 모드) 1 - 5 별 등급 추가"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "5"
+        ],
+        "osx": [
+          "cmd",
+          "5"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "(Filmstrip mode) Increase grade / reduce",
         "ko": "(필름 스트립 모드) 등급 늘리기/줄이기"
@@ -3668,19 +4856,39 @@
       "key": {
         "windows": [
           "ctrl",
-          ".(마침표)/ctrl",
-          ",(쉼표)"
+          "."
         ],
         "osx": [
           "cmd",
-          ".(마침표)/cmd",
-          ",(쉼표)"
+          "."
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
+      "description": {
+        "en": "(Filmstrip mode) Increase grade / reduce",
+        "ko": "(필름 스트립 모드) 등급 늘리기/줄이기"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          ","
+        ],
+        "osx": [
+          "cmd",
+          ","
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "(Filmstrip mode) Red Label Add",
         "ko": "(필름 스트립 모드) 빨강 레이블 추가"
@@ -3698,7 +4906,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "(Filmstrip mode), add the label yellow",
         "ko": "(필름 스트립 모드) 노랑 레이블 추가"
@@ -3716,7 +4926,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "(Filmstrip mode), add green label",
         "ko": "(필름 스트립 모드) 녹색 레이블 추가"
@@ -3734,7 +4946,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "(Filmstrip mode), add blue label",
         "ko": "(필름 스트립 모드) 파랑 레이블 추가"
@@ -3752,7 +4966,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "(Filmstrip mode) frequently add labels",
         "ko": "(필름 스트립 모드) 자주 레이블 추가"
@@ -3772,7 +4988,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Camera Raw settings",
         "ko": "Camera Raw 환경 설정"
@@ -3790,7 +5008,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Camera Raw"
+      ],
       "description": {
         "en": "Delete the Adobe Camera Raw preferences.",
         "ko": "Adobe Camera Raw 환경 설정을 삭제합니다."
@@ -3798,18 +5018,18 @@
       "key": {
         "windows": [
           "ctrl",
-          "alt(열린상태)"
+          "alt"
         ],
         "osx": [
           "opt",
-          "shft(열린상태)"
+          "shft"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "곡선사용"
+        "Curved line"
       ],
       "description": {
         "en": "Open the Curves dialog box",
@@ -3828,19 +5048,27 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Curved line"
+      ],
       "description": {
         "en": "Select the next point on the curve",
         "ko": "곡선 위의 다음 점 선택"
       },
       "key": {
-        "windows": null,
-        "osx": null
+        "windows": [
+          "+"
+        ],
+        "osx": [
+          "+"
+        ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Curved line"
+      ],
       "description": {
         "en": "Select the previous point on the curve",
         "ko": "곡선 위의 이전 점 선택"
@@ -3856,25 +5084,27 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Curved line"
+      ],
       "description": {
         "en": "Select multiple points on the curve",
         "ko": "곡선 위의 여러 점 선택"
       },
       "key": {
         "windows": [
-          "shft",
-          "점클릭"
+          "shft"
         ],
         "osx": [
-          "shft",
-          "점클릭"
+          "shft"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Curved line"
+      ],
       "description": {
         "en": "Off point selection",
         "ko": "점 선택 해제"
@@ -3892,39 +5122,99 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Curved line"
+      ],
       "description": {
         "en": "To delete a point on the curve",
         "ko": "곡선 위의 점을 삭제하려면"
       },
       "key": {
         "windows": [
-          "점을선택하고delete키를누릅니다."
+          "delete"
         ],
         "osx": [
-          "점을선택하고delete키를누릅니다."
+          "delete"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Curved line"
+      ],
       "description": {
         "en": "Move the selected point 1 unit",
         "ko": "선택한 점을 1단위 이동"
       },
       "key": {
         "windows": [
-          "화살표키"
+          "left"
         ],
         "osx": [
-          "화살표키"
+          "left"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Curved line"
+      ],
+      "description": {
+        "en": "Move the selected point 1 unit",
+        "ko": "선택한 점을 1단위 이동"
+      },
+      "key": {
+        "windows": [
+          "up"
+        ],
+        "osx": [
+          "up"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Curved line"
+      ],
+      "description": {
+        "en": "Move the selected point 1 unit",
+        "ko": "선택한 점을 1단위 이동"
+      },
+      "key": {
+        "windows": [
+          "right"
+        ],
+        "osx": [
+          "right"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Curved line"
+      ],
+      "description": {
+        "en": "Move the selected point 1 unit",
+        "ko": "선택한 점을 1단위 이동"
+      },
+      "key": {
+        "windows": [
+          "down"
+        ],
+        "osx": [
+          "down"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Curved line"
+      ],
       "description": {
         "en": "Move the selected point 10 units",
         "ko": "선택한 점을 10단위 이동"
@@ -3932,84 +5222,134 @@
       "key": {
         "windows": [
           "shft",
-          "화살표키"
+          "left"
         ],
         "osx": [
           "shft",
-          "화살표키"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Dark areas appear as light areas to clip",
-        "ko": "클리핑할 밝은 영역과 어두운 영역 표시"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태로검은점/흰점슬라이더drag"
-        ],
-        "osx": [
-          "opt키를누른상태로검은점/흰점슬라이더drag"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "The set point for the synthesis curve",
-        "ko": "합성 곡선에 점 설정"
-      },
-      "key": {
-        "windows": [
-          "ctrl키를누른상태에서이미지클릭"
-        ],
-        "osx": [
-          "cmd키를누른상태에서이미지클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Set point in the channel curve",
-        "ko": "채널 곡선에 점 설정"
-      },
-      "key": {
-        "windows": [
-          "shft",
-          "ctrl을누른상태에서이미지클릭"
-        ],
-        "osx": [
-          "shft",
-          "cmd를누른상태에서이미지클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Grid Size Conversion",
-        "ko": "격자 크기 전환"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서필드클릭"
-        ],
-        "osx": [
-          "opt키를누른상태에서필드클릭"
+          "left"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "개체 선택 및 이동"
+        "Curved line"
+      ],
+      "description": {
+        "en": "Move the selected point 10 units",
+        "ko": "선택한 점을 10단위 이동"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "up"
+        ],
+        "osx": [
+          "shft",
+          "up"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Curved line"
+      ],
+      "description": {
+        "en": "Move the selected point 10 units",
+        "ko": "선택한 점을 10단위 이동"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "right"
+        ],
+        "osx": [
+          "shft",
+          "right"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Curved line"
+      ],
+      "description": {
+        "en": "Move the selected point 10 units",
+        "ko": "선택한 점을 10단위 이동"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "down"
+        ],
+        "osx": [
+          "shft",
+          "down"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Curved line"
+      ],
+      "description": {
+        "en": "The set point for the synthesis curve (image click while holding down the key)",
+        "ko": "합성 곡선에 점 설정(키를누른상태에서이미지click)"
+      },
+      "key": {
+        "windows": [
+          "ctrl"
+        ],
+        "osx": [
+          "cmd"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Curved line"
+      ],
+      "description": {
+        "en": "Set point to the channel curves (click image while pressing the key)",
+        "ko": "채널 곡선에 점 설정 (키를 누른상태에서이미지click)"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "ctrl"
+        ],
+        "osx": [
+          "shft",
+          "ctrl"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Curved line"
+      ],
+      "description": {
+        "en": "Switching grid size (click the key field in the down state)",
+        "ko": "격자 크기 전환 (키를누른상태에서필드click)"
+      },
+      "key": {
+        "windows": [
+          "alt"
+        ],
+        "osx": [
+          "alt"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Object"
       ],
       "description": {
         "en": "Choose Select to change the contour position during ‡",
@@ -4017,12 +5357,10 @@
       },
       "key": {
         "windows": [
-          "선택윤곽도구(단일열/행도구제외)",
           "space",
           "drag"
         ],
         "osx": [
-          "선택윤곽도구(단일열/행도구제외)",
           "space",
           "drag"
         ]
@@ -4030,19 +5368,19 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Object"
+      ],
       "description": {
         "en": "Add to selection",
         "ko": "선택 영역에 추가"
       },
       "key": {
         "windows": [
-          "선택도구",
           "shft",
           "drag"
         ],
         "osx": [
-          "선택도구",
           "shft",
           "drag"
         ]
@@ -4050,19 +5388,19 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Object"
+      ],
       "description": {
         "en": "Subtract from selection",
         "ko": "선택 영역에서 빼기"
       },
       "key": {
         "windows": [
-          "선택도구",
           "alt",
           "drag"
         ],
         "osx": [
-          "선택도구",
           "opt",
           "drag"
         ]
@@ -4070,27 +5408,31 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Object"
+      ],
       "description": {
         "en": "Select area cross",
         "ko": "선택 영역 교차"
       },
       "key": {
         "windows": [
-          "선택도구([빠른선택도구]제외)",
           "shft",
-          "alt를누른상태로drag"
+          "alt",
+          "drag"
         ],
         "osx": [
-          "선택도구([빠른선택도구]제외)",
           "shft",
-          "opt키를누른상태로drag"
+          "alt",
+          "drag"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Object"
+      ],
       "description": {
         "en": "Limiting the marquee to a square or circular (when the other selection is not active) ‡",
         "ko": "선택 윤곽을 정사각형 또는 원형으로 제한(다른 선택 영역이 활성화되지 않은 경우)‡"
@@ -4108,7 +5450,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Object"
+      ],
       "description": {
         "en": "Select from the central outline drawing (if no other selection is not active) ‡",
         "ko": "중앙부터 선택 윤곽 그리기(다른 선택 영역이 활성화되지 않은 경우)‡"
@@ -4126,7 +5470,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Object"
+      ],
       "description": {
         "en": "Limits the shape and draw marquee from center ‡ Select",
         "ko": "모양을 제한하고 중앙부터 선택 윤곽 그리기‡"
@@ -4146,23 +5492,27 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Object"
+      ],
       "description": {
         "en": "Switch to Move tool",
         "ko": "이동 도구로 전환"
       },
       "key": {
         "windows": [
-          "ctrl키(손,분할영역,패스,모양또는펜도구가선택된경우제외)"
+          "ctrl"
         ],
         "osx": [
-          "cmd키(손,분할영역,패스,모양또는펜도구가선택된경우제외)"
+          "cmd"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Object"
+      ],
       "description": {
         "en": "Switch from Magnetic Lasso tool to Lasso tool",
         "ko": "자석 올가미 도구에서 올가미 도구로 전환"
@@ -4180,239 +5530,161 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Object"
+      ],
       "description": {
-        "en": "Switch from Magnetic Lasso tool to polygonal Lasso tool",
-        "ko": "자석 올가미 도구에서 다각형 올가미 도구로 전환"
+        "en": "Switch from Magnetic Lasso tool to polygonal lasso tool (click while pressing the key)",
+        "ko": "자석 올가미 도구에서 다각형 올가미 도구로 전환 (키를누른상태에서click)"
       },
       "key": {
         "windows": [
-          "alt키를누른상태에서클릭"
+          "alt"
         ],
         "osx": [
-          "opt키를누른상태에서클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Magnetic Lasso tool work Apply / Cancel",
-        "ko": "자석 올가미 도구 작업 적용/취소"
-      },
-      "key": {
-        "windows": [
-          "enter/esc키또는ctrl",
-          ".(마침표)"
-        ],
-        "osx": [
-          "return/esc키또는cmd",
-          ".(마침표)"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Copy selection movement",
-        "ko": "선택 영역 사본 이동"
-      },
-      "key": {
-        "windows": [
-          "이동도구",
-          "alt키를누른상태에서선택영역drag‡"
-        ],
-        "osx": [
-          "이동도구",
-          "opt키를누른상태에서선택영역drag‡"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "The selection moves one pixel",
-        "ko": "선택 영역을 1픽셀 이동"
-      },
-      "key": {
-        "windows": [
-          "선택영역",
-          "right,left,up또는down†"
-        ],
-        "osx": [
-          "선택영역",
-          "right,left,up또는down†"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "The selection moves one pixel",
-        "ko": "선택 영역을 1픽셀 이동"
-      },
-      "key": {
-        "windows": [
-          "이동도구",
-          "right,left,up또는down†‡"
-        ],
-        "osx": [
-          "이동도구",
-          "right,left,up또는down†‡"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "If there is selection in the first layer, the layer pixel shift",
-        "ko": "레이어에 선택된 항목이 없을 경우 레이어를 1픽셀 이동"
-      },
-      "key": {
-        "windows": [
-          "ctrl",
-          "right,left,up또는down†"
-        ],
-        "osx": [
-          "cmd",
-          "right,left,up또는down†"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Increase / decrease detection width",
-        "ko": "감지 폭 증가/감소"
-      },
-      "key": {
-        "windows": [
-          "자석올가미도구",
-          "[또는]"
-        ],
-        "osx": [
-          "자석올가미도구",
-          "[또는]"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Crop allow or shut down",
-        "ko": "자르기 허용 또는 종료"
-      },
-      "key": {
-        "windows": [
-          "자르기도구",
-          "enter/esc"
-        ],
-        "osx": [
-          "자르기도구",
-          "return/esc"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Crop Protection On / Off",
-        "ko": "자르기 보호 켜기/끄기"
-      },
-      "key": {
-        "windows": [
-          "/(슬래시)"
-        ],
-        "osx": [
-          "/(슬래시)"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Make protractor",
-        "ko": "각도기 만들기"
-      },
-      "key": {
-        "windows": [
-          "눈금자도구",
-          "alt키를누른상태에서끝점drag"
-        ],
-        "osx": [
-          "눈금자도구",
-          "opt키를누른상태에서끝점drag"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "(Except when View> Snap is unchecked), the ruler guides, grids snap",
-        "ko": "눈금자 격자로 안내선 스냅([보기] > [스냅]이 선택 해제된 경우 제외)"
-      },
-      "key": {
-        "windows": [
-          "shft키를누른상태에서안내선drag"
-        ],
-        "osx": [
-          "shft키를누른상태에서안내선drag"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Transition between the horizontal / vertical guide",
-        "ko": "수평/수직 안내선 사이 전환"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서안내선drag"
-        ],
-        "osx": [
-          "opt키를누른상태에서안내선drag"
+          "opt"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "페인팅용"
+        "Object"
       ],
       "description": {
-        "en": "Choose foreground from the color picker",
-        "ko": "색상 피커에서 전경색 선택"
+        "en": "Magnetic Lasso tool work Apply / Cancel",
+        "ko": "자석 올가미 도구 작업 적용/취소"
       },
       "key": {
         "windows": [
-          "페인팅도구",
-          "shft",
-          "alt",
-          "마우스오른쪽단추클릭후drag"
+          "enter"
         ],
         "osx": [
-          "페인팅도구",
-          "ctrl",
-          "옵션",
-          "명령후drag"
+          "return"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Object"
+      ],
+      "description": {
+        "en": "Magnetic Lasso tool work Apply / Cancel",
+        "ko": "자석 올가미 도구 작업 적용/취소"
+      },
+      "key": {
+        "windows": [
+          "esc"
+        ],
+        "osx": [
+          "esc"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Object"
+      ],
+      "description": {
+        "en": "Magnetic Lasso tool work Apply / Cancel",
+        "ko": "자석 올가미 도구 작업 적용/취소"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "."
+        ],
+        "osx": [
+          "cmd",
+          "."
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Object"
+      ],
+      "description": {
+        "en": "Copy selection movement",
+        "ko": "선택 영역 사본 이동"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "drag"
+        ],
+        "osx": [
+          "opt",
+          "drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Object"
+      ],
+      "description": {
+        "en": "Crop Protection On / Off",
+        "ko": "자르기 보호 켜기/끄기"
+      },
+      "key": {
+        "windows": [
+          "/"
+        ],
+        "osx": [
+          "/"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Object"
+      ],
+      "description": {
+        "en": "(Except when View> Snap is unchecked), the ruler guides, grids snap",
+        "ko": "눈금자 격자로 안내선 스냅([보기] > [스냅]이 선택 해제된 경우 제외)"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "drag"
+        ],
+        "osx": [
+          "shft",
+          "drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Object"
+      ],
+      "description": {
+        "en": "Transition between the horizontal / vertical guide",
+        "ko": "수평/수직 안내선 사이 전환"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "drag"
+        ],
+        "osx": [
+          "opt",
+          "drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "Foreground Select in the image with the eyedropper tool",
         "ko": "스포이드 도구로 이미지에서 전경색 선택"
@@ -4420,19 +5692,39 @@
       "key": {
         "windows": [
           "페인팅도구",
-          "alt또는모양도구",
-          "alt(패스옵션이선택되어있는경우제외)"
+          "alt"
         ],
         "osx": [
           "페인팅도구",
-          "opt또는모양도구",
-          "opt(패스옵션이선택되어있는경우제외)"
+          "opt"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "Foreground Select in the image with the eyedropper tool",
+        "ko": "스포이드 도구로 이미지에서 전경색 선택"
+      },
+      "key": {
+        "windows": [
+          "모양도구",
+          "alt"
+        ],
+        "osx": [
+          "모양도구",
+          "opt"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "Choose a background color",
         "ko": "배경색 선택"
@@ -4440,19 +5732,19 @@
       "key": {
         "windows": [
           "스포이드도구",
-          "alt",
-          "클릭"
+          "alt"
         ],
         "osx": [
           "스포이드도구",
-          "opt",
-          "클릭"
+          "opt"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "Color Sampler tool",
         "ko": "색상 샘플러 도구"
@@ -4470,7 +5762,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "Color Sampler deleted",
         "ko": "색상 샘플러 삭제"
@@ -4478,59 +5772,20 @@
       "key": {
         "windows": [
           "색상샘플러도구",
-          "alt",
-          "클릭"
+          "alt"
         ],
         "osx": [
           "색상샘플러도구",
           "opt",
-          "클릭"
+          ""
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Of the painting mode, opacity, tolerance, strength, exposure settings",
-        "ko": "페인팅 모드의 불투명도, 허용치, 강도, 노출 설정"
-      },
-      "key": {
-        "windows": [
-          "페인팅도구/편집도구",
-          "숫자키(예:0=100%,1=10%,4와5를빠르게연속하여누름=45%)(에어브러시옵션을사용하는경우shft",
-          "숫자키)"
-        ],
-        "osx": [
-          "페인팅도구/편집도구",
-          "숫자키(예:0=100%,1=10%,4와5를빠르게연속하여누름=45%)(에어브러시옵션을사용하는경우shft",
-          "숫자키)"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Flow setting of the painting mode,",
-        "ko": "페인팅 모드의 플로우 설정"
-      },
-      "key": {
-        "windows": [
-          "페인팅도구/편집도구",
-          "shft",
-          "숫자키(예:0=100%,1=10%,4와5를빠르게연속하여누름=45%)(에어브러시옵션을사용하는경우shft키를누르지않음)"
-        ],
-        "osx": [
-          "페인팅도구/편집도구",
-          "shft",
-          "숫자키(예:0=100%,1=10%,4와5를빠르게연속하여누름=45%)(에어브러시옵션을사용하는경우shft키를누르지않음)"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "Changes [mixture brush] to [Mixer Set",
         "ko": "[혼합 브러시]로 [혼합] 설정 변경"
@@ -4539,34 +5794,358 @@
         "windows": [
           "alt",
           "shft",
-          "숫자"
+          "1"
         ],
         "osx": [
           "opt",
           "shft",
-          "숫자"
+          "1"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "Changes [mixture brush] to [Mixer Set",
+        "ko": "[혼합 브러시]로 [혼합] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "shft",
+          "2"
+        ],
+        "osx": [
+          "opt",
+          "shft",
+          "2"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "Changes [mixture brush] to [Mixer Set",
+        "ko": "[혼합 브러시]로 [혼합] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "shft",
+          "3"
+        ],
+        "osx": [
+          "opt",
+          "shft",
+          "3"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "Changes [mixture brush] to [Mixer Set",
+        "ko": "[혼합 브러시]로 [혼합] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "shft",
+          "4"
+        ],
+        "osx": [
+          "opt",
+          "shft",
+          "4"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "Changes [mixture brush] to [Mixer Set",
+        "ko": "[혼합 브러시]로 [혼합] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "shft",
+          "5"
+        ],
+        "osx": [
+          "opt",
+          "shft",
+          "5"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "Changes [mixture brush] to [Mixer Set",
+        "ko": "[혼합 브러시]로 [혼합] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "shft",
+          "6"
+        ],
+        "osx": [
+          "opt",
+          "shft",
+          "6"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "Changes [mixture brush] to [Mixer Set",
+        "ko": "[혼합 브러시]로 [혼합] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "shft",
+          "7"
+        ],
+        "osx": [
+          "opt",
+          "shft",
+          "7"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "Changes [mixture brush] to [Mixer Set",
+        "ko": "[혼합 브러시]로 [혼합] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "shft",
+          "8"
+        ],
+        "osx": [
+          "opt",
+          "shft",
+          "8"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "Changes [mixture brush] to [Mixer Set",
+        "ko": "[혼합 브러시]로 [혼합] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "shft",
+          "9"
+        ],
+        "osx": [
+          "opt",
+          "shft",
+          "9"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "A Blend brush] [wetness] Change Settings",
         "ko": "[혼합 브러시]로 [축축함] 설정 변경"
       },
       "key": {
         "windows": [
-          "숫자키"
+          "1"
         ],
         "osx": [
-          "숫자키"
+          "1"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "A Blend brush] [wetness] Change Settings",
+        "ko": "[혼합 브러시]로 [축축함] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "2"
+        ],
+        "osx": [
+          "2"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "A Blend brush] [wetness] Change Settings",
+        "ko": "[혼합 브러시]로 [축축함] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "3"
+        ],
+        "osx": [
+          "3"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "A Blend brush] [wetness] Change Settings",
+        "ko": "[혼합 브러시]로 [축축함] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "4"
+        ],
+        "osx": [
+          "4"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "A Blend brush] [wetness] Change Settings",
+        "ko": "[혼합 브러시]로 [축축함] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "5"
+        ],
+        "osx": [
+          "5"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "A Blend brush] [wetness] Change Settings",
+        "ko": "[혼합 브러시]로 [축축함] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "6"
+        ],
+        "osx": [
+          "6"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "A Blend brush] [wetness] Change Settings",
+        "ko": "[혼합 브러시]로 [축축함] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "7"
+        ],
+        "osx": [
+          "7"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "A Blend brush] [wetness] Change Settings",
+        "ko": "[혼합 브러시]로 [축축함] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "8"
+        ],
+        "osx": [
+          "8"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "A Blend brush] [wetness] Change Settings",
+        "ko": "[혼합 브러시]로 [축축함] 설정 변경"
+      },
+      "key": {
+        "windows": [
+          "9"
+        ],
+        "osx": [
+          "9"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "A Blend Brush change [wetness] and [mixture] is set to 0",
         "ko": "[혼합 브러시]로 [축축함] 및 [혼합] 설정을 0으로 변경"
@@ -4582,45 +6161,47 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Circulation between the mixed-mode",
-        "ko": "혼합 모드 사이 순환"
-      },
-      "key": {
-        "windows": [
-          "shft",
-          "",
-          "(플러스)또는-(마이너스)"
-        ],
-        "osx": [
-          "shft",
-          "",
-          "(플러스)또는-(마이너스)"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "Open the Fill dialog box in the background or standard layer",
         "ko": "배경 또는 표준 레이어에서 [칠] 대화 상자 열기"
       },
       "key": {
         "windows": [
-          "back키또는shft",
           "back"
         ],
         "osx": [
-          "delete키또는shft",
           "delete"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "Open the Fill dialog box in the background or standard layer",
+        "ko": "배경 또는 표준 레이어에서 [칠] 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "back"
+        ],
+        "osx": [
+          "shft",
+          "delete"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "To fill with the foreground color or background color",
         "ko": "전경색 또는 배경색으로 칠하기"
@@ -4628,19 +6209,39 @@
       "key": {
         "windows": [
           "alt",
-          "back또는ctrl",
-          "back†"
+          "back"
         ],
         "osx": [
           "opt",
-          "delete또는cmd",
-          "delete†"
+          "delete"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
+      "description": {
+        "en": "To fill with the foreground color or background color",
+        "ko": "전경색 또는 배경색으로 칠하기"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "back"
+        ],
+        "osx": [
+          "cmd",
+          "delete"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "Painting in History",
         "ko": "작업 내역에서 칠하기"
@@ -4649,18 +6250,20 @@
         "windows": [
           "ctrl",
           "alt",
-          "back†"
+          "back"
         ],
         "osx": [
           "cmd",
           "opt",
-          "delete†"
+          "delete"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "Dialog box displays seven",
         "ko": "칠 대화 상자 표시"
@@ -4678,44 +6281,45 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Painting"
+      ],
       "description": {
         "en": "Lock transparent pixels on / off",
         "ko": "투명 픽셀 잠금 켜기/끄기"
       },
       "key": {
         "windows": [
-          "/(슬래시)"
+          "/"
         ],
         "osx": [
-          "/(슬래시)"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Connect the dots in a straight line",
-        "ko": "점을 직선으로 연결"
-      },
-      "key": {
-        "windows": [
-          "페인팅도구",
-          "shft",
-          "클릭"
-        ],
-        "osx": [
-          "페인팅도구",
-          "shft",
-          "클릭"
+          "/"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "혼합 모드"
+        "Painting"
+      ],
+      "description": {
+        "en": "Connect the dots in a straight line",
+        "ko": "점을 직선으로 연결"
+      },
+      "key": {
+        "windows": [
+          "shft"
+        ],
+        "osx": [
+          "shft"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Blend Mode",
+        "Painting"
       ],
       "description": {
         "en": "Circulation between the mixed-mode",
@@ -4724,19 +6328,40 @@
       "key": {
         "windows": [
           "shft",
-          "",
-          "(플러스)또는-(마이너스)"
+          "+"
         ],
         "osx": [
           "shft",
-          "",
-          "(플러스)또는-(마이너스)"
+          "+"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode",
+        "Painting"
+      ],
+      "description": {
+        "en": "Circulation between the mixed-mode",
+        "ko": "혼합 모드 사이 순환"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "-"
+        ],
+        "osx": [
+          "shft",
+          "-"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Standard",
         "ko": "표준"
@@ -4756,7 +6381,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "dissolve",
         "ko": "디졸브"
@@ -4776,7 +6403,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Background (Brush tool only)",
         "ko": "배경(브러시 도구 전용)"
@@ -4796,7 +6425,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Clear (Brush tool only)",
         "ko": "지우기(브러시 도구 전용)"
@@ -4816,7 +6447,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "To darken",
         "ko": "어둡게 하기"
@@ -4836,7 +6469,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "multiply",
         "ko": "곱하기"
@@ -4856,7 +6491,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Color Burn",
         "ko": "색상 번"
@@ -4876,7 +6513,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Linear Burn",
         "ko": "선형 번"
@@ -4896,7 +6535,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Brightening",
         "ko": "밝게 하기"
@@ -4916,7 +6557,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "screen",
         "ko": "스크린"
@@ -4936,7 +6579,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Color Dodge",
         "ko": "색상 닷지"
@@ -4956,7 +6601,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Linear Dodge",
         "ko": "선형 닷지"
@@ -4976,7 +6623,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Overlay",
         "ko": "오버레이"
@@ -4996,7 +6645,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Soft Light",
         "ko": "소프트 라이트"
@@ -5016,7 +6667,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Hard Light",
         "ko": "하드 라이트"
@@ -5036,7 +6689,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Vivid Light",
         "ko": "선명한 라이트"
@@ -5056,7 +6711,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Linear Light",
         "ko": "선형 라이트"
@@ -5076,7 +6733,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Pin Light",
         "ko": "핀 라이트"
@@ -5096,7 +6755,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Hard mix",
         "ko": "하드 혼합"
@@ -5116,7 +6777,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Difference",
         "ko": "차이"
@@ -5136,7 +6799,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "except",
         "ko": "제외"
@@ -5156,7 +6821,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "hue",
         "ko": "색조"
@@ -5176,7 +6843,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "saturation",
         "ko": "채도"
@@ -5196,7 +6865,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "color",
         "ko": "색상"
@@ -5216,7 +6887,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "magnitude",
         "ko": "광도"
@@ -5236,7 +6909,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Desaturation",
         "ko": "채도 감소"
@@ -5258,7 +6933,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "saturation",
         "ko": "채도"
@@ -5280,7 +6957,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Dark areas Dodge / Burn",
         "ko": "어두운 영역 닷지/번"
@@ -5302,7 +6981,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Midtones Dodge / Burn",
         "ko": "중간 색조 닷지/번"
@@ -5324,7 +7005,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Highlights the Dodge / Burn",
         "ko": "밝은 영역 닷지/번"
@@ -5346,7 +7029,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Blend Mode"
+      ],
       "description": {
         "en": "Set the mixed-mode the threshold value (bitmap image) or standard (balance of image)",
         "ko": "혼합 모드를 한계값(비트맵 이미지) 또는 표준(나머지 모든 이미지)으로 설정"
@@ -5367,82 +7052,8 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "텍스트"
+        "text"
       ],
-      "description": {
-        "en": "Characters move in the image",
-        "ko": "이미지에서 문자 이동"
-      },
-      "key": {
-        "windows": [
-          "문자레이어가선택된경우ctrl키를누른상태에서문자drag"
-        ],
-        "osx": [
-          "문자레이어가선택된경우cmd키를누른상태에서문자drag"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "1 character left / right, 1 line down / up or 1 word left / right selection",
-        "ko": "1문자 왼쪽/오른쪽, 1줄 아래쪽/위쪽 또는 1단어 왼쪽/오른쪽 선택"
-      },
-      "key": {
-        "windows": [
-          "shft",
-          "left/right,down/up또는ctrl",
-          "shft",
-          "left/right"
-        ],
-        "osx": [
-          "shft",
-          "left/right,down/up또는cmd",
-          "shft",
-          "left/right"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "From the insertion point to mouse click point Select characters",
-        "ko": "삽입점에서 마우스 클릭 점까지 문자 선택"
-      },
-      "key": {
-        "windows": [
-          "shft",
-          "클릭"
-        ],
-        "osx": [
-          "shft",
-          "클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "1 character left / right, 1 line down / up or 1 word left / right moves",
-        "ko": "1문자 왼쪽/오른쪽, 1줄 아래쪽/위쪽 또는 1단어 왼쪽/오른쪽 이동"
-      },
-      "key": {
-        "windows": [
-          "left/right,down/up또는ctrl",
-          "left/right"
-        ],
-        "osx": [
-          "left/right,down/up또는cmd",
-          "left/right"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
       "description": {
         "en": "When you select the text layer in the Layers Panel Create a new text layer",
         "ko": "레이어 패널에서 텍스트 레이어를 선택했을 때 새 텍스트 레이어 만들기"
@@ -5450,33 +7061,39 @@
       "key": {
         "windows": [
           "shft",
-          "클릭"
+          "click"
         ],
         "osx": [
           "shft",
-          "클릭"
+          "click"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "Word, line, paragraph, or entire contents selection",
         "ko": "단어, 줄, 단락 또는 전체 내용 선택"
       },
       "key": {
         "windows": [
-          "두번클릭,세번클릭,네번클릭또는다섯번클릭"
+          "click",
+          "click"
         ],
         "osx": [
-          "두번클릭,세번클릭,네번클릭또는다섯번클릭"
+          "click",
+          "click"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "A selection show / hide in selected character",
         "ko": "선택된 문자에서 선택 영역 표시/숨기기"
@@ -5494,7 +7111,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "When you edit the text, activate transform bounding box display, or when the cursor is inside the bounding box, go to Tools",
         "ko": "텍스트를 편집할 때 변형 테두리 상자 표시 또는 커서가 테두리 상자 내부에 있을 때 이동 도구 활성화"
@@ -5510,23 +7129,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "When you adjust the bounding box to adjust the text size ratio within the bounding box",
-        "ko": "테두리 상자 크기를 조정할 때 테두리 상자 내의 텍스트 비율 조정"
-      },
-      "key": {
-        "windows": [
-          "ctrl키를누른상태에서테두리상자핸들drag"
-        ],
-        "osx": [
-          "cmd키를누른상태에서테두리상자핸들drag"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "When you create a text box, the text box moves",
         "ko": "텍스트 상자를 만들 때 텍스트 상자 이동"
@@ -5545,52 +7150,74 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "문자/단락"
+        "text"
       ],
       "description": {
-        "en": "Left, center, or right alignment",
-        "ko": "왼쪽, 중앙 또는 오른쪽 정렬"
+        "en": "The horizontal (vertical) type tool\nLeft align",
+        "ko": "수평(세로)문자도구\n왼쪽정렬"
       },
       "key": {
         "windows": [
-          "수평문자도구",
           "ctrl",
           "shft",
-          "l,c,r"
+          "l"
         ],
         "osx": [
-          "수평문자도구",
           "cmd",
           "shft",
-          "l,c,r"
+          "l"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
-        "en": "Top, middle, or bottom of the sorted",
-        "ko": "위쪽, 중앙, 또는 아래쪽 정렬"
+        "en": "The horizontal (vertical) type tool\nCentering",
+        "ko": "수평(세로)문자도구\n중앙정렬"
       },
       "key": {
         "windows": [
-          "세로문자도구",
           "ctrl",
           "shft",
-          "l,c,r"
+          "c"
         ],
         "osx": [
-          "세로문자도구",
           "cmd",
           "shft",
-          "l,c,r"
+          "c"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
+      "description": {
+        "en": "The horizontal (vertical) type tool\nRight (bottom) alignment",
+        "ko": "수평(세로)문자도구\n오른쪽(아래쪽) 정렬"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "shft",
+          "r"
+        ],
+        "osx": [
+          "cmd",
+          "shft",
+          "r"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "100% Select horizontal scale",
         "ko": "100% 수평 비율 선택"
@@ -5610,7 +7237,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "Choose 100% vertical scale",
         "ko": "100% 수직 비율 선택"
@@ -5632,7 +7261,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "Choose Auto leading",
         "ko": "자동 행간 선택"
@@ -5654,7 +7285,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "0 Choose a kerning",
         "ko": "자간으로 0 선택"
@@ -5675,7 +7308,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "Paragraph alignment force, the last line aligned left",
         "ko": "단락 강제 정렬, 마지막 줄 왼쪽 정렬"
@@ -5695,7 +7330,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "Paragraph force alignment, both forced alignment",
         "ko": "단락 강제 정렬, 모두 강제 정렬"
@@ -5715,7 +7352,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "Loading paragraph hyphenation on / off switch",
         "ko": "단락 하이픈 넣기 켬/끔 전환"
@@ -5738,7 +7377,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "Single-Line / Every-line Composer On / Off",
         "ko": "싱글라인/에브리라인 컴포저 켜기/끄기"
@@ -5760,7 +7401,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "The font size of selected text 2 points or 2 pixels decrease / increase",
         "ko": "선택된 텍스트의 문자 크기를 2포인트 또는 2픽셀 감소/증가"
@@ -5769,56 +7412,126 @@
         "windows": [
           "ctrl",
           "shft",
-          "<또는>†"
+          "<"
         ],
         "osx": [
           "cmd",
           "shft",
-          "<또는>†"
+          "<"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
-        "en": "The leading two-point or two-pixel reduced / increased",
-        "ko": "행간을 2포인트 또는 2픽셀 감소/증가"
+        "en": "The font size of selected text 2 points or 2 pixels decrease / increase",
+        "ko": "선택된 텍스트의 문자 크기를 2포인트 또는 2픽셀 감소/증가"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "shft",
+          ">"
+        ],
+        "osx": [
+          "cmd",
+          "shft",
+          ">"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "text"
+      ],
+      "description": {
+        "en": "2-point or two-reduced pixel between the lines",
+        "ko": "행간을 2포인트 또는 2픽셀 감소"
       },
       "key": {
         "windows": [
           "alt",
-          "down또는up††"
+          "down"
         ],
         "osx": [
           "opt",
-          "down또는up††"
+          "down"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
       "description": {
-        "en": "Baseline shift 2 points or two pixels decrease / increase",
-        "ko": "기준선 이동을 2포인트 또는 2픽셀 감소/증가"
+        "en": "Between the lines 2, 2 points or pixels increase",
+        "ko": "행간을 2포인트 또는 2픽셀 증가"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "up"
+        ],
+        "osx": [
+          "opt",
+          "up"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "text"
+      ],
+      "description": {
+        "en": "2 points or pixels the baseline shift reduction 2",
+        "ko": "기준선 이동을 2포인트 또는 2픽셀 감소"
       },
       "key": {
         "windows": [
           "shft",
           "alt",
-          "down또는up††"
+          "down"
         ],
         "osx": [
           "shft",
           "opt",
-          "down또는up††"
+          "down"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "text"
+      ],
+      "description": {
+        "en": "Baseline shift 2 points increase or 2 pixels",
+        "ko": "기준선 이동을 2포인트 또는 2픽셀 증가"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "alt",
+          "up"
+        ],
+        "osx": [
+          "shft",
+          "opt",
+          "up"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "text"
+      ],
       "description": {
         "en": "Kerning / tracking 20 / 1000ems decrease / increase",
         "ko": "커닝/자간 20/1000ems 감소/증가"
@@ -5826,37 +7539,99 @@
       "key": {
         "windows": [
           "alt",
-          "left또는right††"
+          "left"
         ],
         "osx": [
           "opt",
-          "left또는right††"
+          "left"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "[채널]패널사용"
+        "text"
       ],
       "description": {
-        "en": "Dedicated channel selection",
-        "ko": "개별 채널 선택"
+        "en": "Kerning / tracking 20 / 1000ems decrease / increase",
+        "ko": "커닝/자간 20/1000ems 감소/증가"
       },
       "key": {
         "windows": [
-          "ctrl",
-          "3(빨강),4(녹색),5(파랑)"
+          "alt",
+          "right"
         ],
         "osx": [
-          "cmd",
-          "3(빨강),4(녹색),5(파랑)"
+          "opt",
+          "right"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Channel"
+      ],
+      "description": {
+        "en": "Individual channel select (red)",
+        "ko": "개별 채널 선택(빨강)"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "3"
+        ],
+        "osx": [
+          "cmd",
+          "3"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Channel"
+      ],
+      "description": {
+        "en": "Individual channel selection (green)",
+        "ko": "개별 채널 선택(녹색)"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "4"
+        ],
+        "osx": [
+          "cmd",
+          "4"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Channel"
+      ],
+      "description": {
+        "en": "Individual channel selection (blue",
+        "ko": "개별 채널 선택(파랑"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "5"
+        ],
+        "osx": [
+          "cmd",
+          "5"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Channel"
+      ],
       "description": {
         "en": "Composite channel selection",
         "ko": "합성 채널 선택"
@@ -5874,271 +7649,345 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Channel"
+      ],
       "description": {
-        "en": "Recalling the channels in the selected area",
-        "ko": "채널을 선택 영역으로 불러오기"
+        "en": "Recalling the channels in the selected area (red)",
+        "ko": "채널을 선택 영역으로 불러오기(빨강)"
       },
       "key": {
         "windows": [
-          "ctrl키를누른상태에서채널축소판클릭,또는alt",
+          "alt",
           "ctrl",
-          "3(빨강),4(녹색),5(파랑)"
+          "3"
         ],
         "osx": [
-          "cmd키를누른상태에서채널축소판클릭,또는opt",
+          "opt",
           "cmd",
-          "3(빨강),4(녹색),5(파랑)"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Add to current selection",
-        "ko": "현재 선택 영역에 추가"
-      },
-      "key": {
-        "windows": [
-          "ctrl",
-          "shft키를누른상태에서채널축소판클릭"
-        ],
-        "osx": [
-          "cmd",
-          "shft키를누른상태에서채널축소판클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Subtract from current selection",
-        "ko": "현재 선택 영역에서 빼기"
-      },
-      "key": {
-        "windows": [
-          "ctrl",
-          "alt키를누른상태에서채널축소판클릭"
-        ],
-        "osx": [
-          "cmd",
-          "opt키를누른상태에서채널축소판클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Intersects with current selection",
-        "ko": "현재 선택 영역과 교차"
-      },
-      "key": {
-        "windows": [
-          "ctrl",
-          "shft",
-          "alt키를누른상태에서채널축소판클릭"
-        ],
-        "osx": [
-          "cmd",
-          "shft",
-          "opt키를누른상태에서채널축소판클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Set options for Save the selection as a channel button,",
-        "ko": "[선택 영역을 채널로 저장] 단추에 대한 옵션 설정"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서[선택영역을채널로저장]단추클릭"
-        ],
-        "osx": [
-          "opt키를누른상태에서[선택영역을채널로저장]단추클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Create a new spot channel",
-        "ko": "새 별색 채널 만들기"
-      },
-      "key": {
-        "windows": [
-          "ctrl키를누른상태에서새채널만들기단추클릭"
-        ],
-        "osx": [
-          "cmd키를누른상태에서새채널만들기단추클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Select / deselect multiple color-channel selection",
-        "ko": "여러 색상 채널 선택 영역 선택/해제"
-      },
-      "key": {
-        "windows": [
-          "shft키를누른상태에서색상채널클릭"
-        ],
-        "osx": [
-          "shft키를누른상태에서색상채널클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Hide Show / alpha channel select / deselect and rubylith overlay",
-        "ko": "알파 채널 선택/해제 및 루비리스 오버레이로 표시/숨기기"
-      },
-      "key": {
-        "windows": [
-          "shft키를누른상태에서알파채널클릭"
-        ],
-        "osx": [
-          "shft키를누른상태에서알파채널클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Display channel options",
-        "ko": "채널 옵션 표시"
-      },
-      "key": {
-        "windows": [
-          "알파또는별색채널축소판두번클릭"
-        ],
-        "osx": [
-          "알파또는별색채널축소판두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "In the composite and grayscale mask switch Quick Mask mode",
-        "ko": "합성 및 회색 음영 마스크 전환 빠른 마스크 모드에서"
-      },
-      "key": {
-        "windows": [
-          "브러시도구를포함한모든도구:\nshft",
-          "~(물결표)\n브러시도구를제외한모든도구:\n'(억음악센트기호)"
-        ],
-        "osx": [
-          "브러시도구를포함한모든도구:\nshft",
-          "~(물결표)\n브러시도구를제외한모든도구:\n'(억음악센트기호)"
+          "3"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "레이어"
+        "Channel"
       ],
       "description": {
-        "en": "Recalling the layer transparency as a selection",
-        "ko": "레이어 투명도를 선택 영역으로 불러오기"
+        "en": "Recalling the channels in the selected area (green)",
+        "ko": "채널을 선택 영역으로 불러오기(녹색)"
       },
       "key": {
         "windows": [
-          "ctrl키를누른상태에서레이어축소판클릭"
+          "alt",
+          "ctrl",
+          "4"
         ],
         "osx": [
-          "cmd키를누른상태에서레이어축소판클릭"
+          "opt",
+          "cmd",
+          "4"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Channel"
+      ],
       "description": {
-        "en": "Add to current selection",
-        "ko": "현재 선택 영역에 추가"
+        "en": "Recalling the channels in the selected area (blue)",
+        "ko": "채널을 선택 영역으로 불러오기(파랑)"
+      },
+      "key": {
+        "windows": [
+          "alt",
+          "ctrl",
+          "5"
+        ],
+        "osx": [
+          "opt",
+          "cmd",
+          "5"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Channel"
+      ],
+      "description": {
+        "en": "(Click on the thumbnails channel, press the key) are added to the selected area",
+        "ko": "현재 선택 영역에 추가(키를누른상태에서채널축소판click)"
       },
       "key": {
         "windows": [
           "ctrl",
-          "shft키를누른상태에서레이어축소판클릭"
+          "shft"
         ],
         "osx": [
           "cmd",
-          "shft키를누른상태에서레이어축소판클릭"
+          "shft"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Channel"
+      ],
       "description": {
-        "en": "Subtract from current selection",
-        "ko": "현재 선택 영역에서 빼기"
+        "en": "(Click on the thumbnails channel, press the key) Subtract from current selection",
+        "ko": "현재 선택 영역에서 빼기(키를누른상태에서채널축소판click)"
       },
       "key": {
         "windows": [
           "ctrl",
-          "alt키를누른상태에서레이어축소판클릭"
+          "alt\\"
         ],
         "osx": [
           "cmd",
-          "opt키를누른상태에서레이어축소판클릭"
+          "opt"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Channel"
+      ],
       "description": {
-        "en": "Intersects with current selection",
-        "ko": "현재 선택 영역과 교차"
+        "en": "(Click on the thumbnails channel, press the key) the current selection with crossover",
+        "ko": "현재 선택 영역과 교차(키를누른상태에서채널축소판click)"
       },
       "key": {
         "windows": [
           "ctrl",
           "shft",
-          "alt키를누른상태에서레이어축소판클릭"
+          "alt"
         ],
         "osx": [
           "cmd",
           "shft",
-          "opt키를누른상태에서레이어축소판클릭"
+          "opt"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Channel"
+      ],
       "description": {
-        "en": "Import filter mask as a selection call",
-        "ko": "선택 영역으로 필터 마스크 불러오기"
+        "en": "Set options for Save the selection as a channel button,\n(Save the selection to the channel; the key and then button click)",
+        "ko": "[선택 영역을 채널로 저장] 단추에 대한 옵션 설정\n(키를누른상태에서[선택영역을채널로저장]단추click)"
       },
       "key": {
         "windows": [
-          "ctrl키를누른상태에서필터마스크축소판클릭"
+          "alt"
         ],
         "osx": [
-          "cmd키를누른상태에서필터마스크축소판클릭"
+          "opt"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Channel"
+      ],
+      "description": {
+        "en": "Create a new spot channel\n(Create a new channel while pressing the key button click)",
+        "ko": "새 별색 채널 만들기\n(키를누른상태에서새채널만들기단추click)"
+      },
+      "key": {
+        "windows": [
+          "ctrl"
+        ],
+        "osx": [
+          "cmd"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Channel"
+      ],
+      "description": {
+        "en": "Select / deselect multiple color-channel selection\n(Color channel, hold down the key click)",
+        "ko": "여러 색상 채널 선택 영역 선택/해제\n(키를 누른 상태에서 색상채널 click)"
+      },
+      "key": {
+        "windows": [
+          "shft"
+        ],
+        "osx": [
+          "shft"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Channel"
+      ],
+      "description": {
+        "en": "Hide Show / alpha channel select / deselect and rubylith overlay\n(Alpha channel click the key and then)",
+        "ko": "알파 채널 선택/해제 및 루비리스 오버레이로 표시/숨기기\n(키를누른상태에서알파채널click)"
+      },
+      "key": {
+        "windows": [
+          "shft"
+        ],
+        "osx": [
+          "shft"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Channel"
+      ],
+      "description": {
+        "en": "In the composite and grayscale mask switch Quick Mask mode\n(All tools, including the Brush tool)",
+        "ko": "합성 및 회색 음영 마스크 전환 빠른 마스크 모드에서\n(브러시도구를포함한모든도구)"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "~"
+        ],
+        "osx": [
+          "shft",
+          "~"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Channel"
+      ],
+      "description": {
+        "en": "In the composite and grayscale mask switch Quick Mask mode\n(All tools except the brush tool)",
+        "ko": "합성 및 회색 음영 마스크 전환 빠른 마스크 모드에서\n(브러시도구를제외한모든도구)"
+      },
+      "key": {
+        "windows": [
+          "'"
+        ],
+        "osx": [
+          "'"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Layers"
+      ],
+      "description": {
+        "en": "Recalling the layer transparency as a selection (click the layer thumbnail in the key-press)",
+        "ko": "레이어 투명도를 선택 영역으로 불러오기(키를누른상태에서레이어축소판click)"
+      },
+      "key": {
+        "windows": [
+          "ctrl"
+        ],
+        "osx": [
+          "cmd"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Layers"
+      ],
+      "description": {
+        "en": "(Click the layer thumbnail, hold down the key) are added to the selected area",
+        "ko": "현재 선택 영역에 추가(키를누른상태에서레이어축소판click)"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "shft"
+        ],
+        "osx": [
+          "cmd",
+          "shft"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Layers"
+      ],
+      "description": {
+        "en": "(Click the layer thumbnail, hold down the key) Subtract from current selection",
+        "ko": "현재 선택 영역에서 빼기(키를누른상태에서레이어축소판click)"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "alt"
+        ],
+        "osx": [
+          "cmd",
+          "opt"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Layers"
+      ],
+      "description": {
+        "en": "(Click the layer thumbnail, hold down the key) the current selection with crossover",
+        "ko": "현재 선택 영역과 교차(키를누른상태에서레이어축소판click)"
+      },
+      "key": {
+        "windows": [
+          "ctrl",
+          "shft",
+          "alt"
+        ],
+        "osx": [
+          "cmd",
+          "shft",
+          "opt"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Layers"
+      ],
+      "description": {
+        "en": "Load filter mask as a selection (filter mask thumbnail in the key and then click)",
+        "ko": "선택 영역으로 필터 마스크 불러오기(키를누른상태에서필터마스크축소판click)"
+      },
+      "key": {
+        "windows": [
+          "ctrl"
+        ],
+        "osx": [
+          "cmd"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "New Layer",
         "ko": "새 레이어"
@@ -6158,7 +8007,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Create a new layer via copy",
         "ko": "복사를 통해 새 레이어 만들기"
@@ -6176,7 +8027,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Cut through the Create New Layer",
         "ko": "잘라내기를 통해 새 레이어 만들기"
@@ -6196,7 +8049,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Grouped layers",
         "ko": "레이어 그룹화"
@@ -6214,7 +8069,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Ungroup layers",
         "ko": "레이어 그룹 해제"
@@ -6234,7 +8091,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Create a clipping mask on / off",
         "ko": "클리핑 마스크 만들기/해제"
@@ -6254,7 +8113,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Select all layers",
         "ko": "모든 레이어 선택"
@@ -6274,7 +8135,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Merge visible layers",
         "ko": "보이는 레이어 병합"
@@ -6294,39 +8157,45 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
-        "en": "Displays a dialog box and create a new blank layer",
-        "ko": "대화 상자를 표시하고 새 빈 레이어 만들기"
+        "en": "Displays a dialog box and create a new blank layer (new layer, hold down the key button click)",
+        "ko": "대화 상자를 표시하고 새 빈 레이어 만들기(키를누른상태에서새레이어단추click)"
       },
       "key": {
         "windows": [
-          "alt키를누른상태에서새레이어단추클릭"
+          "alt"
         ],
         "osx": [
-          "opt키를누른상태에서새레이어단추클릭"
+          "opt"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
-        "en": "Create a new layer below target layer",
-        "ko": "대상 레이어 아래에 새 레이어 만들기"
+        "en": "Create a new layer below target layer (new layer, hold down the key button click)",
+        "ko": "대상 레이어 아래에 새 레이어 만들기(키를누른상태에서새레이어단추click)"
       },
       "key": {
         "windows": [
-          "ctrl키를누른상태에서새레이어단추클릭"
+          "ctrl"
         ],
         "osx": [
-          "cmd키를누른상태에서새레이어단추클릭"
+          "cmd"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Select the top layer",
         "ko": "맨 위의 레이어 선택"
@@ -6334,17 +8203,19 @@
       "key": {
         "windows": [
           "alt",
-          ".(마침표)"
+          "."
         ],
         "osx": [
           "opt",
-          ".(마침표)"
+          "."
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Select the top layer down",
         "ko": "맨 아래 레이어 선택"
@@ -6352,17 +8223,19 @@
       "key": {
         "windows": [
           "alt",
-          ",(쉼표)"
+          ","
         ],
         "osx": [
           "opt",
-          ",(쉼표)"
+          ","
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Added to the layer selection in the layer panel",
         "ko": "레이어 패널에서 레이어 선택 영역에 추가"
@@ -6370,55 +8243,55 @@
       "key": {
         "windows": [
           "shft",
-          "alt",
-          "[또는]"
+          "alt"
         ],
         "osx": [
           "shft",
-          "opt",
-          "[또는]"
+          "opt"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Below / above selected layer",
         "ko": "아래/위 레이어 선택"
       },
       "key": {
         "windows": [
-          "alt",
-          "[또는]"
+          "alt"
         ],
         "osx": [
-          "opt",
-          "[또는]"
+          "opt"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Move the target layer by using the up / down",
         "ko": "대상 레이어를 위로/아래로 이동"
       },
       "key": {
         "windows": [
-          "ctrl",
-          "[또는]"
+          "ctrl"
         ],
         "osx": [
-          "cmd",
-          "[또는]"
+          "cmd"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Merge all visible layers into target layer copy",
         "ko": "보이는 모든 레이어 사본을 대상 레이어로 병합"
@@ -6440,25 +8313,29 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Merge Layers",
         "ko": "레이어 병합"
       },
       "key": {
         "windows": [
-          "병합하려는레이어를강조표시한후ctrl",
+          "ctrl",
           "e"
         ],
         "osx": [
-          "병합하려는레이어를강조표시한후cmd",
+          "cmd",
           "e"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Layer the bottom or bottom to top",
         "ko": "레이어를 맨 아래 또는 맨 위로 이동"
@@ -6466,443 +8343,19 @@
       "key": {
         "windows": [
           "ctrl",
-          "shft",
-          "[또는]"
+          "shft"
         ],
         "osx": [
           "cmd",
-          "shft",
-          "[또는]"
+          "shft"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Copy current layer to layer below",
-        "ko": "현재 레이어를 아래 레이어로 복사"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서패널팝업메뉴의아래레이어와병합명령선택"
-        ],
-        "osx": [
-          "opt키를누른상태에서패널팝업메뉴의아래레이어와병합명령선택"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Merge all visible layers to a new layer above the currently selected layer",
-        "ko": "보이는 모든 레이어를 현재 선택된 레이어 위에 새 레이어로 병합"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서패널팝업메뉴의보이는레이어병합명령선택"
-        ],
-        "osx": [
-          "opt키를누른상태에서패널팝업메뉴의보이는레이어병합명령선택"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Select the layer / layer group only or show / hide all layers / layer groups",
-        "ko": "선택 레이어/레이어 그룹만 또는 모든 레이어/레이어 그룹 표시/숨기기"
-      },
-      "key": {
-        "windows": [
-          "마우스오른쪽단추로눈모양아이콘클릭"
-        ],
-        "osx": [
-          "ctrl키를누른상태에서눈모양아이콘클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Hide all other layers are visible display /",
-        "ko": "현재 보이는 다른 모든 레이어 표시/숨기기"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서눈모양아이콘클릭"
-        ],
-        "osx": [
-          "opt키를누른상태에서눈모양아이콘클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Locking the transparent pixels of the target layer or applied as a last lock switch",
-        "ko": "대상 레이어의 투명 픽셀 잠그기 또는 마지막으로 적용된 잠그기 전환"
-      },
-      "key": {
-        "windows": [
-          "/(슬래시)"
-        ],
-        "osx": [
-          "/(슬래시)"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Layer effect / style, options to edit",
-        "ko": "레이어 효과/스타일, 옵션 편집"
-      },
-      "key": {
-        "windows": [
-          "레이어효과/스타일두번클릭"
-        ],
-        "osx": [
-          "레이어효과/스타일두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Hide layer effect / style",
-        "ko": "레이어 효과/스타일 숨기기"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서레이어효과/스타일두번클릭"
-        ],
-        "osx": [
-          "opt키를누른상태에서레이어효과/스타일두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Edit layer style",
-        "ko": "레이어 스타일 편집"
-      },
-      "key": {
-        "windows": [
-          "레이어두번클릭"
-        ],
-        "osx": [
-          "레이어두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Using vector masks can not / available",
-        "ko": "벡터 마스크 사용 불가/사용 가능"
-      },
-      "key": {
-        "windows": [
-          "shft키를누른상태에서벡터마스크축소판클릭"
-        ],
-        "osx": [
-          "shft키를누른상태에서벡터마스크축소판클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Open Layer Mask Display Options dialog box",
-        "ko": "레이어 마스크 표시 옵션 대화 상자 열기"
-      },
-      "key": {
-        "windows": [
-          "레이어마스크축소판두번클릭"
-        ],
-        "osx": [
-          "레이어마스크축소판두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Layer mask on / off",
-        "ko": "레이어 마스크 켜기/끄기"
-      },
-      "key": {
-        "windows": [
-          "shft키를누른상태에서레이어마스크축소판클릭"
-        ],
-        "osx": [
-          "shft키를누른상태에서레이어마스크축소판클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Filter mask on / off switch",
-        "ko": "필터 마스크 켬/끔 전환"
-      },
-      "key": {
-        "windows": [
-          "shft키를누른상태에서필터마스크축소판클릭"
-        ],
-        "osx": [
-          "shft키를누른상태에서필터마스크축소판클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Layer mask / composite image conversion",
-        "ko": "레이어 마스크/합성 이미지 전환"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서레이어마스크축소판클릭"
-        ],
-        "osx": [
-          "opt키를누른상태에서레이어마스크축소판클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Switching between the filter mask / composite image",
-        "ko": "필터 마스크/합성 이미지 간 전환"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서필터마스크축소판클릭"
-        ],
-        "osx": [
-          "opt키를누른상태에서필터마스크축소판클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "For the layer mask rubylith mode on / off",
-        "ko": "레이어 마스크에 대해 루비리스 모드 켜기/끄기"
-      },
-      "key": {
-        "windows": [
-          "\\(백슬래시)또는shft",
-          "alt",
-          "클릭"
-        ],
-        "osx": [
-          "\\(백슬래시)또는shft",
-          "opt",
-          "클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Choose any character and temporarily select type tool",
-        "ko": "모든 문자 선택, 일시적으로 문자 도구 선택"
-      },
-      "key": {
-        "windows": [
-          "문자레이어축소판두번클릭"
-        ],
-        "osx": [
-          "문자레이어축소판두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Create Clipping Mask",
-        "ko": "클리핑 마스크 만들기"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서두레이어사이구분선클릭"
-        ],
-        "osx": [
-          "opt키를누른상태에서두레이어사이구분선클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Change the layer name",
-        "ko": "레이어 이름 변경"
-      },
-      "key": {
-        "windows": [
-          "레이어이름두번클릭"
-        ],
-        "osx": [
-          "레이어이름두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Edit filter settings",
-        "ko": "필터 설정 편집"
-      },
-      "key": {
-        "windows": [
-          "필터효과두번클릭"
-        ],
-        "osx": [
-          "필터효과두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Edit Filter blending options",
-        "ko": "필터 혼합 옵션 편집"
-      },
-      "key": {
-        "windows": [
-          "필터혼합아이콘두번클릭"
-        ],
-        "osx": [
-          "필터혼합아이콘두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Create a new layer group below current layer / layer set",
-        "ko": "현재 레이어/레이어 세트 아래에 새 레이어 그룹 만들기"
-      },
-      "key": {
-        "windows": [
-          "ctrl키를누른상태에서[새그룹]단추클릭"
-        ],
-        "osx": [
-          "cmd키를누른상태에서[새그룹]단추클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Use the dialog box Create a new layer group",
-        "ko": "대화 상자를 사용하여 새 레이어 그룹 만들기"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서[새그룹]단추클릭"
-        ],
-        "osx": [
-          "opt키를누른상태에서[새그룹]단추클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Create hiding the full / choice selection Layer Mask",
-        "ko": "전체/선택 선택 영역을 숨기는 레이어 마스크 만들기"
-      },
-      "key": {
-        "windows": [
-          "alt키를누른상태에서레이어마스크추가단추클릭"
-        ],
-        "osx": [
-          "opt키를누른상태에서레이어마스크추가단추클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Create vector mask that represents the full / path area",
-        "ko": "전체/경로 영역을 나타내는 벡터 마스크 만들기"
-      },
-      "key": {
-        "windows": [
-          "ctrl키를누른상태에서레이어마스크추가단추클릭"
-        ],
-        "osx": [
-          "cmd키를누른상태에서레이어마스크추가단추클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Hide full or Create vector mask that represents the path area",
-        "ko": "전체를 숨기거나 경로 영역을 나타내는 벡터 마스크 만들기"
-      },
-      "key": {
-        "windows": [
-          "ctrl",
-          "alt",
-          "레이어마스크추가단추클릭"
-        ],
-        "osx": [
-          "cmd",
-          "opt",
-          "레이어마스크추가단추클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Display layer group properties",
-        "ko": "레이어 그룹 속성 표시"
-      },
-      "key": {
-        "windows": [
-          "레이어그룹을마우스오른쪽단추로클릭한다음[그룹속성]선택또는그룹을두번클릭"
-        ],
-        "osx": [
-          "ctrl를누른상태에서레이어그룹을클릭한다음[그룹속성]선택또는그룹을두번클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Layers"
+      ],
       "description": {
         "en": "Several successive layers select / deselect",
         "ko": "여러 연속 레이어 선택/해제"
@@ -6910,34 +8363,38 @@
       "key": {
         "windows": [
           "shft",
-          "클릭"
+          "click"
         ],
         "osx": [
           "shft",
-          "클릭"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Multiple discrete layers select / deselect",
-        "ko": "여러 불연속 레이어 선택/해제"
-      },
-      "key": {
-        "windows": [
-          "ctrl키를누른상태에서클릭"
-        ],
-        "osx": [
-          "cmd키를누른상태에서클릭"
+          "click"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "선택적 플러그인"
+        "Layers"
+      ],
+      "description": {
+        "en": "Multiple discrete layers select / deselect",
+        "ko": "여러 불연속 레이어 선택/해제"
+      },
+      "key": {
+        "windows": [
+          "ctr",
+          "click"
+        ],
+        "osx": [
+          "cmd",
+          "click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Plugins"
       ],
       "description": {
         "en": "Fit to window",
@@ -6956,7 +8413,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "enlargement",
         "ko": "확대"
@@ -6964,19 +8423,19 @@
       "key": {
         "windows": [
           "ctrl",
-          "",
-          "(더하기)"
+          "+"
         ],
         "osx": [
           "cmd",
-          "",
-          "(더하기)"
+          "+"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "reduction",
         "ko": "축소"
@@ -6984,17 +8443,19 @@
       "key": {
         "windows": [
           "ctrl",
-          "-(하이픈)"
+          "-"
         ],
         "osx": [
           "cmd",
-          "-(하이픈)"
+          "-"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Right from the controls on the circulation between",
         "ko": "오른쪽 위에서부터 컨트롤 사이 순환"
@@ -7010,7 +8471,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "From circulating among the lower-right control",
         "ko": "오른쪽 아래에서부터 컨트롤 사이 순환"
@@ -7028,7 +8491,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Temporarily activate Hand tool",
         "ko": "일시적으로 손 도구 활성화"
@@ -7044,7 +8509,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Change the settings back to clear",
         "ko": "취소를 다시 설정으로 변경"
@@ -7060,7 +8527,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Edge tools to lighten",
         "ko": "가장자리 밝게하기 도구"
@@ -7076,7 +8545,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Painting tools",
         "ko": "칠 도구"
@@ -7092,7 +8563,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Eyedropper tool",
         "ko": "스포이드 도구"
@@ -7108,7 +8581,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Cleanup",
         "ko": "정리 도구"
@@ -7124,7 +8599,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Edge Trim Tool",
         "ko": "가장자리 손질 도구"
@@ -7140,41 +8617,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "To brighten alternately switch the tool and the Eraser tool edge",
-        "ko": "가장자리 밝게하기 도구와 지우개 도구를 번갈아 전환"
-      },
-      "key": {
-        "windows": [
-          "alt",
-          "[가장자리밝게하기도구]/[지우개도구]"
-        ],
-        "osx": [
-          "opt",
-          "[가장자리밝게하기도구]/[지우개도구]"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "To brighten the edges (advanced) On / Off",
-        "ko": "가장자리 밝게하기(고급) 켜기/끄기"
-      },
-      "key": {
-        "windows": [
-          "가장자리밝게하기도구를선택한상태로ctrl키를누름"
-        ],
-        "osx": [
-          "가장자리밝게하기도구를선택한상태로cmd키를누름"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Current brightly a region removed",
         "ko": "현재 밝게 한 영역 제거"
@@ -7192,7 +8637,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "To brighten the entire image",
         "ko": "전체 이미지 밝게 하기"
@@ -7210,23 +8657,29 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Fill foreground area and preview extraction",
         "ko": "전경 영역을 칠하고 추출 미리 보기"
       },
       "key": {
         "windows": [
-          "칠도구를선택한상태에서shft를누르고클릭"
+          "shft",
+          "click"
         ],
         "osx": [
-          "칠도구를선택한상태에서shft를누르고클릭"
+          "shft",
+          "click"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Move mask when Edge Touchup tool is selected",
         "ko": "가장자리 손질 도구가 선택될 때 마스크 이동"
@@ -7244,7 +8697,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Add opacity when Cleanup tool is selected",
         "ko": "정리 도구가 선택될 때 불투명도 추가"
@@ -7262,7 +8717,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "The source displayed in the Preview menu option of viewing and extracting switch between displays",
         "ko": "미리 보기의 표시 메뉴 옵션에서 원본 표시와 추출 표시 간 전환"
@@ -7278,7 +8735,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Preview before activating Cleanup and Edge Touchup tool",
         "ko": "미리 보기 전 정리 도구 및 가장자리 손질 도구 활성화"
@@ -7296,7 +8755,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Cycling down the pre-show menu items in the view from above",
         "ko": "미리 보기의 표시 메뉴 항목을 위에서 아래로 순환"
@@ -7312,7 +8773,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Circulation over a menu item displayed in the preview below",
         "ko": "미리 보기의 표시 메뉴 항목을 아래에서 위로 순환"
@@ -7330,39 +8793,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Reducing the size of the brush by 1 / increase",
-        "ko": "브러시 크기를 1만큼 감소/증가"
-      },
-      "key": {
-        "windows": [
-          "브러시크기텍스트상자에서down/up†"
-        ],
-        "osx": [
-          "브러시크기텍스트상자에서down또는up†"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
-      "description": {
-        "en": "Reducing the size of the brush by 1 / increase",
-        "ko": "브러시 크기를 1만큼 감소/증가"
-      },
-      "key": {
-        "windows": [
-          "브러시크기슬라이더가표시된상태에서left/right†"
-        ],
-        "osx": [
-          "브러시크기슬라이더가표시된상태에서left/right†"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "The intensity setting of the cleanup tool or a tool to brighten the edges",
         "ko": "정리 도구 또는 가장자리 밝게하기 도구의 강도 설정"
@@ -7378,7 +8811,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Results (groups only create patterns)",
         "ko": "결과(패턴 작성기에만 해당)"
@@ -7394,7 +8829,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Delete the current selection",
         "ko": "현재 선택 영역 삭제"
@@ -7412,7 +8849,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Move selection Cancel",
         "ko": "선택 영역 이동 취소"
@@ -7430,7 +8869,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Created or recreated",
         "ko": "생성 또는 다시 생성"
@@ -7448,7 +8889,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Intersects with current selection",
         "ko": "현재 선택 영역과 교차"
@@ -7457,18 +8900,20 @@
         "windows": [
           "shft",
           "alt",
-          "선택"
+          "select"
         ],
         "osx": [
           "shft",
           "opt",
-          "선택"
+          "select"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Switch view: original / generated pattern",
         "ko": "보기 전환: 원본/생성 패턴"
@@ -7484,7 +8929,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Go to first tile in Tile History",
         "ko": "타일 작업 내역의 첫 번째 타일로 이동"
@@ -7500,7 +8947,9 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Go to the last tile in Tile History",
         "ko": "타일 작업 내역의 마지막 타일로 이동"
@@ -7516,55 +8965,153 @@
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Go to previous tile in Tile History",
         "ko": "타일 작업 내역에서 이전 타일로 이동"
       },
       "key": {
         "windows": [
-          "left,pageup"
+          "left"
         ],
         "osx": [
-          "left,pageup"
+          "left"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
+      "description": {
+        "en": "Go to previous tile in Tile History",
+        "ko": "타일 작업 내역에서 이전 타일로 이동"
+      },
+      "key": {
+        "windows": [
+          "pageup"
+        ],
+        "osx": [
+          "pageup"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Tiles in history to move to the next tile",
         "ko": "타일 작업 내역에서 다음 타일로 이동"
       },
       "key": {
         "windows": [
-          "right,pagedown"
+          "right"
         ],
         "osx": [
-          "right,pagedown"
+          "right"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
+      "description": {
+        "en": "Tiles in history to move to the next tile",
+        "ko": "타일 작업 내역에서 다음 타일로 이동"
+      },
+      "key": {
+        "windows": [
+          "pagedown"
+        ],
+        "osx": [
+          "pagedown"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Small selection moves from the original view state",
         "ko": "원본 보기 상태에서 선택 영역 소량 이동"
       },
       "key": {
         "windows": [
-          "right,left,up또는down"
+          "right"
         ],
         "osx": [
-          "right,left,up또는down"
+          "right"
         ]
       }
     },
     {
       "programCode": "adobe.photoshop",
-      "category": [],
+      "category": [
+        "Plugins"
+      ],
+      "description": {
+        "en": "Small selection moves from the original view state",
+        "ko": "원본 보기 상태에서 선택 영역 소량 이동"
+      },
+      "key": {
+        "windows": [
+          "left"
+        ],
+        "osx": [
+          "left"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Plugins"
+      ],
+      "description": {
+        "en": "Small selection moves from the original view state",
+        "ko": "원본 보기 상태에서 선택 영역 소량 이동"
+      },
+      "key": {
+        "windows": [
+          "up"
+        ],
+        "osx": [
+          "up"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Plugins"
+      ],
+      "description": {
+        "en": "Small selection moves from the original view state",
+        "ko": "원본 보기 상태에서 선택 영역 소량 이동"
+      },
+      "key": {
+        "windows": [
+          "down"
+        ],
+        "osx": [
+          "down"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Plugins"
+      ],
       "description": {
         "en": "Increasing small amount of movement in the selected area View original state",
         "ko": "원본 보기 상태에서 선택 영역 소량 이동량 증가"
@@ -7572,11 +9119,71 @@
       "key": {
         "windows": [
           "shft",
-          "right,left,up또는down"
+          "right"
         ],
         "osx": [
           "shft",
-          "right,left,up또는down"
+          "right"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Plugins"
+      ],
+      "description": {
+        "en": "Increasing small amount of movement in the selected area View original state",
+        "ko": "원본 보기 상태에서 선택 영역 소량 이동량 증가"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "left"
+        ],
+        "osx": [
+          "shft",
+          "left"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Plugins"
+      ],
+      "description": {
+        "en": "Increasing small amount of movement in the selected area View original state",
+        "ko": "원본 보기 상태에서 선택 영역 소량 이동량 증가"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "up"
+        ],
+        "osx": [
+          "shft",
+          "up"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.photoshop",
+      "category": [
+        "Plugins"
+      ],
+      "description": {
+        "en": "Increasing small amount of movement in the selected area View original state",
+        "ko": "원본 보기 상태에서 선택 영역 소량 이동량 증가"
+      },
+      "key": {
+        "windows": [
+          "shft",
+          "down"
+        ],
+        "osx": [
+          "shft",
+          "down"
         ]
       }
     },

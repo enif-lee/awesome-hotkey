@@ -5,6 +5,7 @@ import externalLinkIcon from "../../assets/icon/external-link.svg"
 import {css} from "@emotion/css";
 import {observer} from "mobx-react-lite";
 import {settingStore} from "../stores/settingStore";
+import {bookmarkStore} from "../stores/bookmark-store";
 
 
 const SettingPageWrap = styled.div`
@@ -52,21 +53,22 @@ const ExternalLink: FC<{ url: string }> = ({url}) => <Action>
 </Action>
 
 const SettingPage: FC = observer(() => {
-        const textSizes = [{label: "큼", value: 20}, {label: "중간(권장)", value: 16}, {label: "작음", value: 12}];
-        const osOptions = [{label: "windows", value: "windows"}, {label: "osx", value: "osx"}];
-        const [open, setOpen] = useState(false);
+    const textSizes = [{label: "큼", value: 20}, {label: "중간(권장)", value: 16}, {label: "작음", value: 12}];
+    const osOptions = [{label: "windows", value: "windows"}, {label: "osx", value: "osx"}];
+    const [open, setOpen] = useState(false);
 
-        return <SettingPageWrap>
-            <h3>설정</h3>
-            <List bordered>
-                <SettingListItem>
-                    글꼴크기
-                    <Action><SettingSelectPicker data={textSizes} defaultValue={settingStore.fontSize}
-                                                 value={settingStore.fontSize}
-                                                 onChange={(size) => settingStore.fontSize = size}/></Action>
-                </SettingListItem>
-                <SettingListItem>
-                    즐겨찾는 프로그램
+    const programs = bookmarkStore.bookmarksWithDetail;
+    return <SettingPageWrap>
+        <h3>설정</h3>
+        <List bordered>
+            <SettingListItem>
+                글꼴크기
+                <Action><SettingSelectPicker data={textSizes} defaultValue={settingStore.fontSize}
+                                             value={settingStore.fontSize}
+                                             onChange={(size) => settingStore.fontSize = size}/></Action>
+            </SettingListItem>
+            <SettingListItem>
+                즐겨찾는 프로그램
                     <Action>
                         <IconButton icon={<Icon icon={"arrow-right"}/>} onClick={() => setOpen(true)}/>
                     </Action>
@@ -97,7 +99,12 @@ const SettingPage: FC = observer(() => {
                 </Modal.Header>
                 <Modal.Body>
                     <List bordered>
-                        <List.Item>프로그램 명 <IconButton appearance={"subtle"} icon={<Icon icon={"close"}/>}/> </List.Item>
+                        {programs.map(program => <List.Item>
+                            {program.name}({program.code})
+                            <IconButton appearance={"subtle"} icon={<Icon icon={"close"}/>}
+                                        onClick={() => bookmarkStore.toggleBookmark(program.code)}/>
+                        </List.Item>)}
+                        {programs.length == 0 && <List.Item>북마크된 프로그램이 없습니다.</List.Item>}
                     </List>
                 </Modal.Body>
             </Modal>
