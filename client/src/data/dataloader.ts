@@ -52,6 +52,10 @@ export function getProgramsByCategory(category: string): Program[] {
     return getStaticData().programs.filter(program => program.category.includes(category));
 }
 
+export function getProgramsByCategories(categories: string[]): Program[] {
+    return categories.map(key => getProgramsByCategory(key)).flat();
+}
+
 export function isSupportProgram(code: ProgramCode): boolean {
     return getStaticData().programs.some(program => program.code == code);
 }

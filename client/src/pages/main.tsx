@@ -192,7 +192,8 @@ const RecommendProgramsComponent: FC<{ title: string, programs: Program[] }> = (
                     <p className={css`margin-bottom: 1rem;
                       font-size: 1.25rem;`}>{title}</p>
                     <FlexboxGrid justify={"center"} align={"middle"}>
-                        {pagePrograms.map(program => <RecommendProgramsComponentItem program={program}/>)}
+                        {pagePrograms.map(program => <RecommendProgramsComponentItem program={program}
+                                                                                     key={program.code}/>)}
                     </FlexboxGrid>
                 </FlexboxGrid.Item>
                 <FlexboxGrid.Item colspan={2}>
@@ -209,7 +210,7 @@ type ProgramCategoryCardProps = { title: string, category: string };
 const ProgramCategoryCard: FC<ProgramCategoryCardProps> = ({title, category}) => {
 
     const programs = useMemo(() => getProgramsByCategory(category), [category]);
-    const chunkedPrograms = _.chunk(programs, 3);
+    const chunkedPrograms = _.chunk(programs, 3).map((value, index) => ({value, index}))
     const padding = useWideCheck()
         ? 8
         : 24;
@@ -221,8 +222,8 @@ const ProgramCategoryCard: FC<ProgramCategoryCardProps> = ({title, category}) =>
           text-align: left;`}>{title}</h5>
         <Grid fluid>
             {chunkedPrograms.map(chunk =>
-                <Row className={css`margin-bottom: 12px;`}>
-                    {chunk.map(program => <Link to={"/programs/" + program.code}>
+                <Row className={css`margin-bottom: 12px;`} key={chunk.index}>
+                    {chunk.value.map(program => <Link to={"/programs/" + program.code} key={program.code}>
                         <Col sm={8} className={css`padding: ${padding}px`}>
                             <img src={"/image/" + program.image} className={css`width: 100%;
                               border-radius: 8px;
@@ -240,7 +241,7 @@ type ProgramCategoryCardColumn = {
 }
 const ProgramCategoryCardColumn: FC<ProgramCategoryCardColumn> = ({cards}) => {
     return <Col xs={24} smPush={2} sm={20} mdPush={3} md={18} lgPush={0} lg={8}>
-        {cards.map(card => <ProgramCategoryCard {...card} />)}
+        {cards.map(card => <ProgramCategoryCard {...card} key={card.title}/>)}
     </Col>
 }
 
@@ -256,7 +257,7 @@ const RelativeHotKeyTips: FC<{ tooltips: string[] }> = ({tooltips}) => {
                 </div>
                 <Grid fluid className={css`max-width: 1200px;`}>
                     <Row>
-                        {tooltips.slice(0, 3).map(tipId => <Col lg={8} sm={24}>
+                        {tooltips.slice(0, 3).map(tipId => <Col lg={8} sm={24} key={tipId}>
                             <Link to={"tool-tips/" + tipId}>
                                 <div className={css`padding: 20px 10px;
                                   overflow: hidden;`}>
@@ -333,7 +334,9 @@ const MainContentPage: FC = observer(props => {
                             {!searchText && <>
                                 <p className="sub-title">최근 검색한 툴</p>
                                 <SearchList>
-                                    {recentSearch.sort(search => new Date(search.time).getTime())
+                                    {recentSearch
+                                        .slice()
+                                        .sort(search => new Date(search.time).getTime())
                                         .reverse()
                                         .slice(0, 5)
                                         .map(({name, code, time}) =>
@@ -363,7 +366,8 @@ const MainContentPage: FC = observer(props => {
             </ContentLayout>
         </MainBackground>
         <ContentLayout>
-            <RecommendProgramsComponent title={"즐겨찾는 프로그램"} programs={bookmarkStore.bookmarksWithDetail}/>
+            {bookmarkStore.bookmarksWithDetail.length > 0 &&
+            <RecommendProgramsComponent title={"즐겨찾는 프로그램"} programs={bookmarkStore.bookmarksWithDetail}/>}
             <RecommendProgramsComponent title={"자주 사용하는 프로그램"} programs={programs}/>
         </ContentLayout>
         <div className={css`margin-top: 90px;`}>
