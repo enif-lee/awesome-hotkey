@@ -1,46 +1,4 @@
 {
-  "programCategories": [
-    {
-      "code": "development",
-      "name": "개발"
-    },
-    {
-      "code": "ux/ui",
-      "name": "UX/UI"
-    },
-    {
-      "code": "document",
-      "name": "문서"
-    },
-    {
-      "code": "graphic",
-      "name": "그래픽"
-    },
-    {
-      "code": "3d/ar",
-      "name": "3D/AR"
-    },
-    {
-      "code": "picture",
-      "name": "사진"
-    },
-    {
-      "code": "video",
-      "name": "영상"
-    },
-    {
-      "code": "collaboration",
-      "name": "협업"
-    },
-    {
-      "code": "chat",
-      "name": "채팅"
-    },
-    {
-      "code": "conference",
-      "name": "회의"
-    }
-  ],
   "programs": [
     {
       "code": "adobe.illustrator",
@@ -179,7 +137,7 @@
       "name": "Jetbrains Intellij",
       "description": "Java(Jvm) 통합 개발툴",
       "version": null,
-      "image": "업로드 ## 구글에다가 올려놨음",
+      "image": "programs/jetbrains/intellij.png",
       "category": [
         "development"
       ]
@@ -189,7 +147,7 @@
       "name": "Jetbrains Rider",
       "description": "C# 통합 개발툴",
       "version": null,
-      "image": "업로드",
+      "image": "programs/jetbrains/rider.png",
       "category": [
         "development"
       ]
@@ -199,7 +157,7 @@
       "name": "Jetbrains Websotrm",
       "description": "웹(Javascript,Typescript,Html..) 통합 개발툴",
       "version": null,
-      "image": "업로드",
+      "image": "programs/jetbrains/webstorm.jpeg",
       "category": [
         "development"
       ]
@@ -209,7 +167,7 @@
       "name": "Jetbrains Goland",
       "description": "Golang 기반 통합 기반 툴",
       "version": null,
-      "image": "업로드",
+      "image": "programs/jetbrains/goland.png",
       "category": [
         "development"
       ]
@@ -249,7 +207,7 @@
       "name": "Jira",
       "description": "프로젝트 매니징/이슈트래킹/애자일 프로세스",
       "version": null,
-      "image": "업로드",
+      "image": "programs/collaboration/jira.png",
       "category": [
         "collaboration"
       ]
@@ -259,7 +217,7 @@
       "name": "Conluence",
       "description": "문서화/위키",
       "version": null,
-      "image": "업로드",
+      "image": "programs/collaboration/confluence.png",
       "category": [
         "document",
         "collaboration"
@@ -270,7 +228,7 @@
       "name": "Trello",
       "description": "프로젝트 매니징 및 이슈 트래킹 도구",
       "version": null,
-      "image": "업로드",
+      "image": "programs/collaboration/trello.png",
       "category": [
         "collaboration"
       ]
@@ -280,7 +238,7 @@
       "name": "Slack",
       "description": "팀 커뮤니케이션/회의",
       "version": null,
-      "image": "업로드",
+      "image": "programs/chat/slack.png",
       "category": [
         "chat",
         "conference"
@@ -291,10 +249,9 @@
       "name": "Notion",
       "description": "블럭 기반 유연한 문서화 도구",
       "version": null,
-      "image": "업로드",
+      "image": "programs/notion.png",
       "category": [
-        "chat",
-        "conference"
+        "document"
       ]
     },
     {
@@ -302,7 +259,7 @@
       "name": "Google Meet",
       "description": "화상 회의",
       "version": null,
-      "image": "업로드",
+      "image": "programs/meet.png",
       "category": [
         "conference"
       ]
@@ -312,7 +269,7 @@
       "name": "Zoom",
       "description": "화상 회의",
       "version": null,
-      "image": "업로드",
+      "image": "programs/zoom.png",
       "category": [
         "conference"
       ]
@@ -322,7 +279,7 @@
       "name": "Zeplin",
       "description": "디자이너와 개발자의 효율적인 협업을 위한 GUI가이드 프로그램",
       "version": null,
-      "image": "업로드",
+      "image": "programs/zeplin.png",
       "category": [
         "conference",
         "ux/ui"
@@ -333,7 +290,7 @@
       "name": "Microsoft Teams",
       "description": null,
       "version": null,
-      "image": "업로드",
+      "image": "programs/teams.png",
       "category": [
         "collaboration",
         "chat",
@@ -465,7 +422,7 @@
       "name": "Github",
       "description": "Git 호스팅 / 이슈 트래킹 / 오픈소스 플랫폼",
       "version": null,
-      "image": null,
+      "image": "programs/github.png",
       "category": [
         "development",
         "collaboration"
@@ -476,11 +433,53 @@
       "name": "Gitlab",
       "description": "Git 호스팅 / 통합 프로젝트 매니징 도구",
       "version": null,
-      "image": null,
+      "image": "programs/gitlab.png",
       "category": [
         "development",
         "collaboration"
       ]
+    }
+  ],
+  "programCategories": [
+    {
+      "code": "development",
+      "name": "개발"
+    },
+    {
+      "code": "ux/ui",
+      "name": "UX/UI"
+    },
+    {
+      "code": "document",
+      "name": "문서"
+    },
+    {
+      "code": "graphic",
+      "name": "그래픽"
+    },
+    {
+      "code": "3d/ar",
+      "name": "3D/AR"
+    },
+    {
+      "code": "picture",
+      "name": "사진"
+    },
+    {
+      "code": "video",
+      "name": "영상"
+    },
+    {
+      "code": "collaboration",
+      "name": "협업"
+    },
+    {
+      "code": "chat",
+      "name": "채팅"
+    },
+    {
+      "code": "conference",
+      "name": "회의"
     }
   ],
   "hotkeys": [
@@ -951,7 +950,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Help Start",
@@ -961,20 +960,24 @@
         "windows": [
           "f1"
         ],
-        "osx": null
+        "osx": [
+          "HelpKey"
+        ]
       }
     },
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Undo / Redo",
         "ko": "취소/다시 실행"
       },
       "key": {
-        "windows": null,
+        "windows": [
+          "None"
+        ],
         "osx": [
           "f1"
         ]
@@ -983,7 +986,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Cut",
@@ -1001,7 +1004,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "copy",
@@ -1019,7 +1022,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "paste",
@@ -1037,7 +1040,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Hide Brushes panel Show /",
@@ -1055,7 +1058,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Color Panel Show / Hide",
@@ -1073,7 +1076,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Layers panel Show / Hide",
@@ -1091,7 +1094,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Information Panel Show / Hide",
@@ -1109,7 +1112,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Actions panel Show / Hide",
@@ -1128,7 +1131,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Revert",
@@ -1146,7 +1149,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "seven",
@@ -1166,7 +1169,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Selection feather",
@@ -1186,7 +1189,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Function Key"
+        "Function"
       ],
       "description": {
         "en": "Invert Selection",
@@ -1206,7 +1209,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Switch using the same shortcuts to other tools\n(Pressing the shortcut by holding down the key (Use shft key to the tool Transfer case preference is selected))",
@@ -1224,7 +1227,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Then switch hidden tools\n(Tool, hold down the key and click (add reference point, delete anchor point, and convert point tools except))",
@@ -1242,7 +1245,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Go to Tools",
@@ -1260,7 +1263,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Rectangular Marquee tool\nCircular Marquee tool",
@@ -1278,7 +1281,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Lasso tool\nPolygonal lasso tool\nMagnetic Lasso tool",
@@ -1296,7 +1299,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Magic Wand tool\nQuick Selection tool",
@@ -1314,7 +1317,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Crop Tool\nPartition Tool\nSelect the partition tool",
@@ -1332,7 +1335,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Eyedropper tool †\nColor Sampler tool\nRuler tool\nNotes Tool",
@@ -1350,7 +1353,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Spot Healing Brush tool\nHealing Brush tool\nPatch tool\nRed Eye tool",
@@ -1368,7 +1371,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Brush tool\nPencil tool\nColor replacement tool\nMixer Brush tool",
@@ -1386,7 +1389,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Clone Stamp Tool\nPattern Stamp tool",
@@ -1404,7 +1407,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "History Brush tool\nArt History Brush tool",
@@ -1422,7 +1425,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Eraser tool †\nBackground Eraser tool\nMagic Eraser tool",
@@ -1440,7 +1443,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Gradient tool\nPaint Bucket tool",
@@ -1458,7 +1461,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Dodge Tool\nBurn tool\nSponge Tool",
@@ -1476,7 +1479,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Pen tool\nFreeform Pen tool",
@@ -1494,7 +1497,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Horizontal Type tool\nVertical Type tool\nHorizontal text mask tool\nVertical Type Mask Tool",
@@ -1512,7 +1515,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Path Selection tool\nDirect Selection tool",
@@ -1530,7 +1533,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Rectangle tool\nRounded Rectangle tool\nCircular tool\nPolygon tool\nLine Tool\nCustom Shape tool",
@@ -1548,7 +1551,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Hand tools",
@@ -1566,7 +1569,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Rotate View tool",
@@ -1584,7 +1587,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Zoom tool",
@@ -1602,7 +1605,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Default Foreground / Background Color",
@@ -1620,7 +1623,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Foreground / background color transition",
@@ -1638,7 +1641,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Standard / Quick Mask mode switch",
@@ -1656,7 +1659,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Content-aware move tool",
@@ -1674,7 +1677,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Perspective Crop tool",
@@ -1692,7 +1695,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Property Tools",
@@ -1710,7 +1713,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Rotate View tool",
@@ -1728,7 +1731,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Preserve Transparency switch",
@@ -1746,7 +1749,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Decrease Brush Hardness",
@@ -1764,7 +1767,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Increase brush hardness",
@@ -1782,7 +1785,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Previous brush",
@@ -1800,7 +1803,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "Then brush",
@@ -1818,7 +1821,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "The first brush",
@@ -1836,7 +1839,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Tool Selection"
+        "Selection"
       ],
       "description": {
         "en": "End Brush",
@@ -2576,7 +2579,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Transform tool",
@@ -2594,7 +2597,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Reconstruct tool",
@@ -2612,7 +2615,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Clockwise turning tool",
@@ -2630,7 +2633,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "A concave tool",
@@ -2648,7 +2651,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Convex tool",
@@ -2666,7 +2669,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Pushing the left tool",
@@ -2684,7 +2687,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Mask holding tool",
@@ -2702,7 +2705,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Mask undocked tool",
@@ -2720,7 +2723,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Convex, concave, and the direction reverse to the left pushing tool",
@@ -2738,7 +2741,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Successively sampling distortion\n(In the preview tool in the reconstruction, displacement, and select the best tweaks or association mode)",
@@ -2758,7 +2761,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "For size 2 by brush, density, a reduced / increased by a case of the pressure, rate, stir stroke jitter",
@@ -2776,7 +2779,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "For size 2 by brush, density, a reduced / increased by a case of the pressure, rate, stir stroke jitter",
@@ -2794,7 +2797,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "For size 2 by brush, density, a reduced / increased by a case of the pressure, rate, stir stroke jitter",
@@ -2812,7 +2815,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "For size 2 by brush, density, a reduced / increased by a case of the pressure, rate, stir stroke jitter",
@@ -2830,7 +2833,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Right from the controls on the circulation between",
@@ -2848,7 +2851,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "From circulating among the lower-right control",
@@ -2868,7 +2871,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Pixel Floating"
+        "px Floating"
       ],
       "description": {
         "en": "Change the settings back to clear",
@@ -2904,7 +2907,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "2x zoom (temporarily)",
@@ -2922,7 +2925,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "enlargement",
@@ -2943,7 +2946,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "reduction",
@@ -2963,7 +2966,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Adjust the view (hand tools twice click)",
@@ -2983,7 +2986,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Increase brush size (Brush, Stamp tools)",
@@ -3001,7 +3004,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Reduced size brush (brush, a stamp tool)",
@@ -3019,7 +3022,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Increased hardness brush (brush, a stamp tool)",
@@ -3039,7 +3042,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Brush hardness decreased (brush, a stamp tool)",
@@ -3059,7 +3062,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "The last action canceled",
@@ -3079,7 +3082,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "The last action Redo",
@@ -3101,7 +3104,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Deselect All",
@@ -3121,7 +3124,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Selection, and a flat-hiding",
@@ -3141,7 +3144,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "The selection moves one pixel",
@@ -3159,7 +3162,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "The selection moves one pixel",
@@ -3177,7 +3180,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "The selection moves one pixel",
@@ -3195,7 +3198,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "The selection moves one pixel",
@@ -3213,7 +3216,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "The selection of 10 pixels moved",
@@ -3233,7 +3236,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "The selection of 10 pixels moved",
@@ -3253,7 +3256,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "The selection of 10 pixels moved",
@@ -3273,7 +3276,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "The selection of 10 pixels moved",
@@ -3293,7 +3296,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "copy",
@@ -3313,7 +3316,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "paste",
@@ -3333,7 +3336,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Finally, repeat copying and moving",
@@ -3355,7 +3358,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Create a flow area in the current selection",
@@ -3367,13 +3370,17 @@
           "alt",
           "t"
         ],
-        "osx": null
+        "osx": [
+          "cmd",
+          "alt",
+          "t"
+        ]
       }
     },
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "To fill the selected area with the image beneath the pointer",
@@ -3393,7 +3400,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Make a copy of the selection to the selected flow area",
@@ -3415,7 +3422,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "It limits the selection to the 15 ° rotation",
@@ -3435,7 +3442,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Select a plane under another selected plane in",
@@ -3453,7 +3460,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Create a 90 ° plane of the upper plane",
@@ -3473,7 +3480,7 @@
     {
       "programCode": "adobe.photoshop",
       "category": [
-        "Vanishing Point"
+        "Vanishing pt"
       ],
       "description": {
         "en": "Delete last node while creating plane",
@@ -3484,7 +3491,7 @@
           "back"
         ],
         "osx": [
-          "삭제"
+          "Delete"
         ]
       }
     },
@@ -6913,126 +6920,6 @@
         "Blend Mode"
       ],
       "description": {
-        "en": "Desaturation",
-        "ko": "채도 감소"
-      },
-      "key": {
-        "windows": [
-          "스폰지도구",
-          "shft",
-          "alt",
-          "d"
-        ],
-        "osx": [
-          "스폰지도구",
-          "shft",
-          "opt",
-          "d"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [
-        "Blend Mode"
-      ],
-      "description": {
-        "en": "saturation",
-        "ko": "채도"
-      },
-      "key": {
-        "windows": [
-          "스폰지도구",
-          "shft",
-          "alt",
-          "s"
-        ],
-        "osx": [
-          "스폰지도구",
-          "shft",
-          "opt",
-          "s"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [
-        "Blend Mode"
-      ],
-      "description": {
-        "en": "Dark areas Dodge / Burn",
-        "ko": "어두운 영역 닷지/번"
-      },
-      "key": {
-        "windows": [
-          "닷지도구/번도구",
-          "shft",
-          "alt",
-          "s"
-        ],
-        "osx": [
-          "닷지도구/번도구",
-          "shft",
-          "opt",
-          "s"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [
-        "Blend Mode"
-      ],
-      "description": {
-        "en": "Midtones Dodge / Burn",
-        "ko": "중간 색조 닷지/번"
-      },
-      "key": {
-        "windows": [
-          "닷지도구/번도구",
-          "shft",
-          "alt",
-          "m"
-        ],
-        "osx": [
-          "닷지도구/번도구",
-          "shft",
-          "opt",
-          "m"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [
-        "Blend Mode"
-      ],
-      "description": {
-        "en": "Highlights the Dodge / Burn",
-        "ko": "밝은 영역 닷지/번"
-      },
-      "key": {
-        "windows": [
-          "닷지도구/번도구",
-          "shft",
-          "alt",
-          "h"
-        ],
-        "osx": [
-          "닷지도구/번도구",
-          "shft",
-          "opt",
-          "h"
-        ]
-      }
-    },
-    {
-      "programCode": "adobe.photoshop",
-      "category": [
-        "Blend Mode"
-      ],
-      "description": {
         "en": "Set the mixed-mode the threshold value (bitmap image) or standard (balance of image)",
         "ko": "혼합 모드를 한계값(비트맵 이미지) 또는 표준(나머지 모든 이미지)으로 설정"
       },
@@ -9189,14 +9076,5895 @@
     },
     {
       "programCode": "adobe.illustrator",
-      "category": [],
+      "category": [
+        "Often"
+      ],
       "description": {
-        "en": null,
-        "ko": null
+        "en": "Undo",
+        "ko": "실행 취소"
       },
       "key": {
-        "windows": null,
-        "osx": null
+        "windows": [
+          "Ctrl",
+          "Z"
+        ],
+        "osx": [
+          "Command",
+          "Z"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Redo",
+        "ko": "재실행"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "Z"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "Z"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Cut",
+        "ko": "오리기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "X"
+        ],
+        "osx": [
+          "Command",
+          "X"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "copy",
+        "ko": "복사"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "C"
+        ],
+        "osx": [
+          "Command",
+          "C"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Glue",
+        "ko": "붙이기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "V"
+        ],
+        "osx": [
+          "Command",
+          "V"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Paste before",
+        "ko": "앞에 붙이기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "F"
+        ],
+        "osx": [
+          "Command",
+          "F"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Paste behind",
+        "ko": "뒤에 붙이기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "B"
+        ],
+        "osx": [
+          "Command",
+          "B"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Paste in place",
+        "ko": "제 자리에 붙여넣기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "B"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "B"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Paste all the land",
+        "ko": "모든 대지에 붙여넣기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "B"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "B"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Spell check",
+        "ko": "맞춤법 검사"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "I"
+        ],
+        "osx": [
+          "Command",
+          "I"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Color Settings dialog box open",
+        "ko": "[색상 설정] 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "K"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "K"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Keyboard Shortcuts Open dialog box",
+        "ko": "[키보드 단축키] 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "K"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "K"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Often"
+      ],
+      "description": {
+        "en": "Preferences dialog box open",
+        "ko": "[기본 설정] 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "K"
+        ],
+        "osx": [
+          "Command",
+          "K"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Help calling",
+        "ko": "도움말 호출"
+      },
+      "key": {
+        "windows": [
+          "F1"
+        ],
+        "osx": [
+          "F1"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Cut",
+        "ko": "오리기"
+      },
+      "key": {
+        "windows": [
+          "F2"
+        ],
+        "osx": [
+          "F2"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "copy",
+        "ko": "복사"
+      },
+      "key": {
+        "windows": [
+          "F3"
+        ],
+        "osx": [
+          "F3"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Glue",
+        "ko": "붙이기"
+      },
+      "key": {
+        "windows": [
+          "F4"
+        ],
+        "osx": [
+          "F4"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Hide Brushes panel Show /",
+        "ko": "브러쉬 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "F5"
+        ],
+        "osx": [
+          "F5"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Color Panel Show / Hide",
+        "ko": "색상 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "F6"
+        ],
+        "osx": [
+          "F6"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Layers panel Show / Hide",
+        "ko": "레이어 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "F7"
+        ],
+        "osx": [
+          "F7"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Create new symbol",
+        "ko": "새 심볼 만들기"
+      },
+      "key": {
+        "windows": [
+          "F8"
+        ],
+        "osx": [
+          "F8"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Information Panel Show / Hide",
+        "ko": "정보 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "F8"
+        ],
+        "osx": [
+          "Command",
+          "F8"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Hide Gradient panel display /",
+        "ko": "그라디언트 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "F9"
+        ],
+        "osx": [
+          "Command",
+          "F9"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Stroke panel Show / Hide",
+        "ko": "획 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "F10"
+        ],
+        "osx": [
+          "Command",
+          "F10"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Properties panel Show / Hide",
+        "ko": "속성 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "F11"
+        ],
+        "osx": [
+          "Command",
+          "F11"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "comeback",
+        "ko": "복귀"
+      },
+      "key": {
+        "windows": [
+          "F12"
+        ],
+        "osx": [
+          "F12"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Graphic Styles panel Show / Hide",
+        "ko": "그래픽 스타일 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "F5"
+        ],
+        "osx": [
+          "Shift",
+          "F5"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Appearance panel Show / Hide",
+        "ko": "모양 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "F6"
+        ],
+        "osx": [
+          "Shift",
+          "F6"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Align panel Show / Hide",
+        "ko": "정렬 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "F7"
+        ],
+        "osx": [
+          "Shift",
+          "F7"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Transform panel Show / Hide",
+        "ko": "변형 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "F8"
+        ],
+        "osx": [
+          "Shift",
+          "F8"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Pathfinder panel Show / Hide",
+        "ko": "패스파인더 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "F9"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "F9"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Hide Transparency panel display /",
+        "ko": "투명도 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "F10"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "F10"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Function"
+      ],
+      "description": {
+        "en": "Symbol panel Show / Hide",
+        "ko": "심볼 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "F11"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "F11"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Create a Document",
+        "ko": "문서 만들기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "N"
+        ],
+        "osx": [
+          "Command",
+          "N"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Create a template document",
+        "ko": "템플릿으로 문서 만들기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "N"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "N"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Create a document without opening the New Document dialog box",
+        "ko": "[새 문서] 대화 상자를 열지 않고 문서 만들기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "N"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "N"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Open the document",
+        "ko": "문서를 엽니다"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "O"
+        ],
+        "osx": [
+          "Command",
+          "O"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Importing files in the document",
+        "ko": "문서에서 파일 가져오기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "P"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "P"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "File Info dialog box open",
+        "ko": "[파일 정보] 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "I"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "I"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Document Settings dialog box open",
+        "ko": "[문서 설정] 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "P"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "P"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Navigating in Adobe Bridge",
+        "ko": "Adobe Bridge에서 탐색"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "O"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "O"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Close the document window",
+        "ko": "문서 창 닫기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "W"
+        ],
+        "osx": [
+          "Command",
+          "W"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Save the changes made to the document",
+        "ko": "문서에 수행된 변경 내용 저장"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "S"
+        ],
+        "osx": [
+          "Command",
+          "S"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Open the Save As dialog box",
+        "ko": "[다른 이름으로 저장] 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "S"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "S"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Save copies of documents",
+        "ko": "문서 사본 저장"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "S"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "S"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Save the document as a script file",
+        "ko": "문서를 스크립트 파일로 저장"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "F12"
+        ],
+        "osx": [
+          "Command",
+          "F12"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Export to fit the screen dialog box open",
+        "ko": "[화면에 맞게 내보내기] 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "E"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "E"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Open the Save for Web dialog box",
+        "ko": "[웹용으로 저장] 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "S"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "S"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Packaging article",
+        "ko": "문서 패키징"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "P"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "P"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "print",
+        "ko": "인쇄"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "P"
+        ],
+        "osx": [
+          "Command",
+          "P"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Documents"
+      ],
+      "description": {
+        "en": "Application termination",
+        "ko": "응용 프로그램 종료"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Q"
+        ],
+        "osx": [
+          "Command",
+          "Q"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Property Tools",
+        "ko": "대지 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "O"
+        ],
+        "osx": [
+          "Shift",
+          "O"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Selection Tools",
+        "ko": "선택 도구"
+      },
+      "key": {
+        "windows": [
+          "V"
+        ],
+        "osx": [
+          "V"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Direct Selection tool",
+        "ko": "직접 선택 도구"
+      },
+      "key": {
+        "windows": [
+          "A"
+        ],
+        "osx": [
+          "A"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Magic Wand tool",
+        "ko": "자동 선택 도구"
+      },
+      "key": {
+        "windows": [
+          "Y"
+        ],
+        "osx": [
+          "Y"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Lasso tool",
+        "ko": "올가미 도구"
+      },
+      "key": {
+        "windows": [
+          "Q"
+        ],
+        "osx": [
+          "Q"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Pen tool",
+        "ko": "펜 도구"
+      },
+      "key": {
+        "windows": [
+          "P"
+        ],
+        "osx": [
+          "P"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Bending tool",
+        "ko": "곡률 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "~"
+        ],
+        "osx": [
+          "Shift",
+          "~"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Blob Brush tool",
+        "ko": "물방울 브러쉬 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "B"
+        ],
+        "osx": [
+          "Shift",
+          "B"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Fixed point Add tool",
+        "ko": "고정점 추가 도구"
+      },
+      "key": {
+        "windows": [
+          "(plus)+"
+        ],
+        "osx": [
+          "(plus)+"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Fixed Point Removal Tool",
+        "ko": "고정점 삭제 도구"
+      },
+      "key": {
+        "windows": [
+          "(minus)-"
+        ],
+        "osx": [
+          "(minus)-"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Switch to fixed-point tools",
+        "ko": "고정점 도구로 전환"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "C"
+        ],
+        "osx": [
+          "Shift",
+          "C"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Text Tool",
+        "ko": "문자 도구"
+      },
+      "key": {
+        "windows": [
+          "T"
+        ],
+        "osx": [
+          "T"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Character Grooming",
+        "ko": "문자 손질 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "T"
+        ],
+        "osx": [
+          "Shift",
+          "T"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Segment tool",
+        "ko": "선분 도구"
+      },
+      "key": {
+        "windows": [
+          "(back_slash)\\"
+        ],
+        "osx": [
+          "(back_slash)\\"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Rectangle tool",
+        "ko": "사각형 도구"
+      },
+      "key": {
+        "windows": [
+          "M"
+        ],
+        "osx": [
+          "M"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Circular tool",
+        "ko": "원형 도구"
+      },
+      "key": {
+        "windows": [
+          "L"
+        ],
+        "osx": [
+          "L"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Paint Brush tool",
+        "ko": "페인트브러쉬 도구"
+      },
+      "key": {
+        "windows": [
+          "B"
+        ],
+        "osx": [
+          "B"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Pencil tool",
+        "ko": "연필 도구"
+      },
+      "key": {
+        "windows": [
+          "N"
+        ],
+        "osx": [
+          "N"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Shaper tool",
+        "ko": "Shaper 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "N"
+        ],
+        "osx": [
+          "Shift",
+          "N"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Rotation tool",
+        "ko": "회전 도구"
+      },
+      "key": {
+        "windows": [
+          "R"
+        ],
+        "osx": [
+          "R"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Reflection Tool",
+        "ko": "반사 도구"
+      },
+      "key": {
+        "windows": [
+          "O"
+        ],
+        "osx": [
+          "O"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Resize Tool",
+        "ko": "크기 조절 도구"
+      },
+      "key": {
+        "windows": [
+          "S"
+        ],
+        "osx": [
+          "S"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Transform tool",
+        "ko": "변형 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "R"
+        ],
+        "osx": [
+          "Shift",
+          "R"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Width tool",
+        "ko": "폭 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "W"
+        ],
+        "osx": [
+          "Shift",
+          "W"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Free Transform tool",
+        "ko": "자유변형 도구"
+      },
+      "key": {
+        "windows": [
+          "E"
+        ],
+        "osx": [
+          "E"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Shape configuration tool",
+        "ko": "도형 구성 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "M"
+        ],
+        "osx": [
+          "Shift",
+          "M"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Perspective Grid Tool",
+        "ko": "원근감 격자 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "P"
+        ],
+        "osx": [
+          "Shift",
+          "P"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Perspective Selection tool",
+        "ko": "원근감 선택 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "V"
+        ],
+        "osx": [
+          "Shift",
+          "V"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Symbol sprayer tool",
+        "ko": "심볼 분무기 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "S"
+        ],
+        "osx": [
+          "Shift",
+          "S"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Bar Graph Tool",
+        "ko": "막대 그래프 도구"
+      },
+      "key": {
+        "windows": [
+          "J"
+        ],
+        "osx": [
+          "J"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Network Tools",
+        "ko": "망 도구"
+      },
+      "key": {
+        "windows": [
+          "U"
+        ],
+        "osx": [
+          "U"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Gradient tool",
+        "ko": "그라디언트 도구"
+      },
+      "key": {
+        "windows": [
+          "G"
+        ],
+        "osx": [
+          "G"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Eyedropper tool",
+        "ko": "스포이드 도구"
+      },
+      "key": {
+        "windows": [
+          "I"
+        ],
+        "osx": [
+          "I"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Blend tool",
+        "ko": "블렌드 도구"
+      },
+      "key": {
+        "windows": [
+          "W"
+        ],
+        "osx": [
+          "W"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Live Paint Bucket tool",
+        "ko": "라이브 페인트 통 도구"
+      },
+      "key": {
+        "windows": [
+          "K"
+        ],
+        "osx": [
+          "K"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Live Paint Selection tool",
+        "ko": "라이브 페인트 선택 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "L"
+        ],
+        "osx": [
+          "Shift",
+          "L"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Partition Tool",
+        "ko": "분할 영역 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "K"
+        ],
+        "osx": [
+          "Shift",
+          "K"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Eraser tool",
+        "ko": "지우개 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "E"
+        ],
+        "osx": [
+          "Shift",
+          "E"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Scissors tool",
+        "ko": "가위 도구"
+      },
+      "key": {
+        "windows": [
+          "C"
+        ],
+        "osx": [
+          "C"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Hand tools",
+        "ko": "손 도구"
+      },
+      "key": {
+        "windows": [
+          "H"
+        ],
+        "osx": [
+          "H"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "Zoom tool",
+        "ko": "돋보기 도구"
+      },
+      "key": {
+        "windows": [
+          "Z"
+        ],
+        "osx": [
+          "Z"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Tool"
+      ],
+      "description": {
+        "en": "While using the Blob Brush tool to smoothly transition tool",
+        "ko": "물방울 브러쉬 도구를 사용하는 동안 매끄럽게 도구로 전환"
+      },
+      "key": {
+        "windows": [
+          "Alt"
+        ],
+        "osx": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Normal Screen Mode, Full Screen Mode with Menu Bar], the display mode switches between Full Screen Mode",
+        "ko": "[표준 화면 모드], [메뉴 막대가 있는 전체 화면 모드], [전체 화면 모드] 사이에서 화면 모드 전환"
+      },
+      "key": {
+        "windows": [
+          "F"
+        ],
+        "osx": [
+          "F"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Zoom to 100%",
+        "ko": "100%로 확대"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "1"
+        ],
+        "osx": [
+          "Command",
+          "1"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "If it is not a text-editing mode switch to the Hand tool",
+        "ko": "텍스트 편집 모드가 아닌 경우 [손] 도구로 전환"
+      },
+      "key": {
+        "windows": [
+          "SpaceBar"
+        ],
+        "osx": [
+          "SpaceBar"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Switch to zoom mode Zoom tool",
+        "ko": "확대 모드에서 [돋보기] 도구로 전환"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "SpabeBar"
+        ],
+        "osx": [
+          "SpaceBar",
+          "Command"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Reduction mode switch to Zoom tool",
+        "ko": "축소 모드에서 [돋보기] 도구로 전환"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "SpabeBar"
+        ],
+        "osx": [
+          "SpaceBar",
+          "Command",
+          "Option"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Zoom] while dragging with the tool [Enlarge / Reduce] to move the selection marquee",
+        "ko": "[돋보기] 도구로 드래그하는 동안 [확대/축소] 선택 윤곽 이동"
+      },
+      "key": {
+        "windows": [
+          "SpaceBar"
+        ],
+        "osx": [
+          "SpaceBar"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Hide the bounding box",
+        "ko": "테두리 상자 숨기기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "B"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "B"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Hide unselected artwork",
+        "ko": "선택되지 않은 아트웍 가리기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "Shift",
+          "3"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "Shift",
+          "3"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Document templates displayed",
+        "ko": "문서 템플릿 표시"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "H"
+        ],
+        "osx": [
+          "Command",
+          "H"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Land Show / Hide",
+        "ko": "대지 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Shift",
+          "H"
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "H"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Hiding Land Ruler Show /",
+        "ko": "대지 눈금자 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "R"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "R"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Show Transparency Grid",
+        "ko": "투명도 격자 표시"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "D"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "D"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Show all windows in the ground",
+        "ko": "윈도우에서 모든 대지 보기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "0"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "0"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Paste it into place on the active ground",
+        "ko": "활성 대지에서 제자리에 붙여넣기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Shift",
+          "V"
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "V"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Property Tools mode exit",
+        "ko": "대지 도구 모드 종료"
+      },
+      "key": {
+        "windows": [
+          "Esc"
+        ],
+        "osx": [
+          "Esc"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Create other premises inside the premises",
+        "ko": "다른 대지 내부에서 대지 만들기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Drag"
+        ],
+        "osx": [
+          "Shift",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Select several premises in the [Property panel",
+        "ko": "[대지] 패널에서 여러 대지 선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Click"
+        ],
+        "osx": [
+          "Command",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Go to the next article",
+        "ko": "다음 문서로 이동"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "F6"
+        ],
+        "osx": [
+          "Command",
+          "F6"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Go to previous article",
+        "ko": "이전 문서로 이동"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Shift",
+          "F6"
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "F6"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Then go to the group of documents",
+        "ko": "다음 문서 그룹으로 이동"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "F6"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "F6"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Go to previous document group",
+        "ko": "이전 문서 그룹으로 이동"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "Shift",
+          "F6"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "Shift",
+          "F6"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Switching between the document outlines the GPU preview",
+        "ko": "문서의 윤곽선과 GPU 미리 보기 간 전환"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Y"
+        ],
+        "osx": [
+          "Command",
+          "Y"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Switching between the CPU and the GPU preview of the article",
+        "ko": "문서의 GPU와 CPU 미리 보기 간 전환"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "E"
+        ],
+        "osx": [
+          "Command",
+          "E"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "View document in the overprint preview mode",
+        "ko": "[중복 인쇄 미리 보기] 모드에서 문서 보기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "Y"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "Y"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "View document in Pixel Preview mode",
+        "ko": "[픽셀 미리 보기] 모드에서 문서 보기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "Y"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "Y"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Exit full-screen mode",
+        "ko": "전체 화면 모드 종료"
+      },
+      "key": {
+        "windows": [
+          "Esc"
+        ],
+        "osx": [
+          "Esc"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "enlargement",
+        "ko": "확대"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "="
+        ],
+        "osx": [
+          "Command",
+          "="
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "reduction",
+        "ko": "축소"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "-"
+        ],
+        "osx": [
+          "Command",
+          "-"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Hide Guides",
+        "ko": "안내선 숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          ";"
+        ],
+        "osx": [
+          "Command",
+          ";"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Lock Guides",
+        "ko": "안내선 잠그기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          ";"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          ";"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Create a guide",
+        "ko": "안내선 만들기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "5"
+        ],
+        "osx": [
+          "Command",
+          "5"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Unpacking guide",
+        "ko": "안내선 풀기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "5"
+        ],
+        "osx": [
+          "Option",
+          "Ctrl",
+          "5"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Show / Hide special characters Guides",
+        "ko": "특수 문자 안내선 표시/ 숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "U"
+        ],
+        "osx": [
+          "Command",
+          "U"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Perspective Grid Show / Hide",
+        "ko": "원근감 격자 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Shift",
+          "I"
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "I"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Show grid",
+        "ko": "격자 표시"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "'"
+        ],
+        "osx": [
+          "Command",
+          "'"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Snap to Grid",
+        "ko": "격자에 물리기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "'"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "'"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "View artwork"
+      ],
+      "description": {
+        "en": "Snap to Point",
+        "ko": "점에 물리기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "'"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "'"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "The last switch to the picker used (Selection tool, Direct Selection tool or the Group Selection tool)",
+        "ko": "마지막으로 사용한 선택 도구로 전환([선택] 도구, [직접 선택] 도구 또는 [그룹 선택] 도구)"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "`"
+        ],
+        "osx": [
+          "Command",
+          "`"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Direct Selection tool and switch between the Group Selection tool",
+        "ko": "[직접 선택] 도구와 [그룹 선택] 도구 간 전환"
+      },
+      "key": {
+        "windows": [
+          "Alt"
+        ],
+        "osx": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Selection tool, Direct Selection tool to add, use the Group Selection tool, the Select the Live Paint tool or the Auto Select tool selection",
+        "ko": "[선택] 도구, [직접 선택] 도구, [그룹 선택] 도구, [라이브 페인트 선택] 도구 또는 [자동 선택] 도구를 사용하여 선택 항목 추가"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Click"
+        ],
+        "osx": [
+          "Shift",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Selection tool, you can use the Direct Selection tool, Group Selection tool, or select the Live Paint tool selection, subtract",
+        "ko": "[선택] 도구, [직접 선택] 도구, [그룹 선택] 도구 또는 [라이브 페인트 선택] 도구를 사용하여 선택 항목 빼기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Click"
+        ],
+        "osx": [
+          "Shift",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Use the automatic selection tool Subtract from selection",
+        "ko": "[자동 선택] 도구를 사용하여 선택 항목에서 빼기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Click"
+        ],
+        "osx": [
+          "Option",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Add selected items using the Lasso tool",
+        "ko": "[올가미] 도구를 사용하여 선택 항목 추가"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "",
+          "Drag"
+        ],
+        "osx": [
+          "Shift",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "[Snare] to select items using the tool minus",
+        "ko": "[올가미] 도구를 사용하여 선택 항목 빼기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "",
+          "Drag"
+        ],
+        "osx": [
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Change the pointer to a crosshair for the Lasso tool",
+        "ko": "올가미 도구에 대해 포인터를 십자형으로 변경"
+      },
+      "key": {
+        "windows": [
+          "Caps",
+          "Lock"
+        ],
+        "osx": [
+          "Caps",
+          "Lock"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Select artwork in active ground",
+        "ko": "활성 대지에서 아트웍 선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "A"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "A"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Create crop marks around selected object",
+        "ko": "선택한 개체 주위에 자르기 표시 만들기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "C",
+          "O"
+        ],
+        "osx": [
+          "Alt",
+          "C",
+          "O"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Select all",
+        "ko": "모두 선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "A"
+        ],
+        "osx": [
+          "Command",
+          "A"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Uncheck",
+        "ko": "선택 취소"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "A"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "A"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Reselection",
+        "ko": "재선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "6"
+        ],
+        "osx": [
+          "Command",
+          "6"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Select the object that is currently on top of the selection",
+        "ko": "현재 선택 영역의 위에 있는 개체 선택"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "]"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "]"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Select objects below the current selection",
+        "ko": "현재 선택 영역의 아래에 있는 개체 선택"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "["
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "",
+          ""
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Select behind objects",
+        "ko": "개체 뒤를 선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "DoubleClick"
+        ],
+        "osx": [
+          "Command",
+          "DoulbeClick"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Select behind in isolation mode",
+        "ko": "격리 모드에서 뒤를 선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "DoubleClick"
+        ],
+        "osx": [
+          "Command",
+          "DoulbeClick"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Selected artwork grouped",
+        "ko": "선택된 아트웍 그룹화"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "G"
+        ],
+        "osx": [
+          "Command",
+          "G"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Off group selected artwork",
+        "ko": "선택된 아트웍 그룹 해제"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "G"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "G"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Locking selection",
+        "ko": "선택 영역 잠그기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "2"
+        ],
+        "osx": [
+          "Command",
+          "2"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Unlock selection",
+        "ko": "선택 영역 잠금 해제"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "2"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "",
+          "2"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Hide selection",
+        "ko": "선택 내용 숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "3"
+        ],
+        "osx": [
+          "Command",
+          "3"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Show all selections",
+        "ko": "모든 선택 내용 표시"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "3"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "",
+          "3"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Deselect all artwork lock",
+        "ko": "선택 취소한 모든 아트웍 잠금"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "Shift",
+          "2"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "Shift",
+          "2"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Limit the movement at a 45 ° angle ([Reflection], except when using the tool)",
+        "ko": "움직임을 45° 각도로 제한([반사] 도구를 사용할 경우 제외)"
+      },
+      "key": {
+        "windows": [
+          "Shift"
+        ],
+        "osx": [
+          "Shift"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Get your choice in the future",
+        "ko": "선택 내용을 앞으로 가져오기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "]"
+        ],
+        "osx": [
+          "Command",
+          "]"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Move the selection to the front",
+        "ko": "선택 내용을 맨 앞으로 이동"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "]"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "]"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Send your selection Back",
+        "ko": "선택 내용을 뒤로 보내기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "["
+        ],
+        "osx": [
+          "Command",
+          "["
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Selections"
+      ],
+      "description": {
+        "en": "Move the selection to Back",
+        "ko": "선택 내용을 맨 뒤로 이동"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "["
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "["
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "The aspect ratio or orientation restrictions:\nThe height and width, such as about square, rounded rectangles, circles and lattice\n\n45 ° increased for the line and arc segments\n\nOriginal orientation for polygons, stars, and flares",
+        "ko": "모양의 비율이나 방향 제한:\n사각형, 둥근 사각형, 원형 및 격자에 대해 같은 높이와 폭\n\n선 및 호 선분에 대해 45° 증가\n\n다각형, 별모양 및 플레어에 대한 원래 방향"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Drag"
+        ],
+        "osx": [
+          "Shift",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Draw a shape while moving shapes",
+        "ko": "도형을 그리는 동시에 도형 이동"
+      },
+      "key": {
+        "windows": [
+          "SpaceBar",
+          "Drag"
+        ],
+        "osx": [
+          "SpaceBar",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Drawing from the center of the shapes (other than a polygon, a star and flare)",
+        "ko": "도형의 중심에서부터 그리기(다각형, 별모양 및 플레어는 제외)"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Keep a straight face in the stars",
+        "ko": "별모양의 면을 직선으로 유지"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Reducing the slope value for the radial dividers in the transverse dividers or polar grid of square grid 10%",
+        "ko": "사각형 격자의 가로 분할자 또는 극좌표 격자의 방사형 분할자에 대한 경사 값을 10% 감소"
+      },
+      "key": {
+        "windows": [
+          "Drag",
+          "F"
+        ],
+        "osx": [
+          "Drag",
+          "F"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "The slope value for the radial dividers in the transverse dividers or polar grid of square grid 10% increase",
+        "ko": "사각형 격자의 가로 분할자 또는 극좌표 격자의 방사형 분할자에 대한 경사 값을 10% 증가"
+      },
+      "key": {
+        "windows": [
+          "Drag",
+          "V"
+        ],
+        "osx": [
+          "Drag",
+          "V"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Reducing the slope value for the vertical dividers or concentric dividing the polar grid of square grid chair 10%",
+        "ko": "사각형 격자의 세로 분할자 또는 극좌표 격자의 동심 분할자에 대한 경사 값을 10% 감소"
+      },
+      "key": {
+        "windows": [
+          "Drag",
+          "X"
+        ],
+        "osx": [
+          "Drag",
+          "X"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "The slope value for the concentric dividers of vertical dividers or polar grid of square grid 10% increase",
+        "ko": "사각형 격자의 세로 분할자 또는 극좌표 격자의 동심 분할자에 대한 경사 값을 10% 증가"
+      },
+      "key": {
+        "windows": [
+          "Drag",
+          "C"
+        ],
+        "osx": [
+          "Drag",
+          "C"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Increase size of Blob Brush",
+        "ko": "물방울 브러쉬의 크기 늘리기"
+      },
+      "key": {
+        "windows": [
+          "]"
+        ],
+        "osx": [
+          "]"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Reduce the size of Blob Brush",
+        "ko": "물방울 브러쉬의 크기 줄이기"
+      },
+      "key": {
+        "windows": [
+          "["
+        ],
+        "osx": [
+          "["
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Limit the Blob Brush horizontally or vertically",
+        "ko": "물방울 브러쉬를 가로 또는 세로 방향으로 제한"
+      },
+      "key": {
+        "windows": [
+          "Shift"
+        ],
+        "osx": [
+          "Shift"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Conversion through the drawing mode",
+        "ko": "그리기 모드를 통해 전환"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "D"
+        ],
+        "osx": [
+          "Shift",
+          "D"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Create a compound path",
+        "ko": "컴파운드 패스 만들기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "8"
+        ],
+        "osx": [
+          "Command",
+          "8"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Peeling compound paths",
+        "ko": "컴파운드 패스 풀기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "8"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "8"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Pattern editing",
+        "ko": "패턴 편집"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "F8"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "F8"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Perspective Grid Tool",
+        "ko": "원근감 격자 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "P"
+        ],
+        "osx": [
+          "Shift",
+          "P"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Perspective Selection tool",
+        "ko": "원근감 선택 도구"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "V"
+        ],
+        "osx": [
+          "Shift",
+          "V"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Perspective Grid",
+        "ko": "원근감 격자"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Shift",
+          "I"
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "I"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Perspective objects Copy",
+        "ko": "원근감 있는 개체 복사"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Command",
+          "Alt",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Perspective objects repeated in variations",
+        "ko": "원근감 있는 개체 변형 반복"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "D"
+        ],
+        "osx": [
+          "Command",
+          "D"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Drawing"
+      ],
+      "description": {
+        "en": "Switching between drawing modes",
+        "ko": "그리기 모드 간 전환"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "D"
+        ],
+        "osx": [
+          "Shift",
+          "D"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "Switching the Pen tool to [the fixed point conversion tool",
+        "ko": "[펜] 도구를 [고정점 변환] 도구로 전환"
+      },
+      "key": {
+        "windows": [
+          "Alt"
+        ],
+        "osx": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "Fixed point Add tool and Delete fixed point - switching between tools",
+        "ko": "[고정점 추가] 도구와 [고정점 삭제] 도구 간 전환"
+      },
+      "key": {
+        "windows": [
+          "Alt"
+        ],
+        "osx": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "[Scissors] switch to [add anchor points - Tools",
+        "ko": "[가위] 도구를 [고정점 추가] 도구로 전환"
+      },
+      "key": {
+        "windows": [
+          "Alt"
+        ],
+        "osx": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "Pen a Smooth Switch to Tools",
+        "ko": "[펜] 도구를 [매끄럽게] 도구로 전환"
+      },
+      "key": {
+        "windows": [
+          "Alt"
+        ],
+        "osx": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "Pen Move current anchor points for a draw tool",
+        "ko": "[펜] 도구로 그리는 동안 현재의 고정점 이동"
+      },
+      "key": {
+        "windows": [
+          "SpaceBar",
+          "Drag"
+        ],
+        "osx": [
+          "SpaceBar",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "[Carl] Cut straight to the tools",
+        "ko": "[칼] 도구로 직선 오리기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "Use the knife tool Cut at 45 ° or 90 °",
+        "ko": "[칼] 도구를 사용하여 45° 또는 90°로 오리기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Shift",
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "[Shape Configuration, select Tools.",
+        "ko": "[도형 구성] 도구를 선택합니다."
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "M"
+        ],
+        "osx": [
+          "Shift",
+          "M"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "Selection rectangle in order to facilitate merging multiple passes contour display ([Shape Configuration] When the user agent)",
+        "ko": "복수 패스를 쉽게 병합하기 위해 사각형 선택 윤곽 표시([도형 구성] 도구 사용 시)"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Click",
+          "Drag"
+        ],
+        "osx": [
+          "Shift",
+          "Click",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "(Using symbolism tools) to increase symbol strength",
+        "ko": "(심볼화 도구 사용 시) 심볼 강도 늘리기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "}"
+        ],
+        "osx": [
+          "Shift",
+          "}"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "(Using symbolism tools) to reduce the intensity symbols",
+        "ko": "(심볼화 도구 사용 시) 심볼 강도 줄이기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "{"
+        ],
+        "osx": [
+          "Shift",
+          "{"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "Objects mixed",
+        "ko": "개체 혼합"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "B"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "B"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "Adding objects to a mixed finish",
+        "ko": "혼합에 개체 추가 마침"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "B"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "B"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "Using a modified shape that surrounds the object distortion",
+        "ko": "변형 모양의 둘러싸기를 사용하여 개체 왜곡"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "Shift",
+          "W"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "Shift",
+          "W"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Shape"
+      ],
+      "description": {
+        "en": "Objects distortion using the network as a runaround shape",
+        "ko": "망을 둘러싸기 모양으로 사용하여 개체 왜곡"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "M"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "M"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Rotate tool, Scale tool, Reflect tool, or [Skew] Open dialog box when you use the home setup and tool",
+        "ko": "[회전] 도구, [크기 조절] 도구, [반사] 도구 또는 [기울이기] 도구를 사용할 때 원점 설정 및 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Click"
+        ],
+        "osx": [
+          "Option",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Selection tool, Scale tool, Reflect tool, or [Skew] selection when using replication and transformation tools",
+        "ko": "[선택] 도구, [크기 조절] 도구, [반사] 도구 또는 [기울이기] 도구를 사용할 때 선택 항목 복제 및 변형"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Selection tool, Scale tool, Reflect tool, or [Skew] pattern transformed into independent objects when you use the tool",
+        "ko": "[선택] 도구, [크기 조절] 도구, [반사] 도구 또는 [기울이기] 도구를 사용할 때 개체와 독립적으로 패턴 변형"
+      },
+      "key": {
+        "windows": [
+          "~",
+          "Drag"
+        ],
+        "osx": [
+          "~",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Re-apply transformations to objects",
+        "ko": "변형을 개체에 다시 적용"
+      },
+      "key": {
+        "windows": [
+          "Ctrl+D"
+        ],
+        "osx": [
+          "Command",
+          "D"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Apply to the selected object, the final Pathfinder effects",
+        "ko": "마지막 패스파인더 효과를 선택된 개체에 적용"
+      },
+      "key": {
+        "windows": [
+          "Ctrl+4"
+        ],
+        "osx": [
+          "Command",
+          "4"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Moving objects",
+        "ko": "개체 이동"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "M"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "M"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Open - Individual modification dialog box",
+        "ko": "[개별 변형] 대화 상자 열기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "D"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "D"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Create Clipping Mask",
+        "ko": "클리핑 마스크 만들기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "7"
+        ],
+        "osx": [
+          "Command",
+          "7"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Unpacking the clipping mask",
+        "ko": "클리핑 마스크 풀기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "7"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "",
+          "7"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Seven strokes and liver repeated replacement",
+        "ko": "칠과 획 간 반복 교체"
+      },
+      "key": {
+        "windows": [
+          "X"
+        ],
+        "osx": [
+          "X"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Set the fill and stroke to the initial value",
+        "ko": "칠과 획을 초기값으로 설정"
+      },
+      "key": {
+        "windows": [
+          "D"
+        ],
+        "osx": [
+          "D"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Seven strokes and replace",
+        "ko": "칠과 획 교체"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "X"
+        ],
+        "osx": [
+          "Shift",
+          "X"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Gradient fill mode selection",
+        "ko": "그라디언트 칠 모드 선택"
+      },
+      "key": {
+        "windows": [
+          ">"
+        ],
+        "osx": [
+          ">"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "(When using the gradient tool) Hide the gradient annotator",
+        "ko": "(그레이디언트 도구 사용 시) 그레이디언트 주석자 숨기기"
+      },
+      "key": {
+        "windows": [
+          "Alt+Ctrl+G"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "G"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Seven color mode selection",
+        "ko": "색상 칠 모드 선택"
+      },
+      "key": {
+        "windows": [
+          "<"
+        ],
+        "osx": [
+          "<"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Select No Stroke / Fill mode",
+        "ko": "획/칠 없음 모드 선택"
+      },
+      "key": {
+        "windows": [
+          "(Slash)/"
+        ],
+        "osx": [
+          "(Slash)/"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "(When using the Paint Bucket tool) Create Live Paint",
+        "ko": "(페인트 통 도구 사용 시) 라이브 페인트 만들기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "X"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "X"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Reduce the size of the brush bristles",
+        "ko": "강모 브러쉬 크기 줄이기"
+      },
+      "key": {
+        "windows": [
+          "["
+        ],
+        "osx": [
+          "["
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Objects"
+      ],
+      "description": {
+        "en": "Increasing the size of the brush bristles",
+        "ko": "강모 브러쉬 크기 늘리기"
+      },
+      "key": {
+        "windows": [
+          "]"
+        ],
+        "osx": [
+          "]"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Variable wd"
+      ],
+      "description": {
+        "en": "Select multiple width points",
+        "ko": "여러 폭 포인트 선택"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Click"
+        ],
+        "osx": [
+          "Shift",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Variable wd"
+      ],
+      "description": {
+        "en": "Create non-uniform widths",
+        "ko": "비균일 폭 만들기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Variable wd"
+      ],
+      "description": {
+        "en": "Change the position of multiple width points",
+        "ko": "여러 폭 포인트의 위치 변경"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Drag"
+        ],
+        "osx": [
+          "Shift",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Variable wd"
+      ],
+      "description": {
+        "en": "Delete selected width points",
+        "ko": "선택한 폭 점 삭제"
+      },
+      "key": {
+        "windows": [
+          "Delete"
+        ],
+        "osx": [
+          "Delete"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Variable wd"
+      ],
+      "description": {
+        "en": "Cancel width point selection",
+        "ko": "폭 포인트 선택 취소"
+      },
+      "key": {
+        "windows": [
+          "Esc"
+        ],
+        "osx": [
+          "Esc"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": null,
+        "ko": "기존 선택 항목 확장"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Click"
+        ],
+        "osx": [
+          "Shift",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": null,
+        "ko": "단락을 왼쪽, 오른쪽 또는 가운데로 정렬"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Shift",
+          "L"
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "L"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": null,
+        "ko": "왼쪽으로 텍스트 강제 정렬"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Shift",
+          "J"
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "J"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": null,
+        "ko": "모든 줄 균등 배치"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "F"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "F"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": null,
+        "ko": "행 컴포저 교체"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "C"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "",
+          ""
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": null,
+        "ko": "소프트 리턴 삽입"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Enter"
+        ],
+        "osx": [
+          "Shift",
+          "Return"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Kerning highlighted",
+        "ko": "커닝 강조"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "K"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "K"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Reset the horizontal scale to 100%",
+        "ko": "가로 크기 조절을 100%로 재설정"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Shift",
+          "X"
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "X"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Increase or decrease font size",
+        "ko": "글꼴 크기 늘리기 또는 줄이기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl+Shift",
+          "."
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "."
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Increase or decrease font size step-by-step",
+        "ko": "단계별로 글꼴 크기 늘리기 또는 줄이기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "Shift",
+          "."
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "",
+          "Shift",
+          "."
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "[Text] and [Vertical Type], [Area character] and [vertical character region] and [character pass] and switch between the Vertical Pass Type tool",
+        "ko": "[문자]와 [세로 문자], [영역 문자]와 [세로 영역 문자] 및 [패스 문자]와 [세로 패스 문자] 도구 간 전환"
+      },
+      "key": {
+        "windows": [
+          "Shift"
+        ],
+        "osx": [
+          "Shift"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Switch between the character regions and a pass character, and the character area vertical longitudinal pass character",
+        "ko": "영역 문자와 패스 문자, 세로 영역 문자와 세로 패스 문자 간에 전환"
+      },
+      "key": {
+        "windows": [
+          "Alt"
+        ],
+        "osx": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Create outlines",
+        "ko": "윤곽선 만들기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "O"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "O"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "[Text] Open panel",
+        "ko": "[문자] 패널 열기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "T"
+        ],
+        "osx": [
+          "Command",
+          "T"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Paragraph opening panel",
+        "ko": "[단락] 패널 열기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "T"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "T"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "[Tab] Open panel",
+        "ko": "[탭] 패널 열기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "T"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "T"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "[OpenType] Open panel",
+        "ko": "[OpenType] 패널 열기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "T"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "T"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Insert bulleted",
+        "ko": "글머리 기호 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "8"
+        ],
+        "osx": [
+          "Option",
+          "8"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Insert Copyright symbol",
+        "ko": "저작권 심볼 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "G"
+        ],
+        "osx": [
+          "Option",
+          "G"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Ellipsis insertion",
+        "ko": "줄임표 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          ";"
+        ],
+        "osx": [
+          "Option",
+          ";"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Inserting paragraph symbol",
+        "ko": "단락 심볼 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "7"
+        ],
+        "osx": [
+          "Option",
+          "7"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Insert section symbol",
+        "ko": "섹션 심볼 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "6"
+        ],
+        "osx": [
+          "Option",
+          "6"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Insert a trademark symbol",
+        "ko": "상표 심볼 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "2"
+        ],
+        "osx": [
+          "Option",
+          "2"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Insert a registered trademark symbol",
+        "ko": "등록 상표 심볼 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "R"
+        ],
+        "osx": [
+          "Option",
+          "R"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Superscript",
+        "ko": "위 첨자"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "="
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "="
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Subscript",
+        "ko": "아래 첨자"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "="
+        ],
+        "osx": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "="
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Insert an em dash",
+        "ko": "전각 대시 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Minus"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "-"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Half-width dashboard insert",
+        "ko": "반각 대시 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Minus"
+        ],
+        "osx": [
+          "Option",
+          "-"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Insert discretionary hyphen",
+        "ko": "임의 하이픈 삽입"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "Minus"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "-"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Replacing the automatic hyphenation",
+        "ko": "자동 하이픈 연결 교체"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "H"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "H"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Left double quotation marks inserts",
+        "ko": "왼쪽 큰 따옴표 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "["
+        ],
+        "osx": [
+          "Option",
+          "["
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Right double quotation marks inserts",
+        "ko": "오른쪽 큰 따옴표 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "["
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "["
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Left single quotation marks inserts",
+        "ko": "왼쪽 작은 따옴표 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "]"
+        ],
+        "osx": [
+          "Option",
+          "]"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Right single quotation mark inserted",
+        "ko": "오른쪽 작은 따옴표 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "]"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "]"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Insert an em space",
+        "ko": "전각 공백 삽입"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "M"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "M"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Insert half-width space",
+        "ko": "반각 공백 삽입"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "N"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "N"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Inserted short of space",
+        "ko": "모자란 공간 삽입"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "M"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "M"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Text"
+      ],
+      "description": {
+        "en": "Display hidden characters",
+        "ko": "가려진 문자 표시"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "I"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "I"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Panel"
+      ],
+      "description": {
+        "en": "Unit of measure conversion",
+        "ko": "측정 단위 전환"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "U"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "U"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Panel"
+      ],
+      "description": {
+        "en": "Apply value and keep text box active",
+        "ko": "값을 적용하고 텍스트 상자를 계속 활성 상태로 유지"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Enter"
+        ],
+        "osx": [
+          "Shift",
+          "Return"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Panel"
+      ],
+      "description": {
+        "en": "Actions, brushes, layers, links, styles, or to select a range of samples",
+        "ko": "액션, 브러쉬, 레이어, 연결, 스타일 또는 견본을 일정 범위 선택"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Click"
+        ],
+        "osx": [
+          "Shift",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Panel"
+      ],
+      "description": {
+        "en": "Noncontiguous actions, brushes, layers (same level only), links, styles, or swatches selection",
+        "ko": "연속되지 않는 액션, 브러쉬, 레이어(같은 레벨만 해당), 연결, 스타일 또는 견본 선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Click"
+        ],
+        "osx": [
+          "Command",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Panel"
+      ],
+      "description": {
+        "en": "All panels Show / Hide",
+        "ko": "모든 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Tab"
+        ],
+        "osx": [
+          "Tab"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Panel"
+      ],
+      "description": {
+        "en": "Tools panel and Control panel, except for the display panel all / Hide",
+        "ko": "[도구] 패널과 [컨트롤] 패널을 제외한 모든 패널 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Tab"
+        ],
+        "osx": [
+          "Shift",
+          "Tab"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Character"
+      ],
+      "description": {
+        "en": null,
+        "ko": "[문자] 패널 열기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "T"
+        ],
+        "osx": [
+          "Command",
+          "T"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Character"
+      ],
+      "description": {
+        "en": null,
+        "ko": "[단락] 패널 열기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "T"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "T"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Character"
+      ],
+      "description": {
+        "en": null,
+        "ko": "[문자] 패널에서 글꼴 이름 필드 강조"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "Shift",
+          "F"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "Shift",
+          "F"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Color"
+      ],
+      "description": {
+        "en": null,
+        "ko": "현재 색상 칠/획의 보색 선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Click"
+        ],
+        "osx": [
+          "Command",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Color"
+      ],
+      "description": {
+        "en": null,
+        "ko": "비활성 칠/획 변경"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Click"
+        ],
+        "osx": [
+          "Option",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Color"
+      ],
+      "description": {
+        "en": null,
+        "ko": "비활성 칠/획의 보색 선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "Click"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Color"
+      ],
+      "description": {
+        "en": null,
+        "ko": "현재 칠/획의 반전 색상 선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Shift",
+          "Click"
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Color"
+      ],
+      "description": {
+        "en": null,
+        "ko": "비활성 칠/획의 반전 색상 선택"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Shift",
+          "Alt",
+          "Click"
+        ],
+        "osx": [
+          "Command",
+          "Shift",
+          "Option",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Color"
+      ],
+      "description": {
+        "en": null,
+        "ko": "색상 안내 열기"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "F3"
+        ],
+        "osx": [
+          "Shift",
+          "F3"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Color"
+      ],
+      "description": {
+        "en": null,
+        "ko": "색상 모드 변경"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Click"
+        ],
+        "osx": [
+          "Shift",
+          "Click"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Color"
+      ],
+      "description": {
+        "en": "Move the color slider with",
+        "ko": "색상 슬라이더를 함께 이동"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Drag"
+        ],
+        "osx": [
+          "Shift",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Color"
+      ],
+      "description": {
+        "en": "Switching between a percentage value and the RGB value 0-255",
+        "ko": "RGB의 백분율 값과 0-255 값 간 전환"
+      },
+      "key": {
+        "windows": [
+          "RightDoubleClick"
+        ],
+        "osx": [
+          "RightDoubleClick"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Gradient"
+      ],
+      "description": {
+        "en": "Color stop replication",
+        "ko": "색상 정지점 복제"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Gradient"
+      ],
+      "description": {
+        "en": "Replacing the color stop",
+        "ko": "색상 정지점 교체"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Gradient"
+      ],
+      "description": {
+        "en": "Hide gradient arrow display /",
+        "ko": "그라디언트 화살표 표시/숨기기"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Alt",
+          "G"
+        ],
+        "osx": [
+          "Command",
+          "Option",
+          "G"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Gradient"
+      ],
+      "description": {
+        "en": "While dragging the Gradient tool or Gradient annotator limit",
+        "ko": "드래그하는 동안 [그라디언트] 도구 또는 그라디언트 주석자 제한"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "",
+          "Drag"
+        ],
+        "osx": [
+          "Shift",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Gradient"
+      ],
+      "description": {
+        "en": "See the gradient annotator in the object, select the gradient fill is applied",
+        "ko": "선택한 그라디언트 칠이 적용된 개체에서 그라디언트 주석자 보기"
+      },
+      "key": {
+        "windows": [
+          "G"
+        ],
+        "osx": [
+          "G"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Layer"
+      ],
+      "description": {
+        "en": "Add a layer",
+        "ko": "레이어를 추가합니다"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "L"
+        ],
+        "osx": [
+          "Command",
+          "L"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Layer"
+      ],
+      "description": {
+        "en": "Additional layers while opening the New Layer dialog box",
+        "ko": "[새 레이어] 대화 상자를 여는 동안 레이어 추가"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Ctrl",
+          "L"
+        ],
+        "osx": [
+          "Option",
+          "Command",
+          "L"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Layer"
+      ],
+      "description": {
+        "en": "Copy the selection to the layer, the lower layer or group",
+        "ko": "선택 항목을 레이어, 하위 레이어 또는 그룹으로 복사"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Swatches"
+      ],
+      "description": {
+        "en": "Replace the sample with other samples",
+        "ko": "견본을 다른 견본과 바꾸기"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Drag"
+        ],
+        "osx": [
+          "Option",
+          "Drag"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Transform"
+      ],
+      "description": {
+        "en": "Applying the values, edit field highlighted",
+        "ko": "값을 적용하고 편집 필드 강조"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Enter"
+        ],
+        "osx": [
+          "Shift",
+          "Return"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Transform"
+      ],
+      "description": {
+        "en": "Apply value and copy object",
+        "ko": "값을 적용하고 개체 복사"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Enter"
+        ],
+        "osx": [
+          "Option",
+          "Return"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Transform"
+      ],
+      "description": {
+        "en": "Applying value and scaled according to the ratio of the width or height",
+        "ko": "값을 적용하고 폭 또는 높이의 비율에 따라 크기 조절"
+      },
+      "key": {
+        "windows": [
+          "Ctrl",
+          "Enter"
+        ],
+        "osx": [
+          "Command",
+          "Return"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Transparency"
+      ],
+      "description": {
+        "en": "Apply to the selected object, the final effect",
+        "ko": "마지막 효과를 선택된 개체에 적용"
+      },
+      "key": {
+        "windows": [
+          "Shift",
+          "Ctrl",
+          "E"
+        ],
+        "osx": [
+          "Shift",
+          "Command",
+          "E"
+        ]
+      }
+    },
+    {
+      "programCode": "adobe.illustrator",
+      "category": [
+        "Transparency"
+      ],
+      "description": {
+        "en": "Apply to the selected object, the final effect by adjusting the values ​​in the Effects dialog box",
+        "ko": "효과 대화 상자에서 값을 조정하여 마지막 효과를 선택된 개체에 적용"
+      },
+      "key": {
+        "windows": [
+          "Alt",
+          "Shift",
+          "Ctrl",
+          "E"
+        ],
+        "osx": [
+          "Option",
+          "Shift",
+          "Command",
+          "E"
+        ]
       }
     }
   ]
