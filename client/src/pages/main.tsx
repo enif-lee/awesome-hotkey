@@ -169,7 +169,6 @@ const RecommendProgramsComponent: FC<{ title: string, programs: Program[] }> = (
     const isWide = useWideCheck();
     const page = isWide ? 6 : 3;
     const pagePrograms = programs.slice(pageIndex * page, pageIndex * page + page);
-    console.log(pagePrograms)
     return <>
         <div className={css`width: 100%;
           margin: 0 auto;
@@ -254,7 +253,10 @@ const RelativeHotKeyTips: FC<{ tooltips: string[] }> = ({tooltips}) => {
                             <Link to={"tool-tips/" + tipId}>
                                 <div className={css`padding: 20px 10px;
                                   overflow: hidden;`}>
-                                    <img className={css`width: 100%;`} src={`/image/tool-tip/${tipId}.png`}/>
+                                    <img className={css`width: 100%;
+                                      max-width: 400px;
+                                      margin: 0 auto;
+                                      display: block;`} src={`/image/tool-tip/${tipId}.png`}/>
                                 </div>
                             </Link>
                         </Col>)}
