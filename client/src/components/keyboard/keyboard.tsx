@@ -18,10 +18,10 @@ interface KeyboardProps {
 
 
 const Wrapper = styled.div`
+    position: relative;
 `
 
 const Row = styled.div`
-    position: relative;
     overflow: hidden;
 `
 

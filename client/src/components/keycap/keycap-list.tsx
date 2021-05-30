@@ -4,11 +4,9 @@ import {observer} from 'mobx-react-lite'
 
 import SimpleKeycap from './simple-keycap'
 
-import KeycapType from '../../models/keycap-type'
-
 
 interface KeycapListProps {
-    keycaps: KeycapType[]
+    keycaps: string[]
 }
 
 

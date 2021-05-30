@@ -1,9 +1,6 @@
-import KeycapType from '../models/keycap-type'
-
-
 interface HotkeyModel {
     description: string
-    keycaps: KeycapType[]
+    keycaps: string[]
     categories: string[]
 }
 

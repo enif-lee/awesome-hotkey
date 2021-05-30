@@ -95,7 +95,6 @@ enum KeycapType {
     Menu = 'Menu',
 
     // Empty
-    Drag = 'Drag',
     EmptyTop = 'EmptyTop',
     EmptyFn = 'EmptyFn',
     EmptyDirection = 'EmptyDirection',
@@ -156,6 +155,8 @@ export const KeyKeycapMap: Record<string, KeycapType> = {
     "r": KeycapType.R,
     "s": KeycapType.S,
     "t": KeycapType.T,
+    "u": KeycapType.U,
+    "v": KeycapType.V,
     "w": KeycapType.W,
     "x": KeycapType.X,
     "y": KeycapType.Y,
@@ -172,7 +173,6 @@ export const KeyKeycapMap: Record<string, KeycapType> = {
     "space": KeycapType.Space,
     "esc": KeycapType.Esc,
     "enter": KeycapType.Enter,
-    "drag": KeycapType.Drag,
     "shft": KeycapType.Shift,
     "ctrl": KeycapType.Ctrl,
     "alt": KeycapType.Alt,

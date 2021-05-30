@@ -3,12 +3,10 @@ import styled from '@emotion/styled'
 
 import KeycapList from '../keycap/keycap-list'
 
-import KeycapType from '../../models/keycap-type'
-
 
 interface HotkeyRowProps {
     description: string
-    keycaps: KeycapType[]
+    keycaps: string[]
     onSelectHotkey?: () => void
 }
 

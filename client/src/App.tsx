@@ -27,9 +27,11 @@ function App() {
                         <MainContentPage/>
                     </Route>
                     <Route path="/programs/:programCode">
-                        <PageContentLayout><ProgramMainPageContextWrapper/></PageContentLayout>
+                        <PageContentLayout>
+                            <ProgramMainPageContextWrapper/>
+                        </PageContentLayout>
                     </Route>
-                    <Route path="/tool-tips/" exact>
+                    <Route path="/tool-tips" exact>
                         <PageContentLayout>
                             <ToolTipListPage/>
                         </PageContentLayout>

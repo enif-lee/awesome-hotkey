@@ -7,7 +7,8 @@ import Search from '../../assets/images/search.png'
 
 interface SimpleSearchBarProps {
     placeholder: string
-    onInputText: (text: string) => void
+    autoFocus: boolean
+    onInputText?: (text: string) => void
 }
 
 
@@ -45,12 +46,13 @@ const Input = styled.input`
 
 
 const SimpleSearchBar: FC<SimpleSearchBarProps> = props => {
-    const delayedInputText = _.debounce(q => props.onInputText(q), 300)
+    const delayedInputText = _.debounce(q => props.onInputText && props.onInputText(q), 300)
 
     return <Wrapper>
         <Img />
         <Input
             placeholder={props.placeholder}
+            autoFocus={props.autoFocus}
             onChange={e => delayedInputText(e.target.value)}
         />
     </Wrapper>

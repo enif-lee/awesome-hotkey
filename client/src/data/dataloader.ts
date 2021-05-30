@@ -104,7 +104,7 @@ const toolTips: ToolTip[] = [
     {
         id: 1,
         image: "/image/tool-tip/1.png",
-        programCode: '',
+        programCode: 'adobe.photoshop',
         programIcons: [],
         coverImage: "/image/tool-tip/content-1/cover.jpg",
         title: "액션(actions)을 이용해서\n자주 사용하는 과정을 단축키로 만들기",
@@ -291,4 +291,8 @@ export function getToolTips(): ToolTip[] {
 
 export function getToolTipById(id: ToolTipId): ToolTip {
     return getToolTips().find(tip => tip.id == id)!;
+}
+
+export function getToolTipByProgram(code: ProgramCode): ToolTip {
+    return getToolTips().find(tip => tip.programCode == code)!;
 }

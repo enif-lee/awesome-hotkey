@@ -6,8 +6,10 @@ import {
     getProgramDetail,
     getProgramHotkeyCategories,
     getProgramHotkeys,
+    getToolTipByProgram,
     Program,
-    ProgramCode
+    ProgramCode,
+    ToolTip
 } from "../data/dataloader";
 import {createContext, useContext} from "react";
 import {SettingStore, settingStore} from "./setting-store";
@@ -16,23 +18,31 @@ const CategoryAll: string = 'All'
 
 
 export class ProgramSearchStore {
-    programCode: string = ''
+
+    programCode: string;
+    bookmarkStore: BookmarkStore;
+    settingStore: SettingStore;
+    
     private _searchingText: string = ''
     private _selectedKeycaps: KeycapType[] = []
     private _selectedCategory: string = ''
-    bookmarkStore: BookmarkStore;
-    settingStore: SettingStore;
+
     private _detail: Program;
+    private _tooltip: ToolTip;
+
 
     constructor(code: ProgramCode) {
         makeAutoObservable(this, {
             bookmarkStore: false,
             settingStore: false
         })
+
         this.programCode = code;
         this.bookmarkStore = bookmarkStore;
         this.settingStore = settingStore;
+
         this._detail = getProgramDetail(code)
+        this._tooltip = getToolTipByProgram(code)
     }
 
     // MARK: - Get
@@ -71,7 +81,8 @@ export class ProgramSearchStore {
         return getProgramHotkeys(this.programCode)
             .map<HotkeyModel>(key => ({
                 description: key.description.ko,
-                keycaps: (key.key[this.settingStore.os] || []).map(value => KeyKeycapMap[value] || KeycapType.Empty),
+                keycaps: (key.key[this.settingStore.os] || [])
+                    .map(value => KeyKeycapMap[value] || value),
                 categories: key.category
             }));
     }
@@ -82,6 +93,10 @@ export class ProgramSearchStore {
         }
 
         return this._selectedCategory
+    }
+
+    public get tooltip(): ToolTip {
+        return this._tooltip
     }
 
     public filteredHotkeys(tab: string): HotkeyModel[] {

@@ -3,8 +3,9 @@ import styled from '@emotion/styled'
 
 
 interface TipWidgetProps {
+    id: number
     imgURL: string
-    description: string
+    title: string
 }
 
 
@@ -23,7 +24,7 @@ const Wrapper = styled.div`
     }
 `
 
-const Title = styled.div`
+const Header = styled.div`
     font-size: 16px;
     font-weight: bold;
     text-align: left;
@@ -37,7 +38,7 @@ const Img = styled.div`
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 `
 
-const Description = styled.div`
+const Title = styled.div`
     font-size: 12px;
     text-align: left;
 `
@@ -53,10 +54,10 @@ const Btn = styled.a`
 
 const TipWidget: FC<TipWidgetProps> = props => (
     <Wrapper>
-        <Title>관련 단축키 팁</Title>
+        <Header>관련 단축키 팁</Header>
         <Img style={{backgroundImage: `url(${props.imgURL})`}} />
-        <Description>{props.description}</Description>
-        <Btn>바로가기 &gt;</Btn>
+        <Title>{props.title}</Title>
+        <Btn href={`/tool-tips/${props.id}`}>바로가기 &gt;</Btn>
     </Wrapper>
 )
 
