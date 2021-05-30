@@ -1,8 +1,8 @@
-import {FC} from "react";
+import {FC, useCallback, useState} from "react";
 import {useParams} from "react-router-dom";
 import {getToolTipById, Paragraph} from "../../data/dataloader";
 import styled from "@emotion/styled";
-import {Col, FlexboxGrid, Grid, Row} from "rsuite";
+import {Col, FlexboxGrid, Grid, Modal, Row} from "rsuite";
 import {css} from "@emotion/css";
 import {useMedia} from "react-use";
 
@@ -50,9 +50,22 @@ const Section = styled.div`
 `
 
 
-const ParagraphImage = styled.img`
-  width: 100%;
-`
+const ParagraphImage: FC<{ src: string, description: string }> = ({src, description}) => {
+    const [show, setShow] = useState(false);
+
+    const close = useCallback(() => setShow(false), []);
+    const open = useCallback(() => setShow(true), []);
+    return <>
+        <img className={css`width: 100%`} src={src} onClick={open}/>
+        <Modal size={"lg"} show={show} onHide={close}>
+            <Modal.Body className={css`margin-top: 0;
+              padding-bottom: 0`}>
+                <img className={css`width: 100%`} src={src}/>
+                <p className={css`margin-top: 12px;`}>{description}</p>
+            </Modal.Body>
+        </Modal>
+    </>
+}
 
 const ParagraphText: FC<Paragraph> = ({title, description}) => {
     return <>
@@ -108,16 +121,19 @@ const ToolTipDetailPage: FC = props => {
                               }`}>
                                 {isMid && paragraph.type == "left" &&
                                 <Row gutter={24}>
-                                    <Col md={13}><ParagraphImage src={paragraph.image}/></Col>
+                                    <Col md={13}><ParagraphImage src={paragraph.image}
+                                                                 description={paragraph.description}/></Col>
                                     <Col md={11}><ParagraphText {...paragraph}/></Col>
                                 </Row>}
                                 {isMid && paragraph.type == "right" &&
                                 <Row gutter={24}>
                                     <Col md={11}><ParagraphText {...paragraph}/></Col>
-                                    <Col md={13}><ParagraphImage src={paragraph.image}/></Col>
+                                    <Col md={13}><ParagraphImage src={paragraph.image}
+                                                                 description={paragraph.description}/></Col>
                                 </Row>}
                                 {!isMid && <>
-                                    <Row><Col><ParagraphImage src={paragraph.image}/></Col></Row>
+                                    <Row><Col><ParagraphImage src={paragraph.image}
+                                                              description={paragraph.description}/> </Col></Row>
                                     <Row><Col><ParagraphText {...paragraph}/></Col></Row>
                                 </>}
                             </Grid>
