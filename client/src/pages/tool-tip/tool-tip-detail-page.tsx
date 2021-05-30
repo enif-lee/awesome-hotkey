@@ -131,11 +131,25 @@ const ToolTipDetailPage: FC = props => {
                                     <Col md={13}><ParagraphImage src={paragraph.image}
                                                                  description={paragraph.description}/></Col>
                                 </Row>}
-                                {!isMid && <>
+                                {!isMid && paragraph.type != "youtube" && <>
                                     <Row><Col><ParagraphImage src={paragraph.image}
                                                               description={paragraph.description}/> </Col></Row>
                                     <Row><Col><ParagraphText {...paragraph}/></Col></Row>
                                 </>}
+
+                                {paragraph.type == "youtube" && <>
+                                    <Row><Col><ParagraphText {...paragraph}/></Col></Row>
+                                    <Row><Col>
+                                        <iframe src={paragraph.source}
+                                                className={css`width: 100%;
+                                                  height: 450px;
+                                                  margin: 1rem 0;`}
+                                                title="YouTube video player" frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen/>
+                                    </Col></Row>
+                                </>}
+
                             </Grid>
                         </>)}
                     </Section>)}
