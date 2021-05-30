@@ -51,6 +51,11 @@ const Section = styled.div`
   }
 `
 
+const ParagraphImageElement = styled.img`
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+`
+
 
 const ParagraphImage: FC<{ src: string, description: string }> = ({src, description}) => {
     const [show, setShow] = useState(false);
@@ -58,7 +63,7 @@ const ParagraphImage: FC<{ src: string, description: string }> = ({src, descript
     const close = useCallback(() => setShow(false), []);
     const open = useCallback(() => setShow(true), []);
     return <>
-        <img className={css`width: 100%`} src={src} onClick={open}/>
+        <ParagraphImageElement src={src} onClick={open}/>
         <Modal size={"lg"} show={show} onHide={close}>
             <Modal.Body className={css`margin-top: 0;
               padding-bottom: 0`}>

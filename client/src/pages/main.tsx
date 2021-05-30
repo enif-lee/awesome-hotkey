@@ -251,9 +251,9 @@ const ProgramCategoryCardColumn: FC<ProgramCategoryCardColumn> = ({cards}) => {
 
 const TipCard: FC<{ id: string }> = ({id}) => {
     console.log(id)
-    return <div className={css`padding: 20px 10px;
-      overflow: hidden;`}>
+    return <div className={css`padding: 20px 10px; `}>
         <img className={css`width: 100%;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           max-width: 400px;
           margin: 0 auto;
           display: block;`} src={`/image/tool-tip/${id}.png`}/>
