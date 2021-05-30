@@ -121,18 +121,18 @@ const ToolTipDetailPage: FC = props => {
                               }`}>
                                 {isMid && paragraph.type == "left" &&
                                 <Row gutter={24}>
-                                    <Col md={13}><ParagraphImage src={paragraph.image}
+                                    <Col md={13}><ParagraphImage src={paragraph.image!}
                                                                  description={paragraph.description}/></Col>
                                     <Col md={11}><ParagraphText {...paragraph}/></Col>
                                 </Row>}
                                 {isMid && paragraph.type == "right" &&
                                 <Row gutter={24}>
                                     <Col md={11}><ParagraphText {...paragraph}/></Col>
-                                    <Col md={13}><ParagraphImage src={paragraph.image}
+                                    <Col md={13}><ParagraphImage src={paragraph.image!}
                                                                  description={paragraph.description}/></Col>
                                 </Row>}
                                 {!isMid && paragraph.type != "youtube" && <>
-                                    <Row><Col><ParagraphImage src={paragraph.image}
+                                    <Row><Col><ParagraphImage src={paragraph.image!}
                                                               description={paragraph.description}/> </Col></Row>
                                     <Row><Col><ParagraphText {...paragraph}/></Col></Row>
                                 </>}
