@@ -66,7 +66,7 @@ export const NavBar: FC = () => {
             <CategoryMenuDropDownItems title="사진" categories={["picture"]}/>
             <CategoryMenuDropDownItems title="비디오" categories={["video"]}/>
             <Divider vertical={true} className={css`height: 36px;`}/>
-            <Nav.Item onSelect={() => history.push("/tool-tips")}>단축키 팁</Nav.Item>
+            <Nav.Item onSelect={() => history.push("/tool-tips")}>프로그램 팁</Nav.Item>
             <Nav.Item onSelect={() => history.push("/settings")}>설정</Nav.Item>
         </MainNav>
     </MainNavBar>;

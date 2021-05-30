@@ -14,7 +14,6 @@ export const PageContentLayout: FC = ({children}) =>
                 <div className={css`max-width: 920px;
                   margin: 0 auto`}>
                     {children}
-
                 </div>
             </Col>
         </Row>
