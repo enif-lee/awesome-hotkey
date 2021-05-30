@@ -92,7 +92,7 @@ export const TipContentLayout: FC = ({children}) =>
     </Grid>
 const ToolTipDetailPage: FC = props => {
     const {id} = useParams<{ id: string }>()
-    const {title, description, coverImage, article} = getToolTipById(parseInt(id));
+    const {title, description, coverImage, article, programIcons} = getToolTipById(parseInt(id));
 
     const isMid = useMedia('(min-width: 992px');
 
@@ -102,9 +102,7 @@ const ToolTipDetailPage: FC = props => {
                 <TipContentLayout>
                     <FlexboxGrid justify={"center"} align={"middle"} className={"header-content"}>
                         <FlexboxGrid.Item colspan={24}>
-                            <img src={"https://via.placeholder.com/66"}/>
-                            <img src={"https://via.placeholder.com/66"}/>
-                            <img src={"https://via.placeholder.com/66"}/>
+                            {programIcons.map(icon => <img src={icon}/>)}
                             <h5>{title}</h5>
                             <p>{description}</p>
                         </FlexboxGrid.Item>
@@ -112,9 +110,9 @@ const ToolTipDetailPage: FC = props => {
                 </TipContentLayout>
             </Header>
             <TipContentLayout>
-                {article.map(section =>
+                {article.map((section, cindex) =>
                     <Section>
-                        {section.map(paragraph => <>
+                        {section.map((paragraph, pindex) => <>
                             <Grid fluid className={css`margin-bottom: 50px;
 
                               &:last-child {

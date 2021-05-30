@@ -2,7 +2,7 @@ import {FC, useCallback, useEffect, useMemo, useState} from "react"
 import {Button, Col, FlexboxGrid, Grid, Icon, Input, InputGroup, List, Notification, Row} from "rsuite";
 import InputGroupAddon from "rsuite/es/InputGroup/InputGroupAddon";
 import styled from "@emotion/styled";
-import svg from '../../assets/logo.svg'
+import logo from '../../assets/logo.png'
 
 import mainBgGd from "../../assets/main_bg_gd.svg";
 import {css} from "@emotion/css";
@@ -47,6 +47,7 @@ const MainSubTitle = styled.h2`
 `
 const MainLogo = styled.img`
   margin: 45px 0;
+  width: 192px;
 `
 
 const MainInputGroupAddon = styled(InputGroupAddon)`
@@ -245,8 +246,28 @@ const ProgramCategoryCardColumn: FC<ProgramCategoryCardColumn> = ({cards}) => {
     </Col>
 }
 
+const TipCard: FC<{ id: string }> = ({id}) => {
+    console.log(id)
+    return <div className={css`padding: 20px 10px;
+      overflow: hidden;`}>
+        <img className={css`width: 100%;
+          max-width: 400px;
+          margin: 0 auto;
+          display: block;`} src={`/image/tool-tip/${id}.png`}/>
+    </div>
+}
+
 const RelativeHotKeyTips: FC<{ tooltips: string[] }> = ({tooltips}) => {
+    const [pageIndex, setPage] = useState(0);
+    const next = useCallback(() => setPage(pageIndex + 1), [pageIndex]);
+    const prev = useCallback(() => setPage(pageIndex - 1), [pageIndex]);
+    const pagedTooltips = _.chunk(tooltips, 3);
+
+
     return <FlexboxGrid justify={"center"} align={"middle"}>
+        <FlexboxGrid.Item colspan={2}>
+            <PaginationButton onClick={prev} disabled={pageIndex == 0} icon={"left"} size={"3x"}/>
+        </FlexboxGrid.Item>
         <FlexboxGrid.Item colspan={20}>
             <div className={css`padding: 2rem 0;`}>
                 <h4 className={css`text-align: center;`}>관련 단축키 팁</h4>
@@ -257,20 +278,17 @@ const RelativeHotKeyTips: FC<{ tooltips: string[] }> = ({tooltips}) => {
                 </div>
                 <Grid fluid className={css`max-width: 1200px;`}>
                     <Row>
-                        {tooltips.slice(0, 3).map(tipId => <Col lg={8} sm={24} key={tipId}>
-                            <Link to={"tool-tips/" + tipId}>
-                                <div className={css`padding: 20px 10px;
-                                  overflow: hidden;`}>
-                                    <img className={css`width: 100%;
-                                      max-width: 400px;
-                                      margin: 0 auto;
-                                      display: block;`} src={`/image/tool-tip/${tipId}.png`}/>
-                                </div>
-                            </Link>
+                        {pagedTooltips[pageIndex].map(tipId => <Col lg={8} sm={24} key={tipId}>
+                            {tipId.startsWith("c") && <TipCard id={tipId[1]}/>}
+                            {!tipId.startsWith("c") && <Link to={"tool-tips/" + tipId}><TipCard id={tipId}/></Link>}
                         </Col>)}
                     </Row>
                 </Grid>
             </div>
+        </FlexboxGrid.Item>
+        <FlexboxGrid.Item colspan={2}>
+            <PaginationButton onClick={next} disabled={(pagedTooltips.length - 1) == pageIndex} icon={"right"}
+                              size={"3x"}/>
         </FlexboxGrid.Item>
     </FlexboxGrid>
 }
@@ -319,7 +337,7 @@ const MainContentPage: FC = observer(props => {
     return <>
         <MainBackground>
             <ContentLayout>
-                <MainLogo src={svg} alt={"logo"}/>
+                <MainLogo src={logo} alt={"logo"}/>
                 <MainTitle>We'll find you a Hotkey.</MainTitle>
                 <MainSubTitle>단축키를 사용하시면 업무효율을 200% 올려줄 수 있습니다!</MainSubTitle>
 
@@ -391,7 +409,9 @@ const MainContentPage: FC = observer(props => {
                 </Grid>
             </ContentLayout>
         </div>
-        <RelativeHotKeyTips tooltips={["1", "2", "3", "4", "5", "6"]}/>
+        <ContentLayout>
+            <RelativeHotKeyTips tooltips={["1", "2", "3", "c4", "c5", "c6"]}/>
+        </ContentLayout>
     </>
 })
 
