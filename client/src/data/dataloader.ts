@@ -241,7 +241,7 @@ const toolTips: ToolTip[] = [
                 {
                     type: "youtube",
                     title: "원본 교육 영상",
-                    description: "위 컨텐츠는 아래 원본 영상을 시청한 뒤 어썸핫키제작진의 설명추가로 제작된 컨텐츠 입니다. 원본은 아래 영상을 확인해주세요.",
+                    description: "위 컨텐츠는 아래 원본 영상을 시청한 뒤 어썸핫키 설명추가로 제작된 컨텐츠 입니다. 원본은 아래 영상을 확인해주세요.",
                     source: "https://www.youtube.com/embed/lpg9y8KHmV0"
                 }
             ]

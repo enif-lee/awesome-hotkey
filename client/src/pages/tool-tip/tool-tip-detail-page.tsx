@@ -13,6 +13,7 @@ const Content = styled.div`
 `
 const Header = styled.div<{ image: string }>`
   background-image: url(${props => props.image});
+  background-position: right;
   height: 512px;
   padding: 100px 0;
   margin-bottom: 180px;
