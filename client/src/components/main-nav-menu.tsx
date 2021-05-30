@@ -3,7 +3,7 @@ import {Divider, Dropdown, Nav} from "rsuite";
 import {FC} from "react";
 import {Link, useHistory} from "react-router-dom";
 import {css} from "@emotion/css";
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.png'
 import {getProgramsByCategories} from "../data/dataloader";
 
 const MainNavBar = styled.div`
