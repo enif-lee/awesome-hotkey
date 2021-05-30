@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import {Col, FlexboxGrid, Grid, Modal, Row} from "rsuite";
 import {css} from "@emotion/css";
 import {useMedia} from "react-use";
+import {FadeInSection} from "../../components/animation/fade-in-section";
 
 
 const Content = styled.div`
@@ -102,9 +103,9 @@ const ToolTipDetailPage: FC = props => {
                 <TipContentLayout>
                     <FlexboxGrid justify={"center"} align={"middle"} className={"header-content"}>
                         <FlexboxGrid.Item colspan={24}>
-                            {programIcons.map(icon => <img src={icon}/>)}
-                            <h5>{title}</h5>
-                            <p>{description}</p>
+                            <FadeInSection>{programIcons.map(icon => <img src={icon}/>)}</FadeInSection>
+                            <FadeInSection timeout={200}><h5>{title}</h5></FadeInSection>
+                            <FadeInSection timeout={400}><p>{description}</p></FadeInSection>
                         </FlexboxGrid.Item>
                     </FlexboxGrid>
                 </TipContentLayout>
@@ -113,43 +114,41 @@ const ToolTipDetailPage: FC = props => {
                 {article.map((section, cindex) =>
                     <Section>
                         {section.map((paragraph, pindex) => <>
-                            <Grid fluid className={css`margin-bottom: 50px;
+                            <FadeInSection>
+                                <Grid fluid className={css`margin-bottom: 50px;`}>
+                                    {isMid && paragraph.type == "left" &&
+                                    <Row gutter={24}>
+                                        <Col md={13}><ParagraphImage src={paragraph.image!}
+                                                                     description={paragraph.description}/></Col>
+                                        <Col md={11}><ParagraphText {...paragraph}/></Col>
+                                    </Row>}
+                                    {isMid && paragraph.type == "right" &&
+                                    <Row gutter={24}>
+                                        <Col md={11}><ParagraphText {...paragraph}/></Col>
+                                        <Col md={13}><ParagraphImage src={paragraph.image!}
+                                                                     description={paragraph.description}/></Col>
+                                    </Row>}
+                                    {!isMid && paragraph.type != "youtube" && <>
+                                        <Row><Col><ParagraphImage src={paragraph.image!}
+                                                                  description={paragraph.description}/> </Col></Row>
+                                        <Row><Col><ParagraphText {...paragraph}/></Col></Row>
+                                    </>}
 
-                              &:last-child {
-                                margin-bottom: 0
-                              }`}>
-                                {isMid && paragraph.type == "left" &&
-                                <Row gutter={24}>
-                                    <Col md={13}><ParagraphImage src={paragraph.image!}
-                                                                 description={paragraph.description}/></Col>
-                                    <Col md={11}><ParagraphText {...paragraph}/></Col>
-                                </Row>}
-                                {isMid && paragraph.type == "right" &&
-                                <Row gutter={24}>
-                                    <Col md={11}><ParagraphText {...paragraph}/></Col>
-                                    <Col md={13}><ParagraphImage src={paragraph.image!}
-                                                                 description={paragraph.description}/></Col>
-                                </Row>}
-                                {!isMid && paragraph.type != "youtube" && <>
-                                    <Row><Col><ParagraphImage src={paragraph.image!}
-                                                              description={paragraph.description}/> </Col></Row>
-                                    <Row><Col><ParagraphText {...paragraph}/></Col></Row>
-                                </>}
+                                    {paragraph.type == "youtube" && <>
+                                        <Row><Col><ParagraphText {...paragraph}/></Col></Row>
+                                        <Row><Col>
+                                            <iframe src={paragraph.source}
+                                                    className={css`width: 100%;
+                                                      height: 450px;
+                                                      margin: 1rem 0;`}
+                                                    title="YouTube video player" frameBorder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen/>
+                                        </Col></Row>
+                                    </>}
 
-                                {paragraph.type == "youtube" && <>
-                                    <Row><Col><ParagraphText {...paragraph}/></Col></Row>
-                                    <Row><Col>
-                                        <iframe src={paragraph.source}
-                                                className={css`width: 100%;
-                                                  height: 450px;
-                                                  margin: 1rem 0;`}
-                                                title="YouTube video player" frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen/>
-                                    </Col></Row>
-                                </>}
-
-                            </Grid>
+                                </Grid>
+                            </FadeInSection>
                         </>)}
                     </Section>)}
             </TipContentLayout>
