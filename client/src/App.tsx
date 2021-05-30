@@ -6,12 +6,13 @@ import {Route, Switch} from "react-router-dom";
 import {ProgramMainPageContextWrapper} from "./pages/program/program-main-page";
 import SettingPage from "./pages/settings";
 import MainContentPage from "./pages/main";
-import ToolTipsPage from "./pages/tool-tips-page";
 import ErrorPage from "./pages/errors/error";
 import {PageContentLayout} from "./components/page-content-layout";
 import {NavBar} from "./components/main-nav-menu";
 import {css} from "@emotion/css";
 import {PageFooter} from "./components/footertsx";
+import {ToolTipListPage} from "./pages/tool-tip/tool-tip-list";
+import ToolTipDetailPage from "./pages/tool-tip/tool-tip-detail-page";
 
 
 function App() {
@@ -28,8 +29,13 @@ function App() {
                     <Route path="/programs/:programCode">
                         <PageContentLayout><ProgramMainPageContextWrapper/></PageContentLayout>
                     </Route>
+                    <Route path="/tool-tips/" exact>
+                        <PageContentLayout>
+                            <ToolTipListPage/>
+                        </PageContentLayout>
+                    </Route>
+                    <Route path="/tool-tips/:id"><ToolTipDetailPage/></Route>
                     <Route path="/settings"><PageContentLayout><SettingPage/></PageContentLayout></Route>
-                    <Route path="/tool-tips"><PageContentLayout><ToolTipsPage/></PageContentLayout></Route>
                     <Route path="/**"><PageContentLayout><ErrorPage code={404}/></PageContentLayout></Route>
                 </Switch>
             </Content>
