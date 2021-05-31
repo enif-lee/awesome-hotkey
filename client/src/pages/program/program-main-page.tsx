@@ -1,7 +1,7 @@
 import {FC, useEffect} from 'react';
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
-import {Link, Route, Switch, useHistory, useParams, useRouteMatch} from 'react-router-dom'
+import {Link, Route, useHistory, useParams, useRouteMatch} from 'react-router-dom'
 import {Col, Grid, Row} from 'rsuite'
 
 import CategoryGrid from '../../components/program/category-grid'
@@ -14,6 +14,7 @@ import ProgramSearchPage from './program-search-page'
 import {ProgramSearchStore, ProgramSearchStoreContext, useProgramSearchStore} from "../../stores/program-search-store";
 import {isSupportProgram} from "../../data/dataloader";
 import {recentSearchStore} from "../../stores/recent-search-store";
+import {CommonAnimatedSwitch} from "../../util/CommonAnimatedSwitch";
 
 
 const Wrapper = styled.div`
@@ -72,7 +73,7 @@ const ProgramMainPage: FC = observer(() => {
 
     return <Wrapper>
         <Container>
-            <Switch>
+            <CommonAnimatedSwitch>
                 <Route path={match.url} exact>
                     <Grid fluid>
                         <Row className="row">
@@ -138,7 +139,7 @@ const ProgramMainPage: FC = observer(() => {
                 <Route path={`/programs/:programCode/search/:type`}>
                     <ProgramSearchPage/>
                 </Route>
-            </Switch>
+            </CommonAnimatedSwitch>
         </Container>
         
         {store.tooltip && <TipWidgetContainer>
