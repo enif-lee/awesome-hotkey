@@ -15,6 +15,7 @@ import {useMedia} from "react-use";
 import _ from "lodash";
 import {ButtonProps} from "rsuite/lib/Button/Button";
 import {IconProps} from "rsuite/lib/Icon/Icon";
+import {FadeInSection} from "../components/animation/fade-in-section";
 
 
 const MainBackground = styled.div`
@@ -215,26 +216,28 @@ const ProgramCategoryCard: FC<ProgramCategoryCardProps> = ({title, category}) =>
     const padding = useWideCheck()
         ? 8
         : 24;
-    return <div className={css`margin: 1.5rem 0.5rem;
-      padding: 1.5rem;
-      background-color: #101011;
-      border: 1px solid rgba(255, 255, 255, .1)`}>
-        <h5 className={css`margin-bottom: 12px;
-          text-align: left;`}>{title}</h5>
-        <Grid fluid>
-            {chunkedPrograms.map(chunk =>
-                <Row className={css`margin-bottom: 12px;`} key={chunk.index}>
-                    {chunk.value.map(program => <Link to={"/programs/" + program.code} key={program.code}>
-                        <Col sm={8} className={css`padding: ${padding}px`}>
-                            <img src={"/image/" + program.image} className={css`width: 100%;
-                              border-radius: 8px;
-                              overflow: hidden;`}/>
-                        </Col>
-                    </Link>)}
-                </Row>
-            )}
-        </Grid>
-    </div>
+    return <FadeInSection>
+        <div className={css`margin: 1.5rem 0.5rem;
+          padding: 1.5rem;
+          background-color: #101011;
+          border: 1px solid rgba(255, 255, 255, .1)`}>
+            <h5 className={css`margin-bottom: 12px;
+              text-align: left;`}>{title}</h5>
+            <Grid fluid>
+                {chunkedPrograms.map(chunk =>
+                    <Row className={css`margin-bottom: 12px;`} key={chunk.index}>
+                        {chunk.value.map(program => <Link to={"/programs/" + program.code} key={program.code}>
+                            <Col sm={8} className={css`padding: ${padding}px`}>
+                                <img src={"/image/" + program.image} className={css`width: 100%;
+                                  border-radius: 8px;
+                                  overflow: hidden;`}/>
+                            </Col>
+                        </Link>)}
+                    </Row>
+                )}
+            </Grid>
+        </div>
+    </FadeInSection>
 }
 
 type ProgramCategoryCardColumn = {
@@ -248,9 +251,9 @@ const ProgramCategoryCardColumn: FC<ProgramCategoryCardColumn> = ({cards}) => {
 
 const TipCard: FC<{ id: string }> = ({id}) => {
     console.log(id)
-    return <div className={css`padding: 20px 10px;
-      overflow: hidden;`}>
+    return <div className={css`padding: 20px 10px; `}>
         <img className={css`width: 100%;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           max-width: 400px;
           margin: 0 auto;
           display: block;`} src={`/image/tool-tip/${id}.png`}/>
@@ -264,33 +267,35 @@ const RelativeHotKeyTips: FC<{ tooltips: string[] }> = ({tooltips}) => {
     const pagedTooltips = _.chunk(tooltips, 3);
 
 
-    return <FlexboxGrid justify={"center"} align={"middle"}>
-        <FlexboxGrid.Item colspan={2}>
-            <PaginationButton onClick={prev} disabled={pageIndex == 0} icon={"left"} size={"3x"}/>
-        </FlexboxGrid.Item>
-        <FlexboxGrid.Item colspan={20}>
-            <div className={css`padding: 2rem 0;`}>
-                <h4 className={css`text-align: center;`}>관련 단축키 팁</h4>
-                <div className={css`margin: 0 auto;`}>
-                    <hr className={css`width: 35px;
-                      height: 5px;
-                      background-color: white;`}/>
+    return <FadeInSection>
+        <FlexboxGrid justify={"center"} align={"middle"}>
+            <FlexboxGrid.Item colspan={2}>
+                <PaginationButton onClick={prev} disabled={pageIndex == 0} icon={"left"} size={"3x"}/>
+            </FlexboxGrid.Item>
+            <FlexboxGrid.Item colspan={20}>
+                <div className={css`padding: 2rem 0;`}>
+                    <h4 className={css`text-align: center;`}>관련 단축키 팁</h4>
+                    <div className={css`margin: 0 auto;`}>
+                        <hr className={css`width: 35px;
+                          height: 5px;
+                          background-color: white;`}/>
+                    </div>
+                    <Grid fluid className={css`max-width: 1200px;`}>
+                        <Row>
+                            {pagedTooltips[pageIndex].map(tipId => <Col lg={8} sm={24} key={tipId}>
+                                {tipId.startsWith("c") && <TipCard id={tipId[1]}/>}
+                                {!tipId.startsWith("c") && <Link to={"tool-tips/" + tipId}><TipCard id={tipId}/></Link>}
+                            </Col>)}
+                        </Row>
+                    </Grid>
                 </div>
-                <Grid fluid className={css`max-width: 1200px;`}>
-                    <Row>
-                        {pagedTooltips[pageIndex].map(tipId => <Col lg={8} sm={24} key={tipId}>
-                            {tipId.startsWith("c") && <TipCard id={tipId[1]}/>}
-                            {!tipId.startsWith("c") && <Link to={"tool-tips/" + tipId}><TipCard id={tipId}/></Link>}
-                        </Col>)}
-                    </Row>
-                </Grid>
-            </div>
-        </FlexboxGrid.Item>
-        <FlexboxGrid.Item colspan={2}>
-            <PaginationButton onClick={next} disabled={(pagedTooltips.length - 1) == pageIndex} icon={"right"}
-                              size={"3x"}/>
-        </FlexboxGrid.Item>
-    </FlexboxGrid>
+            </FlexboxGrid.Item>
+            <FlexboxGrid.Item colspan={2}>
+                <PaginationButton onClick={next} disabled={(pagedTooltips.length - 1) == pageIndex} icon={"right"}
+                                  size={"3x"}/>
+            </FlexboxGrid.Item>
+        </FlexboxGrid>
+    </FadeInSection>
 }
 
 function takeFilteredList<T extends { name: string, code: string }>(entries: T[], filter: string): T[] {
@@ -337,30 +342,31 @@ const MainContentPage: FC = observer(props => {
     return <>
         <MainBackground>
             <ContentLayout>
-                <MainLogo src={logo} alt={"logo"}/>
-                <MainTitle>We'll find you a Hotkey.</MainTitle>
-                <MainSubTitle>단축키를 사용하시면 업무효율을 200% 올려줄 수 있습니다!</MainSubTitle>
-
-                <SelectedInputGroup>
-                    <form onClick={e => e.stopPropagation()} onSubmit={e => e.preventDefault()}>
-                        <MainInputGroup>
-                            <MainInputGroupAddon><Icon icon={"search"}/></MainInputGroupAddon>
-                            <MainSearchInput placeholder={"Input program name to search."} onClick={open}
-                                             onChange={setSearchText} onPressEnter={onPressEnterSearch}/>
-                        </MainInputGroup>
-                        {recentHistories && <RecentSearchList>
-                            {!searchText && <>
-                                <p className="sub-title">최근 검색한 툴</p>
-                                <SearchList>
-                                    {recentSearch
-                                        .slice()
-                                        .sort(search => new Date(search.time).getTime())
-                                        .reverse()
-                                        .slice(0, 5)
-                                        .map(({name, code, time}) =>
-                                            <Link to={"/programs/" + code} key={code}>
-                                                <SearchListItem>
-                                                    <SearchEntry icon={<Icon icon={"clock-o"}/>}
+                <FadeInSection><MainLogo src={logo} alt={"logo"}/></FadeInSection>
+                <FadeInSection timeout={100}><MainTitle>We'll find you a Hotkey.</MainTitle></FadeInSection>
+                <FadeInSection timeout={150}><MainSubTitle>단축키를 사용하시면 업무효율을 200% 올려줄 수
+                    있습니다!</MainSubTitle></FadeInSection>
+                <FadeInSection timeout={200}>
+                    <SelectedInputGroup>
+                        <form onClick={e => e.stopPropagation()} onSubmit={e => e.preventDefault()}>
+                            <MainInputGroup>
+                                <MainInputGroupAddon><Icon icon={"search"}/></MainInputGroupAddon>
+                                <MainSearchInput placeholder={"Input program name to search."} onClick={open}
+                                                 onChange={setSearchText} onPressEnter={onPressEnterSearch}/>
+                            </MainInputGroup>
+                            {recentHistories && <RecentSearchList>
+                                {!searchText && <>
+                                    <p className="sub-title">최근 검색한 툴</p>
+                                    <SearchList>
+                                        {recentSearch
+                                            .slice()
+                                            .sort(search => new Date(search.time).getTime())
+                                            .reverse()
+                                            .slice(0, 5)
+                                            .map(({name, code, time}) =>
+                                                <Link to={"/programs/" + code} key={code}>
+                                                    <SearchListItem>
+                                                        <SearchEntry icon={<Icon icon={"clock-o"}/>}
                                                                  programName={name}
                                                                  time={new Date(time).toLocaleDateString()}/>
                                                 </SearchListItem>
@@ -378,15 +384,18 @@ const MainContentPage: FC = observer(props => {
                                         )}
                                 </SearchList>
                             </>}
-                        </RecentSearchList>}
-                    </form>
-                </SelectedInputGroup>
+                            </RecentSearchList>}
+                        </form>
+                    </SelectedInputGroup>
+                </FadeInSection>
             </ContentLayout>
         </MainBackground>
         <ContentLayout>
             {bookmarkStore.bookmarksWithDetail.length > 0 &&
-            <RecommendProgramsComponent title={"즐겨찾는 프로그램"} programs={bookmarkStore.bookmarksWithDetail}/>}
-            <RecommendProgramsComponent title={"자주 사용하는 프로그램"} programs={programs}/>
+            <FadeInSection>
+                <RecommendProgramsComponent title={"즐겨찾는 프로그램"} programs={bookmarkStore.bookmarksWithDetail}/>
+            </FadeInSection>}
+            <FadeInSection><RecommendProgramsComponent title={"자주 사용하는 프로그램"} programs={programs}/></FadeInSection>
         </ContentLayout>
         <div className={css`margin-top: 90px;`}>
             <ContentLayout>

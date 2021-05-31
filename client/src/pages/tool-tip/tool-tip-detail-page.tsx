@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import {Col, FlexboxGrid, Grid, Modal, Row} from "rsuite";
 import {css} from "@emotion/css";
 import {useMedia} from "react-use";
+import {FadeInSection} from "../../components/animation/fade-in-section";
 
 
 const Content = styled.div`
@@ -50,6 +51,11 @@ const Section = styled.div`
   }
 `
 
+const ParagraphImageElement = styled.img`
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+`
+
 
 const ParagraphImage: FC<{ src: string, description: string }> = ({src, description}) => {
     const [show, setShow] = useState(false);
@@ -57,7 +63,7 @@ const ParagraphImage: FC<{ src: string, description: string }> = ({src, descript
     const close = useCallback(() => setShow(false), []);
     const open = useCallback(() => setShow(true), []);
     return <>
-        <img className={css`width: 100%`} src={src} onClick={open}/>
+        <ParagraphImageElement src={src} onClick={open}/>
         <Modal size={"lg"} show={show} onHide={close}>
             <Modal.Body className={css`margin-top: 0;
               padding-bottom: 0`}>
@@ -102,9 +108,9 @@ const ToolTipDetailPage: FC = props => {
                 <TipContentLayout>
                     <FlexboxGrid justify={"center"} align={"middle"} className={"header-content"}>
                         <FlexboxGrid.Item colspan={24}>
-                            {programIcons.map(icon => <img src={icon}/>)}
-                            <h5>{title}</h5>
-                            <p>{description}</p>
+                            <FadeInSection>{programIcons.map(icon => <img src={icon}/>)}</FadeInSection>
+                            <FadeInSection timeout={200}><h5>{title}</h5></FadeInSection>
+                            <FadeInSection timeout={400}><p>{description}</p></FadeInSection>
                         </FlexboxGrid.Item>
                     </FlexboxGrid>
                 </TipContentLayout>
@@ -113,43 +119,41 @@ const ToolTipDetailPage: FC = props => {
                 {article.map((section, cindex) =>
                     <Section>
                         {section.map((paragraph, pindex) => <>
-                            <Grid fluid className={css`margin-bottom: 50px;
+                            <FadeInSection>
+                                <Grid fluid className={css`margin-bottom: 50px;`}>
+                                    {isMid && paragraph.type == "left" &&
+                                    <Row gutter={24}>
+                                        <Col md={13}><ParagraphImage src={paragraph.image!}
+                                                                     description={paragraph.description}/></Col>
+                                        <Col md={11}><ParagraphText {...paragraph}/></Col>
+                                    </Row>}
+                                    {isMid && paragraph.type == "right" &&
+                                    <Row gutter={24}>
+                                        <Col md={11}><ParagraphText {...paragraph}/></Col>
+                                        <Col md={13}><ParagraphImage src={paragraph.image!}
+                                                                     description={paragraph.description}/></Col>
+                                    </Row>}
+                                    {!isMid && paragraph.type != "youtube" && <>
+                                        <Row><Col><ParagraphImage src={paragraph.image!}
+                                                                  description={paragraph.description}/> </Col></Row>
+                                        <Row><Col><ParagraphText {...paragraph}/></Col></Row>
+                                    </>}
 
-                              &:last-child {
-                                margin-bottom: 0
-                              }`}>
-                                {isMid && paragraph.type == "left" &&
-                                <Row gutter={24}>
-                                    <Col md={13}><ParagraphImage src={paragraph.image!}
-                                                                 description={paragraph.description}/></Col>
-                                    <Col md={11}><ParagraphText {...paragraph}/></Col>
-                                </Row>}
-                                {isMid && paragraph.type == "right" &&
-                                <Row gutter={24}>
-                                    <Col md={11}><ParagraphText {...paragraph}/></Col>
-                                    <Col md={13}><ParagraphImage src={paragraph.image!}
-                                                                 description={paragraph.description}/></Col>
-                                </Row>}
-                                {!isMid && paragraph.type != "youtube" && <>
-                                    <Row><Col><ParagraphImage src={paragraph.image!}
-                                                              description={paragraph.description}/> </Col></Row>
-                                    <Row><Col><ParagraphText {...paragraph}/></Col></Row>
-                                </>}
+                                    {paragraph.type == "youtube" && <>
+                                        <Row><Col><ParagraphText {...paragraph}/></Col></Row>
+                                        <Row><Col>
+                                            <iframe src={paragraph.source}
+                                                    className={css`width: 100%;
+                                                      height: 450px;
+                                                      margin: 1rem 0;`}
+                                                    title="YouTube video player" frameBorder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen/>
+                                        </Col></Row>
+                                    </>}
 
-                                {paragraph.type == "youtube" && <>
-                                    <Row><Col><ParagraphText {...paragraph}/></Col></Row>
-                                    <Row><Col>
-                                        <iframe src={paragraph.source}
-                                                className={css`width: 100%;
-                                                  height: 450px;
-                                                  margin: 1rem 0;`}
-                                                title="YouTube video player" frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen/>
-                                    </Col></Row>
-                                </>}
-
-                            </Grid>
+                                </Grid>
+                            </FadeInSection>
                         </>)}
                     </Section>)}
             </TipContentLayout>

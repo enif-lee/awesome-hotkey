@@ -43,8 +43,12 @@ const CategoryMenuDropDownItems: FC<{ categories: string[], title: string }> = (
     const programs = getProgramsByCategories(categories);
     return <>
         <MenuDropDown title={title} onSelect={code => history.push("/programs/" + code)}>
-            {programs.slice(0, 5).map(program => <Dropdown.Item key={program.code}
-                                                                eventKey={program.code}>{program.name}</Dropdown.Item>)}
+            {programs.slice(0, 5).map(program => <Dropdown.Item key={program.code} eventKey={program.code}>
+                <img src={"/image/" + program.image} className={css`width: 16px;
+                  height: 16px;
+                  margin-right: 0.25rem;
+                  display: inline-block;`}/> {program.name}
+            </Dropdown.Item>)}
         </MenuDropDown>
     </>
 }
