@@ -277,11 +277,13 @@ export const KeyKeycapMap: Record<string, KeycapType> = {
     "alt": KeycapType.Alt,
     "del": KeycapType.Del,
     "ins": KeycapType.Insert,
+    "cmd": KeycapType.Command,
+    "opt": KeycapType.Alt,
 
     // windows
     "win": KeycapType.Windows,
-    "pgup": KeycapType.PgUp,
-    "pgdw": KeycapType.PgDn,
+    "pageup": KeycapType.PgUp,
+    "pagedown": KeycapType.PgDn,
     "home": KeycapType.Home,
     "end": KeycapType.End,
     "pause-break": KeycapType.PauseBreak,
