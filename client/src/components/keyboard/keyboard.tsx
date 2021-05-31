@@ -7,7 +7,7 @@ import KeyboardKeycap from '../keycap/keyboard-keycap'
 
 import {OsType} from '../../stores/setting-store'
 
-import KeycapType, {EventKeyKeycapMap} from '../../models/keycap-type'
+import KeycapType, {EventCodeKeycapMap} from '../../models/keycap-type'
 
 
 interface KeyboardProps {
@@ -99,7 +99,7 @@ function bottomKeycaps(os: OsType): KeycapType[] {
 function registerKeyUpEvent(props: KeyboardProps) {
     const eventName = 'keyup'
     const eventHandler = (e: any) => {
-        const keycap: KeycapType = EventKeyKeycapMap[e && refinedEventKey(e.key, props.os)]
+        const keycap: KeycapType = EventCodeKeycapMap[e && adjustedEventCode(e.key, e.code, props.os)]
         props.onSelectKeycap && props.onSelectKeycap(keycap)
     }
 
@@ -108,15 +108,35 @@ function registerKeyUpEvent(props: KeyboardProps) {
     return () => document.removeEventListener(eventName, eventHandler)
 }
 
-function refinedEventKey(key: string, os: OsType): string {
-    if(key === 'Meta') {
+function adjustedEventCode(key: string, code: string, os: OsType): string {
+    if(isSpecialEventKey(key)) {
+        return key
+    }
+
+    if(isSpecialEventCode(code, os)) {
+        return eventCodeByOS(code, os)
+    }
+
+    return code
+}
+
+function isSpecialEventKey(key: string): boolean {
+    return ['HanjaMode', 'HangulMode'].includes(key)
+}
+
+function isSpecialEventCode(code: string, os: OsType): boolean {
+    return code != eventCodeByOS(code, os)
+}
+
+function eventCodeByOS(code: string, os: OsType): string {
+    if(code.includes('Meta')) {
         switch(os) {
             case OsType.Osx: return 'Command'
             case OsType.Windows: return 'Windows'
         }
     }
 
-    return key
+    return code
 }
 
 
