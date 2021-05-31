@@ -106,6 +106,7 @@ const ProgramSearchPage: FC = observer(() => {
                     <Keyboard
                         activedKeycaps={store.activedKeycaps}
                         os={store.settingStore.os}
+                        isKeyUpEnabled={true}
                         onSelectKeycap={store.toggleKeycap}
                     />
                 </KeyboardContainer>}

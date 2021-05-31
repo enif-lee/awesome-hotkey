@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import {FC, useEffect} from 'react'
 import styled from '@emotion/styled'
 import {observer} from 'mobx-react-lite'
 
@@ -7,12 +7,13 @@ import KeyboardKeycap from '../keycap/keyboard-keycap'
 
 import {OsType} from '../../stores/setting-store'
 
-import KeycapType from '../../models/keycap-type'
+import KeycapType, {EventKeyKeycapMap} from '../../models/keycap-type'
 
 
 interface KeyboardProps {
     activedKeycaps: KeycapType[]
     os: OsType
+    isKeyUpEnabled?: boolean
     onSelectKeycap?: (keycap: KeycapType) => void
 }
 
@@ -27,6 +28,7 @@ const Row = styled.div`
 
 
 const Keyboard: FC<KeyboardProps> = observer(props => {
+
     const keycapRows: KeycapType[][] = [
         topKeycaps(props.os),
         [KeycapType.Esc, KeycapType.EmptyFn, KeycapType.F1, KeycapType.F2, KeycapType.F3, KeycapType.F4, KeycapType.EmptyFn, KeycapType.F5, KeycapType.F6, KeycapType.F7, KeycapType.F8, KeycapType.EmptyFn, KeycapType.F9, KeycapType.F10, KeycapType.F11, KeycapType.F12],
@@ -36,6 +38,12 @@ const Keyboard: FC<KeyboardProps> = observer(props => {
         [KeycapType.Shift, KeycapType.Z, KeycapType.X, KeycapType.C, KeycapType.V, KeycapType.B, KeycapType.N, KeycapType.M, KeycapType.Comma, KeycapType.Period, KeycapType.Slash, KeycapType.Shift],
         bottomKeycaps(props.os)
     ]
+
+
+    if(props.isKeyUpEnabled || false) {
+        useEffect(() => registerKeyUpEvent(props))
+    }
+
 
     return <Wrapper>
         {keycapRows.map((keycaps, rowIndex) => (
@@ -59,6 +67,7 @@ const Keyboard: FC<KeyboardProps> = observer(props => {
             onSelectKeycap={props.onSelectKeycap}
         />
     </Wrapper>
+
 })
 
 export const KeyboardContainer = styled.div`
@@ -80,11 +89,34 @@ function topKeycaps(os: OsType): KeycapType[] {
 function bottomKeycaps(os: OsType): KeycapType[] {
     switch(os) {
         case OsType.Osx:
-            return [KeycapType.Ctrl, KeycapType.Alt, KeycapType.Option, KeycapType.Command, KeycapType.Space, KeycapType.Command, KeycapType.Option]
+            return [KeycapType.Fn, KeycapType.Ctrl, KeycapType.Alt, KeycapType.Command, KeycapType.Space, KeycapType.Command, KeycapType.Alt]
 
         case OsType.Windows:
             return [KeycapType.Ctrl, KeycapType.Windows, KeycapType.Alt, KeycapType.Chinese, KeycapType.Space, KeycapType.KoreanEnglish, KeycapType.Alt, KeycapType.Menu, KeycapType.Ctrl]
     }
+}
+
+function registerKeyUpEvent(props: KeyboardProps) {
+    const eventName = 'keyup'
+    const eventHandler = (e: any) => {
+        const keycap: KeycapType = EventKeyKeycapMap[e && refinedEventKey(e.key, props.os)]
+        props.onSelectKeycap && props.onSelectKeycap(keycap)
+    }
+
+    document.addEventListener(eventName, eventHandler)
+
+    return () => document.removeEventListener(eventName, eventHandler)
+}
+
+function refinedEventKey(key: string, os: OsType): string {
+    if(key === 'Meta') {
+        switch(os) {
+            case OsType.Osx: return 'Command'
+            case OsType.Windows: return 'Windows'
+        }
+    }
+
+    return key
 }
 
 

@@ -12,8 +12,9 @@ interface KeycapListProps {
 
 const Wrapper = styled.div`
     position: relative;
-    overflow: hidden;
     left: -4px;
+    max-height: 100px;
+    overflow: hidden;
 
     .keycap-wrapper {
         float: left;

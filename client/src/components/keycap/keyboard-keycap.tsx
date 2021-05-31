@@ -146,7 +146,7 @@ function sizeCSS(keycap: string, os: OsType): object {
 
         case KeycapType.Ctrl:
         case KeycapType.Alt:
-        case KeycapType.Option:
+        case KeycapType.Fn:
         case KeycapType.Windows:
         case KeycapType.Chinese:
         case KeycapType.KoreanEnglish:
