@@ -24,9 +24,9 @@ export const PageFooter: FC = () => {
                         <div className={css`width: 640px;
                           float: left;
                           color: #7C7C7C`}>
-                            <p>본 웹사이트는 2021년 웹프로그래밍 실습에서 제작된 팀프로젝트 사이트입니다.</p>
-                            <p>어썸하키 | 만든 이 : 이진성 장민선 조태현 최다현</p>
-                            <p>서울특별시 동작구 상도로 369 숭실대학교 | 연락처 : 00-000-0000 | 팩스 : 00-000-00000</p>
+                            <p>Copyrightⓒ2021 By 이진성. All right reserved.</p>
+                            <p>어썸핫키 | 만든 이 : 이진성 장민선 조태현 최다현</p>
+                            <p>Contact : enif.lee@gmail.com</p>
                         </div>
                     </div>
                 </FlexboxGrid.Item>
