@@ -24,8 +24,8 @@ export const PageFooter: FC = () => {
                         <div className={css`width: 640px;
                           float: left;
                           color: #7C7C7C`}>
-                            <p>Copyrightⓒ2021 By 이진성. All right reserved.</p>
-                            <p>어썸핫키 | 만든 이 : 이진성 장민선 조태현 최다현</p>
+                            <p>Copyrightⓒ2021 By AwesomeHotkey Team. All right reserved.</p>
+                            <p>Awesome Hotkey | Creators : 이진성 장민선 조태현 최다현</p>
                             <p>Contact : enif.lee@gmail.com</p>
                         </div>
                     </div>
